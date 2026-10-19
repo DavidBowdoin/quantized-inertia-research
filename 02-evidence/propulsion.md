@@ -1,0 +1,75 @@
+---
+title: "Propellantless propulsion from QI (capacitors, laser cavities, METs, nano-materials, IVO flights)"
+tags: [propulsion, capacitor-thrust, laser, mach-effect, darpa, ivo, null-result]
+verdict: refuted-or-null
+---
+
+# Propellantless propulsion
+
+> The EmDrive has its own note, [emdrive](emdrive.md). This note covers QI's general thrust idea and the other devices. The laboratory measurements are listed device by device in [lab-tests](lab-tests.md).
+
+## The phenomenon and the data
+- QI claims that an asymmetric "horizon" (a conductor, a cavity wall or a Rindler horizon) damps Unruh radiation on one side of an accelerated object. The resulting gradient would produce a net force with no propellant.
+- **Claimed observations that QI has been fitted to:**
+  - **Asymmetric / symmetric capacitors.** Bhatt & Becker 2018 ([arXiv:1810.04368](https://arxiv.org/abs/1810.04368); [2018-bhatt-capacitor-thrust](../04-experiments/2018-bhatt-capacitor-thrust/README.md)): an anode-directed force of about 1 mN in 33 µm polyethylene capacitors during field emission, over 507 readings on a consumer digital scale. The force reversed when insulated conductors were placed behind the cathode, and the authors claim more than 0.4 N/kW.
+  - **NASA 2004 asymmetric capacitor in vacuum** (Canning et al.): 14 mN, direction "unspecified" (as used in [2018-mcculloch-propellantless-propulsion](../01-papers/2018-mcculloch-propellantless-propulsion/README.md)).
+  - **Mach-Effect Thrusters.** Mahood 1999 about 50 µN; Fearn et al. 2013 1.5 µN.
+  - **IVO Ltd "Quantum Drive".** Company claims of 45 mN at 1 W (2022), later up to 52 mN/W, with no published method or error bars ([2022-satnews-ivo](../07-media/2022-satnews-ivo/README.md), [2023-universetoday-ivo](../07-media/2023-universetoday-ivo/README.md)).
+
+## Mainstream explanation(s)
+- Momentum conservation forbids a closed system from accelerating its own centre of mass ([Provatidis 2024 review](../01-papers/2024-provatidis-inertial-propulsion-review/README.md)).
+- Andrew Higgins (McGill) argues that any propellantless electromagnetic drive exceeding about 3.33 µN/kW could be turned into a perpetual-motion machine. IVO's 52 mN/W is more than four orders of magnitude above that bound ([2023-universetoday-ivo](../07-media/2023-universetoday-ivo/README.md)).
+- Reported small forces are attributed to known artefacts. TU Dresden catalogues them for capacitors as:
+  - corona and ion wind;
+  - wire bending and centre-of-mass shifts under high voltage;
+  - buoyancy from heating (≈ 4 mg per °C in a 10 cm box);
+  - electromagnetic interaction with the surroundings ([2020-tajmar-capacitor-thrust](../03-criticism/2020-tajmar-capacitor-thrust/README.md)).
+- Millis (former NASA Breakthrough Propulsion Physics head) says a space drive would need new physics, and that it is "unknown if any of these lines of inquiry will be fruitful". He cites McCulloch 2010 among open inertia hypotheses, not as an endorsed mechanism ([2017-millis-inertial-frames](../01-papers/2017-millis-inertial-frames/README.md)).
+
+## QI's prediction
+- **Origin of the idea, 2013** ([2013-mcculloch-asymmetric-casimir](../01-papers/2013-mcculloch-asymmetric-casimir/README.md)): "if some way could be found to damp the Unruh waves on one side of an object, or create an artificial event horizon ... the object could then be accelerated in a new way". The 2008 JBIS paper had earlier proposed metamaterials ([2008-mcculloch-flyby-anomalies-jbis](../01-papers/2008-mcculloch-flyby-anomalies-jbis/README.md)).
+- **General formula, 2018** ([2018-mcculloch-propellantless-propulsion](../01-papers/2018-mcculloch-propellantless-propulsion/README.md)):
+
+  $$ F = \frac{PQL}{2c}\left(\frac{1}{\Delta x_{left}} - \frac{1}{\Delta x_{right}}\right), \qquad F_{max} = \frac{PQ}{c} $$
+
+| Device | Observed | QI prediction |
+|---|---|---|
+| Shawyer EmDrive | 16 mN | 4.2 mN |
+| Mahood 1999 MET | ~50 µN | 29–92 µN (Woodward's theory: 0.05 µN) |
+| Fearn et al. 2013 MET | 1.5 µN | 12.6–40 µN |
+| NASA asymmetric capacitor | 14 mN | 12 mN |
+
+  - The Q values for the METs are estimated, not measured.
+- **Symmetric capacitors, 2021**: a ResearchGate preprint, not peer-reviewed, whose content is known only from the blog ([2021-mcculloch-symmetric-capacitors](../01-papers/2021-mcculloch-symmetric-capacitors/README.md)). The prediction is F = 0.00014 IA/d², said to match Becker & Bhatt and Mansell "exactly".
+  - Blog-reported Plymouth tests: an anode-directed force of about 10 mg, "only 1/3 of the force predicted".
+  - Blog-reported success rate: "In our 22 tests so far 14% of them have shown a thrust".
+- **Laser and optical cavities.** Taylor 2017, JBIS ([2017-taylor-laser-resonators](../01-papers/2017-taylor-laser-resonators/README.md)), argues that high-Q asymmetric laser resonators "should produce very large propulsive forces if the theory is correct". Motherboard reported DARPA-programme targets of order 1 N from 10 W ([2018-motherboard-darpa-pseudoscience](../07-media/2018-motherboard-darpa-pseudoscience/README.md)).
+- **Nano-materials, 2020** ([2020-mcculloch-nano-materials](../01-papers/2020-mcculloch-nano-materials/README.md)): asymmetric cavities of 129 nm or smaller should levitate on the zero-point field "without any input power". The calculation assumes 1 mm thick walls on a 129 nm cavity, a geometric inconsistency.
+- **Spinning discs, 2019** ([2019-mcculloch-rindler-horizons](../01-papers/2019-mcculloch-rindler-horizons/README.md)): at about 1.43 × 10¹⁰ m s⁻² a disc's Rindler horizon would hide part of the Earth and change its weight. Hiding the Sun at r = 0.1 m needs about 23k rpm.
+- **Asymmetric-Casimir framing, 2022**: known only from a Google Scholar snippet ([2022-mcculloch-qi-thrust-casimir](../01-papers/2022-mcculloch-qi-thrust-casimir/README.md)).
+- **DARPA programme.** $1.3M over four years (award HR001118C0125) from the Nascent Light-Matter Interactions programme. The first 18 months were for theory, followed by experiments at TU Dresden and the University of Alcalá ([2018-plymouth-darpa](../07-media/2018-plymouth-darpa/README.md), [2018-upi-darpa](../07-media/2018-upi-darpa/README.md), [2018-earthsky-darpa](../07-media/2018-earthsky-darpa/README.md), [2018-photonics-darpa](../07-media/2018-photonics-darpa/README.md)).
+
+## Independent tests, critiques and null results
+- **Laser resonators, metal cavities and fibre loops (DARPA-funded, TU Dresden).** Neunzig, Weikert & Tajmar 2021/22 measured only classical photon thrust, about 1–2 nN. That puts limits on QI "by at least 4 orders of magnitude" ([2022-neunzig-laser-resonators](../03-criticism/2022-neunzig-laser-resonators/README.md)).
+  - The BART LED cavity's claimed 2700 nN was measured as (0.22 ± 4.13) nN.
+  - McCulloch's objections were tested in a follow-up ([2022-neunzig-emdrive-thrust](../03-criticism/2022-neunzig-emdrive-thrust/README.md)): removing the aluminium case, adding a tapered metal cone, and running outside the vacuum chamber with no metal within 80 m. All gave null results: "The vacuum chamber did not hide the proposed QI effects."
+- **Capacitors.** Tajmar & Schreiber 2020 measured less than 0.3 mg, against 6.8 mg predicted by an empirical fit to Bhatt & Becker's data. The claim is "ruled out by an order of magnitude". The authors caveat that differences in voltage (2.1 vs 5 kV), dielectric thickness (90 µm) and surroundings mean it "may not completely rule out the claim" ([2020-tajmar-capacitor-thrust](../03-criticism/2020-tajmar-capacitor-thrust/README.md)).
+  - The QI capacitor formula has no peer-reviewed publication, and no peer-reviewed replication of Bhatt & Becker or of the IVO and Plymouth tests was located.
+- **Mach-Effect Thrusters (Dresden).** Signals of about 2 µN did not reverse with orientation and were attributed to non-linear thermal drift. A magnetostrictive variant showed no thrust ([2019-kossling-spacedrive-balance](../04-experiments/2019-kossling-spacedrive-balance/README.md)).
+- **In space (IVO Ltd):**
+  - **Barry-1** (launched 11 Nov 2023) lost contact on 9 Feb 2024 because of power-system problems, and the drives were never switched on ([2024-debrief-ivo-failure](../07-media/2024-debrief-ivo-failure/README.md), [2024-futurism-ivo-contact-lost](../07-media/2024-futurism-ivo-contact-lost/README.md), [2023-debrief-ivo-launch](../07-media/2023-debrief-ivo-launch/README.md)).
+  - **OTP-2** (March 2025): per McCulloch, the drive ran for less than about a minute per day. He reports about 600 m less orbital decay than a comparison satellite over three months and calls this "not conclusive and could have a conventional explanation, including a possible Lorentz force". No primary data have been released ([2026-nextbigfuture-ivo-review](../07-media/2026-nextbigfuture-ivo-review/README.md)).
+- **McCulloch's response to the nulls** (blog, Jan 2022): "QI thrusters based on light alone did not perform well ... and yet QI thrusters that are based on electrons did". He revised the v = c assumption and says "QI has not been falsified". No quantitative revised prediction for the Dresden devices has been published.
+- **Critics in the press.** Koberlein argues that the thrust mechanism violates Newton's third law, relativity and Noether's theorem ([2017-koberlein-doing-it-wrong](../07-media/2017-koberlein-doing-it-wrong/README.md)). James Woodward calls the prospects "quite bleak" ([2018-motherboard-darpa-pseudoscience](../07-media/2018-motherboard-darpa-pseudoscience/README.md)).
+- **Theory.** Dickmann & Dickmann 2023 argue that summing all modes gives an Unruh-pressure force ∝ a⁴, not a, which contradicts the mechanism on which thrust rests ([2023-dickmann-casimir-contradicts](../03-criticism/2023-dickmann-casimir-contradicts/README.md)).
+
+## Assessment
+QI's propulsion predictions are the theory's most direct and falsifiable claims. They have been tested most carefully by TU Dresden, partly with the same DARPA award that funded McCulloch. Laser resonators, metal cavities, LED cavities and fibre loops gave only photon thrust, several orders of magnitude below QI's worst-case predictions, including after the set-up changes McCulloch requested. The capacitor effect McCulloch now regards as his strongest lab evidence rests on a non-peer-reviewed digital-scale experiment and on unpublished replications. A clean Dresden set-up found nothing, though with caveats about exact replication. The in-space tests have produced either no data (Barry-1) or a result its own proponent calls inconclusive (OTP-2). Taken together, the controlled tests are null, and positive claims come only from uncontrolled or unpublished sources.
+
+## Sources
+- Theory: [2013-mcculloch-asymmetric-casimir](../01-papers/2013-mcculloch-asymmetric-casimir/README.md), [2018-mcculloch-propellantless-propulsion](../01-papers/2018-mcculloch-propellantless-propulsion/README.md), [2021-mcculloch-symmetric-capacitors](../01-papers/2021-mcculloch-symmetric-capacitors/README.md), [2022-mcculloch-qi-thrust-casimir](../01-papers/2022-mcculloch-qi-thrust-casimir/README.md), [2020-mcculloch-nano-materials](../01-papers/2020-mcculloch-nano-materials/README.md), [2019-mcculloch-rindler-horizons](../01-papers/2019-mcculloch-rindler-horizons/README.md), [2017-taylor-laser-resonators](../01-papers/2017-taylor-laser-resonators/README.md), [2008-mcculloch-flyby-anomalies-jbis](../01-papers/2008-mcculloch-flyby-anomalies-jbis/README.md)
+- Reviews: [2017-millis-inertial-frames](../01-papers/2017-millis-inertial-frames/README.md), [2024-provatidis-inertial-propulsion-review](../01-papers/2024-provatidis-inertial-propulsion-review/README.md)
+- Experiments: [2018-bhatt-capacitor-thrust](../04-experiments/2018-bhatt-capacitor-thrust/README.md), [2018-tajmar-spacedrive](../04-experiments/2018-tajmar-spacedrive/README.md), [2019-kossling-spacedrive-balance](../04-experiments/2019-kossling-spacedrive-balance/README.md)
+- Criticism: [2020-tajmar-capacitor-thrust](../03-criticism/2020-tajmar-capacitor-thrust/README.md), [2022-neunzig-laser-resonators](../03-criticism/2022-neunzig-laser-resonators/README.md), [2022-neunzig-emdrive-thrust](../03-criticism/2022-neunzig-emdrive-thrust/README.md), [2023-dickmann-casimir-contradicts](../03-criticism/2023-dickmann-casimir-contradicts/README.md)
+- Media: [2018-plymouth-darpa](../07-media/2018-plymouth-darpa/README.md), [2018-motherboard-darpa-pseudoscience](../07-media/2018-motherboard-darpa-pseudoscience/README.md), [2018-upi-darpa](../07-media/2018-upi-darpa/README.md), [2018-earthsky-darpa](../07-media/2018-earthsky-darpa/README.md), [2018-photonics-darpa](../07-media/2018-photonics-darpa/README.md), [2022-satnews-ivo](../07-media/2022-satnews-ivo/README.md), [2023-universetoday-ivo](../07-media/2023-universetoday-ivo/README.md), [2023-inverse-ivo](../07-media/2023-inverse-ivo/README.md), [2023-debrief-ivo-launch](../07-media/2023-debrief-ivo-launch/README.md), [2024-debrief-ivo-failure](../07-media/2024-debrief-ivo-failure/README.md), [2024-futurism-ivo-contact-lost](../07-media/2024-futurism-ivo-contact-lost/README.md), [2026-nextbigfuture-ivo-review](../07-media/2026-nextbigfuture-ivo-review/README.md), [2017-koberlein-doing-it-wrong](../07-media/2017-koberlein-doing-it-wrong/README.md)
+- Related evidence: [emdrive](emdrive.md), [lab-tests](lab-tests.md), [derivation](derivation.md)

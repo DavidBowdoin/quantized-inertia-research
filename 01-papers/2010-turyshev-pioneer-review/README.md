@@ -1,0 +1,84 @@
+---
+title: "The Pioneer Anomaly"
+authors: [Slava G. Turyshev, Viktor T. Toth]
+year: 2010
+type: paper
+venue: "Living Reviews in Relativity 13:4"
+doi: 10.12942/lrr-2010-4
+arxiv: "1001.3686"
+url: "https://arxiv.org/abs/1001.3686"
+open_access: true
+license: arXiv-nonexclusive
+files: [paper.pdf, citation.bib, figures/fig-1-early-anomaly-vs-distance.png, figures/fig-2-thermal-model-temperature-map.png, figures/fig-3-rtg-electrical-heat.png]
+status: neutral
+tags: [pioneer-anomaly, review]
+---
+
+# The Pioneer Anomaly
+
+<!-- local-only-note -->
+> 📁 **Local only:** the stored PDF and its rendered figures are kept out of the public repository because this copy's licence (`arXiv-nonexclusive`) does not permit redistribution. Read the paper at [arXiv:1001.3686](https://arxiv.org/abs/1001.3686) · [doi:10.12942/lrr-2010-4](https://doi.org/10.12942/lrr-2010-4).
+
+**Citation:** Turyshev, S. G. & Toth, V. T. (2010). *The Pioneer Anomaly*. Living Reviews in Relativity 13:4. [doi:10.12942/lrr-2010-4](https://doi.org/10.12942/lrr-2010-4) / [arXiv:1001.3686](https://arxiv.org/abs/1001.3686)
+
+**TL;DR:** A 165-page review of the Pioneer 10/11 anomalous Sunward acceleration, a_P = (8.74 ± 1.33) × 10⁻¹⁰ m/s². It covers the spacecraft, the Deep Space Network data, orbit modelling, error budgets, and the proposed explanations, from new physics to on-board thermal recoil. McCulloch's (2007) modified-inertia proposal is mentioned in one sentence among the new-physics candidates. The review concludes that the thermal recoil force was probably underestimated in 2002 and "may, in fact, account for all of it". This was confirmed in their later 2012 analysis.
+
+> Text and page numbers are from arXiv v2 (Aug 2010), stored as `paper.pdf`. Page numbers are PDF/preprint pages.
+
+## Key claims
+- The existence and approximate magnitude of the anomaly "can be considered established fact". It has been independently confirmed by several analysts (Markwardt, Olsen, Toth, Levy et al.).
+- The direction of the anomaly cannot be distinguished: the Sunward, Earthward, spin-axis and velocity directions lie within a few degrees of each other. Whether it is constant in time has also been questioned, since some analyses find a "jerk" term.
+- The review discusses many explanations: dark matter, modified gravity (MOND, Yukawa, STVG/MOG), cosmological mechanisms, radio-signal effects, and on-board forces.
+  - It notes that Gundlach et al. found no violation of F = ma down to 5 × 10⁻¹⁴ m/s².
+  - It mentions modified inertia (Milgrom; McCulloch 2007) briefly.
+- On numerical coincidences: a_P ≃ cH₀ is called misleading. A cosmic-expansion effect would point away from the Sun, and matching a_P needs H₀ ≃ 95 ± 14 km/s/Mpc.
+- The apparent "onset" of the anomaly at Pioneer 11's Saturn encounter, which coincides with the move from a bound to an unbound orbit, is "highly suspect" and quite likely an artifact.
+- Thermal recoil from the RTGs and electrical heat was likely underestimated in 2002 and may explain the whole anomaly. If so, the anomaly should decrease over time as the on-board power declines.
+
+## Key equations
+Simplified thermal recoil force model along the spin axis, where ξ are efficiency factors for RTG and electrical heat:
+$$ F = \frac{1}{c}\left(\xi_{rtg} B_{rtg} + \xi_{elec} B_{elec}\right)\mathbf{s} $$
+Yukawa-type modified potential (Sanders), one of the modified-gravity ansätze reviewed:
+$$ U(r) = U_{Newton}(r)\left(1 + \alpha e^{-r/\lambda}\right) $$
+
+## Data used
+- Radiometric Doppler tracking of Pioneer 10/11 from 20–70 AU, including the extended Doppler data set recovered in the 2000s.
+- The complete telemetry record (Master Data Records) and project documentation, recovered by 2005.
+- The 2002 JPL formal solution (Anderson et al. 2002) and the independent re-analyses.
+
+## Results & predictions
+- a_P = (8.74 ± 1.33) × 10⁻¹⁰ m/s², Sunward. The drift is equivalent to a blue-shifted frequency drift of ~6 × 10⁻⁹ Hz/s.
+- Early 1998 results: (8.09 ± 0.20) × 10⁻¹⁰ m/s² for Pioneer 10 and (8.56 ± 0.15) × 10⁻¹⁰ m/s² for Pioneer 11. No variation with distance was found within 2 × 10⁻¹⁰ m/s² over 40–60 AU (p. 76).
+- Ulysses gave an ambiguous possible Sunward anomaly of (12 ± 3) × 10⁻¹⁰ m/s². Galileo data could not separate an anomaly from solar radiation pressure.
+- Scheffer's estimate: up to 70 W of collimated heat, corresponding to 9.3 × 10⁻¹⁰ m/s² (p. 101).
+- Prediction: a thermal origin implies the anomaly decreases with time as the Pu-238 decays and electrical power drops.
+
+## Figures
+*Figure (local only): Fig. 1 — Review Fig. 5.1: early unmodelled Sunward accelerations of Pioneer 10 (~1981–1989) and Pioneer 11 (1977–1989) against heliocentric distance, adapted from Anderson et al. 2002 (p. 76).*
+
+*Figure (local only): Fig. 2 — Review Fig. 7.8: work-in-progress finite-element temperature map of the Pioneer 10 body compared with telemetered platform temperatures (p. 124).*
+
+*Figure (local only): Fig. 3 — Review Fig. 7.9: heat generated by the RTGs and by electrical equipment on Pioneer 10 over the mission lifetime (p. 127).*
+
+## Notable quotes
+> "Finally, there were suggestions that rather then modifying laws of gravity in order to explain the Pioneer effect, perhaps we needs to modify laws of inertia instead [205]. To that extent, modified-inertia as a reaction to Unruh radiation has been considered in [192]." (p. 93; [192] = McCulloch 2007)
+
+> "…quite likely, the 'onset' is simply an artifact that will vanish when data is re-analyzed using a consistent strategy." (p. 103)
+
+> "…the thermal recoil force represents a substantial fraction of the force required to generate the anomalous acceleration seen in Pioneer data, and may, in fact, account for all of it." (p. 129)
+
+## Criticisms & responses
+- This is a review, not a QI paper. It matters for QI because:
+  - It casts doubt on the bound-to-unbound "onset" that McCulloch (2007) and Milgrom cite in favour of modified inertia.
+  - It rejects a_P ≃ cH₀ as a coincidence. McCulloch's 2007 prediction is ≈ 0.99 cH.
+  - It anticipates the thermal explanation.
+- The follow-up thermal analysis, Turyshev et al. (2012, *PRL* 108, 241101, [arXiv:1204.2507](https://arxiv.org/abs/1204.2507)), found no statistically significant anomalous acceleration once thermal recoil was modelled. See [2012-turyshev-pioneer-thermal](../../03-criticism/2012-turyshev-pioneer-thermal/README.md).
+- > [!UNVERIFIED] McCulloch has argued in later papers and blog posts that the thermal explanation is not conclusive. No specific response to this review was located here.
+
+## Related
+- Evidence: [pioneer-anomaly](../../02-evidence/pioneer-anomaly.md), [flyby-anomaly](../../02-evidence/flyby-anomaly.md)
+- Sources:
+  - [2007-mcculloch-pioneer-anomaly](../2007-mcculloch-pioneer-anomaly/README.md)
+  - [2011-gine-pioneer-holographic](../2011-gine-pioneer-holographic/README.md)
+  - [2012-turyshev-pioneer-thermal](../../03-criticism/2012-turyshev-pioneer-thermal/README.md)
+  - [2015-iorio-solar-system-anomalies](../2015-iorio-solar-system-anomalies/README.md)
