@@ -1,0 +1,612 @@
+[
+ {
+  "folder": "01-papers/2007-mcculloch-pioneer-anomaly",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:astro-ph/0612599&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2007-mcculloch-pioneer-anomaly/paper.pdf",
+   "01-papers/2007-mcculloch-pioneer-anomaly/figures/fig-1-allowed-wavelengths.png",
+   "01-papers/2007-mcculloch-pioneer-anomaly/figures/fig-2-pioneer-prediction.png"
+  ],
+  "note": "Stored PDF is arXiv v1; OAI record has no <license> element = arXiv default non-exclusive licence."
+ },
+ {
+  "folder": "01-papers/2008-mcculloch-flyby-anomalies-jbis",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:0712.3022&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2008-mcculloch-flyby-anomalies-jbis/paper.pdf",
+   "01-papers/2008-mcculloch-flyby-anomalies-jbis/figures/fig-1-galileo-flyby.png",
+   "01-papers/2008-mcculloch-flyby-anomalies-jbis/figures/fig-2-near-flyby.png"
+  ],
+  "note": "PDF stamp arXiv:0712.3022v1; OAI has no <license> element = arXiv default."
+ },
+ {
+  "folder": "01-papers/2008-mcculloch-flyby-anomalies-mnras",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:0806.4159&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2008-mcculloch-flyby-anomalies-mnras/paper.pdf",
+   "01-papers/2008-mcculloch-flyby-anomalies-mnras/figures/fig-1-near-geometry.png",
+   "01-papers/2008-mcculloch-flyby-anomalies-mnras/figures/fig-2-observed-vs-predicted.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2010-mcculloch-minimum-accelerations",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1004.3303&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2010-mcculloch-minimum-accelerations/paper.pdf"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2010-mcculloch-tajmar-effect-explained",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:0912.1108&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2010-mcculloch-tajmar-effect-explained/paper.pdf",
+   "01-papers/2010-mcculloch-tajmar-effect-explained/figures/fig-1-setup-b-schematic.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2010-turyshev-pioneer-review",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1001.3686&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2010-turyshev-pioneer-review/paper.pdf",
+   "01-papers/2010-turyshev-pioneer-review/figures/fig-1-early-anomaly-vs-distance.png",
+   "01-papers/2010-turyshev-pioneer-review/figures/fig-2-thermal-model-temperature-map.png",
+   "01-papers/2010-turyshev-pioneer-review/figures/fig-3-rtg-electrical-heat.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2011-gine-pioneer-holographic",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1108.3565&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2011-gine-pioneer-holographic/paper.pdf"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2011-mcculloch-podkletnov-effect",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1108.3488&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2011-mcculloch-podkletnov-effect/paper.pdf",
+   "01-papers/2011-mcculloch-podkletnov-effect/figures/fig-1-setup-schematic.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence. (Physics Procedia version is Elsevier OA CC BY-NC-ND but is not the stored copy.)"
+ },
+ {
+  "folder": "01-papers/2011-mcculloch-tajmar-effect",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1106.3266&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2011-mcculloch-tajmar-effect/paper.pdf",
+   "01-papers/2011-mcculloch-tajmar-effect/figures/fig-1-setup-a-schematic.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2012-hernandez-wide-binaries",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1105.1873&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2012-hernandez-wide-binaries/paper.pdf",
+   "01-papers/2012-hernandez-wide-binaries/figures/fig-1-hipparcos-sdss-dv-vs-s.png",
+   "01-papers/2012-hernandez-wide-binaries/figures/fig-2-fraction-and-rms-velocity.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence. (EPJC published version may be OA, but stored copy is arXiv v4.)"
+ },
+ {
+  "folder": "01-papers/2012-mcculloch-galactic-scales",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1207.7007&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2012-mcculloch-galactic-scales/paper.pdf",
+   "01-papers/2012-mcculloch-galactic-scales/figures/fig-1-btfr-mihsc-vs-mond.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2013-mcculloch-asymmetric-casimir",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1302.2775&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2013-mcculloch-asymmetric-casimir/paper.pdf",
+   "01-papers/2013-mcculloch-asymmetric-casimir/figures/fig-1-rindler-hubble-horizons.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2014-mcculloch-toy-cosmology",
+  "pdf_license": "CC-BY-3.0",
+  "evidence_url": "https://api.crossref.org/works/10.3390/galaxies2010081",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2014-mcculloch-toy-cosmology/paper.pdf"
+  ],
+  "note": "MDPI Galaxies published PDF; PDF footer and Crossref (vor) state CC BY 3.0."
+ },
+ {
+  "folder": "01-papers/2015-iorio-solar-system-anomalies",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1412.7673&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2015-iorio-solar-system-anomalies/paper.pdf"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2015-mcculloch-emdrive-epl",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1604.03449&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2015-mcculloch-emdrive-epl/paper.pdf",
+   "01-papers/2015-mcculloch-emdrive-epl/figures/fig-1-cavity.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2015-mcculloch-emdrive-pip",
+  "pdf_license": "CC-BY-NC-ND-2.5",
+  "evidence_url": "https://progress-in-physics.com/",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2015-mcculloch-emdrive-pip/paper.pdf"
+  ],
+  "note": "Progress in Physics journal-wide licence CC BY-NC-ND 2.5 (site statement; PDF itself carries no notice). Unmodified PDF OK; rendered figures are derivatives of ND content -> LOCAL."
+ },
+ {
+  "folder": "01-papers/2016-mcculloch-relativity-uncertainty",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1610.06787&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2016-mcculloch-relativity-uncertainty/paper.pdf"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2017-mcculloch-dwarf-galaxies",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1703.01179&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2017-mcculloch-dwarf-galaxies/paper.pdf",
+   "01-papers/2017-mcculloch-dwarf-galaxies/figures/fig-1-velocity-dispersions.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2017-mcculloch-galaxy-rotations-sparc",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1709.04918&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2017-mcculloch-galaxy-rotations-sparc/paper.pdf",
+   "01-papers/2017-mcculloch-galaxy-rotations-sparc/figures/fig-1-rar-redshift.png",
+   "01-papers/2017-mcculloch-galaxy-rotations-sparc/figures/fig-2-genzel-high-z.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2017-mcculloch-proton-radius",
+  "pdf_license": "CC-BY-NC-ND-2.5",
+  "evidence_url": "https://progress-in-physics.com/",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2017-mcculloch-proton-radius/figures/fig-1-sheltering.png"
+  ],
+  "note": "Figures rendered from ND-licensed PDF -> LOCAL to be safe. [figures entry]"
+ },
+ {
+  "folder": "01-papers/2017-mcculloch-proton-radius",
+  "pdf_license": "CC-BY-NC-ND-2.5",
+  "evidence_url": "https://progress-in-physics.com/",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2017-mcculloch-proton-radius/paper.pdf"
+  ],
+  "note": "Progress in Physics journal-wide licence CC BY-NC-ND 2.5 (site statement; PDF itself carries no notice). Unmodified PDF OK; rendered figures are derivatives of ND content -> LOCAL. [PDF entry]"
+ },
+ {
+  "folder": "01-papers/2017-pickering-resonant-cavity",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "https://api.crossref.org/works/10.22606/adap.2017.21002",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2017-pickering-resonant-cavity/paper.pdf"
+  ],
+  "note": "Isaac Scientific PDF footer 'Copyright (c) 2017 Isaac Scientific Publishing'; no CC licence in PDF or Crossref."
+ },
+ {
+  "folder": "01-papers/2017-smolin-mond-quantum-gravity",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1704.00780&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2017-smolin-mond-quantum-gravity/paper.pdf"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2018-haug-mcculloch-derivation",
+  "pdf_license": "unknown",
+  "evidence_url": "https://vixra.org/abs/1803.0045",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2018-haug-mcculloch-derivation/paper.pdf"
+  ],
+  "note": "viXra copy; viXra grants no reuse licence and PDF has no licence notice."
+ },
+ {
+  "folder": "01-papers/2018-hernandez-bounding-curvature",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1705.06356&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2018-hernandez-bounding-curvature/paper.pdf",
+   "01-papers/2018-hernandez-bounding-curvature/figures/fig-1-bounding-curvature-schematic.png",
+   "01-papers/2018-hernandez-bounding-curvature/figures/fig-2-expansion-history.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2018-mcculloch-cold-fusion",
+  "pdf_license": "CC-BY-NC-ND-2.5",
+  "evidence_url": "https://progress-in-physics.com/",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2018-mcculloch-cold-fusion/figures/fig-1-sheltering-schematic.png"
+  ],
+  "note": "Figures rendered from ND-licensed PDF -> LOCAL to be safe. [figures entry]"
+ },
+ {
+  "folder": "01-papers/2018-mcculloch-cold-fusion",
+  "pdf_license": "CC-BY-NC-ND-2.5",
+  "evidence_url": "https://progress-in-physics.com/",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2018-mcculloch-cold-fusion/paper.pdf"
+  ],
+  "note": "Progress in Physics journal-wide licence CC BY-NC-ND 2.5 (site statement; PDF itself carries no notice). Unmodified PDF OK; rendered figures are derivatives of ND content -> LOCAL. [PDF entry]"
+ },
+ {
+  "folder": "01-papers/2018-mcculloch-propellantless-propulsion",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "https://www.tsijournals.com/articles/propellantless-propulsion-from-quantized-inertia-13923.html",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2018-mcculloch-propellantless-propulsion/paper.pdf",
+   "01-papers/2018-mcculloch-propellantless-propulsion/figures/fig-2-woodward-asymmetric-capacitor.png"
+  ],
+  "note": "PDF says '(c)2018 Trade Science Inc.'; article page footer 'All Rights Reserved'; no CC licence found."
+ },
+ {
+  "folder": "01-papers/2019-cadoni-long-range-qg",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1904.11835&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2019-cadoni-long-range-qg/paper.pdf"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2019-hernandez-gaia-wide-binaries",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1810.08696&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2019-hernandez-gaia-wide-binaries/paper.pdf",
+   "01-papers/2019-hernandez-gaia-wide-binaries/figures/fig-4-1d-relative-velocities.png",
+   "01-papers/2019-hernandez-gaia-wide-binaries/figures/fig-5-rms-velocity-vs-separation.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2019-mcculloch-rindler-horizons",
+  "pdf_license": "CC-BY-NC-ND-2.5",
+  "evidence_url": "https://progress-in-physics.com/",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2019-mcculloch-rindler-horizons/figures/fig-1-hubble-rindler-schematic.png"
+  ],
+  "note": "Figures rendered from ND-licensed PDF -> LOCAL to be safe. [figures entry]"
+ },
+ {
+  "folder": "01-papers/2019-mcculloch-rindler-horizons",
+  "pdf_license": "CC-BY-NC-ND-2.5",
+  "evidence_url": "https://progress-in-physics.com/",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2019-mcculloch-rindler-horizons/paper.pdf"
+  ],
+  "note": "Progress in Physics journal-wide licence CC BY-NC-ND 2.5 (site statement; PDF itself carries no notice). Unmodified PDF OK; rendered figures are derivatives of ND content -> LOCAL. [PDF entry]"
+ },
+ {
+  "folder": "01-papers/2019-mcculloch-wide-binaries",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1908.01434&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2019-mcculloch-wide-binaries/paper.pdf",
+   "01-papers/2019-mcculloch-wide-binaries/figures/fig-1-wide-binary-velocities.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2020-gine-luciano-eup-modified-inertia",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://api.crossref.org/works/10.1140/epjc/s10052-020-08636-x",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2020-gine-luciano-eup-modified-inertia/paper.pdf",
+   "01-papers/2020-gine-luciano-eup-modified-inertia/figures/fig-1-horizons-schematic.png"
+  ],
+  "note": "Published EPJC version (via Univ. Lleida repository); PDF and Crossref state CC BY 4.0 (SCOAP3)."
+ },
+ {
+  "folder": "01-papers/2020-mcculloch-horizon-widths",
+  "pdf_license": "CC-BY-NC-ND",
+  "evidence_url": "https://doi.org/10.12988/astp.2020.9416",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2020-mcculloch-horizon-widths/paper.pdf"
+  ],
+  "note": "Hikari PDF states 'distributed under the Creative Commons by-nc-nd Attribution License' (version unstated). No figures in folder."
+ },
+ {
+  "folder": "01-papers/2020-mcculloch-information-theory",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "https://api.crossref.org/works/10.22606/adap.2020.54002",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2020-mcculloch-information-theory/paper.pdf",
+   "01-papers/2020-mcculloch-information-theory/figures/fig-1-horizon-bits-schematic.png"
+  ],
+  "note": "Isaac Scientific PDF footer 'Copyright (c) 2020 Isaac Scientific Publishing'; no CC licence in PDF or Crossref."
+ },
+ {
+  "folder": "01-papers/2020-mcculloch-nano-materials",
+  "pdf_license": "CC-BY-NC-ND-2.5",
+  "evidence_url": "https://progress-in-physics.com/",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2020-mcculloch-nano-materials/figures/fig-1-cavity.png"
+  ],
+  "note": "Figures rendered from ND-licensed PDF -> LOCAL to be safe. [figures entry]"
+ },
+ {
+  "folder": "01-papers/2020-mcculloch-nano-materials",
+  "pdf_license": "CC-BY-NC-ND-2.5",
+  "evidence_url": "https://progress-in-physics.com/",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2020-mcculloch-nano-materials/paper.pdf"
+  ],
+  "note": "Progress in Physics journal-wide licence CC BY-NC-ND 2.5 (site statement; PDF itself carries no notice). Unmodified PDF OK; rendered figures are derivatives of ND content -> LOCAL. [PDF entry]"
+ },
+ {
+  "folder": "01-papers/2021-haug-minimum-acceleration",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://api.crossref.org/works/10.4236/jhepgc.2021.72035",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2021-haug-minimum-acceleration/paper.pdf",
+   "01-papers/2021-haug-minimum-acceleration/figures/fig-1-sparc-accelerations.png"
+  ],
+  "note": "SCIRP PDF and Crossref state CC BY 4.0."
+ },
+ {
+  "folder": "01-papers/2022-mcculloch-light-bending",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://api.crossref.org/works/10.21203/rs.3.rs-2251614/v1",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2022-mcculloch-light-bending/paper.pdf",
+   "01-papers/2022-mcculloch-light-bending/figures/fig-1-light-path.png"
+  ],
+  "note": "Research Square preprint PDF and Crossref state CC BY 4.0."
+ },
+ {
+  "folder": "01-papers/2023-chae-wide-binaries",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://arxiv.org/abs/2305.04613v4",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2023-chae-wide-binaries/paper.pdf",
+   "01-papers/2023-chae-wide-binaries/figures/fig-12-acceleration-plane.png",
+   "01-papers/2023-chae-wide-binaries/figures/fig-19-delta-vs-aqual.png",
+   "01-papers/2023-chae-wide-binaries/figures/fig-32-velocity-scaling.png"
+  ],
+  "note": "Stored PDF is arXiv v4; OAI <license> and abs page for v4 = CC BY 4.0."
+ },
+ {
+  "folder": "01-papers/2023-lynch-accelerated-electron-thermometer",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://arxiv.org/abs/2211.14774v2",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2023-lynch-accelerated-electron-thermometer/paper.pdf",
+   "01-papers/2023-lynch-accelerated-electron-thermometer/figures/fig-3-4-photon-spectra.png",
+   "01-papers/2023-lynch-accelerated-electron-thermometer/figures/fig-5-bgo-recoil.png"
+  ],
+  "note": "Stored PDF is arXiv v2; OAI <license> and abs page for v2 = CC BY 4.0."
+ },
+ {
+  "folder": "01-papers/2024-hernandez-wide-binary-review",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://arxiv.org/abs/2312.03162v3",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2024-hernandez-wide-binary-review/paper.pdf",
+   "01-papers/2024-hernandez-wide-binary-review/figures/fig-1-banik-errors-binning.png",
+   "01-papers/2024-hernandez-wide-binary-review/figures/fig-5-fmulti-test.png",
+   "01-papers/2024-hernandez-wide-binary-review/figures/fig-6-noise-likelihood.png"
+  ],
+  "note": "Stored PDF is arXiv v3; OAI <license> and abs page for v3 = CC BY 4.0."
+ },
+ {
+  "folder": "01-papers/2024-provatidis-inertial-propulsion-review",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://api.crossref.org/works/10.3390/eng5020046",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2024-provatidis-inertial-propulsion-review/paper.pdf"
+  ],
+  "note": "MDPI Eng published PDF; PDF and Crossref state CC BY 4.0."
+ },
+ {
+  "folder": "01-papers/2025-mcculloch-jupiter-mass-binaries",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://api.crossref.org/works/10.3390/astronomy5010001",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2025-mcculloch-jupiter-mass-binaries/paper.pdf",
+   "01-papers/2025-mcculloch-jupiter-mass-binaries/figures/fig-1-jumbo-accelerations.png"
+  ],
+  "note": "MDPI Astronomy published PDF; PDF says CC BY, Crossref says CC BY 4.0."
+ },
+ {
+  "folder": "03-criticism/2012-turyshev-pioneer-thermal",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1204.2507&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "03-criticism/2012-turyshev-pioneer-thermal/paper.pdf",
+   "03-criticism/2012-turyshev-pioneer-thermal/figures/fig-2-thermal-power.png",
+   "03-criticism/2012-turyshev-pioneer-thermal/figures/fig-3-thermal-vs-anomalous.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "03-criticism/2016-samsonov-emdrive-null",
+  "pdf_license": "unknown",
+  "evidence_url": "https://vixra.org/abs/1603.0153",
+  "classification": "LOCAL",
+  "files": [
+   "03-criticism/2016-samsonov-emdrive-null/paper.pdf",
+   "03-criticism/2016-samsonov-emdrive-null/figures/fig-7-8-low-noise-and-thermal.png"
+  ],
+  "note": "viXra copy; no licence notice in PDF; viXra grants no reuse licence."
+ },
+ {
+  "folder": "03-criticism/2019-renda-sceptical",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://arxiv.org/abs/1908.01589v1",
+  "classification": "PUBLIC",
+  "files": [
+   "03-criticism/2019-renda-sceptical/paper.pdf",
+   "03-criticism/2019-renda-sceptical/figures/fig-3-F-of-a.png",
+   "03-criticism/2019-renda-sceptical/figures/fig-5-G-of-a.png"
+  ],
+  "note": "Stored PDF is arXiv v1; OAI <license> and abs page for v1 = CC BY 4.0."
+ },
+ {
+  "folder": "03-criticism/2021-tajmar-emdrive-false-positive",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://api.crossref.org/works/10.1007/s12567-021-00385-1",
+  "classification": "PUBLIC",
+  "files": [
+   "03-criticism/2021-tajmar-emdrive-false-positive/paper.pdf",
+   "03-criticism/2021-tajmar-emdrive-false-positive/figures/fig-11-thrust-spectrum.png",
+   "03-criticism/2021-tajmar-emdrive-false-positive/figures/fig-12-13-fixed-frequency-and-sweep.png",
+   "03-criticism/2021-tajmar-emdrive-false-positive/figures/fig-6-false-positives.png"
+  ],
+  "note": "Published CEAS Space J. version (DNB archive copy); PDF 'Open Access ... Creative Commons Attribution 4.0' and Crossref CC BY 4.0."
+ },
+ {
+  "folder": "03-criticism/2022-neunzig-laser-resonators",
+  "pdf_license": "unknown",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "03-criticism/2022-neunzig-laser-resonators/paper-conference.pdf"
+  ],
+  "note": "SP2020+1 conference version; no licence notice."
+ },
+ {
+  "folder": "03-criticism/2022-neunzig-laser-resonators",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://api.crossref.org/works/10.1007/s12567-021-00366-4",
+  "classification": "PUBLIC",
+  "files": [
+   "03-criticism/2022-neunzig-laser-resonators/paper.pdf",
+   "03-criticism/2022-neunzig-laser-resonators/figures/fig-10-beam-trap.png",
+   "03-criticism/2022-neunzig-laser-resonators/figures/fig-13-14-taylor-thrust.png",
+   "03-criticism/2022-neunzig-laser-resonators/figures/fig-17-asymmetric-loop.png"
+  ],
+  "note": "Journal version (CC BY 4.0 per Crossref and the PDF's licence statement), from the DNB archive copy d-nb.info/124181175X."
+ },
+ {
+  "folder": "03-criticism/2023-banik-gaia-dr3-wide-binaries",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://arxiv.org/abs/2311.03436v4",
+  "classification": "PUBLIC",
+  "files": [
+   "03-criticism/2023-banik-gaia-dr3-wide-binaries/paper.pdf",
+   "03-criticism/2023-banik-gaia-dr3-wide-binaries/figures/fig-11-median-ve.png",
+   "03-criticism/2023-banik-gaia-dr3-wide-binaries/figures/fig-12-ve-distribution.png",
+   "03-criticism/2023-banik-gaia-dr3-wide-binaries/figures/fig-13-loglikelihood.png"
+  ],
+  "note": "Stored PDF is arXiv v4; OAI <license> and abs page for v4 = CC BY 4.0."
+ },
+ {
+  "folder": "03-criticism/2023-dickmann-casimir-contradicts",
+  "pdf_license": "unknown",
+  "evidence_url": "https://doi.org/10.15407/kfnt2023.06.080",
+  "classification": "LOCAL",
+  "files": [
+   "03-criticism/2023-dickmann-casimir-contradicts/paper.pdf",
+   "03-criticism/2023-dickmann-casimir-contradicts/figures/fig-1-qi-schematic.png"
+  ],
+  "note": "Ukrainian original (KFNT, MAO NASU); PDF shows only (c) MAO NASU / Akademperiodyka 2023, no CC licence; journal site unreachable (502) so policy unverified."
+ },
+ {
+  "folder": "04-experiments/2016-white-eagleworks",
+  "pdf_license": "NTRS-public-use-permitted",
+  "evidence_url": "https://ntrs.nasa.gov/api/citations/20170000277",
+  "classification": "LOCAL",
+  "files": [
+   "04-experiments/2016-white-eagleworks/paper.pdf",
+   "04-experiments/2016-white-eagleworks/figures/fig-13-forward-thrust-vacuum.png",
+   "04-experiments/2016-white-eagleworks/figures/fig-18-null-test.png",
+   "04-experiments/2016-white-eagleworks/figures/fig-19-thrust-vs-power.png"
+  ],
+  "note": "NTRS 20170000277 copyright determination GOV_PUBLIC_USE_PERMITTED, all authors listed NASA JSC, no publisher/contractor/third-party flags; PDF has no AIAA copyright notice. Borderline: not formally CC/PD, and NTRS lists belongsToUsGov=false. Made LOCAL by owner decision (stricter reading)."
+ },
+ {
+  "folder": "04-experiments/2018-bhatt-capacitor-thrust",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1810.04368&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "04-experiments/2018-bhatt-capacitor-thrust/paper.pdf",
+   "04-experiments/2018-bhatt-capacitor-thrust/figures/fig-18-blockers.png",
+   "04-experiments/2018-bhatt-capacitor-thrust/figures/fig-21-wireless.png",
+   "04-experiments/2018-bhatt-capacitor-thrust/figures/fig-9-force-vs-current.png"
+  ],
+  "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ }
+]

@@ -28,7 +28,7 @@ It is pure Markdown and assets. There is no build system: just two stdlib-only P
 | `08-synthesis/` | topic notes | editorial: scorecard, open questions, ideas, build notes |
 | `assets/diagrams/` | assets | our own SVGs only (CC BY 4.0) |
 | `_templates/source-README.md` | template | copy this for every new source |
-| `_tools/` | code (MIT) | `build_index.py`, `build_master_index.py` |
+| `_tools/` | code (MIT) | `build_index.py`, `build_master_index.py`, `check_license.py`, `apply_local_only.py`; `licenses.json` (licence decisions) |
 | `bibliography.bib` | generated | concatenation of every `citation.bib` |
 
 ## The source-folder convention (most important rule)
@@ -52,12 +52,14 @@ Topic notes (`02-evidence/`, `05-context/`, …) are single `.md` files. They **
 The public GitHub repo (`DavidBowdoin/quantized-inertia-research`) must contain **only redistributable material**. A private backup with everything exists separately (`quantized-inertia-research-private`).
 - **Can be published:** our own writing and diagrams; PDFs and figures whose `license` is CC-BY, CC-BY-SA, CC0, public domain or CC-BY-NC.
 - **Local only:** arXiv's default non-exclusive licence (`arXiv-nonexclusive`), all-rights-reserved, `unknown`, and figures rendered from any of these (or from ND-licensed works).
-- Local-only files are listed in `.gitignore` and stay on disk. **Never `git add -f` them.**
-- Their README marks them *(local only)*, so readers on GitHub know why a file is missing.
+- **`_tools/licenses.json` is the record of every licence decision**: one entry per folder (sometimes two, e.g. PDF public but figures local), with `pdf_license`, `evidence_url`, `classification` (`PUBLIC` | `LOCAL`) and the files it covers.
+- **`python3 -I _tools/apply_local_only.py`** turns that record into the `LOCAL-ONLY` block of `.gitignore` (regenerated each run, so don't hand-edit it), plain-text "(local only)" captions, and a "📁 Local only" note in each affected README. It is safe to rerun.
+- Local-only files stay on disk. **Never `git add -f` them.**
 - When you add a new PDF or figure, determine its licence first:
-  - arXiv: the OAI-PMH `GetRecord` call with `metadataPrefix=arXiv` returns a `<license>` element. No element means the default non-exclusive licence, which is not redistributable.
-  - DOI: the Crossref `license` field.
-  - If in doubt, treat it as local only and add it to `.gitignore`.
+  - Run `python3 -I _tools/check_license.py --arxiv <id> --doi <doi>`. It reads arXiv's OAI-PMH `<license>` (no element means the default non-exclusive licence, which is not redistributable) and Crossref's / OpenAlex's licence records.
+  - Confirm against the licence statement inside the PDF you actually store. Licences differ between arXiv versions, conference versions and journal versions.
+  - Add an entry to `licenses.json`, then run `apply_local_only.py`. If in doubt, classify it `LOCAL`.
+  - If only the preprint is restricted but the journal version is CC-BY, store the journal version instead. Springer's site blocks scripts, but the German National Library often has an archive copy (search `https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&recordSchema=MARC21-xml&query=tit%3D%22<title words>%22`, then download `https://d-nb.info/<id>/34`).
 - Before any commit, check that the staged changes contain no ignored PDFs:
   `git diff --cached --name-only | grep -E '\.(pdf|png)$'`, then compare against `.gitignore`.
 
@@ -77,7 +79,7 @@ The public GitHub repo (`DavidBowdoin/quantized-inertia-research`) must contain 
 4. Extract text **to a scratch directory, not the repo**: `pdftotext -layout paper.pdf /tmp/…/text.txt`. Render figure pages with `pdftoppm -png -r 110 -f N -l N`. (Install `poppler` if these are missing.)
 5. Fill in the README and `citation.bib`. Add relative links to related sources and evidence notes, and add a back-link from the relevant evidence note.
 6. Run `python3 -I _tools/build_index.py` (rebuilds the section `INDEX.md` tables between the `AUTO-INDEX` markers, then checks every relative link and must end "No broken relative links."). Then run `python3 -I _tools/build_master_index.py` and `cat */*/citation.bib > bibliography.bib`.
-7. If the source is local only, add its PDF and figures to `.gitignore`.
+7. Record the licence decision in `_tools/licenses.json` and run `python3 -I _tools/apply_local_only.py`. Then rerun `build_index.py`; its link check also fails on any link to a git-ignored file.
 
 Do not hand-edit the content between `<!-- BEGIN AUTO-INDEX -->` and `<!-- END AUTO-INDEX -->`, or the top-level `INDEX.md`; both are generated.
 

@@ -41,6 +41,8 @@ Template: [_templates/source-README.md](_templates/source-README.md).
 python3 -I _tools/build_index.py          # rebuild section INDEX tables + check links
 python3 -I _tools/build_index.py --check-only
 python3 -I _tools/build_master_index.py    # rebuild top-level INDEX.md
+python3 -I _tools/check_license.py --arxiv <id> --doi <doi>   # licence lookup for a new PDF
+python3 -I _tools/apply_local_only.py      # apply _tools/licenses.json: .gitignore + "local only" notes
 cat */*/citation.bib > bibliography.bib    # regenerate the bibliography
 ```
 To add a source, copy the template into a new `YYYY-author-shortname/` folder in the right section, fill in the README, and rerun the script.
