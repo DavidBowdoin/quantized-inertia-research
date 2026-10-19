@@ -17,7 +17,7 @@ tags: [lab-test, gravity, rindler-horizon]
 # Can We Hide Gravitational Sources behind Rindler Horizons?
 
 <!-- local-only-note -->
-> 📁 **Local only:** the figures rendered from this paper are kept out of the public repository (`CC-BY-NC-ND-2.5` does not permit derivatives). The PDF itself is included.
+> 📁 **Local only:** the figures rendered from this paper are kept out of the public repository (`CC-BY-NC-ND-2.5` does not permit derivatives). The PDF itself is included; each figure caption below links to its page in the PDF.
 
 **Citation:** McCulloch, M. E. (2019). *Can We Hide Gravitational Sources behind Rindler Horizons?* Progress in Physics, 15(2), 72–74. https://progress-in-physics.com/2019/PP-57-05.PDF (submitted 5 May 2019).
 
@@ -54,7 +54,7 @@ $$ a = \frac{4\pi^2 r R^2}{3600}, \qquad d_R = \frac{c^2}{a} = \frac{900\,c^2}{\
 - Expected Sun signal for a disc of radius 0.2 m, averaged over the whole disc: about 6.25 × 10⁻⁶ m/s².
 
 ## Figures
-*Figure (local only): Fig. 1 — Schematic of the Hubble horizon with a photon moving rightwards at c. Its Rindler horizon passes through it, so mass in the shaded left half is "irrelevant" and the right half's pull dominates, which the paper says predicts cosmic acceleration. (Rendered page 2 of the PDF.)*
+*Figure (local only): Fig. 1 — Schematic of the Hubble horizon with a photon moving rightwards at c. Its Rindler horizon passes through it, so mass in the shaded left half is "irrelevant" and the right half's pull dominates, which the paper says predicts cosmic acceleration. (Rendered page 2 of the PDF.)* → [view on PDF p. 2](paper.pdf#page=2)
 
 ## Notable quotes
 > "if an object, say a disc, is rotationally accelerated by over ∼10¹⁰ m/s² then the Rindler horizon it sees should come close enough to hide part of the Earth" (abstract, p. 72)

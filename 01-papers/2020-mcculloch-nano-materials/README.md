@@ -17,7 +17,7 @@ tags: [propulsion, nanotechnology, uncertainty-principle, asymmetric-cavity]
 # Can Nano-Materials Push Off the Vacuum?
 
 <!-- local-only-note -->
-> 📁 **Local only:** the figures rendered from this paper are kept out of the public repository (`CC-BY-NC-ND-2.5` does not permit derivatives). The PDF itself is included.
+> 📁 **Local only:** the figures rendered from this paper are kept out of the public repository (`CC-BY-NC-ND-2.5` does not permit derivatives). The PDF itself is included; each figure caption below links to its page in the PDF.
 
 **Citation:** McCulloch, M. E. (2020). *Can Nano-Materials Push Off the Vacuum?* Progress in Physics, 16(2), 92–93 (Issue 2, October 2020). PDF: https://progress-in-physics.com/2020/PP-60-02.PDF
 
@@ -48,7 +48,7 @@ $$ L^2 = \frac{2\hbar c}{3ma} = \frac{8\hbar c}{15\pi L^2 \rho\delta a} \;\Right
 - No experiment is reported or proposed in detail.
 
 ## Figures
-*Figure (local only): Fig. 1 — The asymmetrical metal cavity: a wide sphere (size L) joined to a narrow one (size l), with a photon moving back and forth over distance d. Rendered page 92 (PDF p. 1).*
+*Figure (local only): Fig. 1 — The asymmetrical metal cavity: a wide sphere (size L) joined to a narrow one (size l), with a photon moving back and forth over distance d. Rendered page 92 (PDF p. 1).* → [view on PDF p. 1](paper.pdf#page=1)
 
 ## Notable quotes
 > "if we build an asymmetric metal cavity such as that shown in Figure 1, with its narrow end upwards and on a scale of 129 nm or less, then it should levitate simply from the already-present zero point field without any input power." (p. 93)

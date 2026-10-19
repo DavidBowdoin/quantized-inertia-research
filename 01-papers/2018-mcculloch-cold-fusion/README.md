@@ -17,7 +17,7 @@ tags: [lenr, cold-fusion, unruh-radiation]
 # Can Cold Fusion Be Explained by Quantised Inertia?
 
 <!-- local-only-note -->
-> 📁 **Local only:** the figures rendered from this paper are kept out of the public repository (`CC-BY-NC-ND-2.5` does not permit derivatives). The PDF itself is included.
+> 📁 **Local only:** the figures rendered from this paper are kept out of the public repository (`CC-BY-NC-ND-2.5` does not permit derivatives). The PDF itself is included; each figure caption below links to its page in the PDF.
 
 **Citation:** McCulloch, M. E. (2018). *Can Cold Fusion Be Explained by Quantised Inertia?* Progress in Physics, 14(2), 63–65. https://progress-in-physics.com/2018/PP-53-02.PDF (submitted 20 January 2018).
 
@@ -51,7 +51,7 @@ $$ D < (4\pi\varepsilon_0\sigma)^{1/4}\,\frac{\hbar}{3k}\,c^{3/4}\,\sqrt{\frac{d
 - Prediction: a nanometal made with regular cracks smaller than 28 nm should produce LENR "far more uniformly".
 
 ## Figures
-*Figure (local only): Fig. 1 — Schematic of two deuterons a distance d apart inside a crack of width D in a palladium lattice. Mutual sheltering creates a radiation-free zone between them, and the non-uniform thermal radiation pushes them together. (Rendered page 2 of the PDF.)*
+*Figure (local only): Fig. 1 — Schematic of two deuterons a distance d apart inside a crack of width D in a palladium lattice. Mutual sheltering creates a radiation-free zone between them, and the non-uniform thermal radiation pushes them together. (Rendered page 2 of the PDF.)* → [view on PDF p. 2](paper.pdf#page=2)
 
 ## Notable quotes
 > "quantised inertia predicts that in cracks in the metal with diameters less than 28 nm, the temperature is 27,000 K" (abstract, p. 63)

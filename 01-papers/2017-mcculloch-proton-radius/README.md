@@ -17,7 +17,7 @@ tags: [particle-physics, unruh-radiation]
 # The Proton Radius Anomaly from the Sheltering of Unruh Radiation
 
 <!-- local-only-note -->
-> 📁 **Local only:** the figures rendered from this paper are kept out of the public repository (`CC-BY-NC-ND-2.5` does not permit derivatives). The PDF itself is included.
+> 📁 **Local only:** the figures rendered from this paper are kept out of the public repository (`CC-BY-NC-ND-2.5` does not permit derivatives). The PDF itself is included; each figure caption below links to its page in the PDF.
 
 **Citation:** McCulloch, M. E. (2017). *The Proton Radius Anomaly from the Sheltering of Unruh Radiation*. Progress in Physics 13(2), 100–101 (April 2017; submitted 5 Jan 2017, accepted 19 Jan 2017). https://progress-in-physics.com/2017/PP-49-05.PDF. Progress in Physics does not assign DOIs.
 
@@ -48,7 +48,7 @@ $$E \sim \frac{h\alpha^2 c}{8R} \times \frac{\pi r_P^2}{2\pi R^2} = 2.8\times10^
 - The paper proposes no new experiment and gives no explanation for the remaining ~45%.
 
 ## Figures
-*Figure (local only): Fig. 1 — Schematic of a muon (small right-hand circle) orbiting close to a proton (large left-hand circle). Unruh radiation pushes on the muon from all directions except where the proton blocks it (truncated arrow), giving a net force towards the proton.*
+*Figure (local only): Fig. 1 — Schematic of a muon (small right-hand circle) orbiting close to a proton (large left-hand circle). Unruh radiation pushes on the muon from all directions except where the proton blocks it (truncated arrow), giving a net force towards the proton.* → [view on PDF p. 1](paper.pdf#page=1)
 
 ## Notable quotes
 > "Here it is shown that 55% of this extra energy can be explained if Unruh radiation seen by the orbiting muon can push on it, and is being asymmetrically blocked by the proton." (p. 100, Abstract)

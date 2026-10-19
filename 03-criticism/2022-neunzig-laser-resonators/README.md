@@ -8,8 +8,8 @@ doi: 10.1007/s12567-021-00366-4
 arxiv:
 url: "https://doi.org/10.1007/s12567-021-00366-4"
 open_access: true
-license: unknown
-files: [paper.pdf, figures/fig-10-beam-trap.png, figures/fig-13-taylor-light.png, figures/fig-16-17-photon-loops.png]
+license: CC-BY-4.0
+files: [paper.pdf, paper-conference.pdf, citation.bib, figures/fig-10-beam-trap.png, figures/fig-13-14-taylor-thrust.png, figures/fig-17-asymmetric-loop.png]
 status: critical
 tags: [darpa-collaborator, direct-qi-test, emdrive, lab-test, laser, null-result, propulsion, tu-dresden]
 ---
@@ -17,11 +17,11 @@ tags: [darpa-collaborator, direct-qi-test, emdrive, lab-test, laser, null-result
 # Thrust measurements and evaluation of asymmetric infrared laser resonators for space propulsion
 
 <!-- local-only-note -->
-> 📁 **Local only:** the stored PDF and its rendered figures are kept out of the public repository because this copy's licence (`unknown`) does not permit redistribution. Read the paper at [doi:10.1007/s12567-021-00366-4](https://doi.org/10.1007/s12567-021-00366-4).
+> 📁 **Local only:** `paper-conference.pdf` (licence `unknown`) is kept out of the public repository. The openly licensed `paper.pdf` is included.
 
 **Citation:** Neunzig, O., Weikert, M. & Tajmar, M. (2022). *Thrust measurements and evaluation of asymmetric infrared laser resonators for space propulsion*. CEAS Space Journal, 14(1), 45–62 (online 24 April 2021). https://doi.org/10.1007/s12567-021-00366-4. CC BY 4.0. A correction was issued as https://doi.org/10.1007/s12567-021-00372-6 (27 May 2021); its content was not checked.
 
-**About the stored PDF:** The Springer PDF could not be downloaded because of a bot challenge. `paper.pdf` is therefore the **conference version**, SP2020_104, from the Space Propulsion 2020+1 conference (17–19 March 2021), hosted openly by TU Dresden ([link](https://tu-dresden.de/ing/maschinenwesen/ilr/rfs/ressourcen/dateien/forschung/folder-2007-08-21-5231434330/ag_raumfahrtantriebe/SPC-Thrust-Measurements-and-Evaluation-of-Asymmetric-Infrared-Laser-Resonators-for-Space-Propulsion.pdf)). It is 20 pages long and its abstract is identical to the journal abstract. Page numbers below refer to it. Journal-specific details were cross-checked against the Springer HTML.
+**About the stored PDF:** `paper.pdf` is the published CC BY 4.0 journal version (18 pages, journal pp. 45–62), retrieved from the German National Library archive copy ([d-nb.info/124181175X](https://d-nb.info/124181175X/34)) because Springer's site blocks scripted downloads. **Page numbers below are PDF pages** (journal page = PDF page + 44). An earlier conference version (SP2020_104, Space Propulsion 2020+1, 20 pages, [TU Dresden link](https://tu-dresden.de/ing/maschinenwesen/ilr/rfs/ressourcen/dateien/forschung/folder-2007-08-21-5231434330/ag_raumfahrtantriebe/SPC-Thrust-Measurements-and-Evaluation-of-Asymmetric-Infrared-Laser-Resonators-for-Space-Propulsion.pdf)) is kept locally as `paper-conference.pdf`. Where a quote appears only in that version, we say so.
 
 **TL;DR:** This is a direct test of QI, part of McCulloch's DARPA-funded programme (award HR001118C0125), which McCulloch says he persuaded Tajmar to join in 2017. Travis Taylor had proposed laser "EMDrives" based on QI. TU Dresden built a sub-nN inverted counterbalanced double-pendulum balance and tested several devices:
 - copper and silver asymmetric metal cavities (CC/CX, CC/CC, Circle);
@@ -38,7 +38,7 @@ Every device gave only the classical photon thrust F = P/c (about 1–2 nN at 0.
   - This lowers QI predictions to "2–3 orders of magnitude above the photon thrust limit, which is still of major interest". It also "invalidates Taylor's Eq. 3", whose assumptions gave 0.1 N per W.
   - Their worst-case prediction for a device is photon thrust × S.
 - **Set-up:** an inverted counterbalanced double-pendulum balance with sub-nN sensitivity, operated in vacuum. Laser power was limited to ≤ 1 W (3.3 nN photon thrust) to control thermal drift. An 808 nm laser at 0.01–0.65 W was used, among others. The balance was verified with a beam trap, which measured photon thrust to within error.
-- **Encapsulation detail (later central to McCulloch's response):** "every copper cavity was encapsuled in an aluminium case, similar to the beam trap mentioned previously, to minimize heat radiation to the balance components" (p. 7).
+- **Encapsulation detail (later central to McCulloch's response):** "every copper cavity was encapsuled in an aluminium case, similar to the beam trap mentioned previously, to minimize heat radiation to the balance components" (p. 6).
 - **One false positive found and resolved:** the silver CC/CX cavity first showed a force 50% above photon thrust, with suspicious on/off delays. The cause was vaporisation of an undisclosed transparent protective film on the silver coating, detected as a rise in chamber pressure. It was removed by baking at 200 °C.
 
 ## Key equations
@@ -55,24 +55,24 @@ $$ F_{QI} \approx \frac{P\,S}{c}, \qquad F_{\rm photon} = \frac{P}{c} $$
 - Balance time series, averaged over 40–60 profiles; laser power measured with a calibrated power meter; resonator decay times (about 250 ns, "equivalent to a Q of millions").
 
 ## Results & predictions
-- Beam trap (vacuum): (0.32 ± 0.23), (0.94 ± 0.31) and (1.64 ± 0.26) nN at 109, 292 and 497 mW, against calculated photon thrust of 0.36, 0.97 and 1.66 nN (p. 13). The text prints "0.36 mN", an apparent typo.
+- Beam trap (vacuum): (0.32 ± 0.23), (0.94 ± 0.31) and (1.64 ± 0.26) nN at 109, 292 and 497 mW, against calculated photon thrust of 0.36, 0.97 and 1.66 nN (p. 11). The text prints "0.36 mN", an apparent typo.
 - Metal cavities: expected amplification of about 9× photon thrust for copper and 39× for silver. Measured values show "excellent agreement with classical photon thrust and no anomalous force as predicted by QI".
-- BART silver LED cavity at 1.54 W: the claimed effect implied 2700 nN; measured (0.22 ± 4.13) nN, "ruling out any anomalous thrust by 4 orders of magnitude" (p. 14). The BART design was suggested by Lucio and McCulloch, with initial positive reports by Komala.
+- BART silver LED cavity at 1.54 W: the claimed effect implied 2700 nN; measured (0.22 ± 4.13) nN, "ruling out any anomalous thrust by 4 orders of magnitude" (p. 13). The BART design was suggested by Lucio and McCulloch, with initial positive reports by Komala.
 - Taylor resonators (amplification factors 500–908): only photon thrust, "ruling out theoretical predictions by three orders of magnitude". Taylor-Classic had a feedthrough offset of about 67 nN at 500 mW; the differential measurement was below photon thrust.
 - Fibre-optic loops (at least 4330 windings, 4000 used conservatively): no thrust, symmetric or asymmetric, with or without the shield (Figs. 16–17).
-- Conclusion: QI-predicted forces "should have been detected at least 4 orders of magnitude above" (p. 17). The authors acknowledge that "our simple application of QI thrust prediction must be only an assumption as in reality the actual geometry must play an important role". They counter that McCulloch "claimed to exactly match claimed thrusts for the EMDrive and other devices with his simple equations" (pp. 17–18).
+- Conclusion: QI-predicted forces "should have been detected at least 4 orders of magnitude above" (p. 17). The authors acknowledge that "our simple application of QI thrust prediction must be only an assumption as in reality the actual geometry must play an important role" (conference version only; this sentence is not in the journal text). They counter that McCulloch "claimed to exactly match claimed thrusts for the EMDrive and other devices with his simple equations" (p. 17).
 
 ## Figures
-*Figure (local only): Fig. 10 — Beam-trap thrust measurements in vacuum at different laser powers: measured force matches classical photon thrust, verifying the balance at the nN level. (Rendered page 13 of the SP2020+1 PDF.)*
+![Fig. 10 — Beam-trap thrust measurements in vacuum at two laser powers: the measured force matches classical photon thrust, verifying the balance at the nN level. Figs. 8–9 (loop configurations and set-up) and Table 1 are on the same page. (PDF p. 12.)](figures/fig-10-beam-trap.png)
 
-*Figure (local only): Figs. 12–14 — Taylor-type laser-resonator set-up and thrust measurements: only photon thrust is seen; Fig. 14 shows blocked/unblocked/differential runs for Taylor-Classic. (Rendered page 15 of the SP2020+1 PDF.)*
+![Figs. 13–14 — Thrust measurements for the Taylor-Light and Taylor-Classic laser-resonator set-ups (blocked / unblocked / differential): only photon thrust is seen. (PDF p. 15.)](figures/fig-13-14-taylor-thrust.png)
 
-*Figure (local only): Figs. 16 & 17 — Photon-loop tests: (16) symmetric loop at ambient pressure, shielded vs unshielded, whose difference is null (the common signal is attributed to liquid-metal contacts); (17) asymmetric loop in vacuum with and without an Unruh shield at the big radius, no thrust above ~±1 nN noise. The start of the Conclusion is on the same page. (Rendered page 17 of the SP2020+1 PDF.)*
+![Fig. 17 — Asymmetric fibre-optic loop in vacuum, with and without an Unruh shield at the big radius: no thrust above the nN noise. The Conclusion and the CC BY 4.0 licence statement are on the same page. (PDF p. 17.)](figures/fig-17-asymmetric-loop.png)
 
 ## Notable quotes
 > "This puts strong limits on all proposed theories like quantised inertia by at least 4 orders of magnitude for the laboratory-scale geometries and power levels used with worst case assumptions for the theoretical predictions." (p. 1, abstract)
 
-> "At 1.54 W of optical LED power, the expected thrust from the claimed measurement would have been 2700 nN [12], however we measured (0.22±4.13) nN, ruling out any anomalous thrust by 4 orders of magnitude." (p. 14)
+> "At 1.54 W of optical LED power, the expected thrust from the claimed measurement would have been 2700 nN [12], however we measured (0.22±4.13) nN, ruling out any anomalous thrust by 4 orders of magnitude." (p. 13)
 
 ## Criticisms & responses
 - **McCulloch's response (blog, 27 Apr 2021, "Response to Tajmar's New Cavity Results").** McCulloch opens: "there is no criticism of Tajmar's team here". He says he had not known, until reading the paper, that "every copper [and silver] cavity was encapsulated in an aluminium case". In QI the Unruh waves seen by the accelerated photons extend outside a partially transparent cavity, so the cavity "falls down" the Unruh gradient. A symmetric metal box around it means "there's no background gradient", and the combined cavity and box should show "no or much less thrust" ([blog](https://physicsfromtheedge.blogspot.com/2021/04/response-to-tajmars-new-cavity-results.html)).
