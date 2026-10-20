@@ -102,7 +102,7 @@ Do not hand-edit the content between `<!-- BEGIN AUTO-INDEX -->` and `<!-- END A
 - Ask the user before pushing, changing repository visibility, or deleting anything remote.
 
 ## Good next work (see `08-synthesis/ideas-and-tests.md`)
-- A1 (`09-analysis/a1-sparc-rar-refit/`, stdlib only) and A1b (`09-analysis/a1b-sparc-per-galaxy/`, numpy/scipy) are done. Next: A2, the Renda-corrected F(a), reusing both scripts. Rerun a script after editing it; never hand-edit `results/`.
+- A1 (`09-analysis/a1-sparc-rar-refit/`, stdlib only) and A1b (`09-analysis/a1b-sparc-per-galaxy/`, numpy/scipy) are done. Next: reproduce McCulloch's 2017 binned/RMS comparison and trace his later derivations (A2b), then test his published redshift prediction (A6). Keep Renda's disputed reconstruction (A2) and our calibrated variants separate from the author's predictions. Rerun a script after editing it; never hand-edit `results/`.
 - Python env: `uv venv --python 3.13 .venv && uv pip install --python .venv/bin/python -r 09-analysis/requirements.txt` (`.venv/` is git-ignored; the system Python is 3.9 and end-of-life).
 - Track new arXiv papers and blog posts (physicsfromtheedge.blogspot.com).
 - Resolve the `[!UNVERIFIED]` items, especially paywalled papers summarised from their abstracts.

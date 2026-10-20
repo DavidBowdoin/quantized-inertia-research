@@ -1,28 +1,33 @@
 ---
 title: "Ideas: analyses we could run and tests that would decide"
 tags: [synthesis, ideas, predictions]
-as_of: 2026-10-19
+as_of: 2026-10-20
 ---
 
 # What we can come up with: analyses and decisive tests
 
 > **Editorial.** These are proposals, not results. Items marked 🔧 are analyses this repository could carry out with public data. Items marked 🔬 need new observations or experiments.
 
+**How to test QI faithfully.** Start from the equations, definitions of acceleration and horizon scale, domain and comparison stated in the relevant McCulloch paper. Reproduce that comparison before extending it. Identify criticisms by the version and assumptions they address; do not adopt a critic's reconstruction as the definition of QI. Label our fitted variants and theoretical extensions separately. This preserves both the author's explanation and the possibility of a result against it.
+
 ## A. Analyses we could do ourselves
 
 ### 🔧 A1. Fixed-Θ refit of the SPARC radial acceleration relation
 Take the public [SPARC](http://astroweb.cwru.edu/SPARC/) RAR (153 galaxies, ~2700 points) and fit:
-- QI with Θ = 2.6 × 10²⁶ m (fixed, early papers)
+- The 2017 QI equation with Θ = 2.6 × 10²⁶ m (sensitivity to the older scale, not a reproduction of an early paper)
 - QI with Θ = 8.8 × 10²⁶ m (fixed, 2017 on)
 - QI with Θ free
 - MOND (simple and standard μ, a₀ free)
 
-Compare fit quality at fixed and free Θ, reporting the dependence on errors, priors and within-galaxy correlations. This quantifies how the choice of Θ affects QI's "no free parameter" comparison, without equating a fit score with exclusion significance. McCulloch 2017 showed agreement only by eye ([source](../01-papers/2017-mcculloch-galaxy-rotations-sparc/README.md)).
+Compare fit quality at fixed and free Θ, reporting the dependence on errors, priors and within-galaxy correlations. McCulloch 2017 compared his prediction visually with binned data displayed with RMS scatter ([source](../01-papers/2017-mcculloch-galaxy-rotations-sparc/README.md)). Reproducing that comparison and testing systematic offsets in bin means are distinct tasks; agreement within scatter can coexist with an offset. A fit score alone is not an exclusion significance.
 
 > **Status (2026-10-19): A1 and A1b complete, with conditional conclusions.** [A1](../09-analysis/a1-sparc-rar-refit/README.md) finds that both published fixed Θ values fit worse than a free scale under its error and baryonic assumptions. Θ = 8.8 × 10²⁶ m over-predicts low-acceleration bin means by 17–32% in acceleration (about 8–15% in velocity at fixed radius); the best Θ is ≈ 1.23 × 10²⁷ m. Point-level ΔBIC is +490 vs MOND simple, but neither that score nor its galaxy bootstrap calibrates exclusion significance. [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md), with per-galaxy distance, inclination and Υ★ priors, also favors a free scale (baseline Θ ≈ 1.37 × 10²⁷ m). Its statistic is Q = velocity χ² + prior penalty, not BIC. It includes a full refit and bootstrap with enlarged velocity errors and reports distance shifts by measurement method and standardized uncertainty. Formal model comparison with correlated errors and broader prior sensitivity remains open.
 
-### 🔧 A2. Renda-corrected F(a) applied to galaxies
-Renda (2019) gives the proper discrete-spectrum F(a), which peaks at ≈ 2.17 near 1.2 × 10⁻⁹ m s⁻² ([source](../03-criticism/2019-renda-sceptical/README.md)). Feed that F(a) into the rotation-curve formula and see whether "corrected QI" still fits the RAR. If it does not, the galaxy fits depend on the flawed step.
+### 🔧 A2. Test Renda's reconstruction of F(a)
+[Renda (2019)](../03-criticism/2019-renda-sceptical/README.md) reconstructs the discrete-spectrum calculation behind the early QI derivation and reports a peak F ≈ 2.17 near 1.2 × 10⁻⁹ m s⁻². Reproduce his calculation and audit its wavelength convention and mode count before deriving a galaxy prediction from it. [Junghanns (2026, unreviewed preprint)](../03-criticism/2026-junghanns-causal-restriction-nogo/README.md) disputes that peak; this repository has not independently resolved the disagreement. A galaxy fit would test the specified reconstruction and its additional dynamical assumptions, not automatically McCulloch's later derivations or all QI predictions.
+
+### 🔧 A2b. Trace McCulloch's later derivations to their galaxy predictions
+In his [30 August 2026 response](https://physicsfromtheedge.blogspot.com/2026/08/responding-to-criticisms.html), McCulloch acknowledges the peak-spectrum limitation and points to uncertainty-principle and information-erasure derivations of the same formula. Start with the [2020 horizon-width paper](../01-papers/2020-mcculloch-horizon-widths/README.md) and [2020 information-theory paper](../01-papers/2020-mcculloch-information-theory/README.md), checking subsequent revisions where available. Track the assumptions needed to obtain the inertial-mass law and then the 2017 galaxy relation, including the distinction between rotational acceleration and local motions. Identify which criticism applies to which step. Recovering the same formula would leave A1/A1b's empirical diagnostics relevant; it would not by itself validate the derivation. A changed prediction must be labelled as the author's revision or our editorial extension, with its provenance.
 
 ### 🔧 A3. Thrust-prediction ledger
 Make a table of every quantitative QI thrust prediction: EmDrive, laser resonators, fibre loops, capacitors, IVO. For each, list the prediction, the measured upper limit and the ratio. The data are already in [propulsion](../02-evidence/propulsion.md) and the 03-criticism READMEs. A log-scale chart would show where QI has been tested and where it hasn't.
@@ -56,7 +61,7 @@ For each QI paper, recompute the headline number with both Θ values. This shows
 | 2 | A8 | Wide binaries binned by internal acceleration (Gaia DR4, 2 Dec 2026) | No external field effect means the boost keeps growing at low acceleration; MOND levels off | Uncertain: the field is split | Weeks |
 | 3 | A12 | Does the SPARC external-field signal survive? | QI predicts **no** environment dependence; recent reanalyses find weak or no evidence for it | Moderate | Days |
 | 4 | A13 | Isolated-vs-EFE dwarf and UDG population test | Coma UDGs prefer no EFE; several Milky Way and Andromeda dwarfs prefer EFE | Mixed | Days |
-| 5 | A7 | Pre-registered Θ, then held-out tests | Converts a post-hoc coincidence into a real prediction | Unknown | Hours |
+| 5 | A7 | Pre-registered Θ, then held-out tests | Separates the published prediction from variants calibrated on SPARC | Unknown | Hours |
 | 6 | A9 | Flyby formula applied to post-2013 flybys | The later nulls have never been checked against QI's own formula | Moderate | Days |
 | 7 | A10 | Independent OTP-2 orbit-decay analysis | The only in-space QI thrust test; the data are public | Low (see below) | Days |
 | 8 | A11 | Chae's inner/outer rotation-curve test with QI's own function | A direct test of "modified inertia" against "modified gravity" | Low to moderate | Days |
@@ -72,31 +77,32 @@ For each QI paper, recompute the headline number with both Θ values. This shows
 
 **What each law predicts** (editorial check; the ratio of the scale at z to the scale today, using Planck 2018 parameters H₀ = 67.4, Ω_m = 0.315):
 
-| z | MOND (constant a₀) | QI as printed, Θ ∝ 1/(1+z) ([2017](../01-papers/2017-mcculloch-galaxy-rotations-sparc/README.md)) | Scale ∝ H(z) (cH/2π variants) | Θ = proper particle-horizon diameter at that epoch |
+| z | MOND (constant a₀) | QI as printed, Θ ∝ 1/(1+z) ([2017](../01-papers/2017-mcculloch-galaxy-rotations-sparc/README.md)) | Scale ∝ H(z) (cH/2π variants) | Editorial alternative: Θ = proper particle-horizon diameter at that epoch |
 |---|---|---|---|---|
 | 0.5 | 1 | 1.50 | 1.32 | 1.74 |
 | 1 | 1 | 2.00 | 1.79 | 2.63 |
 | 2 | 1 | 3.00 | 3.03 | 4.80 |
 
-The last column matters. McCulloch 2017 takes the **comoving** diameter (8.8 × 10²⁶ m) and divides by (1+z). But the comoving particle horizon was itself smaller in the past, so a horizon-set Θ shrinks faster than 1/(1+z). The two readings of QI separate clearly by z ≈ 1–2. This is a choice the theory has to make, and the data can make it.
+McCulloch 2017 specifies Θ₀ = 8.8 × 10²⁶ m and Θ(z) = Θ₀/(1+z); that is the primary prediction to test. The last column instead evolves the proper particle-horizon diameter in the stated cosmology, including the evolution of its comoving radius. It is an editorial alternative, not a second law attributed to McCulloch. Its different redshift dependence can be compared separately without replacing his published prescription.
 
 **Editorial reading of the headline numbers.** Against the local a₀ ≈ 1.2 × 10⁻¹⁰, MUSE-DARK's z ≈ 1 value is a ratio of about 2.0. Against the paper's own fitted intercept the ratio is larger, about 2.4 `[!UNVERIFIED: intercept read from the paper body by a research agent, not from the abstract]`. Either way the scale rises, which standard MOND does not predict and QI does. The printed (1+z) law gives 2.0; the proper-horizon reading gives 2.6 at z = 1 but 4.8 at z = 2, where Milgrom's argument bites.
 
 **The test.**
 1. Download the MUSE-DARK rotation curves (data releases at dark.univ-lyon1.fr; check exactly what is served) and refit them with **QI's own function**, a = a_bar·√(1 + a_Q/a_bar), in redshift bins. The paper uses a different interpolating function, and our [A1](../09-analysis/a1-sparc-rar-refit/README.md) refit showed that the QI scale and the McGaugh a₀ differ by about 1.3× locally.
-2. Fit a_Q(z) = a_Q(0)·f(z) for each column of the table above, with a_Q(0) **fixed from SPARC** ([A1](../09-analysis/a1-sparc-rar-refit/README.md), [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md)), and compare.
-3. Add the Genzel et al. 2020 z ≈ 1–2.4 sample as a high-z lever arm.
+2. **Primary test: McCulloch's published prediction.** Fix Θ₀ = 8.8 × 10²⁶ m and a_Q(z) = (2c²/Θ₀)(1+z), using 2017 Eqs. 8–9. Do not fit the normalization or redshift law to SPARC or the high-z sample. State the baryonic and observational nuisance assumptions and test their sensitivity.
+3. **Separate calibrated test.** Freeze a_Q(0) from [A1](../09-analysis/a1-sparc-rar-refit/README.md) or [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md) before using high-z data, propagate its uncertainty, and test the (1+z) evolution. This tests transfer of a locally fitted scale, not the published parameter-free normalization.
+4. Compare constant-scale, H(z) and proper-particle-horizon alternatives separately, documenting each normalization. Add the Genzel et al. 2020 z ≈ 1–2.4 sample as a high-z lever arm.
 
-**QI-favourable result:** the scale rises at the rate of one of QI's two Θ(z) laws, starts from the SPARC value at z = 0, and stays consistent with Genzel at z ≈ 2. **Against QI:** the rise turns out to be a modelling artefact (the paper uses a dark-matter disc–halo decomposition, and ΛCDM simulations also predict some drift), or it follows neither law.
+**Favourable to the published prediction:** both the absolute scale and its (1+z) evolution agree with the data under defensible observational assumptions. **Against that prediction:** its normalization or evolution remains inconsistent across sensitivity checks. Agreement only after SPARC calibration supports the separate calibrated variant; agreement with the proper-horizon alternative supports that editorial extension. A rising fitted scale alone, especially if sensitive to the disc–halo decomposition, does not decide among them.
 
 **Caveats.** The paper's a₀ is a fitted parameter of a disc–halo model, not a direct observable. A rising scale also fits some "a₀ ∝ cH" MOND variants, so success would not single out QI from every horizon-based model ([mond](../05-context/mond.md)). Junghanns 2026 already lists the competing Θ(t) prescriptions as untested ([source](../03-criticism/2026-junghanns-causal-restriction-nogo/README.md)).
 
 #### 🔧 A7. Pre-register Θ, then test it on data it was not fitted to
-**Why it matters.** The scorecard's main objection is that Θ was chosen after looking at the data. Our SPARC fits ([A1](../09-analysis/a1-sparc-rar-refit/README.md), [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md)) prefer a_Q ≈ 1.31–1.47 × 10⁻¹⁰ m s⁻², which is Θ ≈ 1.23–1.37 × 10²⁷ m, and neither published Θ.
+**Why it matters.** The papers give cosmological justifications for their different Θ values; the change alone does not establish that McCulloch fitted Θ to galaxy data. Our SPARC fits ([A1](../09-analysis/a1-sparc-rar-refit/README.md), [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md)) prefer a_Q ≈ 1.31–1.47 × 10⁻¹⁰ m s⁻², which is Θ ≈ 1.23–1.37 × 10²⁷ m, under their assumptions. Any new scale we select using those results must be distinguished from McCulloch's published value and tested on held-out data.
 
 **Editorial check (a coincidence, not a result).** With Planck 2018 parameters, the comoving particle-horizon radius is R_p = 4.37 × 10²⁶ m. Its diameter, 2R_p = 8.73 × 10²⁶ m, is QI's 2017 Θ. Its **half circumference**, πR_p = 1.371 × 10²⁷ m, gives a_Q = 1.31 × 10⁻¹⁰ m s⁻². That is the A1b per-galaxy best fit (Θ ≈ 1.37 × 10²⁷ m) almost exactly. McCulloch's 2020 derivation already uses horizon *half circumferences* for Δx ([2020](../01-papers/2020-mcculloch-horizon-widths/README.md)), but plugging that length in for Θ is not what the derivation does. Other standard lengths give 6.5 × 10⁻¹⁰ (2c/H₀), 5.7 × 10⁻¹⁰ (event-horizon diameter), 5.4 × 10⁻¹⁰ (de Sitter diameter) and 1.7 × 10⁻¹⁰ (de Sitter circumference).
 
-**The test.** Write down one Θ, with its justification, **before** looking at new data. Then test that frozen value on samples it was not tuned to: the high-z data in A6, the lensing data in A14, the dwarfs in A13 and the wide binaries in A8. A coincidence found by searching a list of cosmological lengths is worth nothing on its own. A frozen value that then predicts held-out data would be the first genuinely parameter-free QI success.
+**The test.** Retain McCulloch's 2017 Θ as the primary baseline. For any new variant, write down its Θ, justification and applicable dynamics **before** looking at new data. Then test it on samples it was not tuned to: high-z galaxies in A6 and, where the relevant equations have been established, the other proposed systems. A match found by searching cosmological lengths is exploratory. Successful held-out predictions would add evidence for that variant, but would not erase its calibration history or retrospectively establish the author's original normalization.
 
 #### 🔧 A8. Gaia DR4 wide binaries, binned by internal acceleration (upgrades B2)
 **Timing.** ESA's Gaia archive reopens with **DR4 on 2 Dec 2026**: 66 months of data and the first epoch astrometry. Epoch astrometry can reveal hidden third stars, the main systematic in the debate.
@@ -166,9 +172,9 @@ These are not where QI is likely to gain. But a positive galaxy-scale result wil
 - McCulloch blog posts with numbers: "A Tale of Two Satellites" (30 Jan 2026), the AC G185.0-11.5 prediction (22 May 2025), weak lensing (6 Oct 2026).
 
 ## C. Suggested next steps for this repository
-1. ~~Build `09-analysis/` with A1 (SPARC refit) as the first notebook.~~ Done: [A1](../09-analysis/a1-sparc-rar-refit/README.md). [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md) (per-galaxy fits) also done. Next: A6 (see step 4), then A2 (Renda-corrected F(a)); both can reuse these scripts.
+1. ~~Build `09-analysis/` with A1 (SPARC refit) as the first notebook.~~ Done: [A1](../09-analysis/a1-sparc-rar-refit/README.md). [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md) (per-galaxy fits) also done. First complete a reproduction of McCulloch's 2017 binned comparison, including the RMS convention and data selection; the exact bins supplied privately to him have not been established here. Audit his later derivations in A2b. Keep the disputed Renda reconstruction (A2) as a separate investigation.
 2. Ask McCulloch (via the blog) for the IVO OTP-2 telemetry and the Alcalá DARPA results.
 3. Track new papers: set up a recurring check of arXiv for "quantised inertia" / "MiHsC", and new posts on physicsfromtheedge.blogspot.com.
-4. Do A6 (redshift evolution) next. It is QI's most distinctive galaxy prediction, the data are new, and it reuses the A1/A1b code. Freeze Θ first (A7).
+4. Do A6 (redshift evolution) as the next observational extension, using McCulloch's published normalization and evolution law first. Keep the locally calibrated and alternative-horizon tests separate (A7).
 5. Prepare A8 now so it can run on Gaia DR4 when it appears on 2 Dec 2026.
 6. Ask IVO (as well as McCulloch) for the OTP-2 drive-on log. Without it, A10 cannot be decisive.

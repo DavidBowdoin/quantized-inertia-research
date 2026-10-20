@@ -1,7 +1,7 @@
 ---
 title: "A1b: per-galaxy SPARC rotation-curve fits, QI vs MOND"
 tags: [analysis, galaxy-rotation, sparc, mond, theta]
-as_of: 2026-10-19
+as_of: 2026-10-20
 ---
 
 # A1b: per-galaxy SPARC rotation-curve fits, QI vs MOND
@@ -12,7 +12,7 @@ as_of: 2026-10-19
 Does allowing per-galaxy uncertainties in distance, inclination and Υ★ remove the preference for a free QI scale found in the stacked SPARC RAR fit?
 
 ## Findings and limits
-Under the tested priors and velocity-error assumptions, the two published fixed Θ values fit less well than a free scale. The baseline best QI scale is Θ ≈ 1.37 × 10²⁷ m (galaxy-bootstrap 16–84%: 1.22–1.51 × 10²⁷ m), compared with 1.23 × 10²⁷ m in A1. This challenges the claimed parameter-free agreement, but does not establish model-independent exclusion of QI.
+Under the tested priors and velocity-error assumptions, the 2017 QI equation at either fixed Θ tested here fits less well than a free scale. The baseline best QI scale is Θ ≈ 1.37 × 10²⁷ m (galaxy-bootstrap 16–84%: 1.22–1.51 × 10²⁷ m), compared with 1.23 × 10²⁷ m in A1. This identifies a conditional normalization tension, but does not establish model-independent exclusion of QI. This per-galaxy fit extends the author's binned/RMS comparison rather than reproducing it; see [A1's scope](../a1-sparc-rar-refit/README.md#relation-to-mccullochs-comparison).
 
 The comparison uses **Q = velocity χ² + prior penalty**, a descriptive penalized fit loss. It is **not BIC, a Bayes factor, or an exclusion significance**. There is no `k ln n` term. Free-scale QI includes the fixed scales and has an extra global parameter, so a lower Q is expected; the improvement alone does not reject a fixed scale. Bootstrap ranges show sampling variation conditional on the selected errors and priors, not posterior model probabilities.
 
@@ -80,7 +80,7 @@ Our own figures (CC BY 4.0), showing the baseline catalogue-error fits.
 - **Error-model and prior dependence:** enlarging random velocity errors is only one sensitivity check. Correlated rotation-curve residuals, variations in prior widths and shared calibration errors remain unmodeled. A galaxy bootstrap changes sample composition while retaining these assumptions; it does not make the result independent of per-point errors.
 - **Goodness of fit:** velocity χ² is kept separate from prior penalties. Ratios using n − p are descriptive because informative priors alter effective degrees of freedom; they are not calibrated goodness-of-fit tests here.
 - **Optimization:** local minima remain possible. Warm starts and convergence checks on final fits do not prove global optimality or replace posterior marginalization.
-- **Physics scope:** only the published 2017 QI function is tested. Renda-corrected F(a) remains a separate analysis (A2). MOND's external field effect is omitted.
+- **Physics scope:** only the published 2017 QI function is tested. The older-Θ run substitutes an earlier scale into that function; it is not a reproduction of the 2007 or 2012 analysis. Renda's disputed reconstruction remains a separate investigation (A2), alongside an audit of McCulloch's later derivations (A2b in [ideas-and-tests](../../08-synthesis/ideas-and-tests.md)). MOND's external field effect is omitted.
 
 ## Reproduce
 ```sh

@@ -4,6 +4,8 @@
 
 Each analysis is a folder holding a `README.md` (question, bottom line, method, results, caveats), a Python script (A1 needs only the standard library; later analyses use numpy and scipy, see [requirements.txt](requirements.txt)) and a `results/` folder of generated tables, JSON and SVG figures. Third-party input data are downloaded by the script into a git-ignored `data/` folder; they are not redistributed.
 
+A1 and A1b implement McCulloch's 2017 Eq. 8. The older-Θ run is a scale-sensitivity experiment within that equation. Their fit diagnostics extend his visual comparison with binned RMS scatter; reproducing his exact bins remains separate work.
+
 | ID | Analysis | Data | Status | Bottom line |
 |---|---|---|---|---|
 | A1 | [Fixed-Θ refit of the SPARC radial acceleration relation](a1-sparc-rar-refit/README.md) | SPARC (2,693 points, 147 galaxies) | done | Under the tested assumptions, both fixed Θ values fit worse than a free scale (best Θ ≈ 1.23 × 10²⁷ m). Late-Θ low-acceleration offsets are 17–32% in acceleration. No calibrated exclusion claim |

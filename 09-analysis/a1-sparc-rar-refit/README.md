@@ -1,7 +1,7 @@
 ---
 title: "A1: fixed-Θ refit of the SPARC radial acceleration relation"
 tags: [analysis, galaxy-rotation, sparc, mond, theta]
-as_of: 2026-10-19
+as_of: 2026-10-20
 ---
 
 # A1: fixed-Θ refit of the SPARC radial acceleration relation
@@ -9,16 +9,21 @@ as_of: 2026-10-19
 > **Editorial analysis.** This is our own calculation, not a published result. It tests the QI formula for the radial acceleration relation (RAR) exactly as printed in [McCulloch 2017](../../01-papers/2017-mcculloch-galaxy-rotations-sparc/README.md), against the public SPARC data. Proposed as item A1 in [ideas-and-tests](../../08-synthesis/ideas-and-tests.md).
 
 ## Question
-QI's galaxy formula is said to need "no adjustable parameter", but the paper only compared it with binned data by eye, and the cosmic length Θ has taken two values: 2.6 × 10²⁶ m (2007–2013) and 8.8 × 10²⁶ m (2017 on). How well does QI fit the RAR with each fixed Θ, which Θ do the data prefer, and how does QI compare with MOND given one free parameter?
+McCulloch's 2017 galaxy formula fixes Θ at 8.8 × 10²⁶ m from the present cosmic diameter and is compared visually with binned data displayed with RMS scatter. How well does that equation fit the public RAR under an explicit likelihood, which scale do the data prefer, and how does it compare with fitted MOND functions? Applying the older Θ = 2.6 × 10²⁶ m to the same 2017 equation is a scale-sensitivity experiment, not a reproduction of the 2007 or 2012 analysis.
 
 ## Bottom line
 1. **Θ = 2.6 × 10²⁶ m fits much worse under these assumptions.** It predicts accelerations ~2–2.4 times too high (−0.33 to −0.38 dex) in the low-acceleration bins. Point-level ΔBIC ≈ +4,400 against QI with Θ free; this is not a calibrated exclusion significance.
-2. **Θ = 8.8 × 10²⁶ m captures most of the effect but is clearly too high at low acceleration.** Mean residuals reach −0.07 to −0.12 dex (predictions 17–32% too high) below g_bar ≈ 10⁻¹¹ m s⁻². ΔBIC is +490 against MOND with fitted a₀, and +417 against QI's own best Θ. The galaxy bootstrap never brings either difference near zero (16–84%: +343 to +671 and +273 to +599).
+2. **Θ = 8.8 × 10²⁶ m captures most of the effect but lies above the low-acceleration bin means under the default baryonic assumptions.** Mean residuals reach −0.07 to −0.12 dex (predictions 17–32% too high) below g_bar ≈ 10⁻¹¹ m s⁻². ΔBIC is +490 against MOND with fitted a₀, and +417 against QI's own best Θ. The galaxy bootstrap never brings either difference near zero (16–84%: +343 to +671 and +273 to +599).
 3. **With Θ free, QI prefers Θ ≈ 1.23 × 10²⁷ m** (galaxy bootstrap 1.14–1.31 × 10²⁷ m), i.e. 2c²/Θ ≈ 1.47 × 10⁻¹⁰ m s⁻². That is about 1.4 times the co-moving diameter QI uses, and the value moves between ≈ 0.97 and 1.49 × 10²⁷ m as Υ_disk ranges over 0.4–0.6.
 4. **With Θ free, the QI function fits slightly worse than MOND's "simple" function or the McGaugh 2016 fitting function at the default Υ★.** ΔBIC is +73 (bootstrap +17 to +123), and best-Θ QI wins in 4% of resamples. The difference is a mild S-shaped residual (figure 3). It shrinks to +28 when Υ★ is also fitted, and reverses at Υ_disk = 0.6. The shape ranking depends on the baryonic assumptions.
 5. **Fitting a global Υ★ retains the preference for a free scale in this comparison.** Fixed Θ = 8.8 × 10²⁶ m then prefers Υ_disk = 0.43 and remains ΔBIC +356 behind MOND (+328 behind QI with Θ and Υ★ both free). Fixed Θ = 2.6 × 10²⁶ m drives Υ_disk to 0.17, well below the SPARC default, and remains +2,749 behind.
 
-The QI formula has a MOND-like deep limit, but the published fixed Θ values fit less well than a free scale under the assumptions tested here. This challenges the claimed parameter-free agreement; it does not establish model-independent exclusion of QI. The 17–32% offsets above concern predicted accelerations, equivalent to about 8–15% in velocity at fixed radius.
+The 2017 QI equation has a MOND-like deep limit, but both fixed scales tested here fit less well than a free scale under the stated assumptions. This identifies a conditional normalization tension; it does not establish model-independent exclusion of QI or contradict agreement within the scatter shown in the author's figure. The 17–32% offsets above concern predicted accelerations, equivalent to about 8–15% in velocity at fixed radius.
+
+## Relation to McCulloch's comparison
+In [McCulloch 2017, §3 and Fig. 1](https://arxiv.org/pdf/1709.04918), the binned data were supplied by McGaugh and the boxes represent RMS scatter. Our likelihood and the standard errors of the bin means in Figure 2 ask a different question: whether a systematic offset remains under the specified measurement-error and baryonic assumptions. A curve can lie within the point scatter while differing from the mean.
+
+This analysis reproduces the published equation, not the exact original binned comparison. Its bin selection and the correspondence to the privately supplied bins have not been established. The next reproduction step is to recover that selection and RMS convention, documenting any unavailable inputs, before drawing conclusions about the author's stated visual agreement. Any reconstruction from the public data must be labelled as such. The unbinned fit remains a separate quantitative extension.
 
 ## Data
 - **SPARC** (Lelli, McGaugh & Schombert 2016, AJ 152, 157, [doi:10.3847/0004-6256/152/6/157](https://doi.org/10.3847/0004-6256/152/6/157)), downloaded from [astroweb.case.edu/SPARC](https://astroweb.case.edu/SPARC/). The site gives no redistribution licence, so the tables are fetched by the script into `data/`, which is git-ignored. SHA-256 sums are recorded in `results/results.json`.
@@ -77,7 +82,7 @@ Our own figures (CC BY 4.0). Each follows the reader's light or dark theme.
 
 ![Binned residuals of QI for three choices of Θ](results/fig-2-residuals-qi.svg)
 
-*Figure 2. Mean residual log(g_obs / g_model) in 0.2-dex bins of g_bar for QI with three choices of Θ. Zero means the model is right on average. Bins with fewer than 20 points are not shown. The bin standard errors are 0.007–0.023 dex, smaller than the markers.*
+*Figure 2. Mean residual log(g_obs / g_model) in 0.2-dex bins of g_bar for QI with three choices of Θ. Zero means the model is right on average. Bins with fewer than 20 points are not shown. The bin standard errors are 0.007–0.023 dex, smaller than the markers. These are point-based standard errors, not the RMS scatter displayed by McCulloch or uncertainties that account for within-galaxy correlations.*
 
 ![Binned residuals of the one-parameter fits](results/fig-3-residuals-free.svg)
 
@@ -90,7 +95,7 @@ Our own figures (CC BY 4.0). Each follows the reader's light or dark theme.
 ## Caveats
 - **This is an RAR-level fit, not a fit to individual rotation curves.** Distance, inclination and Υ★ are not fitted galaxy by galaxy as in Li et al. 2018 (A&A 615, A3, [doi:10.1051/0004-6361/201732547](https://doi.org/10.1051/0004-6361/201732547)). That follow-up is now in [A1b](../a1b-sparc-per-galaxy/README.md), which also favors a free scale under its priors. A1b uses a different sample, velocity-space residuals and a prior-penalized objective, so the magnitudes of its score differences cannot be compared with A1's BIC differences as evidence that the result has become stronger.
 - **BIC uses an independence approximation here.** Galaxy resampling preserves within-galaxy clusters, but retains the same point-level error weights and model assumptions. Neither the BIC differences nor their bootstrap ranges establish exclusion significance.
-- **Only the published QI formula is tested.** That formula (2017 Eq. 8) rests on the assumption a′ = 2c²/Θ at a galaxy's edge ([equations §3](../../00-overview/equations.md#3-the-rounded-form-and-the-minimum-acceleration-20102013)). Corrected forms of F(a), such as [Renda 2019](../../03-criticism/2019-renda-sceptical/README.md), are a separate test (A2).
+- **Only the published 2017 QI formula is tested.** Eq. 8 rests on the assumption a′ = 2c²/Θ at a galaxy's edge, where a′ describes local motions separately from the mean rotational acceleration ([equations §3](../../00-overview/equations.md#3-the-rounded-form-and-the-minimum-acceleration-20102013)). Both fixed-Θ runs use that equation; the older scale does not reproduce an earlier paper's full dynamics or data comparison. [Renda's reconstruction](../../03-criticism/2019-renda-sceptical/README.md) is a separate, disputed calculation (A2), not the definition of QI used here. McCulloch's later derivations of the same inertial-mass law require their own audit (A2b in [ideas-and-tests](../../08-synthesis/ideas-and-tests.md)).
 - **The coefficient is rounded.** Using βπ² ≈ 1.99 instead of 2 changes the Θ ↔ a mapping by < 1%. That is negligible here.
 - **Redshift is ignored.** SPARC galaxies are nearby (distances up to ~130 Mpc), so QI's (1 + z) factor changes Θ by < 3%.
 - **Υ★ conventions:** Υ_bul = 1.4 Υ_disk follows the SPARC defaults (0.5 and 0.7). Gas is fixed at Υ = 1 with the 1.33 helium factor already in the SPARC tables.
