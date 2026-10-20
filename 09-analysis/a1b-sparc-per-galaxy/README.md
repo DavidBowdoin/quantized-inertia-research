@@ -48,6 +48,17 @@ Thus 43 of the 50 use Hubble-flow or cluster distances; seven use TRGB, Cepheid 
 
 Using standardized pulls, 28/153 galaxies move below −2σ_D in the fixed late-Θ fit, compared with 12/153 for MOND simple. Among TRGB distances, the counts are 13/39 and 8/39 respectively. Thus the distance tension is not absent in the more precise subsample, but the aggregate count of 20% shifts does not measure it.
 
+## Prior sensitivity and galaxy influence
+Four additional full refits retain the catalogue velocity errors and prior centres while widening the mass-to-light prior from 0.1 to 0.2 dex, doubling the distance-prior widths, doubling the inclination-prior widths, or making all three changes jointly. Every model and galaxy profile is recomputed, with 1,000 bootstrap resamples in each scenario. These choices explore sensitivity to our observational modelling; they are not assumptions supplied by McCulloch.
+
+Optimizer bounds stay at their baseline values to isolate changes to penalties. The [generated sensitivity table](results/summary.md#prior-width-sensitivity-full-refits) reports how often the published-Θ fit reaches distance or inclination bounds. Doubling a Gaussian width within fixed bounds is a truncated sensitivity experiment, not an unrestricted broad-prior fit. Distance and inclination pulls remain in original catalogue-error units. Absolute Q values across scenarios use different penalties; compare models within each scenario.
+
+**Results:** the four wider-prior scenarios give fitted QI Θ ≈ 1.28–1.38 × 10²⁷ m. Published-Θ QI has ΔQ ≈ +810 to +1,101 against fitted MOND simple, compared with +1,203 at baseline. Widening all priors gives Θ ≈ 1.28 × 10²⁷ m and reduces the published-versus-fitted QI difference from +592 to +257. These checks retain the direction of the conditional fit comparison, while changing its magnitude. In the joint scenario, 9 published-Θ fits reach distance bounds and 19 reach inclination bounds; further broadening beyond the fixed bounds has not been tested.
+
+The [galaxy-influence table](results/summary.md#which-galaxies-contribute-to-the-baseline-difference) splits each galaxy's contribution to the published-Θ QI versus fitted MOND simple difference into velocity χ² and prior penalty. It shows the five largest contributions in each direction, retaining every galaxy in the primary fit. JSON stores all contributions, including the comparison with fitted-scale QI. Leave-one-galaxy-out diagnostics reoptimize global scales using the stored profiles, rather than subtracting a contribution at a fixed scale. They test sensitivity to individual galaxies, not simultaneous removal of a selected group or independent statistical significance.
+
+NGC5055 and NGC5907 contribute about +275 and +254 to the baseline ΔQ, respectively, while NGC2403 contributes about −116. Across all single-galaxy deletions the reprofiled ΔQ stays positive (+928 to +1,326) and fitted QI Θ ranges from 1.28 to 1.45 × 10²⁷ m. No single deletion reverses the comparison under the baseline assumptions; this does not establish robustness to shared systematics or coordinated sample changes.
+
 ## Data and sample
 - **SPARC** mass models and galaxy table: Lelli, McGaugh & Schombert 2016, AJ 152, 157, [doi:10.3847/0004-6256/152/6/157](https://doi.org/10.3847/0004-6256/152/6/157). A1 fetches the tables into its git-ignored `data/` directory. Input SHA-256 checksums are recorded in `results.json`.
 - **Sample:** 153 galaxies with Q < 3 and inclination ≥ 30°, totaling 3,168 usable positive-radius, positive-velocity points with positive velocity errors. A1's 10% velocity-error cut is not applied; its RAR sample retains points from 147 of these galaxies.
@@ -59,7 +70,7 @@ Using standardized pulls, 28/153 galaxies move below −2σ_D in the fixed late-
 - **Scaling:** radii scale with D and baryonic velocities with √D. Observed velocities and errors scale by sin i₀ / sin i. There are 490 nuisance parameters across the sample.
 - **Optimization:** at each shared log₁₀ a, minimize Q over each galaxy's nuisance parameters using L-BFGS-B. The scale grid covers −11 to −8.5 in 0.01-dex steps and includes both exact fixed-Θ scales for QI. Distance and inclination bounds are generally ±5 catalogue standard deviations, intersected with physical bounds; log₁₀ Υ bounds are −1.5 to 0.7. Fits start from neighboring scale solutions. The global profile is summed, its minimum refined parabolically on the regular grid, and compared with any better exact fixed-scale point. Final nuisance diagnostics are refitted at that global scale.
 - **Reporting:** Q is split into velocity χ² and prior penalty. These are maximum-a-posteriori fits in the stated parameter coordinates, not marginalized posterior evidence. Standard BIC is based on maximized likelihood; adding prior penalties and cancelling equal nuisance counts does not by itself establish that approximation ([Schwarz 1978](https://doi.org/10.1214/aos/1176344136)).
-- **Bootstrap:** 1,000 resamples of whole galaxies, with replacement. Each resample re-sums the appropriate scenario's stored profiles and refines the global scale. Bootstrap results use this grid approximation. Both scenarios use the same seed and galaxy draws. No model-probability or exclusion interpretation is assigned to these ranges.
+- **Bootstrap:** 1,000 resamples of whole galaxies, with replacement. Each resample re-sums the appropriate scenario's stored profiles and refines the global scale. Bootstrap results use this grid approximation. All six scenarios use the same seed and galaxy draws. No model-probability or exclusion interpretation is assigned to these ranges.
 
 ## Figures
 Our own figures (CC BY 4.0), showing the baseline catalogue-error fits.
@@ -77,7 +88,7 @@ Our own figures (CC BY 4.0), showing the baseline catalogue-error fits.
 *Figure 3. Each galaxy's best QI Θ, with its nuisance parameters fitted. The wide distribution of point estimates is not an estimate of intrinsic scale variation: individual uncertainties and grid-edge solutions must also be considered.*
 
 ## Caveats
-- **Error-model and prior dependence:** enlarging random velocity errors is only one sensitivity check. Correlated rotation-curve residuals, variations in prior widths and shared calibration errors remain unmodeled. A galaxy bootstrap changes sample composition while retaining these assumptions; it does not make the result independent of per-point errors.
+- **Error-model and prior dependence:** velocity-error inflation and four prior-width scenarios cover only selected sensitivities. Prior-centre shifts, correlated rotation-curve residuals and shared calibration errors remain unmodeled. The scenarios do not combine enlarged velocity errors with widened priors. A galaxy bootstrap changes sample composition while retaining these assumptions; it does not make the result independent of per-point errors.
 - **Goodness of fit:** velocity χ² is kept separate from prior penalties. Ratios using n − p are descriptive because informative priors alter effective degrees of freedom; they are not calibrated goodness-of-fit tests here.
 - **Optimization:** local minima remain possible. Warm starts and convergence checks on final fits do not prove global optimality or replace posterior marginalization.
 - **Physics scope:** only the published 2017 QI function is tested. The older-Θ run substitutes an earlier scale into that function; it is not a reproduction of the 2007 or 2012 analysis. Renda's disputed reconstruction remains a separate investigation (A2), alongside an audit of McCulloch's later derivations (A2b in [ideas-and-tests](../../08-synthesis/ideas-and-tests.md)). MOND's external field effect is omitted.
@@ -89,9 +100,9 @@ uv pip install --python .venv/bin/python -r 09-analysis/requirements.txt
 .venv/bin/python -I 09-analysis/a1b-sparc-per-galaxy/test_fit_galaxies.py
 .venv/bin/python -I 09-analysis/a1b-sparc-per-galaxy/fit_galaxies.py
 ```
-The last command runs both scenarios, with 1,000 galaxy resamples each. The seed is fixed (`--seed 20261019`); `--boot 0` skips resampling while still refitting both scenarios. Outputs:
-- `results/results.json`: baseline fits, separate objective terms, per-galaxy diagnostics and profiles, plus the full `velocity_error_sensitivity` analysis
-- `results/summary.md`: generated comparison and distance tables
+The last command runs six scenarios, with 1,000 galaxy resamples each. The seed is fixed (`--seed 20261019`); `--boot 0` skips resampling while still refitting all scenarios. Outputs:
+- `results/results.json`: baseline and velocity-error fits with grid profiles, plus four `prior_sensitivity` fits and `galaxy_influence` diagnostics for each scenario. Prior scenarios omit bulky grid profiles after computing their bootstraps and influence diagnostics; rerun the script to regenerate those profiles.
+- `results/summary.md`: generated comparison, prior-sensitivity, galaxy-influence and distance tables
 - `results/fig-*.svg`: baseline figures
 
 ## Related

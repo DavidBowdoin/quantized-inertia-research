@@ -87,6 +87,22 @@ def read_rar():
     return pts
 
 
+def read_rar_bins():
+    """Public Lelli+2017 table: log means, within-bin SD (not SEM), count."""
+    rows = []
+    for line in (DATA / "RARbins.mrt").read_text().splitlines():
+        p = line.split()
+        if len(p) == 4 and p[0].startswith("-"):
+            x, y, sd = map(float, p[:3])
+            n = int(p[3])
+            if sd <= 0 or n < 1:
+                raise ValueError("Invalid scatter or count in RARbins.mrt")
+            rows.append(dict(x=x, y=y, sd=sd, n=n))
+    if not rows:
+        raise ValueError("No public RAR bins found")
+    return rows
+
+
 def label_rar(rar, gal, mm):
     """Attach galaxy name + mass-model components to each RAR.mrt row.
 
@@ -171,9 +187,9 @@ THETA_LATE = 8.8e26      # 2017 onward (present co-moving diameter)
 # key, label, nu, fixed log10(a) or None (free), colour slot
 MODELS = [
     ("newton", "Newton (baryons only)", nu_newton, 0.0, None),
-    ("qi_early", "QI, Θ = 2.6 × 10²⁶ m (fixed)", nu_qi, math.log10(theta_to_a(THETA_EARLY)), 1),
-    ("qi_late", "QI, Θ = 8.8 × 10²⁶ m (fixed)", nu_qi, math.log10(theta_to_a(THETA_LATE)), 2),
-    ("qi_free", "QI, Θ free", nu_qi, None, 3),
+    ("qi_early", "2017 QI, older Θ = 2.6 × 10²⁶ m", nu_qi, math.log10(theta_to_a(THETA_EARLY)), 1),
+    ("qi_late", "2017 QI, published Θ = 8.8 × 10²⁶ m", nu_qi, math.log10(theta_to_a(THETA_LATE)), 2),
+    ("qi_free", "2017 QI, fitted Θ", nu_qi, None, 3),
     ("mond_simple", "MOND simple μ, a₀ free", nu_simple, None, 4),
     ("mond_standard", "MOND standard μ, a₀ free", nu_standard, None, 5),
     ("rar_exp", "McGaugh 2016 RAR fit, a₀ free (reference)", nu_rar, None, 7),
@@ -371,7 +387,7 @@ def fig_rar(pts, fits, path):
         p.line(xs, curve(k, fits[k]["log_a"], xs), color(k), tip=MODEL[k][1])
     p.legend([("Newton (baryons only)", "var(--ink2)", "4 4")] +
              [(MODEL[k][1] if k != "mond_simple" else f"MOND simple μ, best fit a₀ = {fits[k]['a'] * 1e10:.2f} × 10⁻¹⁰", color(k), None)
-              for k in ("qi_early", "qi_late", "mond_simple")], 360, 440)
+              for k in ("qi_early", "qi_late", "mond_simple")], 290, 440)
     p.save(path)
 
 
@@ -386,6 +402,52 @@ def binned(pts, res, edges):
     return out
 
 
+def public_bin_comparison(rows):
+    """Descriptive offsets relative to scatter; no significance or fitting."""
+    comparisons = {}
+    for key, nu, a in (("qi_late", nu_qi, theta_to_a(THETA_LATE)),
+                       ("rar_reference", nu_rar, 1.2e-10)):
+        derived = []
+        for b in rows:
+            residual = b["y"] - predict(nu, math.log10(a), b["x"])[0]
+            derived.append(dict(log_gbar=b["x"], residual_dex=residual,
+                                residual_over_scatter=residual / b["sd"]))
+        comparisons[key] = dict(
+            a=a, n_bins_within_one_scatter=sum(abs(r["residual_over_scatter"]) <= 1 for r in derived),
+            max_abs_residual_over_scatter=max(abs(r["residual_over_scatter"]) for r in derived),
+            bins=derived)
+    return dict(source=BASE_URL + "RARbins.mrt", n_bins=len(rows),
+                n_points=sum(b["n"] for b in rows),
+                status="Public-bin reconstruction; identity with McCulloch's privately supplied bins is unverified.",
+                convention="Evaluate each fixed curve at the tabulated log mean gbar. Bars show tabulated "
+                "within-bin standard deviation in log gobs, not standard errors of means; no horizontal "
+                "scatter is supplied. Bin counts within scatter are descriptive, not a goodness-of-fit test.",
+                comparisons=comparisons)
+
+
+def fig_public_bins(rows, path):
+    p = Plot(840, 570, (-12.3, -8.4), (-12.3, -8.4),
+             "2017 comparison: public-bin reconstruction (original bins unverified)",
+             "log₁₀ g_bar  (m s⁻²)", "log₁₀ g_obs  (m s⁻²)")
+    p.axes([-12, -11, -10, -9], [-12, -11, -10, -9])
+    for b in rows:
+        x, y0, y1 = p.X(b["x"]), p.Y(b["y"] - b["sd"]), p.Y(b["y"] + b["sd"])
+        p.el.append(f'<path d="M{x:.1f},{y0:.1f} V{y1:.1f} M{x-4:.1f},{y0:.1f} H{x+4:.1f} '
+                    f'M{x-4:.1f},{y1:.1f} H{x+4:.1f}" stroke="var(--pt)" fill="none"/>')
+        p.marker(b["x"], b["y"], "var(--pt)", f"Public mean ± within-bin SD; n = {b['n']}")
+    xs = [-12.3 + i * .02 for i in range(196)]
+    p.line(xs, xs, "var(--ink2)", "4 4", "Newton (baryons only)")
+    p.line(xs, curve("qi_late", math.log10(theta_to_a(THETA_LATE)), xs), color("qi_late"),
+           "8 4", MODEL["qi_late"][1])
+    p.line(xs, curve("rar_exp", math.log10(1.2e-10), xs), color("rar_exp"),
+           tip="2017 paper's Eq. 2 reference, fixed a₀ = 1.2 × 10⁻¹⁰ m s⁻²")
+    p.legend([("Public bin mean ± one within-bin SD", "var(--pt)", None),
+              (MODEL["qi_late"][1], color("qi_late"), "8 4"),
+              ("Eq. 2 reference, fixed a₀ = 1.2 × 10⁻¹⁰", color("rar_exp"), None),
+              ("Newton (baryons only)", "var(--ink2)", "4 4")], 320, 420)
+    p.save(path)
+
+
 def fig_residuals(pts, fits, path, keys, title):
     edges = [-12.4 + 0.2 * i for i in range(20)]
     p = Plot(760, 400, (-12.2, -8.6), (-0.45, 0.25), title, "log₁₀ g_bar  (m s⁻²)",
@@ -397,7 +459,7 @@ def fig_residuals(pts, fits, path, keys, title):
         p.line([v[0] for v in b], [v[1] for v in b], color(k), tip=MODEL[k][1])
         for xb, mu, se, nb in b:
             p.marker(xb, mu, color(k), f"{MODEL[k][1]}: {mu:+.3f} ± {se:.3f} dex (n = {nb})")
-    p.legend([(MODEL[k][1], color(k), None) for k in keys], 440, 340 - 18 * (len(keys) - 1))
+    p.legend([(MODEL[k][1], color(k), None) for k in keys], 290, 340 - 18 * (len(keys) - 1))
     p.save(path)
 
 
@@ -419,7 +481,8 @@ def fig_theta(pts, best, path):
         v = math.log10(th)
         dv = profile(nu_qi, math.log10(theta_to_a(th)), pts)["m2lnl"] - lo
         p.marker(v, math.log10(1 + dv), color(k), f"{MODEL[k][1]}: Δ(−2 ln L) = {dv:.0f}")
-        p.text(p.X(v) + 10, p.Y(math.log10(1 + dv)) + 4, f"Θ = {th / 1e26:.1f} × 10²⁶ m: +{dv:,.0f}")
+        kind = "older" if k == "qi_early" else "published"
+        p.text(p.X(v) + 10, p.Y(math.log10(1 + dv)) + 4, f"{kind} Θ = {th / 1e26:.1f} × 10²⁶ m: +{dv:,.0f}")
     bt = 2 * C * C / best["a"]
     p.marker(math.log10(bt), 0, color("qi_free"), f"best fit Θ = {bt:.3g} m")
     p.text(p.X(math.log10(bt)), p.Y(0) - 12, f"best Θ = {bt / 1e27:.2f} × 10²⁷ m", "middle")
@@ -504,10 +567,13 @@ def main():
         summary[k] = e
 
     bins = {k: binned(pts, fits[k]["res"], [-12.4 + 0.2 * i for i in range(20)]) for k in fits}
+    public_bins = read_rar_bins()
+    reconstruction = public_bin_comparison(public_bins)
     result = dict(data=dict(source=BASE_URL, sha256=sums, n_points=len(pts), n_galaxies=ngal, alignment=align),
                   constants=dict(c=C, theta_early=THETA_EARLY, theta_late=THETA_LATE,
                                  a_early=theta_to_a(THETA_EARLY), a_late=theta_to_a(THETA_LATE)),
                   fits=summary, upsilon_disk=upsilon, upsilon_free=ufree, binned_residuals=bins,
+                  public_bin_reconstruction=reconstruction,
                   bootstrap=dict(replicates=len(boot), seed=args.seed, unit="galaxy"),
                   interpretation="Point-level BIC uses an independence approximation. Galaxy bootstrap ranges "
                   "describe sampling variation conditional on the error model and baryonic assumptions; "
@@ -554,8 +620,22 @@ def main():
     for k, f in ufree.items():
         L.append(f"| {MODEL[k][1]} | {f['k']} | {f['upsilon_disk']:.2f} | {fmt_a(f['a'])} | {2 * C * C / f['a']:.3g} | "
                  f"{f['sig_int']:.3f} | {f['rms']:.3f} | {f['bic'] - ufree[ref]['bic']:+.1f} |")
+    L += ["", "## Public-bin reconstruction of the 2017 comparison", "",
+          reconstruction["status"], "", reconstruction["convention"], "",
+          f"Source: [SPARC binned data]({reconstruction['source']}); "
+          f"{reconstruction['n_bins']} bins containing {reconstruction['n_points']} points.", "",
+          "| Fixed curve | Bins within one tabulated scatter | Largest absolute offset / scatter |",
+          "|---|---|---|"]
+    for key, label in (("qi_late", MODEL["qi_late"][1]),
+                       ("rar_reference", "2017 Eq. 2 reference, a₀ = 1.2 × 10⁻¹⁰ m s⁻²")):
+        v = reconstruction["comparisons"][key]
+        L.append(f"| {label} | {v['n_bins_within_one_scatter']}/{reconstruction['n_bins']} | "
+                 f"{v['max_abs_residual_over_scatter']:.3f} |")
+    L += ["", "Agreement within scatter can coexist with a systematic offset from bin means. "
+          "These counts neither calibrate significance nor establish that the original figure has been exactly reproduced."]
     (OUT / "summary.md").write_text("\n".join(L) + "\n")
 
+    fig_public_bins(public_bins, OUT / "fig-5-public-bin-reconstruction.svg")
     fig_rar(pts, fits, OUT / "fig-1-rar-models.svg")
     fig_residuals(pts, fits, OUT / "fig-2-residuals-qi.svg", ["qi_early", "qi_late", "qi_free"],
                   "Binned residuals: QI with three choices of Θ")

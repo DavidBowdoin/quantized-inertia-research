@@ -12,18 +12,23 @@ as_of: 2026-10-20
 McCulloch's 2017 galaxy formula fixes Θ at 8.8 × 10²⁶ m from the present cosmic diameter and is compared visually with binned data displayed with RMS scatter. How well does that equation fit the public RAR under an explicit likelihood, which scale do the data prefer, and how does it compare with fitted MOND functions? Applying the older Θ = 2.6 × 10²⁶ m to the same 2017 equation is a scale-sensitivity experiment, not a reproduction of the 2007 or 2012 analysis.
 
 ## Bottom line
-1. **Θ = 2.6 × 10²⁶ m fits much worse under these assumptions.** It predicts accelerations ~2–2.4 times too high (−0.33 to −0.38 dex) in the low-acceleration bins. Point-level ΔBIC ≈ +4,400 against QI with Θ free; this is not a calibrated exclusion significance.
-2. **Θ = 8.8 × 10²⁶ m captures most of the effect but lies above the low-acceleration bin means under the default baryonic assumptions.** Mean residuals reach −0.07 to −0.12 dex (predictions 17–32% too high) below g_bar ≈ 10⁻¹¹ m s⁻². ΔBIC is +490 against MOND with fitted a₀, and +417 against QI's own best Θ. The galaxy bootstrap never brings either difference near zero (16–84%: +343 to +671 and +273 to +599).
-3. **With Θ free, QI prefers Θ ≈ 1.23 × 10²⁷ m** (galaxy bootstrap 1.14–1.31 × 10²⁷ m), i.e. 2c²/Θ ≈ 1.47 × 10⁻¹⁰ m s⁻². That is about 1.4 times the co-moving diameter QI uses, and the value moves between ≈ 0.97 and 1.49 × 10²⁷ m as Υ_disk ranges over 0.4–0.6.
-4. **With Θ free, the QI function fits slightly worse than MOND's "simple" function or the McGaugh 2016 fitting function at the default Υ★.** ΔBIC is +73 (bootstrap +17 to +123), and best-Θ QI wins in 4% of resamples. The difference is a mild S-shaped residual (figure 3). It shrinks to +28 when Υ★ is also fitted, and reverses at Υ_disk = 0.6. The shape ranking depends on the baryonic assumptions.
-5. **Fitting a global Υ★ retains the preference for a free scale in this comparison.** Fixed Θ = 8.8 × 10²⁶ m then prefers Υ_disk = 0.43 and remains ΔBIC +356 behind MOND (+328 behind QI with Θ and Υ★ both free). Fixed Θ = 2.6 × 10²⁶ m drives Υ_disk to 0.17, well below the SPARC default, and remains +2,749 behind.
+1. **The published 2017 curve agrees within the scatter of all 14 public bins.** This supports the stated visual agreement at that descriptive level; exact identity with the privately supplied bins remains unverified. The likelihood findings below address systematic offsets under additional modelling assumptions.
+2. **Θ = 2.6 × 10²⁶ m fits much worse under these assumptions.** It predicts accelerations ~2–2.4 times too high (−0.33 to −0.38 dex) in the low-acceleration bins. Point-level ΔBIC ≈ +4,400 against QI with Θ free; this is not a calibrated exclusion significance.
+3. **Θ = 8.8 × 10²⁶ m captures most of the effect but lies above the low-acceleration bin means under the default baryonic assumptions.** Mean residuals reach −0.07 to −0.12 dex (predictions 17–32% too high) below g_bar ≈ 10⁻¹¹ m s⁻². ΔBIC is +490 against MOND with fitted a₀, and +417 against QI's own best Θ. The galaxy bootstrap never brings either difference near zero (16–84%: +343 to +671 and +273 to +599).
+4. **With Θ free, QI prefers Θ ≈ 1.23 × 10²⁷ m** (galaxy bootstrap 1.14–1.31 × 10²⁷ m), i.e. 2c²/Θ ≈ 1.47 × 10⁻¹⁰ m s⁻². That is about 1.4 times the co-moving diameter QI uses, and the value moves between ≈ 0.97 and 1.49 × 10²⁷ m as Υ_disk ranges over 0.4–0.6.
+5. **With Θ free, the QI function fits slightly worse than MOND's "simple" function or the McGaugh 2016 fitting function at the default Υ★.** ΔBIC is +73 (bootstrap +17 to +123), and best-Θ QI wins in 4% of resamples. The difference is a mild S-shaped residual (figure 3). It shrinks to +28 when Υ★ is also fitted, and reverses at Υ_disk = 0.6. The shape ranking depends on the baryonic assumptions.
+6. **Fitting a global Υ★ retains the preference for a free scale in this comparison.** Fixed Θ = 8.8 × 10²⁶ m then prefers Υ_disk = 0.43 and remains ΔBIC +356 behind MOND (+328 behind QI with Θ and Υ★ both free). Fixed Θ = 2.6 × 10²⁶ m drives Υ_disk to 0.17, well below the SPARC default, and remains +2,749 behind.
 
 The 2017 QI equation has a MOND-like deep limit, but both fixed scales tested here fit less well than a free scale under the stated assumptions. This identifies a conditional normalization tension; it does not establish model-independent exclusion of QI or contradict agreement within the scatter shown in the author's figure. The 17–32% offsets above concern predicted accelerations, equivalent to about 8–15% in velocity at fixed radius.
 
 ## Relation to McCulloch's comparison
 In [McCulloch 2017, §3 and Fig. 1](https://arxiv.org/pdf/1709.04918), the binned data were supplied by McGaugh and the boxes represent RMS scatter. Our likelihood and the standard errors of the bin means in Figure 2 ask a different question: whether a systematic offset remains under the specified measurement-error and baryonic assumptions. A curve can lie within the point scatter while differing from the mean.
 
-This analysis reproduces the published equation, not the exact original binned comparison. Its bin selection and the correspondence to the privately supplied bins have not been established. The next reproduction step is to recover that selection and RMS convention, documenting any unavailable inputs, before drawing conclusions about the author's stated visual agreement. Any reconstruction from the public data must be labelled as such. The unbinned fit remains a separate quantitative extension.
+The script now reconstructs that comparison using SPARC's public `RARbins.mrt`: 14 bins containing 2,630 points, with a standard deviation around each observed mean. It evaluates the published QI curve at the tabulated baryonic means and plots vertical ±1 standard-deviation bars. It also shows the paper's Eq. 2 reference at its stated a₀ = 1.2 × 10⁻¹⁰ m s⁻², with no refitting. The supplied table does not include horizontal scatter, so none is invented.
+
+**Result:** the published QI curve lies within one tabulated scatter of all **14/14** means; its largest absolute offset is **0.741** times that scatter. The fixed Eq. 2 reference also lies within all 14, with maximum **0.220**. This is consistent with the author's visual agreement claim. Counting bins inside a scatter band is a descriptive comparison, not a calibrated goodness-of-fit or significance test.
+
+This is a **public-bin reconstruction**, not a verified reproduction of the exact privately supplied bins in the 2017 figure. The source table identifies itself as data behind Lelli et al. 2017 Fig. 2; its counts also do not cover all 2,693 unbinned points. Neither bin membership nor correspondence to the author's original inputs is established here. The unbinned likelihood remains a separate quantitative extension. The [generated summary](results/summary.md#public-bin-reconstruction-of-the-2017-comparison) and JSON record provenance, conventions and derived offsets.
 
 ## Data
 - **SPARC** (Lelli, McGaugh & Schombert 2016, AJ 152, 157, [doi:10.3847/0004-6256/152/6/157](https://doi.org/10.3847/0004-6256/152/6/157)), downloaded from [astroweb.case.edu/SPARC](https://astroweb.case.edu/SPARC/). The site gives no redistribution licence, so the tables are fetched by the script into `data/`, which is git-ignored. SHA-256 sums are recorded in `results/results.json`.
@@ -76,6 +81,10 @@ The best-fit Θ is strongly degenerate with Υ★. A lower Υ★ (less baryonic 
 ## Figures
 Our own figures (CC BY 4.0). Each follows the reader's light or dark theme.
 
+![Public-bin reconstruction of the 2017 comparison, with within-bin scatter and fixed curves](results/fig-5-public-bin-reconstruction.svg)
+
+*Public-bin reconstruction. The vertical bars show the public table's within-bin standard deviations, not uncertainties of the means. Both curves use the scales stated in the 2017 paper. Identity with the author's privately supplied bins is unverified. Figures 1–4 below show our additional fitting diagnostics.*
+
 ![The SPARC RAR with Newton, QI at both fixed Θ values and the best-fit MOND simple curve](results/fig-1-rar-models.svg)
 
 *Figure 1. The 2,693 SPARC RAR points (grey) with Newton (dashed), QI at Θ = 2.6 and 8.8 × 10²⁶ m, and the best-fit MOND simple curve. The early-Θ curve lies above almost all the data. The late-Θ curve lies above the data in the deep-MOND regime.*
@@ -102,6 +111,7 @@ Our own figures (CC BY 4.0). Each follows the reader's light or dark theme.
 
 ## Reproduce
 ```sh
+python3 -I 09-analysis/a1-sparc-rar-refit/test_rar_refit.py
 python3 -I 09-analysis/a1-sparc-rar-refit/rar_refit.py             # ~1 min on 8 cores; downloads data on first run
 python3 -I 09-analysis/a1-sparc-rar-refit/rar_refit.py --boot 0    # ~15 s, no bootstrap
 ```
