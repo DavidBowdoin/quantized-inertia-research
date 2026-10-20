@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" role="img">
+<title>QI: how the fit depends on Θ</title>
+<style>
+svg { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --grid:#e4e3df; --pt:#8f8d86;
+      --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#6250d6; }
+@media (prefers-color-scheme: dark) {
+  svg { --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --grid:#33322f; --pt:#77756f;
+        --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; } }
+text { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--ink2); font-size: 12px; }
+.t { fill: var(--ink); font-size: 14px; font-weight: 600; }
+.ax { stroke: var(--ink2); stroke-width: 1; }
+.gr { stroke: var(--grid); stroke-width: 1; }
+.ln { fill: none; stroke-width: 2; stroke-linejoin: round; }
+</style>
+<rect width="760" height="400" fill="var(--surface)"/>
+<text class="t" x="64" y="24">QI: how the fit depends on Θ</text>
+<text x="402.0" y="388" text-anchor="middle">log₁₀ Θ  (m)</text>
+<text transform="translate(16,197.0) rotate(-90)" text-anchor="middle">Δ(−2 ln L) from the best-fit Θ</text>
+<line class="gr" x1="64.0" x2="64.0" y1="44" y2="350"/><text x="64.0" y="366" text-anchor="middle">26</text>
+<line class="gr" x1="176.7" x2="176.7" y1="44" y2="350"/><text x="176.7" y="366" text-anchor="middle">26.25</text>
+<line class="gr" x1="289.3" x2="289.3" y1="44" y2="350"/><text x="289.3" y="366" text-anchor="middle">26.5</text>
+<line class="gr" x1="402.0" x2="402.0" y1="44" y2="350"/><text x="402.0" y="366" text-anchor="middle">26.75</text>
+<line class="gr" x1="514.7" x2="514.7" y1="44" y2="350"/><text x="514.7" y="366" text-anchor="middle">27</text>
+<line class="gr" x1="627.3" x2="627.3" y1="44" y2="350"/><text x="627.3" y="366" text-anchor="middle">27.25</text>
+<line class="gr" x1="740.0" x2="740.0" y1="44" y2="350"/><text x="740.0" y="366" text-anchor="middle">27.5</text>
+<line class="ax" x1="64" x2="740" y1="350" y2="350"/><line class="ax" x1="64" x2="64" y1="44" y2="350"/>
+<line class="gr" x1="64" x2="740" y1="350.0" y2="350.0"/><text x="58" y="354.0" text-anchor="end">0</text>
+<line class="gr" x1="64" x2="740" y1="327.0" y2="327.0"/><text x="58" y="331.0" text-anchor="end">1</text>
+<line class="gr" x1="64" x2="740" y1="270.3" y2="270.3"/><text x="58" y="274.3" text-anchor="end">10</text>
+<line class="gr" x1="64" x2="740" y1="196.7" y2="196.7"/><text x="58" y="200.7" text-anchor="end">100</text>
+<line class="gr" x1="64" x2="740" y1="120.5" y2="120.5"/><text x="58" y="124.5" text-anchor="end">1,000</text>
+<path class="ln" d="M64.0,56.7 L73.0,57.2 L82.0,57.7 L91.0,58.2 L100.1,58.7 L109.1,59.3 L118.1,59.8 L127.1,60.4 L136.1,61.0 L145.1,61.7 L154.1,62.3 L163.1,63.0 L172.2,63.7 L181.2,64.4 L190.2,65.2 L199.2,66.0 L208.2,66.8 L217.2,67.7 L226.2,68.6 L235.3,69.5 L244.3,70.5 L253.3,71.5 L262.3,72.6 L271.3,73.7 L280.3,74.9 L289.3,76.2 L298.3,77.5 L307.4,78.9 L316.4,80.4 L325.4,81.9 L334.4,83.6 L343.4,85.4 L352.4,87.2 L361.4,89.3 L370.5,91.4 L379.5,93.8 L388.5,96.3 L397.5,99.0 L406.5,101.9 L415.5,105.1 L424.5,108.6 L433.5,112.5 L442.6,116.7 L451.6,121.4 L460.6,126.7 L469.6,132.6 L478.6,139.3 L487.6,147.0 L496.6,156.0 L505.7,166.7 L514.7,179.7 L518.4,186.0 L519.3,187.6 L520.2,189.3 L521.1,191.0 L522.0,192.8 L522.9,194.6 L523.7,196.3 L523.8,196.5 L524.7,198.4 L525.6,200.4 L526.5,202.5 L527.4,204.6 L528.3,206.8 L529.2,209.1 L530.1,211.4 L531.0,213.9 L531.9,216.4 L532.7,218.8 L532.8,219.0 L533.7,221.8 L534.6,224.7 L535.5,227.7 L536.4,230.8 L537.3,234.1 L538.2,237.6 L539.1,241.2 L540.0,245.1 L540.9,249.1 L541.7,253.0 L541.8,253.5 L542.7,258.1 L543.6,263.0 L544.5,268.4 L545.4,274.1 L546.3,280.3 L547.2,287.0 L548.1,294.4 L549.0,302.5 L549.9,311.2 L550.7,319.7 L550.8,320.7 L551.7,330.5 L552.6,339.9 L553.5,347.1 L554.4,350.0 L555.3,347.3 L556.2,340.1 L557.1,330.7 L558.0,320.9 L558.9,311.5 L559.7,303.6 L559.8,302.7 L560.7,294.7 L561.6,287.3 L562.5,280.6 L563.4,274.4 L564.3,268.6 L565.2,263.3 L566.1,258.4 L567.0,253.8 L567.9,249.5 L568.7,245.8 L568.8,245.4 L569.7,241.5 L570.6,237.9 L571.5,234.5 L572.4,231.2 L573.3,228.1 L574.2,225.1 L575.1,222.2 L576.0,219.5 L576.9,216.9 L577.8,214.6 L577.9,214.3 L578.8,211.9 L579.7,209.6 L580.6,207.3 L581.5,205.1 L582.4,203.0 L583.3,201.0 L584.2,199.0 L585.1,197.1 L586.0,195.3 L586.8,193.6 L586.9,193.5 L587.8,191.7 L588.7,190.0 L589.6,188.3 L590.5,186.7 L595.8,178.0 L604.8,165.6 L613.8,155.5 L622.8,147.0 L631.8,139.8 L640.9,133.5 L649.9,127.9 L658.9,123.0 L667.9,118.7 L676.9,114.7 L685.9,111.2 L694.9,108.0 L703.9,105.1 L713.0,102.4 L722.0,99.9 L731.0,97.6 L740.0,95.5" stroke="var(--s3)"><title>profile likelihood, QI with Θ free</title></path>
+<circle cx="251.0" cy="71.3" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>QI, Θ = 2.6 × 10²⁶ m (fixed): Δ(−2 ln L) = 4402</title></circle>
+<text x="261.0" y="75.3" text-anchor="start">Θ = 2.6 × 10²⁶ m: +4,402</text>
+<circle cx="489.6" cy="148.9" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>QI, Θ = 8.8 × 10²⁶ m (fixed): Δ(−2 ln L) = 425</title></circle>
+<text x="499.6" y="152.9" text-anchor="start">Θ = 8.8 × 10²⁶ m: +425</text>
+<circle cx="554.4" cy="350.0" r="5" fill="var(--s3)" stroke="var(--surface)" stroke-width="2"><title>best fit Θ = 1.23e+27 m</title></circle>
+<text x="554.4" y="338.0" text-anchor="middle">best Θ = 1.23 × 10²⁷ m</text>
+</svg>

@@ -54,7 +54,7 @@ def route(fm, venue):
 
 def rows():
     out = []
-    for readme in ROOT.glob("[0-9][0-9]-*/*/README.md"):
+    for readme in ROOT.glob("0[1347]-*/*/README.md"):  # source sections only
         folder = readme.parent
         rel = folder.relative_to(ROOT).as_posix()
         if rel in NOT_APPLICABLE or any(folder.glob("*.pdf")):

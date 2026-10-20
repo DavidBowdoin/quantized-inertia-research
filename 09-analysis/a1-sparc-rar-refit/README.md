@@ -1,0 +1,111 @@
+---
+title: "A1: fixed-Θ refit of the SPARC radial acceleration relation"
+tags: [analysis, galaxy-rotation, sparc, mond, theta]
+as_of: 2026-10-19
+---
+
+# A1: fixed-Θ refit of the SPARC radial acceleration relation
+
+> **Editorial analysis.** This is our own calculation, not a published result. It tests the QI formula for the radial acceleration relation (RAR) exactly as printed in [McCulloch 2017](../../01-papers/2017-mcculloch-galaxy-rotations-sparc/README.md), against the public SPARC data. Proposed as item A1 in [ideas-and-tests](../../08-synthesis/ideas-and-tests.md).
+
+## Question
+QI's galaxy formula is said to need "no adjustable parameter", but the paper only compared it with binned data by eye, and the cosmic length Θ has taken two values: 2.6 × 10²⁶ m (2007–2013) and 8.8 × 10²⁶ m (2017 on). How well does QI fit the RAR with each fixed Θ, which Θ do the data prefer, and how does QI compare with MOND given one free parameter?
+
+## Bottom line
+1. **Θ = 2.6 × 10²⁶ m is excluded.** It predicts accelerations ~2–2.4 times too high (−0.33 to −0.38 dex) in the low-acceleration bins. ΔBIC ≈ +4,400 against QI with Θ free.
+2. **Θ = 8.8 × 10²⁶ m captures most of the effect but is clearly too high at low acceleration.** Mean residuals reach −0.07 to −0.12 dex (predictions 17–32% too high) below g_bar ≈ 10⁻¹¹ m s⁻². ΔBIC is +490 against MOND with fitted a₀, and +417 against QI's own best Θ. The galaxy bootstrap never brings either difference near zero (16–84%: +343 to +671 and +273 to +599).
+3. **With Θ free, QI prefers Θ ≈ 1.23 × 10²⁷ m** (galaxy bootstrap 1.14–1.31 × 10²⁷ m), i.e. 2c²/Θ ≈ 1.47 × 10⁻¹⁰ m s⁻². That is about 1.4 times the co-moving diameter QI uses, and the value moves between ≈ 0.97 and 1.49 × 10²⁷ m as Υ_disk ranges over 0.4–0.6.
+4. **Even with Θ free, the QI function is a slightly worse shape than MOND's "simple" function or the McGaugh 2016 fitting function.** ΔBIC is +73 (bootstrap +17 to +123), and best-Θ QI wins in only 4% of resamples. The difference is a mild S-shaped residual (figure 3). It shrinks to +28 when Υ★ is also fitted, and reverses at Υ_disk = 0.6. **The shape difference between QI and MOND is not decisive. The fixed-Θ results are.**
+5. **Fitting a global Υ★ does not rescue the fixed values.** Fixed Θ = 8.8 × 10²⁶ m then prefers Υ_disk = 0.43 and remains ΔBIC +356 behind MOND (+328 behind QI with Θ and Υ★ both free). Fixed Θ = 2.6 × 10²⁶ m drives Υ_disk to an implausible 0.17 and remains +2,749 behind.
+
+In plain terms, QI's RAR formula has the right form; it is the deep-MOND limit with a cosmological acceleration scale. But neither Θ that QI papers have used gives the scale the data want. The 2017 value is about 30% off in acceleration scale, and the "no free parameter" fit is significantly worse than a one-parameter fit of the same formula.
+
+## Data
+- **SPARC** (Lelli, McGaugh & Schombert 2016, AJ 152, 157, [doi:10.3847/0004-6256/152/6/157](https://doi.org/10.3847/0004-6256/152/6/157)), downloaded from [astroweb.case.edu/SPARC](https://astroweb.case.edu/SPARC/). The site gives no redistribution licence, so the tables are fetched by the script into `data/`, which is git-ignored. SHA-256 sums are recorded in `results/results.json`.
+- **RAR points:** `RAR.mrt`, the 2,693 points behind Fig. 2 of Lelli et al. 2017 (ApJ 836, 152, [doi:10.3847/1538-4357/836/2/152](https://doi.org/10.3847/1538-4357/836/2/152)), with the per-point uncertainties on log g_bar and log g_obs that the file supplies. These are the same points as McGaugh, Lelli & Schombert 2016 (PRL 117, 201101, [doi:10.1103/PhysRevLett.117.201101](https://doi.org/10.1103/PhysRevLett.117.201101)): "2693 points in 153 galaxies".
+- **Galaxy labels:** `RAR.mrt` has no galaxy column. The script rebuilds the RAR from `MassModels_Lelli2016c.mrt` with Υ_disk = 0.5, Υ_bul = 0.7, Q < 3, i ≥ 30° and δV/V ≤ 10%. That gives 2,700 points. It then aligns them to `RAR.mrt`, which lists galaxies in reverse name order. 2,683 points match to the printed 0.01 dex, 10 (all UGC 7524) match within 0.06 dex, and 7 rebuilt points are unmatched and dropped. The points come from **147 galaxies**: all 153 pass the galaxy cuts, but the 10% velocity-error cut removes every point of 6 of them. The labels are used only for the bootstrap and the Υ★ variants.
+
+## Method
+- **Models:** g_obs = g_bar · ν(g_bar / a), fitted in log space.
+
+  | Model | ν(y) | a |
+  |---|---|---|
+  | Newton | 1 | — |
+  | QI ([2017 Eq. 8](../../00-overview/equations.md#5-galaxy-scale-relations-2017-onward)) | √(1 + 1/y) | 2c²/Θ; Θ fixed at 2.6 or 8.8 × 10²⁶ m, or free |
+  | MOND "simple" μ = x/(1+x) | ½ + √(¼ + 1/y) | a₀ free |
+  | MOND "standard" μ = x/√(1+x²) | √(½ + √(¼ + 1/y²)) | a₀ free |
+  | McGaugh et al. 2016 RAR fit (reference) | 1/(1 − e^(−√y)) | a₀ free |
+
+- **Likelihood:** Gaussian in log g_obs with variance σ_obs² + (slope · σ_bar)² + σ_int². The second term propagates the g_bar error through the model's local slope. σ_int is an intrinsic scatter fitted for every model, so k = 1 for fixed-Θ QI and Newton and k = 2 for one-parameter models. Comparisons use BIC = −2 ln L + k ln n; AIC is in `results.json`.
+- **Correlated points:** points within a galaxy share distance, inclination and Υ★ errors, so the point-level BIC differences overstate the evidence. Every fit is therefore repeated on **200 bootstrap resamples of galaxies** (whole galaxies drawn with replacement). Ranges quoted are 16th–84th percentiles.
+- **Υ★ systematics:** g_bar is rebuilt from the mass-model components with Υ_disk = 0.4, 0.5 and 0.6 (Υ_bul = 1.4 Υ_disk). Separately, a single global Υ_disk is fitted as an extra free parameter for every model (flat prior 0.15–1.0).
+- **Check against the literature:** the McGaugh fitting function gives a₀ = 1.15 × 10⁻¹⁰ m s⁻² here (bootstrap 1.07–1.23). This is consistent with the ≈ 1.2 × 10⁻¹⁰ m s⁻² published for these data with a different fitting method.
+
+## Results
+Generated by the script (`results/summary.md`); point-level fit, Υ_disk = 0.5:
+
+| Model | k | a (m s⁻²) | equiv. Θ = 2c²/a (m) | σ_int (dex) | rms (dex) | ΔBIC vs MOND simple | bootstrap ΔBIC (16–84%) | best in bootstrap |
+|---|---|---|---|---|---|---|---|---|
+| Newton (baryons only) | 1 | — | — | 0.498 | 0.514 | +7,138 | — | — |
+| QI, Θ = 2.6 × 10²⁶ m (fixed) | 1 | 6.91 × 10⁻¹⁰ | 2.6 × 10²⁶ | 0.292 | 0.312 | +4,468 | +4,040 to +4,883 | 0% |
+| QI, Θ = 8.8 × 10²⁶ m (fixed) | 1 | 2.04 × 10⁻¹⁰ | 8.8 × 10²⁶ | 0.104 | 0.146 | +490 | +343 to +671 | 0% |
+| QI, Θ free | 2 | 1.47 × 10⁻¹⁰ (1.37–1.57) | 1.23 × 10²⁷ | 0.086 | 0.135 | +73 | +17 to +123 | 4% |
+| MOND simple, a₀ free | 2 | 1.13 × 10⁻¹⁰ (1.05–1.21) | 1.59 × 10²⁷ | 0.082 | 0.133 | 0 | (reference) | 42% |
+| MOND standard, a₀ free | 2 | 1.61 × 10⁻¹⁰ (1.50–1.72) | 1.12 × 10²⁷ | 0.092 | 0.139 | +212 | +128 to +305 | 0% |
+| McGaugh 2016 RAR fit, a₀ free | 2 | 1.15 × 10⁻¹⁰ (1.07–1.23) | 1.56 × 10²⁷ | 0.082 | 0.133 | −4 | −19 to +10 | 55% |
+
+The "equiv. Θ" column just converts each fitted scale with 2c²/a. It has a physical meaning only for the QI rows.
+
+**Υ★ sensitivity** (ΔBIC vs MOND simple at the same Υ★):
+
+| Model | Υ_disk = 0.4 | 0.5 | 0.6 | Υ_disk fitted |
+|---|---|---|---|---|
+| QI, Θ = 2.6 × 10²⁶ m | +3,756 | +4,467 | +4,851 | +2,749 (Υ = 0.17) |
+| QI, Θ = 8.8 × 10²⁶ m | +229 | +489 | +900 | +356 (Υ = 0.43) |
+| QI, Θ free | +201 (Θ ≈ 9.7 × 10²⁶) | +73 (1.23 × 10²⁷) | −44 (1.49 × 10²⁷) | +28 (Υ = 0.56; Θ = 1.39 × 10²⁷) |
+| MOND standard | +426 | +212 | −24 | +59 (Υ = 0.62) |
+| McGaugh 2016 fit | +36 | −4 | −55 | −15 (Υ = 0.53) |
+
+The best-fit Θ is strongly degenerate with Υ★. A lower Υ★ (less baryonic mass) wants a larger acceleration scale and so a smaller Θ. Only at Υ_disk ≈ 0.4 does the preferred Θ come near 8.8 × 10²⁶ m. When Υ★ is left free, however, the data prefer Υ_disk ≈ 0.56 for QI and ≈ 0.51 for MOND, close to the 0.5 SPARC assumes.
+
+## Figures
+Our own figures (CC BY 4.0). Each follows the reader's light or dark theme.
+
+![The SPARC RAR with Newton, QI at both fixed Θ values and the best-fit MOND simple curve](results/fig-1-rar-models.svg)
+
+*Figure 1. The 2,693 SPARC RAR points (grey) with Newton (dashed), QI at Θ = 2.6 and 8.8 × 10²⁶ m, and the best-fit MOND simple curve. The early-Θ curve lies above almost all the data. The late-Θ curve lies above the data in the deep-MOND regime.*
+
+![Binned residuals of QI for three choices of Θ](results/fig-2-residuals-qi.svg)
+
+*Figure 2. Mean residual log(g_obs / g_model) in 0.2-dex bins of g_bar for QI with three choices of Θ. Zero means the model is right on average. Bins with fewer than 20 points are not shown. The bin standard errors are 0.007–0.023 dex, smaller than the markers.*
+
+![Binned residuals of the one-parameter fits](results/fig-3-residuals-free.svg)
+
+*Figure 3. As figure 2, for the four one-parameter fits. QI with Θ free has a mild S-shaped residual: a little high near g_bar ≈ 10⁻¹¹·⁵ and a little low near 10⁻¹⁰. The MOND standard function shows the same pattern more strongly.*
+
+![Profile likelihood of QI versus Θ](results/fig-4-theta-profile.svg)
+
+*Figure 4. How the QI fit worsens as Θ moves away from the best value (log scale on both axes). The two values used in QI papers are marked.*
+
+## Caveats
+- **This is an RAR-level fit, not a fit to individual rotation curves.** Distance, inclination and Υ★ are not fitted galaxy by galaxy as in Li et al. 2018 (A&A 615, A3, [doi:10.1051/0004-6361/201732547](https://doi.org/10.1051/0004-6361/201732547)). Doing so would let each galaxy absorb part of any scale error and would probably shrink every ΔBIC. That is now done in [A1b](../a1b-sparc-per-galaxy/README.md). The fixed-Θ penalties grow rather than shrink, because absorbing the scale error would require pulling many galaxies well inside their measured distances.
+- **BIC assumes independent points.** The galaxy bootstrap is the more honest guide, and it does not change any conclusion above.
+- **Only the published QI formula is tested.** That formula (2017 Eq. 8) rests on the assumption a′ = 2c²/Θ at a galaxy's edge ([equations §3](../../00-overview/equations.md#3-the-rounded-form-and-the-minimum-acceleration-20102013)). Corrected forms of F(a), such as [Renda 2019](../../03-criticism/2019-renda-sceptical/README.md), are a separate test (A2).
+- **The coefficient is rounded.** Using βπ² ≈ 1.99 instead of 2 changes the Θ ↔ a mapping by < 1%. That is negligible here.
+- **Redshift is ignored.** SPARC galaxies are nearby (distances up to ~130 Mpc), so QI's (1 + z) factor changes Θ by < 3%.
+- **Υ★ conventions:** Υ_bul = 1.4 Υ_disk follows the SPARC defaults (0.5 and 0.7). Gas is fixed at Υ = 1 with the 1.33 helium factor already in the SPARC tables.
+
+## Reproduce
+```sh
+python3 -I 09-analysis/a1-sparc-rar-refit/rar_refit.py             # ~1 min on 8 cores; downloads data on first run
+python3 -I 09-analysis/a1-sparc-rar-refit/rar_refit.py --boot 0    # ~15 s, no bootstrap
+```
+Python 3 standard library only; no numpy or scipy needed. The bootstrap seed is fixed (`--seed 20261019`), so reruns give identical numbers. Outputs:
+- `results/results.json`: every fit, the bootstrap percentiles, the binned residuals, the Υ★ variants and the data checksums
+- `results/summary.md`: the tables above
+- `results/fig-*.svg`: the figures
+
+## Related
+- Evidence: [galaxy-rotation](../../02-evidence/galaxy-rotation.md), [dwarf-galaxies](../../02-evidence/dwarf-galaxies.md), [wide-binaries](../../02-evidence/wide-binaries.md)
+- Sources: [2017-mcculloch-galaxy-rotations-sparc](../../01-papers/2017-mcculloch-galaxy-rotations-sparc/README.md), [2012-mcculloch-galactic-scales](../../01-papers/2012-mcculloch-galactic-scales/README.md), [2021-haug-minimum-acceleration](../../01-papers/2021-haug-minimum-acceleration/README.md), [2019-renda-sceptical](../../03-criticism/2019-renda-sceptical/README.md)
+- Equations: [Θ values and discrepancies](../../00-overview/equations.md#7-discrepancies-and-inconsistencies-between-papers)
