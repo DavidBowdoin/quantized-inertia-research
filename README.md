@@ -2,7 +2,7 @@
 
 A balanced, source-grounded collection of everything published on **Quantized Inertia (QI)**, also called **MiHsC** (*Modification of inertia from a Hubble-scale Casimir effect*). It is the hypothesis, proposed by Mike McCulloch (University of Plymouth) in 2007, that inertia comes from Unruh radiation being limited by horizons. It covers the theory papers, the observational and laboratory evidence offered for it, independent tests and critiques, null results, and the surrounding physics and history.
 
-> **Stance.** This repository reports what each source says and how it has been tested. Every source is tagged **supports**, **neutral** or **critical**. Our own analysis is kept in [08-synthesis/](08-synthesis/) and clearly labelled. Anything we could not verify is marked `[!UNVERIFIED]`.
+> **Stance.** This repository reports what each source says and how it has been tested. Every source is tagged **supports**, **neutral** or **critical**. Our own analysis is kept in [08-synthesis/](08-synthesis/) and [09-analysis/](09-analysis/INDEX.md) and clearly labelled. Anything we could not verify is marked `[!UNVERIFIED]`.
 
 ## Start here
 1. [What is Quantized Inertia?](00-overview/what-is-qi.md): the mechanism, the formula, the claims and the main objections
@@ -24,6 +24,7 @@ Contributing with an AI agent? Start with [AGENTS.md](AGENTS.md). Have access to
 | [06-people-orgs/](06-people-orgs/INDEX.md) | McCulloch, Tajmar, Giné, IVO Ltd, DARPA 2018 award, others |
 | [07-media/](07-media/INDEX.md) | Books, press coverage, popular articles, one folder per source |
 | [08-synthesis/](08-synthesis/) | Our analysis: scorecard, open questions, testable predictions |
+| [09-analysis/](09-analysis/INDEX.md) | Our own reproducible calculations with public data (e.g. [A1: SPARC refit](09-analysis/a1-sparc-rar-refit/README.md)) |
 | [assets/diagrams/](assets/diagrams/README.md) | Self-made SVG / Mermaid diagrams |
 | [bibliography.bib](bibliography.bib) | BibTeX for every source (generated from each folder's `citation.bib`) |
 
@@ -50,5 +51,5 @@ To add a source, copy the template into a new `YYYY-author-shortname/` folder in
 
 ## Licence
 - **Original content** (notes, READMEs, evidence, synthesis, diagrams in `assets/diagrams/`): [CC BY 4.0](LICENSE) © 2026 David Bowdoin.
-- **Code** in `_tools/`: [MIT](_tools/LICENSE).
+- **Code** in `_tools/` and the scripts in `09-analysis/`: [MIT](_tools/LICENSE).
 - **Third-party material** (source PDFs and figures rendered from them) is **not** covered by these licences. It keeps its original licence, recorded in each source's `license:` front-matter field. Only openly licensed PDFs and figures are included in this public repository; the rest are kept locally and are marked *local only* in their README. Short quotations are included for commentary and criticism, with citations.

@@ -19,6 +19,8 @@ Take the public [SPARC](http://astroweb.cwru.edu/SPARC/) RAR (153 galaxies, ~270
 
 Compare χ² / BIC. This settles in numbers whether QI's "no free parameter" fit is competitive, and how much the choice of Θ matters. McCulloch 2017 showed agreement only by eye ([source](../01-papers/2017-mcculloch-galaxy-rotations-sparc/README.md)). This could be a short Python notebook in a new `09-analysis/` folder.
 
+> **Status (2026-10-19): done at the RAR level** → [09-analysis/a1-sparc-rar-refit](../09-analysis/a1-sparc-rar-refit/README.md). Θ = 2.6 × 10²⁶ m is excluded. Θ = 8.8 × 10²⁶ m over-predicts by 17–32% below g_bar ≈ 10⁻¹¹ m s⁻² (ΔBIC +490 vs MOND simple; galaxy bootstrap +343 to +671). The best Θ is ≈ 1.23 × 10²⁷ m, and even then the QI function is slightly worse than MOND simple (ΔBIC +73, not decisive given Υ★ systematics). **A1b done** → [per-galaxy fits](../09-analysis/a1b-sparc-per-galaxy/README.md). Each galaxy gets its own distance, inclination and Υ★ (Li et al. 2018 style). Fixed Θ = 8.8 × 10²⁶ m remains ΔBIC +1,195 behind MOND simple (+225 after rescaling for underestimated velocity errors), and it is only reached by pulling a third of galaxies > 20% closer. The best Θ is ≈ 1.37 × 10²⁷ m.
+
 ### 🔧 A2. Renda-corrected F(a) applied to galaxies
 Renda (2019) gives the proper discrete-spectrum F(a), which peaks at ≈ 2.17 near 1.2 × 10⁻⁹ m s⁻² ([source](../03-criticism/2019-renda-sceptical/README.md)). Feed that F(a) into the rotation-curve formula and see whether "corrected QI" still fits the RAR. If it does not, the galaxy fits depend on the flawed step.
 
@@ -43,6 +45,6 @@ For each QI paper, recompute the headline number with both Θ values. This shows
 | 🔬 B6 | Unruh-radiation detection (analogue or accelerator-based) | Required ingredient; anisotropy is what matters | Absence would remove QI's mechanism, though not its phenomenology |
 
 ## C. Suggested next steps for this repository
-1. Build `09-analysis/` with A1 (SPARC refit) as the first notebook. The data are public, and it answers the most important open question.
+1. ~~Build `09-analysis/` with A1 (SPARC refit) as the first notebook.~~ Done: [A1](../09-analysis/a1-sparc-rar-refit/README.md). [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md) (per-galaxy fits) also done. Next: A2 (Renda-corrected F(a)), which can reuse both scripts.
 2. Ask McCulloch (via the blog) for the IVO OTP-2 telemetry and the Alcalá DARPA results.
 3. Track new papers: set up a recurring check of arXiv for "quantised inertia" / "MiHsC", and new posts on physicsfromtheedge.blogspot.com.

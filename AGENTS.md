@@ -3,7 +3,7 @@
 Read this file before changing anything. It is the shortest path from a blank context to useful, safe work here.
 
 ## What this repository is
-A **balanced, source-grounded research archive on Quantized Inertia (QI)**, also called **MiHsC** (Mike McCulloch's 2007– hypothesis that inertia arises from horizon-limited Unruh radiation). It is **not** advocacy and **not** debunking. Every source is reported faithfully and tagged `supports | neutral | critical`. Our own analysis lives only in `08-synthesis/` and is labelled *editorial*.
+A **balanced, source-grounded research archive on Quantized Inertia (QI)**, also called **MiHsC** (Mike McCulloch's 2007– hypothesis that inertia arises from horizon-limited Unruh radiation). It is **not** advocacy and **not** debunking. Every source is reported faithfully and tagged `supports | neutral | critical`. Our own analysis lives only in `08-synthesis/` and `09-analysis/` and is labelled *editorial*.
 
 It is pure Markdown and assets. There is no build system: just two stdlib-only Python scripts in `_tools/`.
 
@@ -26,6 +26,7 @@ It is pure Markdown and assets. There is no build system: just two stdlib-only P
 | `06-people-orgs/` | topic notes | people, IVO Ltd, the DARPA 2018 award |
 | `07-media/` | **source folders** | books, press, popular articles |
 | `08-synthesis/` | topic notes | editorial: scorecard, open questions, ideas, build notes |
+| `09-analysis/` | **analysis folders** | editorial calculations: `README.md` + stdlib-only script + generated `results/`; input data fetched into git-ignored `data/` |
 | `assets/diagrams/` | assets | our own SVGs only (CC BY 4.0) |
 | `_templates/source-README.md` | template | copy this for every new source |
 | `_tools/` | code (MIT) | `build_index.py`, `build_master_index.py`, `build_missing_list.py`, `check_license.py`, `apply_local_only.py`; `licenses.json` (licence decisions) |
@@ -101,6 +102,7 @@ Do not hand-edit the content between `<!-- BEGIN AUTO-INDEX -->` and `<!-- END A
 - Ask the user before pushing, changing repository visibility, or deleting anything remote.
 
 ## Good next work (see `08-synthesis/ideas-and-tests.md`)
-- A1: refit SPARC with fixed Θ against MOND in a new `09-analysis/` folder (the data are public).
+- A1 (`09-analysis/a1-sparc-rar-refit/`, stdlib only) and A1b (`09-analysis/a1b-sparc-per-galaxy/`, numpy/scipy) are done. Next: A2, the Renda-corrected F(a), reusing both scripts. Rerun a script after editing it; never hand-edit `results/`.
+- Python env: `uv venv --python 3.13 .venv && uv pip install --python .venv/bin/python -r 09-analysis/requirements.txt` (`.venv/` is git-ignored; the system Python is 3.9 and end-of-life).
 - Track new arXiv papers and blog posts (physicsfromtheedge.blogspot.com).
 - Resolve the `[!UNVERIFIED]` items, especially paywalled papers summarised from their abstracts.

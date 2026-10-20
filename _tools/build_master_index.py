@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SECTIONS = [("00-overview", "Overview"), ("02-evidence", "Evidence"), ("05-context", "Context physics"),
-            ("06-people-orgs", "People & organisations"), ("08-synthesis", "Synthesis"), ("01-papers", "Papers"),
+            ("06-people-orgs", "People & organisations"), ("08-synthesis", "Synthesis"), ("09-analysis", "Analysis"), ("01-papers", "Papers"),
             ("03-criticism", "Criticism & null results"), ("04-experiments", "Experiments"), ("07-media", "Books, press & media")]
 
 

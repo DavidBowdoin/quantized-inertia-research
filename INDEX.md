@@ -52,6 +52,10 @@ Every note and source in the repository. Section tables with year, status and li
 - [Open questions](08-synthesis/open-questions.md)
 - [Quantized Inertia: scorecard](08-synthesis/scorecard.md)
 
+## [Analysis](09-analysis/INDEX.md)
+- [A1: fixed-Θ refit of the SPARC radial acceleration relation](09-analysis/a1-sparc-rar-refit/README.md)
+- [A1b: per-galaxy SPARC rotation-curve fits, QI vs MOND](09-analysis/a1b-sparc-per-galaxy/README.md)
+
 ## [Papers](01-papers/INDEX.md)
 - [Modelling the Pioneer anomaly as modified inertia](01-papers/2007-mcculloch-pioneer-anomaly/README.md)
 - [Can the flyby anomalies be explained by a modification of inertia?](01-papers/2008-mcculloch-flyby-anomalies-jbis/README.md)
