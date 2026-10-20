@@ -566,6 +566,19 @@
   "note": "MDPI Eng published PDF; PDF and Crossref state CC BY 4.0."
  },
  {
+  "folder": "01-papers/2024-stauffer-qi-drive-versions",
+  "pdf_license": "unknown",
+  "evidence_url": "https://www.rocketslinger.com/",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2024-stauffer-qi-drive-versions/paper.pdf",
+   "01-papers/2024-stauffer-qi-drive-versions/figures/fig-1-basic-thruster.png",
+   "01-papers/2024-stauffer-qi-drive-versions/figures/fig-2-stacked-cells.png",
+   "01-papers/2024-stauffer-qi-drive-versions/figures/fig-3-baffled-expander.png"
+  ],
+  "note": "ResearchGate PDF (owner-supplied, created 2 Feb 2024). Author 'defensively publishes' the ideas into the public domain, but grants no copyright licence for the text."
+ },
+ {
   "folder": "01-papers/2025-mcculloch-jupiter-mass-binaries",
   "pdf_license": "CC-BY-4.0",
   "evidence_url": "https://api.crossref.org/works/10.3390/astronomy5010001",
@@ -575,6 +588,16 @@
    "01-papers/2025-mcculloch-jupiter-mass-binaries/figures/fig-1-jumbo-accelerations.png"
   ],
   "note": "MDPI Astronomy published PDF; PDF says CC BY, Crossref says CC BY 4.0."
+ },
+ {
+  "folder": "01-papers/2025-stauffer-qi-experiments",
+  "pdf_license": "unknown",
+  "evidence_url": "https://www.rocketslinger.com/",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2025-stauffer-qi-experiments/paper.pdf"
+  ],
+  "note": "ResearchGate PDF (owner-supplied, created 17 Jan 2025). Author 'defensively publishes' the ideas into the public domain, but grants no copyright licence for the text."
  },
  {
   "folder": "03-criticism/2012-turyshev-pioneer-thermal",
