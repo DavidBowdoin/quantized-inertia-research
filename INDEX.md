@@ -48,6 +48,7 @@ Every note and source in the repository. Section tables with year, status and li
 
 ## [Synthesis](08-synthesis/INDEX.md)
 - [Build notes: issues found while reading the sources](08-synthesis/build-notes.md)
+- [Grokipedia edits](08-synthesis/grokipedia-edits.md)
 - [Ideas: analyses we could run and tests that would decide](08-synthesis/ideas-and-tests.md)
 - [Open questions](08-synthesis/open-questions.md)
 - [Quantized Inertia: scorecard](08-synthesis/scorecard.md)
