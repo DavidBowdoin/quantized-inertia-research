@@ -10,7 +10,7 @@ A balanced, source-grounded collection of everything published on **Quantized In
 3. [Scorecard & synthesis](08-synthesis/scorecard.md): what we can conclude
 4. [Master index](INDEX.md): every note and source in one place
 
-Contributing with an AI agent? Start with [AGENTS.md](AGENTS.md).
+Contributing with an AI agent? Start with [AGENTS.md](AGENTS.md). Have access to a paper we're missing? See [MISSING-PDFS.md](MISSING-PDFS.md).
 
 ## Layout
 | Folder | Contents |
@@ -43,6 +43,7 @@ python3 -I _tools/build_index.py --check-only
 python3 -I _tools/build_master_index.py    # rebuild top-level INDEX.md
 python3 -I _tools/check_license.py --arxiv <id> --doi <doi>   # licence lookup for a new PDF
 python3 -I _tools/apply_local_only.py      # apply _tools/licenses.json: .gitignore + "local only" notes
+python3 -I _tools/build_missing_list.py    # refresh MISSING-PDFS.md
 cat */*/citation.bib > bibliography.bib    # regenerate the bibliography
 ```
 To add a source, copy the template into a new `YYYY-author-shortname/` folder in the right section, fill in the README, and rerun the script.

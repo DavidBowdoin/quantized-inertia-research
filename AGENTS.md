@@ -28,8 +28,9 @@ It is pure Markdown and assets. There is no build system: just two stdlib-only P
 | `08-synthesis/` | topic notes | editorial: scorecard, open questions, ideas, build notes |
 | `assets/diagrams/` | assets | our own SVGs only (CC BY 4.0) |
 | `_templates/source-README.md` | template | copy this for every new source |
-| `_tools/` | code (MIT) | `build_index.py`, `build_master_index.py`, `check_license.py`, `apply_local_only.py`; `licenses.json` (licence decisions) |
+| `_tools/` | code (MIT) | `build_index.py`, `build_master_index.py`, `build_missing_list.py`, `check_license.py`, `apply_local_only.py`; `licenses.json` (licence decisions) |
 | `bibliography.bib` | generated | concatenation of every `citation.bib` |
+| `MISSING-PDFS.md` | generated table | sources with no PDF yet, and how to obtain them (`_tools/build_missing_list.py`) |
 
 ## The source-folder convention (most important rule)
 Every source is one folder: `<section>/YYYY-firstauthorsurname-shortname/` (lowercase, hyphens, 2–4 words in the short name), containing:
@@ -78,7 +79,7 @@ The public GitHub repo (`DavidBowdoin/quantized-inertia-research`) must contain 
 3. If it's open access, download it into its own folder (`curl -L -A "Mozilla/5.0" -o paper.pdf …`) and confirm `file paper.pdf` says "PDF document". Determine `license`.
 4. Extract text **to a scratch directory, not the repo**: `pdftotext -layout paper.pdf /tmp/…/text.txt`. Render figure pages with `pdftoppm -png -r 110 -f N -l N`. (Install `poppler` if these are missing.)
 5. Fill in the README and `citation.bib`. Add relative links to related sources and evidence notes, and add a back-link from the relevant evidence note.
-6. Run `python3 -I _tools/build_index.py` (rebuilds the section `INDEX.md` tables between the `AUTO-INDEX` markers, then checks every relative link and must end "No broken relative links."). Then run `python3 -I _tools/build_master_index.py` and `cat */*/citation.bib > bibliography.bib`.
+6. Run `python3 -I _tools/build_index.py` (rebuilds the section `INDEX.md` tables between the `AUTO-INDEX` markers, then checks every relative link and must end "No broken relative links."). Then run `python3 -I _tools/build_master_index.py`, `python3 -I _tools/build_missing_list.py` and `cat */*/citation.bib > bibliography.bib`.
 7. Record the licence decision in `_tools/licenses.json` and run `python3 -I _tools/apply_local_only.py`. Then rerun `build_index.py`; its link check also fails on any link to a git-ignored file.
 
 Do not hand-edit the content between `<!-- BEGIN AUTO-INDEX -->` and `<!-- END AUTO-INDEX -->`, or the top-level `INDEX.md`; both are generated.
