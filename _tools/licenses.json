@@ -877,5 +877,63 @@
    "07-media/2023-arundal-tiverton-lecture/slides.pdf"
   ],
   "note": "PEARL copy (version of record); cover sheet: no open licence, reuse needs publisher/author permission. Owner-supplied download."
+ },
+ {
+  "folder": "01-papers/2015-mcculloch-swastika-rotors",
+  "pdf_license": "CC-BY-NC-ND-2.5",
+  "evidence_url": "https://progress-in-physics.com/",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2015-mcculloch-swastika-rotors/paper.pdf"
+  ],
+  "note": "Progress in Physics journal-wide licence CC BY-NC-ND 2.5 (site statement; PDF itself carries no notice). Unmodified PDF OK."
+ },
+ {
+  "folder": "01-papers/2015-mcculloch-swastika-rotors",
+  "pdf_license": "CC-BY-NC-ND-2.5",
+  "evidence_url": "https://progress-in-physics.com/",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2015-mcculloch-swastika-rotors/figures/fig-1-rotor-schematic.png"
+  ],
+  "note": "Cropped figure is a derivative of ND-licensed content -> LOCAL."
+ },
+ {
+  "folder": "01-papers/2024-gine-luciano-discretization-lambda",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://api.crossref.org/works/10.3390/universe10030142",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2024-gine-luciano-discretization-lambda/paper.pdf"
+  ],
+  "note": "Published MDPI Universe version (mdpi-res.com); PDF footer and Crossref both state CC BY 4.0."
+ },
+ {
+  "folder": "03-criticism/2026-junghanns-causal-restriction-nogo",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://zenodo.org/records/21923680",
+  "classification": "PUBLIC",
+  "files": [
+   "03-criticism/2026-junghanns-causal-restriction-nogo/paper.pdf"
+  ],
+  "note": "Zenodo v2 (doi:10.5281/zenodo.21923680; concept 10.5281/zenodo.21895660). CC BY 4.0 per Zenodo record and DataCite rightsList; PDF itself carries only the MNRAS-template copyright line. MD5 matches Zenodo."
+ },
+ {
+  "folder": "01-papers/2018-haug-foundation-quantized-inertia",
+  "pdf_license": "unknown",
+  "evidence_url": "https://vixra.org/abs/1803.0052",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2018-haug-foundation-quantized-inertia/paper.pdf"
+  ],
+  "note": "viXra v3 (2018-09-02); no licence statement on viXra or in PDF."
+ },
+ {
+  "folder": "01-papers/2026-mcculloch-quantum-thrust-capacitors",
+  "pdf_license": "unknown",
+  "evidence_url": "https://api.crossref.org/works/10.2139/ssrn.6313698",
+  "classification": "LOCAL",
+  "files": [],
+  "note": "No PDF stored (SSRN blocks scripted access); Crossref records no licence. Treat any later SSRN PDF as LOCAL unless an open licence is shown."
  }
 ]

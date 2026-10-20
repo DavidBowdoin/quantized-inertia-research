@@ -16,6 +16,7 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2022 | [Thrust measurements and evaluation of asymmetric infrared laser resonators for space propulsion](2022-neunzig-laser-resonators/README.md) | Neunzig et al. | CEAS Space Journal 14(1):45-62 (online 24 Apr 2021) | critical | ✅ | [DOI](https://doi.org/10.1007/s12567-021-00366-4) |
 | 2023 | [Modification of Inertia Resulting from a Hubble-Scale Casimir Effect Contradicts Classical Inertia](2023-dickmann-casimir-contradicts/README.md) | Dickmann & Dickmann | Kinematics and Physics of Celestial Bodies 39(6):356-359 (Ukrainian original: Kinematika i Fizika Nebesnykh Tel 39(6):80-86) | critical | ✅ | [DOI](https://doi.org/10.3103/S0884591323060041) |
 | 2024 | [Strong constraints on the gravitational law from Gaia DR3 wide binaries](2023-banik-gaia-dr3-wide-binaries/README.md) | Banik et al. | Monthly Notices of the Royal Astronomical Society 527(3):4573-4615 | critical | ✅ | [DOI](https://doi.org/10.1093/mnras/stad3393) [arXiv](https://arxiv.org/abs/2311.03436) |
+| 2026 | [Causal restriction is not spectral truncation: a no-go result for the Rindler–Casimir mechanism of Quantised Inertia (QI)](2026-junghanns-causal-restriction-nogo/README.md) | Junghanns | Zenodo preprint (manuscript prepared for MNRAS; not peer-reviewed) | critical | ✅ | [DOI](https://doi.org/10.5281/zenodo.21895660) |
 
-_9 sources._
+_10 sources._
 <!-- END AUTO-INDEX -->

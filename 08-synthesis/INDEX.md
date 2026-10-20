@@ -6,3 +6,4 @@
 - [open-questions.md](open-questions.md): unresolved questions about theory, astrophysics and experiment
 - [ideas-and-tests.md](ideas-and-tests.md): analyses we could run (SPARC refit, Renda-corrected F(a)…) and decisive tests
 - [build-notes.md](build-notes.md): raw issues found while reading the sources
+- [grokipedia-edits.md](grokipedia-edits.md): corrections drafted for the Grokipedia "Quantized inertia" page, and whether each has been submitted
