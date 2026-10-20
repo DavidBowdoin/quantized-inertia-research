@@ -20,6 +20,7 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2018 | [Scientists receive $1.3 million to study new propulsion idea for spacecraft](2018-plymouth-darpa/README.md) | Plymouth | University of Plymouth news | supports | ✅ |  |
 | 2018 | [DARPA invests in propellant-free rocket theory](2018-upi-darpa/README.md) | Hays | UPI | neutral | ✅ |  |
 | 2022 | [IVO Ltd. introduces a propulsion first: a pure electric thruster for satellites](2022-satnews-ivo/README.md) | SatNews | SatNews | supports | ✅ |  |
+| 2023 | [Tiverton and Devon Astronomical Society - Lecture on On Orbit Manufacturing and Quantized Inertia](2023-arundal-tiverton-lecture/README.md) | Arundal et al. | Tiverton and Devon Astronomical Society lecture (PEARL conference proceeding) | supports | ✅ |  |
 | 2023 | [EXCLUSIVE: The 'Impossible' Quantum Drive That Defies Known Laws of Physics Was Just Launched Into Space](2023-debrief-ivo-launch/README.md) | Plain | The Debrief | neutral | ✅ |  |
 | 2023 | [A Controversial Rocket Technology Could Challenge a Basic Law of Physics](2023-inverse-ivo/README.md) | Williams | Inverse (syndicated from Universe Today) | neutral | ✅ |  |
 | 2023 | [An Alternative Theory of Inertia will Get Tested in Space](2023-universetoday-ivo/README.md) | Williams | Universe Today | neutral | ✅ |  |
@@ -28,5 +29,5 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2024 | [Quantised Accelerations: From Anomalies to New Physics](2024-mcculloch-quantised-accelerations/README.md) | McCulloch | Polaris Books | supports |  |  |
 | 2026 | [Reviewing the IVO Quantum Drive](2026-nextbigfuture-ivo-review/README.md) | Wang | NextBigFuture | neutral | ✅ |  |
 
-_20 sources._
+_21 sources._
 <!-- END AUTO-INDEX -->

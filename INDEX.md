@@ -146,6 +146,7 @@ Every note and source in the repository. Section tables with year, status and li
 - [Scientists receive $1.3 million to study new propulsion idea for spacecraft](07-media/2018-plymouth-darpa/README.md)
 - [DARPA invests in propellant-free rocket theory](07-media/2018-upi-darpa/README.md)
 - [IVO Ltd. introduces a propulsion first: a pure electric thruster for satellites](07-media/2022-satnews-ivo/README.md)
+- [Tiverton and Devon Astronomical Society - Lecture on On Orbit Manufacturing and Quantized Inertia](07-media/2023-arundal-tiverton-lecture/README.md)
 - [EXCLUSIVE: The 'Impossible' Quantum Drive That Defies Known Laws of Physics Was Just Launched Into Space](07-media/2023-debrief-ivo-launch/README.md)
 - [A Controversial Rocket Technology Could Challenge a Basic Law of Physics](07-media/2023-inverse-ivo/README.md)
 - [An Alternative Theory of Inertia will Get Tested in Space](07-media/2023-universetoday-ivo/README.md)

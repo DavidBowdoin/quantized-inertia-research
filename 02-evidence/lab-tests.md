@@ -30,7 +30,7 @@ This note collects every laboratory measurement or proposal in the repository th
 
 ## QI's prediction
 - **Photon-cavity thrust:** F = PQL/c(1/w_small − 1/w_big), or worst-case F ≈ PS/c, where S is the number of round trips ([2015-mcculloch-emdrive-epl](../01-papers/2015-mcculloch-emdrive-epl/README.md); Dresden's adaptation). For the Dresden devices: copper cavities ~9×, silver ~39×, Taylor resonators 500–908× photon thrust.
-- **Capacitors:** F = 0.00014 IA/d² (blog-reported; [2021-mcculloch-symmetric-capacitors](../01-papers/2021-mcculloch-symmetric-capacitors/README.md)).
+- **Capacitors:** F = N_eħc/(2ns²) with N_e = I/q in the July 2021 preprint ([2021-mcculloch-symmetric-capacitors](../01-papers/2021-mcculloch-symmetric-capacitors/README.md)). The blog-reported F = 0.00014 IA/d² is not in that copy, but follows (editorial check) from F = π²PQcA/(240v²d²) in the 2022 preprint ([2022-mcculloch-qi-thrust-casimir](../01-papers/2022-mcculloch-qi-thrust-casimir/README.md)).
 - **Tajmar effect:**
   - **2010:** ratio −1.78 ± 0.25 × 10⁻⁸ (gyro counter-rotating), with mirror-image behaviour predicted for the southern hemisphere.
   - **2011, revised frame:** 2.67 ± 0.24 × 10⁻⁸ clockwise and 1.34 ± 0.12 × 10⁻⁸ anticlockwise, which accounts for the parity asymmetry. This revision replaced the 2010 southern-hemisphere prediction.

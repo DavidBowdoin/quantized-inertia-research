@@ -198,6 +198,18 @@
   "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
  },
  {
+  "folder": "01-papers/2017-mcculloch-emdrives-dielectrics",
+  "pdf_license": "CC-BY-3.0",
+  "evidence_url": "https://doi.org/10.1209/0295-5075/118/34003",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2017-mcculloch-emdrives-dielectrics/paper.pdf",
+   "01-papers/2017-mcculloch-emdrives-dielectrics/figures/fig-1-cavity-schematic.png",
+   "01-papers/2017-mcculloch-emdrives-dielectrics/figures/fig-2-predicted-vs-observed.png"
+  ],
+  "note": "Published EPL version (downloaded by owner); PDF states CC BY 3.0."
+ },
+ {
   "folder": "01-papers/2017-mcculloch-galaxy-rotations-sparc",
   "pdf_license": "arXiv-nonexclusive",
   "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1709.04918&metadataPrefix=arXiv",
@@ -208,6 +220,16 @@
    "01-papers/2017-mcculloch-galaxy-rotations-sparc/figures/fig-2-genzel-high-z.png"
   ],
   "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2017-mcculloch-information-loss",
+  "pdf_license": "author-manuscript",
+  "evidence_url": "https://pearl.plymouth.ac.uk/",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2017-mcculloch-information-loss/paper.pdf"
+  ],
+  "note": "Plymouth PEARL author manuscript; cover sheet says no open licence, reuse needs publisher/author permission."
  },
  {
   "folder": "01-papers/2017-mcculloch-proton-radius",
@@ -408,6 +430,17 @@
   "note": "Progress in Physics journal-wide licence CC BY-NC-ND 2.5 (site statement; PDF itself carries no notice). Unmodified PDF OK; rendered figures are derivatives of ND content -> LOCAL. [PDF entry]"
  },
  {
+  "folder": "01-papers/2021-gine-luciano-inertia-fluctuations",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://doi.org/10.1016/j.rinp.2021.104543",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2021-gine-luciano-inertia-fluctuations/paper.pdf",
+   "01-papers/2021-gine-luciano-inertia-fluctuations/figures/fig-1-rindler-casimir.png"
+  ],
+  "note": "Published Results in Physics version (downloaded by owner); PDF states CC BY 4.0."
+ },
+ {
   "folder": "01-papers/2021-haug-minimum-acceleration",
   "pdf_license": "CC-BY-4.0",
   "evidence_url": "https://api.crossref.org/works/10.4236/jhepgc.2021.72035",
@@ -419,6 +452,31 @@
   "note": "SCIRP PDF and Crossref state CC BY 4.0."
  },
  {
+  "folder": "01-papers/2021-mcculloch-symmetric-capacitors",
+  "pdf_license": "unknown",
+  "evidence_url": "https://www.researchgate.net/",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2021-mcculloch-symmetric-capacitors/paper.pdf",
+   "01-papers/2021-mcculloch-symmetric-capacitors/figures/fig-1-schematic.png",
+   "01-papers/2021-mcculloch-symmetric-capacitors/figures/fig-2-thrust-vs-separation.png"
+  ],
+  "note": "ResearchGate preprint (owner-supplied copy, 27 Jul 2021 PDF); no licence statement."
+ },
+ {
+  "folder": "01-papers/2021-soli-ikkt-qi",
+  "pdf_license": "unknown",
+  "evidence_url": "https://www.researchgate.net/",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2021-soli-ikkt-qi/paper.pdf",
+   "01-papers/2021-soli-ikkt-qi/figures/fig-1-unruh-spectrum.png",
+   "01-papers/2021-soli-ikkt-qi/figures/fig-2-thorlabs-attenuation.png",
+   "01-papers/2021-soli-ikkt-qi/figures/fig-3-statistics-factor.png"
+  ],
+  "note": "APS April 2021 conference paper, Rev7 (owner-supplied copy, 14 May 2021 PDF); no licence statement."
+ },
+ {
   "folder": "01-papers/2022-mcculloch-light-bending",
   "pdf_license": "CC-BY-4.0",
   "evidence_url": "https://api.crossref.org/works/10.21203/rs.3.rs-2251614/v1",
@@ -428,6 +486,16 @@
    "01-papers/2022-mcculloch-light-bending/figures/fig-1-light-path.png"
   ],
   "note": "Research Square preprint PDF and Crossref state CC BY 4.0."
+ },
+ {
+  "folder": "01-papers/2022-mcculloch-qi-thrust-casimir",
+  "pdf_license": "unknown",
+  "evidence_url": "https://www.researchgate.net/",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2022-mcculloch-qi-thrust-casimir/paper.pdf"
+  ],
+  "note": "ResearchGate preprint (owner-supplied copy, 25 Jan 2022 PDF); no licence statement."
  },
  {
   "folder": "01-papers/2023-chae-wide-binaries",
@@ -466,6 +534,16 @@
    "01-papers/2024-hernandez-wide-binary-review/figures/fig-6-noise-likelihood.png"
   ],
   "note": "Stored PDF is arXiv v3; OAI <license> and abs page for v3 = CC BY 4.0."
+ },
+ {
+  "folder": "01-papers/2024-mcculloch-proxima-centauri",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://doi.org/10.1093/mnrasl/slae047",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2024-mcculloch-proxima-centauri/paper.pdf"
+  ],
+  "note": "Published MNRAS Letters version (downloaded by owner); PDF states CC BY 4.0."
  },
  {
   "folder": "01-papers/2024-provatidis-inertial-propulsion-review",
@@ -608,5 +686,15 @@
    "04-experiments/2018-bhatt-capacitor-thrust/figures/fig-9-force-vs-current.png"
   ],
   "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "07-media/2023-arundal-tiverton-lecture",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "https://pearl.plymouth.ac.uk/secam-research/1399",
+  "classification": "LOCAL",
+  "files": [
+   "07-media/2023-arundal-tiverton-lecture/slides.pdf"
+  ],
+  "note": "PEARL copy (version of record); cover sheet: no open licence, reuse needs publisher/author permission. Owner-supplied download."
  }
 ]

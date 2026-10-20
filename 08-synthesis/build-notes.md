@@ -41,3 +41,13 @@ Raw issues collected while building the source folders (Oct 2026). Each one is e
 - McCulloch replies: Renda — thanked May 2020; 30 Aug 2026 accepted peak-only point, claims same formula re-derived via uncertainty principle / horizon information erasure. Dickmann — no reply. Turyshev — 6 objections (1 May 2012). Banik — "backwards" (30 Aug 2026), doesn't address contamination. Tajmar laser — Al casing cancels thrust (27 Apr 2021); Dresden 2022 follow-up removed casing etc., still only photon thrust. 23 Jan 2022: light thrusters failed, capacitors work.
 - Kößling 2019 journal: "no final conclusions"; IAC-18: "only thermal drifts".
 - Samsonov: viXra, tests Shawyer not QI. White 2016: QI not mentioned. Banik's QI-falsification sentence relies on Pittordis & Sutherland 2019.
+
+## Added 2026-10-19 (full texts supplied by the owner)
+- EmDrives & dielectrics (2017): printed eq. 13 has the opposite sign to eq. 2 (table follows eq. 2); NASA predictions within ~1–6× (not 1–3×); n chosen per test (1.46 vs 6.16) despite the "no adjustable parameters" claim.
+- Information loss (2017): mixes the two Θ values (7×10⁻¹⁰ m/s² implies 2.6×10²⁶ m, while eq. 17 uses 8.8×10²⁶ m); the "within 8%" agreement with QI holds only near a ≈ 2c²/Θ.
+- Giné & Luciano (2021): state that McCulloch 2007/2013 and Giné & McCulloch 2016 use a wrong integration factor and an unjustified energy-density volume; their own k ≃ 1.2 consistency is partly by construction; Hubble-scale term neglected.
+- Proxima Centauri (2024): the MOND comparison (Beech 0.424 km/s) is deep-MOND without an external field; QI eq. 5 is the same formula with a₀ → 2c²/Θ.
+- Symmetric capacitors (2021): the blog formula F = 0.00014 IA/d² is not in this preprint (it follows from the 2022 preprint's eq. 5); applying its eq. 6 to Tajmar & Schreiber's 90 µm capacitor predicts ~8 mg, ~28× their 0.3 mg null limit; internal inconsistencies (n = 1.2 vs 1.49, gap 1 µm vs 10–120 µm axis, 180 vs 216 N).
+- QI thrust as an asymmetric Casimir effect (2022): author calls the revision "hindsight"; under it the Dresden laser/fibre nulls no longer test QI; fibre-loop (≈11/17 vs 20/40 nN) and Madrid (500 vs 250) numbers don't reproduce from its own inputs; "71 N/kW" is 71 N/W.
+- Soli (2021): no new experiment; reinterprets a Thorlabs datasheet and CERN channelling data; admits its key ingredient (soft NCSUSY-breaking terms) is missing.
+- Tiverton lecture (Feb 2023): Plymouth in-air digital-scale capacitor tests, "up to 10 mg", heated stack (~50 °C), correlation 0.71 with predictions; conclusion "Lab tests have shown thrust (probably!)"; 10 mg at 1 W ≈ 0.1 N/kW (not 0.3) and only ~2–7× Dawn's ion drive (not 15×); conditions match Dresden's artefact list; no IVO / OTP-2 content.

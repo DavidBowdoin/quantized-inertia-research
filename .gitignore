@@ -1,6 +1,7 @@
 .DS_Store
 *.tmp
 _extract/
+downloads/
 
 # BEGIN LOCAL-ONLY (licence does not permit redistribution; see AGENTS.md)
 01-papers/2007-mcculloch-pioneer-anomaly/figures/fig-1-allowed-wavelengths.png
@@ -40,6 +41,7 @@ _extract/
 01-papers/2017-mcculloch-galaxy-rotations-sparc/figures/fig-1-rar-redshift.png
 01-papers/2017-mcculloch-galaxy-rotations-sparc/figures/fig-2-genzel-high-z.png
 01-papers/2017-mcculloch-galaxy-rotations-sparc/paper.pdf
+01-papers/2017-mcculloch-information-loss/paper.pdf
 01-papers/2017-mcculloch-proton-radius/figures/fig-1-sheltering.png
 01-papers/2017-pickering-resonant-cavity/paper.pdf
 01-papers/2017-smolin-mond-quantum-gravity/paper.pdf
@@ -60,6 +62,14 @@ _extract/
 01-papers/2020-mcculloch-information-theory/figures/fig-1-horizon-bits-schematic.png
 01-papers/2020-mcculloch-information-theory/paper.pdf
 01-papers/2020-mcculloch-nano-materials/figures/fig-1-cavity.png
+01-papers/2021-mcculloch-symmetric-capacitors/figures/fig-1-schematic.png
+01-papers/2021-mcculloch-symmetric-capacitors/figures/fig-2-thrust-vs-separation.png
+01-papers/2021-mcculloch-symmetric-capacitors/paper.pdf
+01-papers/2021-soli-ikkt-qi/figures/fig-1-unruh-spectrum.png
+01-papers/2021-soli-ikkt-qi/figures/fig-2-thorlabs-attenuation.png
+01-papers/2021-soli-ikkt-qi/figures/fig-3-statistics-factor.png
+01-papers/2021-soli-ikkt-qi/paper.pdf
+01-papers/2022-mcculloch-qi-thrust-casimir/paper.pdf
 03-criticism/2012-turyshev-pioneer-thermal/figures/fig-2-thermal-power.png
 03-criticism/2012-turyshev-pioneer-thermal/figures/fig-3-thermal-vs-anomalous.png
 03-criticism/2012-turyshev-pioneer-thermal/paper.pdf
@@ -76,4 +86,5 @@ _extract/
 04-experiments/2018-bhatt-capacitor-thrust/figures/fig-21-wireless.png
 04-experiments/2018-bhatt-capacitor-thrust/figures/fig-9-force-vs-current.png
 04-experiments/2018-bhatt-capacitor-thrust/paper.pdf
+07-media/2023-arundal-tiverton-lecture/slides.pdf
 # END LOCAL-ONLY
