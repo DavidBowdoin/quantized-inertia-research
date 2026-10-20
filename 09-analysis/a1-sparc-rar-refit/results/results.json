@@ -1193,5 +1193,6 @@
   "replicates": 200,
   "seed": 20261019,
   "unit": "galaxy"
- }
+ },
+ "interpretation": "Point-level BIC uses an independence approximation. Galaxy bootstrap ranges describe sampling variation conditional on the error model and baryonic assumptions; they do not calibrate BIC evidence thresholds or establish model-independent exclusion."
 }

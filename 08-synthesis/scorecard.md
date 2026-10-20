@@ -1,7 +1,7 @@
 ---
 title: "Quantized Inertia: scorecard"
 tags: [synthesis, scorecard]
-as_of: 2026-10-18
+as_of: 2026-10-19
 ---
 
 # Quantized Inertia: scorecard (as of October 2026)
@@ -39,7 +39,7 @@ as_of: 2026-10-18
 ## 3. Bottom line
 
 1. **QI's best evidence is a numerical coincidence it shares with MOND.** The acceleration scale 2c²/Θ falls near MOND's a₀ ≈ 1.2 × 10⁻¹⁰ m s⁻² and near cH₀. That coincidence is genuine and widely noticed (Milgrom pointed it out in 1983). It does not single out QI over other horizon-based or entropic MOND-like models (see [mond](../05-context/mond.md)).
-2. **"No adjustable parameters" is weaker than claimed.** Θ has taken values from 2.6 to 8.8 × 10²⁶ m across papers (a factor of 3.4). With the early value, galaxy rotation speeds were over-predicted by 30–54% (2012). The later value does much better, but our own refit of the SPARC data ([A1](../09-analysis/a1-sparc-rar-refit/README.md), editorial) finds it still too high by 17–32% at low acceleration and clearly worse than a one-parameter fit (ΔBIC ≈ +420). Per-galaxy fits ([A1b](../09-analysis/a1b-sparc-per-galaxy/README.md)) confirm this. The data prefer Θ ≈ 1.2–1.4 × 10²⁷ m, which is neither value QI has used ([equations.md](../00-overview/equations.md#7-discrepancies-and-inconsistencies-between-papers)). Choosing between cosmological length scales after seeing the data is in effect one discrete free parameter.
+2. **"No adjustable parameters" is weaker than claimed.** Θ has taken values from 2.6 to 8.8 × 10²⁶ m across papers (a factor of 3.4). With the early value, galaxy rotation speeds were over-predicted by 30–54% (2012). Our editorial [A1 refit](../09-analysis/a1-sparc-rar-refit/README.md) finds that the 2017 value over-predicts low-acceleration bin means by 17–32% **in acceleration**, equivalent to about 8–15% in velocity at fixed radius. A1 and the [per-galaxy A1b fits](../09-analysis/a1b-sparc-per-galaxy/README.md) favor Θ ≈ 1.2–1.4 × 10²⁷ m under the tested assumptions. A1 uses a point-level likelihood approximation; A1b reports prior-penalized fit loss and an explicit velocity-error sensitivity refit. These comparisons challenge the claimed parameter-free agreement but do not establish model-independent exclusion or a calibrated evidence strength. Choosing between cosmological length scales after seeing the data is in effect one discrete free parameter ([equations.md](../00-overview/equations.md#7-discrepancies-and-inconsistencies-between-papers)).
 3. **Every independent controlled test of QI's distinctive predictions has been null.** Those predictions are laboratory and propulsion thrust: lasers, fibre loops, capacitors and EmDrive cavities. QI is unusual among MOND-like ideas in predicting effects in the lab, which makes it more falsifiable, and so far those tests have gone against it.
 4. **The theoretical foundation is disputed.** Renda (2019) and Dickmann & Dickmann (2023) argue the derivation fails, and McCulloch accepted part of Renda's point in 2026. The newer derivations (uncertainty principle, information erasure) have not been reviewed independently, and they depend on choices such as Δx = half the horizon circumference and log₂.
 5. **The mainstream challenges to any no-dark-matter theory still apply**: Bullet Cluster lensing, CMB acoustic peaks, structure formation. We found **no QI calculation** of any of these.

@@ -6,5 +6,5 @@ Each analysis is a folder holding a `README.md` (question, bottom line, method, 
 
 | ID | Analysis | Data | Status | Bottom line |
 |---|---|---|---|---|
-| A1 | [Fixed-Θ refit of the SPARC radial acceleration relation](a1-sparc-rar-refit/README.md) | SPARC (2,693 points, 147 galaxies) | done | Θ = 2.6 × 10²⁶ m is excluded. Θ = 8.8 × 10²⁶ m over-predicts deep-MOND accelerations by 17–32% (ΔBIC +490 vs MOND). The data prefer Θ ≈ 1.2 × 10²⁷ m |
-| A1b | [Per-galaxy rotation-curve fits with distance, inclination and Υ★ priors](a1b-sparc-per-galaxy/README.md) | SPARC (3,168 points, 153 galaxies) | done | Per-galaxy freedom does not rescue fixed Θ. Θ = 8.8 × 10²⁶ m: ΔBIC +1,195 vs MOND (conservative +225), with a third of galaxies pulled > 20% closer. Best Θ ≈ 1.37 × 10²⁷ m |
+| A1 | [Fixed-Θ refit of the SPARC radial acceleration relation](a1-sparc-rar-refit/README.md) | SPARC (2,693 points, 147 galaxies) | done | Under the tested assumptions, both fixed Θ values fit worse than a free scale (best Θ ≈ 1.23 × 10²⁷ m). Late-Θ low-acceleration offsets are 17–32% in acceleration. No calibrated exclusion claim |
+| A1b | [Per-galaxy rotation-curve fits with distance, inclination and Υ★ priors](a1b-sparc-per-galaxy/README.md) | SPARC (3,168 points, 153 galaxies) | done | Prior-penalized fit loss favors a free scale (baseline Θ ≈ 1.37 × 10²⁷ m). Includes a full velocity-error sensitivity refit and distance diagnostics by method; loss differences are not BIC |
