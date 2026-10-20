@@ -21,14 +21,14 @@ verdict: refuted-or-null
   - Interpretation: the authors explain the thrust with a quantum-vacuum pilot-wave model, *not* QI. They acknowledge that thermal centre-of-gravity shifts need a "modified Cavendish balance approach ... to definitively rule out thermal".
 - **Null and artefact results:**
   - **Samsonov 2016** (viXra, amateur, in air; [2016-samsonov-emdrive-null](../03-criticism/2016-samsonov-emdrive-null/README.md)): battery-powered, wireless, on a 3 m tungsten pendulum. Any force is below ~40 µN, against a Shawyer prediction of 640 µN. Spurious thermal forces were observed. No QI prediction was computed.
-  - **Kößling et al. 2019, Dresden** ([2019-kossling-spacedrive-balance](../04-experiments/2019-kossling-spacedrive-balance/README.md)): 3.0–3.4 µN signals, similar to NASA's, identified as thermal drift. The IAC version says: "only thermal drifts and no real thrust".
+  - **Kößling et al. 2019, Dresden** ([2019-kossling-spacedrive-balance](../04-experiments/2019-kossling-spacedrive-balance/README.md)): 3.0–3.4 µN signals, similar to March's 4.7 µN at 3.2 W, that follow the cavity temperature. The journal text (accepted manuscript) says they "seem to indicate the presence of thermal drifts" but, with no 180° or 90° runs, "there can be no definite conclusions"; the stronger IAC-18 wording ("only thermal drifts and no real thrust") is not in the journal version.
   - **Tajmar, Neunzig & Weikert 2021/22** (CEAS Space J. 14, 31; [2021-tajmar-emdrive-false-positive](../03-criticism/2021-tajmar-emdrive-false-positive/README.md)):
     - Set-up: a replica of the White et al. geometry. A conventional mount reproduced ~1 µN/W, "similar to the one reported by White et al.".
     - With a bolt-bearing mount and battery power the signal vanished. Noise was 10–30 nN, and there was no thrust above the photon-thrust limit (36 nN at 11 W).
     - Conclusion: earlier claims are ruled out "by at least two orders of magnitude".
   - **Neunzig, Weikert & Tajmar 2022** (Acta Astronautica 195, 583; [2022-neunzig-emdrive-thrust](../03-criticism/2022-neunzig-emdrive-thrust/README.md)):
-    - Devices: a spherical-end-cap EmDrive (loaded Q 113–1027) and a superconducting YBCO EmDrive (Q ≈ 2600, at 65 K).
-    - F = PQ/c predicted 2261–6808 nN and 156–164 µN respectively. Only balance noise was measured.
+    - Devices: a spherical-end-cap EmDrive (loaded Q 113–1027, 4.2–10 W) and a superconducting YBCO EmDrive (Q 2063–2599, 18–19 W, in liquid/solid nitrogen at about −196 to −202 °C; the balance itself is rated down to 65 K).
+    - F = PQ/c predicted 2.3–22.6 µN and 156–164 µN respectively. Measured: (−11 ± 25) to (13 ± 31) nN, and (−0.33 ± 0.54) to (0.14 ± 0.23) µN, i.e. balance noise only (Tables B1–B2, p. 594).
 
 ## Mainstream explanation(s)
 - **Experimental artefacts**, as catalogued by TU Dresden:

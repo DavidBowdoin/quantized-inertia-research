@@ -102,6 +102,27 @@
   "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
  },
  {
+  "folder": "01-papers/2012-gine-cosmological-holographic",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2012-gine-cosmological-holographic/paper.pdf"
+  ],
+  "note": "Springer published version; '(c) Springer Science+Business Media, LLC 2012'. Owner-supplied copy."
+ },
+ {
+  "folder": "01-papers/2012-gine-holographic-modified-inertia",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2012-gine-holographic-modified-inertia/paper.pdf",
+   "01-papers/2012-gine-holographic-modified-inertia/figures/fig-1-two-screens.png"
+  ],
+  "note": "World Scientific published version; '(c) World Scientific Publishing Company', 'For personal use only'. Owner-supplied copy."
+ },
+ {
   "folder": "01-papers/2012-hernandez-wide-binaries",
   "pdf_license": "arXiv-nonexclusive",
   "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1105.1873&metadataPrefix=arXiv",
@@ -134,6 +155,16 @@
    "01-papers/2013-mcculloch-asymmetric-casimir/figures/fig-1-rindler-hubble-horizons.png"
   ],
   "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2014-mcculloch-gravity-uncertainty",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2014-mcculloch-gravity-uncertainty/paper.pdf"
+  ],
+  "note": "Springer published version (online 2013); '(c) Springer Science+Business Media Dordrecht 2013'. Owner-supplied copy."
  },
  {
   "folder": "01-papers/2014-mcculloch-toy-cosmology",
@@ -177,6 +208,17 @@
   "note": "Progress in Physics journal-wide licence CC BY-NC-ND 2.5 (site statement; PDF itself carries no notice). Unmodified PDF OK; rendered figures are derivatives of ND content -> LOCAL."
  },
  {
+  "folder": "01-papers/2016-gine-unruh-temperatures",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2016-gine-unruh-temperatures/paper.pdf",
+   "01-papers/2016-gine-unruh-temperatures/figures/fig-1-rindler-cosmic-horizons.png"
+  ],
+  "note": "World Scientific published version; 'For personal use only'. Owner-supplied copy."
+ },
+ {
   "folder": "01-papers/2016-mcculloch-relativity-uncertainty",
   "pdf_license": "arXiv-nonexclusive",
   "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1610.06787&metadataPrefix=arXiv",
@@ -185,6 +227,16 @@
    "01-papers/2016-mcculloch-relativity-uncertainty/paper.pdf"
   ],
   "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2017-gine-inertial-mass-holographic",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2017-gine-inertial-mass-holographic/paper.pdf"
+  ],
+  "note": "World Scientific published version; 'For personal use only'. Owner-supplied copy."
  },
  {
   "folder": "01-papers/2017-mcculloch-dwarf-galaxies",
@@ -252,6 +304,17 @@
   "note": "Progress in Physics journal-wide licence CC BY-NC-ND 2.5 (site statement; PDF itself carries no notice). Unmodified PDF OK; rendered figures are derivatives of ND content -> LOCAL. [PDF entry]"
  },
  {
+  "folder": "01-papers/2017-millis-inertial-frames",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2017-millis-inertial-frames/paper.pdf",
+   "01-papers/2017-millis-inertial-frames/figures/fig-1-table1.png"
+  ],
+  "note": "Elsevier published version; '(c) 2017 IAA. Published by Elsevier Ltd. All rights reserved.' Owner-supplied copy."
+ },
+ {
   "folder": "01-papers/2017-pickering-resonant-cavity",
   "pdf_license": "all-rights-reserved",
   "evidence_url": "https://api.crossref.org/works/10.22606/adap.2017.21002",
@@ -270,6 +333,28 @@
    "01-papers/2017-smolin-mond-quantum-gravity/paper.pdf"
   ],
   "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2018-gine-casimir-uncertainty",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2018-gine-casimir-uncertainty/paper.pdf",
+   "01-papers/2018-gine-casimir-uncertainty/figures/fig-1-shielded-volume.png"
+  ],
+  "note": "World Scientific published version; 'Re-use and distribution is strictly not permitted'. Owner-supplied copy."
+ },
+ {
+  "folder": "01-papers/2018-gine-hawking-unruh-uncertainty",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2018-gine-hawking-unruh-uncertainty/paper.pdf",
+   "01-papers/2018-gine-hawking-unruh-uncertainty/figures/fig-2-rindler-half-sphere.png"
+  ],
+  "note": "IOP/EPL published version; '(c) EPLA, 2018', no CC statement. Owner-supplied copy."
  },
  {
   "folder": "01-papers/2018-haug-mcculloch-derivation",
@@ -345,6 +430,18 @@
    "01-papers/2019-hernandez-gaia-wide-binaries/figures/fig-5-rms-velocity-vs-separation.png"
   ],
   "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "01-papers/2019-kholupenko-unruh-anisotropy-1",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2019-kholupenko-unruh-anisotropy-1/paper.pdf",
+   "01-papers/2019-kholupenko-unruh-anisotropy-1/figures/fig-1-delayed-trajectories.png",
+   "01-papers/2019-kholupenko-unruh-anisotropy-1/figures/fig-2-weight-function.png"
+  ],
+  "note": "Pleiades published version; '(c) Pleiades Publishing, Ltd., 2019'. Owner-supplied copy."
  },
  {
   "folder": "01-papers/2019-mcculloch-rindler-horizons",
@@ -635,6 +732,19 @@
   "note": "Stored PDF is arXiv v1; OAI <license> and abs page for v1 = CC BY 4.0."
  },
  {
+  "folder": "03-criticism/2020-tajmar-capacitor-thrust",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "03-criticism/2020-tajmar-capacitor-thrust/paper.pdf",
+   "03-criticism/2020-tajmar-capacitor-thrust/figures/fig-1-setup.png",
+   "03-criticism/2020-tajmar-capacitor-thrust/figures/fig-2-calibration-null.png",
+   "03-criticism/2020-tajmar-capacitor-thrust/figures/fig-3-leakage-capacitor.png"
+  ],
+  "note": "Elsevier published version; '(c) 2020 Elsevier B.V. All rights reserved.' Owner-supplied copy."
+ },
+ {
   "folder": "03-criticism/2021-tajmar-emdrive-false-positive",
   "pdf_license": "CC-BY-4.0",
   "evidence_url": "https://api.crossref.org/works/10.1007/s12567-021-00385-1",
@@ -646,6 +756,19 @@
    "03-criticism/2021-tajmar-emdrive-false-positive/figures/fig-6-false-positives.png"
   ],
   "note": "Published CEAS Space J. version (DNB archive copy); PDF 'Open Access ... Creative Commons Attribution 4.0' and Crossref CC BY 4.0."
+ },
+ {
+  "folder": "03-criticism/2022-neunzig-emdrive-thrust",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "03-criticism/2022-neunzig-emdrive-thrust/paper.pdf",
+   "03-criticism/2022-neunzig-emdrive-thrust/figures/fig-1-silver-cavity.png",
+   "03-criticism/2022-neunzig-emdrive-thrust/figures/fig-2-taylor-cone.png",
+   "03-criticism/2022-neunzig-emdrive-thrust/figures/fig-3-fibre-loop.png"
+  ],
+  "note": "Elsevier published version; '(c) 2022 IAA. Published by Elsevier Ltd. All rights reserved.' Owner-supplied copy."
  },
  {
   "folder": "03-criticism/2022-neunzig-laser-resonators",
@@ -719,6 +842,31 @@
    "04-experiments/2018-bhatt-capacitor-thrust/figures/fig-9-force-vs-current.png"
   ],
   "note": "Stored PDF is arXiv copy; arXiv default non-exclusive distribution licence."
+ },
+ {
+  "folder": "04-experiments/2018-tajmar-spacedrive",
+  "pdf_license": "accepted-manuscript",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "04-experiments/2018-tajmar-spacedrive/paper.pdf",
+   "04-experiments/2018-tajmar-spacedrive/figures/fig-1-thrust-balance.png",
+   "04-experiments/2018-tajmar-spacedrive/figures/fig-2-emdrive-met-designs.png"
+  ],
+  "note": "Elsevier accepted manuscript (IAC-17 basis; '(c) 2017 IAF. All rights reserved.'); no CC licence stated. Owner-supplied copy."
+ },
+ {
+  "folder": "04-experiments/2019-kossling-spacedrive-balance",
+  "pdf_license": "accepted-manuscript",
+  "evidence_url": "",
+  "classification": "LOCAL",
+  "files": [
+   "04-experiments/2019-kossling-spacedrive-balance/paper.pdf",
+   "04-experiments/2019-kossling-spacedrive-balance/figures/fig-1-noise-calibration.png",
+   "04-experiments/2019-kossling-spacedrive-balance/figures/fig-2-met-orientations.png",
+   "04-experiments/2019-kossling-spacedrive-balance/figures/fig-3-emdrive.png"
+  ],
+  "note": "Elsevier accepted manuscript (IAC-18 basis; '(c) 2018 IAF. All rights reserved.'); no CC licence stated. Owner-supplied copy."
  },
  {
   "folder": "07-media/2023-arundal-tiverton-lecture",

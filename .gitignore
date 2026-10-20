@@ -25,6 +25,9 @@ downloads/
 01-papers/2011-mcculloch-podkletnov-effect/paper.pdf
 01-papers/2011-mcculloch-tajmar-effect/figures/fig-1-setup-a-schematic.png
 01-papers/2011-mcculloch-tajmar-effect/paper.pdf
+01-papers/2012-gine-cosmological-holographic/paper.pdf
+01-papers/2012-gine-holographic-modified-inertia/figures/fig-1-two-screens.png
+01-papers/2012-gine-holographic-modified-inertia/paper.pdf
 01-papers/2012-hernandez-wide-binaries/figures/fig-1-hipparcos-sdss-dv-vs-s.png
 01-papers/2012-hernandez-wide-binaries/figures/fig-2-fraction-and-rms-velocity.png
 01-papers/2012-hernandez-wide-binaries/paper.pdf
@@ -32,10 +35,14 @@ downloads/
 01-papers/2012-mcculloch-galactic-scales/paper.pdf
 01-papers/2013-mcculloch-asymmetric-casimir/figures/fig-1-rindler-hubble-horizons.png
 01-papers/2013-mcculloch-asymmetric-casimir/paper.pdf
+01-papers/2014-mcculloch-gravity-uncertainty/paper.pdf
 01-papers/2015-iorio-solar-system-anomalies/paper.pdf
 01-papers/2015-mcculloch-emdrive-epl/figures/fig-1-cavity.png
 01-papers/2015-mcculloch-emdrive-epl/paper.pdf
+01-papers/2016-gine-unruh-temperatures/figures/fig-1-rindler-cosmic-horizons.png
+01-papers/2016-gine-unruh-temperatures/paper.pdf
 01-papers/2016-mcculloch-relativity-uncertainty/paper.pdf
+01-papers/2017-gine-inertial-mass-holographic/paper.pdf
 01-papers/2017-mcculloch-dwarf-galaxies/figures/fig-1-velocity-dispersions.png
 01-papers/2017-mcculloch-dwarf-galaxies/paper.pdf
 01-papers/2017-mcculloch-galaxy-rotations-sparc/figures/fig-1-rar-redshift.png
@@ -43,8 +50,14 @@ downloads/
 01-papers/2017-mcculloch-galaxy-rotations-sparc/paper.pdf
 01-papers/2017-mcculloch-information-loss/paper.pdf
 01-papers/2017-mcculloch-proton-radius/figures/fig-1-sheltering.png
+01-papers/2017-millis-inertial-frames/figures/fig-1-table1.png
+01-papers/2017-millis-inertial-frames/paper.pdf
 01-papers/2017-pickering-resonant-cavity/paper.pdf
 01-papers/2017-smolin-mond-quantum-gravity/paper.pdf
+01-papers/2018-gine-casimir-uncertainty/figures/fig-1-shielded-volume.png
+01-papers/2018-gine-casimir-uncertainty/paper.pdf
+01-papers/2018-gine-hawking-unruh-uncertainty/figures/fig-2-rindler-half-sphere.png
+01-papers/2018-gine-hawking-unruh-uncertainty/paper.pdf
 01-papers/2018-haug-mcculloch-derivation/paper.pdf
 01-papers/2018-hernandez-bounding-curvature/figures/fig-1-bounding-curvature-schematic.png
 01-papers/2018-hernandez-bounding-curvature/figures/fig-2-expansion-history.png
@@ -56,6 +69,9 @@ downloads/
 01-papers/2019-hernandez-gaia-wide-binaries/figures/fig-4-1d-relative-velocities.png
 01-papers/2019-hernandez-gaia-wide-binaries/figures/fig-5-rms-velocity-vs-separation.png
 01-papers/2019-hernandez-gaia-wide-binaries/paper.pdf
+01-papers/2019-kholupenko-unruh-anisotropy-1/figures/fig-1-delayed-trajectories.png
+01-papers/2019-kholupenko-unruh-anisotropy-1/figures/fig-2-weight-function.png
+01-papers/2019-kholupenko-unruh-anisotropy-1/paper.pdf
 01-papers/2019-mcculloch-rindler-horizons/figures/fig-1-hubble-rindler-schematic.png
 01-papers/2019-mcculloch-superluminal-travel/paper.pdf
 01-papers/2019-mcculloch-wide-binaries/figures/fig-1-wide-binary-velocities.png
@@ -81,6 +97,14 @@ downloads/
 03-criticism/2012-turyshev-pioneer-thermal/paper.pdf
 03-criticism/2016-samsonov-emdrive-null/figures/fig-7-8-low-noise-and-thermal.png
 03-criticism/2016-samsonov-emdrive-null/paper.pdf
+03-criticism/2020-tajmar-capacitor-thrust/figures/fig-1-setup.png
+03-criticism/2020-tajmar-capacitor-thrust/figures/fig-2-calibration-null.png
+03-criticism/2020-tajmar-capacitor-thrust/figures/fig-3-leakage-capacitor.png
+03-criticism/2020-tajmar-capacitor-thrust/paper.pdf
+03-criticism/2022-neunzig-emdrive-thrust/figures/fig-1-silver-cavity.png
+03-criticism/2022-neunzig-emdrive-thrust/figures/fig-2-taylor-cone.png
+03-criticism/2022-neunzig-emdrive-thrust/figures/fig-3-fibre-loop.png
+03-criticism/2022-neunzig-emdrive-thrust/paper.pdf
 03-criticism/2022-neunzig-laser-resonators/paper-conference.pdf
 03-criticism/2023-dickmann-casimir-contradicts/figures/fig-1-qi-schematic.png
 03-criticism/2023-dickmann-casimir-contradicts/paper.pdf
@@ -92,5 +116,12 @@ downloads/
 04-experiments/2018-bhatt-capacitor-thrust/figures/fig-21-wireless.png
 04-experiments/2018-bhatt-capacitor-thrust/figures/fig-9-force-vs-current.png
 04-experiments/2018-bhatt-capacitor-thrust/paper.pdf
+04-experiments/2018-tajmar-spacedrive/figures/fig-1-thrust-balance.png
+04-experiments/2018-tajmar-spacedrive/figures/fig-2-emdrive-met-designs.png
+04-experiments/2018-tajmar-spacedrive/paper.pdf
+04-experiments/2019-kossling-spacedrive-balance/figures/fig-1-noise-calibration.png
+04-experiments/2019-kossling-spacedrive-balance/figures/fig-2-met-orientations.png
+04-experiments/2019-kossling-spacedrive-balance/figures/fig-3-emdrive.png
+04-experiments/2019-kossling-spacedrive-balance/paper.pdf
 07-media/2023-arundal-tiverton-lecture/slides.pdf
 # END LOCAL-ONLY
