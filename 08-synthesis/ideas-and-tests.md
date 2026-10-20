@@ -83,8 +83,8 @@ The last column matters. McCulloch 2017 takes the **comoving** diameter (8.8 × 
 **Editorial reading of the headline numbers.** Against the local a₀ ≈ 1.2 × 10⁻¹⁰, MUSE-DARK's z ≈ 1 value is a ratio of about 2.0. Against the paper's own fitted intercept the ratio is larger, about 2.4 `[!UNVERIFIED: intercept read from the paper body by a research agent, not from the abstract]`. Either way the scale rises, which standard MOND does not predict and QI does. The printed (1+z) law gives 2.0; the proper-horizon reading gives 2.6 at z = 1 but 4.8 at z = 2, where Milgrom's argument bites.
 
 **The test.**
-1. Download the MUSE-DARK rotation curves (data releases at dark.univ-lyon1.fr; check exactly what is served) and refit them with **QI's own function**, a = a_bar·√(1 + a_Q/a_bar), in redshift bins. The paper uses a different interpolating function, and our A1 refit showed that the QI scale and the McGaugh a₀ differ by about 1.3× locally.
-2. Fit a_Q(z) = a_Q(0)·f(z) for each column of the table above, with a_Q(0) **fixed from SPARC** (A1/A1b, on the `analysis/a1-sparc-refit` branch), and compare.
+1. Download the MUSE-DARK rotation curves (data releases at dark.univ-lyon1.fr; check exactly what is served) and refit them with **QI's own function**, a = a_bar·√(1 + a_Q/a_bar), in redshift bins. The paper uses a different interpolating function, and our [A1](../09-analysis/a1-sparc-rar-refit/README.md) refit showed that the QI scale and the McGaugh a₀ differ by about 1.3× locally.
+2. Fit a_Q(z) = a_Q(0)·f(z) for each column of the table above, with a_Q(0) **fixed from SPARC** ([A1](../09-analysis/a1-sparc-rar-refit/README.md), [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md)), and compare.
 3. Add the Genzel et al. 2020 z ≈ 1–2.4 sample as a high-z lever arm.
 
 **QI-favourable result:** the scale rises at the rate of one of QI's two Θ(z) laws, starts from the SPARC value at z = 0, and stays consistent with Genzel at z ≈ 2. **Against QI:** the rise turns out to be a modelling artefact (the paper uses a dark-matter disc–halo decomposition, and ΛCDM simulations also predict some drift), or it follows neither law.
@@ -92,7 +92,7 @@ The last column matters. McCulloch 2017 takes the **comoving** diameter (8.8 × 
 **Caveats.** The paper's a₀ is a fitted parameter of a disc–halo model, not a direct observable. A rising scale also fits some "a₀ ∝ cH" MOND variants, so success would not single out QI from every horizon-based model ([mond](../05-context/mond.md)). Junghanns 2026 already lists the competing Θ(t) prescriptions as untested ([source](../03-criticism/2026-junghanns-causal-restriction-nogo/README.md)).
 
 #### 🔧 A7. Pre-register Θ, then test it on data it was not fitted to
-**Why it matters.** The scorecard's main objection is that Θ was chosen after looking at the data. Our SPARC fits prefer a_Q ≈ 1.31–1.47 × 10⁻¹⁰ m s⁻², which is Θ ≈ 1.23–1.37 × 10²⁷ m, and neither published Θ.
+**Why it matters.** The scorecard's main objection is that Θ was chosen after looking at the data. Our SPARC fits ([A1](../09-analysis/a1-sparc-rar-refit/README.md), [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md)) prefer a_Q ≈ 1.31–1.47 × 10⁻¹⁰ m s⁻², which is Θ ≈ 1.23–1.37 × 10²⁷ m, and neither published Θ.
 
 **Editorial check (a coincidence, not a result).** With Planck 2018 parameters, the comoving particle-horizon radius is R_p = 4.37 × 10²⁶ m. Its diameter, 2R_p = 8.73 × 10²⁶ m, is QI's 2017 Θ. Its **half circumference**, πR_p = 1.371 × 10²⁷ m, gives a_Q = 1.31 × 10⁻¹⁰ m s⁻². That is the A1b per-galaxy best fit (Θ ≈ 1.37 × 10²⁷ m) almost exactly. McCulloch's 2020 derivation already uses horizon *half circumferences* for Δx ([2020](../01-papers/2020-mcculloch-horizon-widths/README.md)), but plugging that length in for Θ is not what the derivation does. Other standard lengths give 6.5 × 10⁻¹⁰ (2c/H₀), 5.7 × 10⁻¹⁰ (event-horizon diameter), 5.4 × 10⁻¹⁰ (de Sitter diameter) and 1.7 × 10⁻¹⁰ (de Sitter circumference).
 
@@ -114,10 +114,10 @@ The last column matters. McCulloch 2017 takes the **comoving** diameter (8.8 × 
 #### 🔧 A12. Is the "external field effect" in SPARC real?
 QI's sharpest qualitative difference from MOND is that it has **no** external field effect. Chae et al. 2020 ([arXiv:2009.11525](https://arxiv.org/abs/2009.11525)) reported the EFE in SPARC rotation curves at high significance, with per-galaxy field estimates in Chae et al. 2021 (ApJ 921, 104). Later work is more sceptical: Desmond 2023 (MNRAS 526, 3342) finds only weak evidence, Stiskalek & Desmond 2023 find the external field adds no predictive power, and Paranjape & Sheth (MNRAS, 2022) argue that ΛCDM gives a similar signal with the opposite sign `[!UNVERIFIED: these three identifiers come from a research agent and were not re-checked]`.
 
-**Test.** Using our A1b per-galaxy fits, correlate the outer-curve residuals of QI and MOND with each galaxy's environmental field. QI predicts **zero** correlation, MOND a negative one, ΛCDM the opposite sign. **QI-favourable:** a null correlation, especially in the cleanest isolated subsample. Chae 2021's Appendix B tables may need transcribing.
+**Test.** Using our [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md) per-galaxy fits, correlate the outer-curve residuals of QI and MOND with each galaxy's environmental field. QI predicts **zero** correlation, MOND a negative one, ΛCDM the opposite sign. **QI-favourable:** a null correlation, especially in the cleanest isolated subsample. Chae 2021's Appendix B tables may need transcribing.
 
 #### 🔧 A13. Population test of dwarfs and ultra-diffuse galaxies: isolated or EFE?
-QI predicts every dwarf behaves as if isolated. Editorial check: in deep-MOND scaling, QI's dispersion is about the isolated MOND value × (a_Q/a₀)^¼, which is ×1.14 for a_Q = 2.04 × 10⁻¹⁰ (Θ = 8.8 × 10²⁶ m) and ×1.02 for the A1b value.
+QI predicts every dwarf behaves as if isolated. Editorial check: in deep-MOND scaling, QI's dispersion is about the isolated MOND value × (a_Q/a₀)^¼, which is ×1.14 for a_Q = 2.04 × 10⁻¹⁰ (Θ = 8.8 × 10²⁶ m) and ×1.02 for the [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md) value.
 
 | System | Observed σ (km s⁻¹) | MOND isolated | MOND with EFE | Direction for QI | Source |
 |---|---|---|---|---|---|
@@ -166,7 +166,7 @@ These are not where QI is likely to gain. But a positive galaxy-scale result wil
 - McCulloch blog posts with numbers: "A Tale of Two Satellites" (30 Jan 2026), the AC G185.0-11.5 prediction (22 May 2025), weak lensing (6 Oct 2026).
 
 ## C. Suggested next steps for this repository
-1. ~~Build `09-analysis/` with A1 (SPARC refit) as the first notebook.~~ Done: [A1](../09-analysis/a1-sparc-rar-refit/README.md). [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md) (per-galaxy fits) also done. Next: A2 (Renda-corrected F(a)), which can reuse both scripts.
+1. ~~Build `09-analysis/` with A1 (SPARC refit) as the first notebook.~~ Done: [A1](../09-analysis/a1-sparc-rar-refit/README.md). [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md) (per-galaxy fits) also done. Next: A6 (see step 4), then A2 (Renda-corrected F(a)); both can reuse these scripts.
 2. Ask McCulloch (via the blog) for the IVO OTP-2 telemetry and the Alcalá DARPA results.
 3. Track new papers: set up a recurring check of arXiv for "quantised inertia" / "MiHsC", and new posts on physicsfromtheedge.blogspot.com.
 4. Do A6 (redshift evolution) next. It is QI's most distinctive galaxy prediction, the data are new, and it reuses the A1/A1b code. Freeze Θ first (A7).
