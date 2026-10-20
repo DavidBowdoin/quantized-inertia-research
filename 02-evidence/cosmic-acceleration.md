@@ -49,6 +49,7 @@ QI ties its minimum acceleration to the size of the cosmic horizon, so it lands,
 - [2012-mcculloch-galactic-scales](../01-papers/2012-mcculloch-galactic-scales/README.md)
 - [2017-mcculloch-information-loss](../01-papers/2017-mcculloch-information-loss/README.md)
 - [2019-mcculloch-rindler-horizons](../01-papers/2019-mcculloch-rindler-horizons/README.md)
+- [2019-mcculloch-superluminal-travel](../01-papers/2019-mcculloch-superluminal-travel/README.md) (residual 2c²/Θ said to persist at v = c)
 - [2017-pickering-resonant-cavity](../01-papers/2017-pickering-resonant-cavity/README.md)
 - [2012-gine-holographic-modified-inertia](../01-papers/2012-gine-holographic-modified-inertia/README.md)
 - [2017-smolin-mond-quantum-gravity](../01-papers/2017-smolin-mond-quantum-gravity/README.md)

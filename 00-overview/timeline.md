@@ -1,7 +1,7 @@
 ---
 title: "Quantized Inertia timeline, 2006–2026"
 type: overview
-updated: 2026-10-18
+updated: 2026-10-19
 ---
 
 # Quantized Inertia timeline (2006–2026)
@@ -76,6 +76,7 @@ timeline
 | 2019 | Kößling et al. trace apparent EmDrive thrust to artefacts. | test | [2019-kossling-spacedrive-balance](../04-experiments/2019-kossling-spacedrive-balance/README.md) |
 | Aug 2019 | **Renda, *A sceptical analysis of Quantized Inertia*** (arXiv:1908.01589; MNRAS 489). Finds two major flaws in the derivation. | critique | [2019-renda-sceptical](../03-criticism/2019-renda-sceptical/README.md) |
 | 2019 | McCulloch & Lucio, wide binaries (Ap&SS 364). *Can we hide gravitational sources behind Rindler horizons?* (PiP). | theory | [wide binaries](../01-papers/2019-mcculloch-wide-binaries/README.md), [Rindler](../01-papers/2019-mcculloch-rindler-horizons/README.md) |
+| Jun 2019 | *Superluminal travel from quantised inertia* (J. Space Expl. 8(2)): QI's residual acceleration 2c²/Θ is said to persist at v = c. | theory | [2019-mcculloch-superluminal-travel](../01-papers/2019-mcculloch-superluminal-travel/README.md) |
 | 2019 | Richard Mansell (later IVO Ltd.) contacts McCulloch, according to McCulloch's account as relayed in 2026. | media | [2026-nextbigfuture-ivo-review](../07-media/2026-nextbigfuture-ivo-review/README.md) |
 
 ### 2020–2022: Dresden null results
@@ -84,6 +85,7 @@ timeline
 | 2020 | Tajmar & Schreiber find no anomalous thrust from charged high-voltage capacitors (J. Electrostatics 107). | critique | [2020-tajmar-capacitor-thrust](../03-criticism/2020-tajmar-capacitor-thrust/README.md) |
 | 2020 | Horizon-width rederivation (with Giné). Information-theory and nano-materials papers. Giné & Luciano link QI to extended uncertainty principles. | theory | [horizons](../01-papers/2020-mcculloch-horizon-widths/README.md), [info](../01-papers/2020-mcculloch-information-theory/README.md), [nano](../01-papers/2020-mcculloch-nano-materials/README.md), [EUP](../01-papers/2020-gine-luciano-eup-modified-inertia/README.md) |
 | 2021 (online) / 2022 | **Tajmar, Neunzig & Weikert:** high-accuracy EmDrive measurements show no thrust, and earlier positives are explained as false positives (CEAS Space J. 14). **Neunzig, Weikert & Tajmar:** asymmetric laser resonators and fibre loops built to test QI show no thrust at nN level, at least four orders of magnitude below QI predictions (CEAS Space J. 14). Both are part of the DARPA-funded programme. | critique | [EmDrive](../03-criticism/2021-tajmar-emdrive-false-positive/README.md), [lasers](../03-criticism/2022-neunzig-laser-resonators/README.md) |
+| Jul 2021 | Advocacy site quantizedinertia.com adds a Tests page: "Six labs have tested this. So far, five have shown some thrust" (citing an unpublished Pérez-Díaz et al. 2021, which McCulloch called "an artefact" in Jan 2022). | media | [2023-quantizedinertia-website](../07-media/2023-quantizedinertia-website/README.md) |
 | 2021 | Symmetric-capacitor thrust preprint and EPR-paradox paper (MPLB). | theory | [capacitors](../01-papers/2021-mcculloch-symmetric-capacitors/README.md), [EPR](../01-papers/2021-mcculloch-epr-paradox/README.md) |
 | 2022 | Neunzig et al. test microwave, superconducting and laser-type EmDrives (Acta Astronautica 195) and find no anomalous thrust. | critique | [2022-neunzig-emdrive-thrust](../03-criticism/2022-neunzig-emdrive-thrust/README.md) |
 | 2022 | IVO Ltd. announces a QI-based "Quantum Drive" and claims ~45 mN/W in thermal-vacuum tests (company claim, unverified). Light-bending and "QI thrust as asymmetric Casimir" preprints. | media / theory | [SatNews](../07-media/2022-satnews-ivo/README.md), [light](../01-papers/2022-mcculloch-light-bending/README.md), [Casimir](../01-papers/2022-mcculloch-qi-thrust-casimir/README.md) |
@@ -99,6 +101,7 @@ timeline
 | **9 Feb 2024** | **Barry-1 contact lost** after power problems during the early-orbit phase. The drives were never switched on, so there is no result. | test | [Debrief](../07-media/2024-debrief-ivo-failure/README.md), [Futurism](../07-media/2024-futurism-ivo-contact-lost/README.md) |
 | 2024 | *Testing quantized inertia on Proxima Centauri* (MNRAS Lett. 532). Hernandez et al. critique the Newtonian wide-binary analyses. Provatidis reviews inertial-propulsion devices. | theory / review | [Proxima](../01-papers/2024-mcculloch-proxima-centauri/README.md), [Hernandez](../01-papers/2024-hernandez-wide-binary-review/README.md), [Provatidis](../01-papers/2024-provatidis-inertial-propulsion-review/README.md) |
 | 15 Jul 2024 | Book *Quantised Accelerations: From Anomalies to New Physics* (Polaris Books; retailer release date). | book | [2024-mcculloch-quantised-accelerations](../07-media/2024-mcculloch-quantised-accelerations/README.md) |
+| 2024–2025 | Hobbyist Titus Stauffer self-publishes a QI thermal-gradient drive concept (Feb 2024) and test proposals (Jan 2025) on ResearchGate, and adds them to the quantizedinertia.com papers list. | theory | [2024](../01-papers/2024-stauffer-qi-drive-versions/README.md), [2025](../01-papers/2025-stauffer-qi-experiments/README.md) |
 | 2025 | *Jupiter Mass Binary Objects Show a Minimum Acceleration* (Astronomy 5). Kholupenko et al. Part III on anisotropic Unruh radiation. | theory | [JuMBOs](../01-papers/2025-mcculloch-jupiter-mass-binaries/README.md), [Kholupenko III](../01-papers/2025-kholupenko-unruh-anisotropy-3/README.md) |
 | Mar 2025 | Second IVO flight on Rogue OTP-2 (Transporter-13). According to McCulloch, the drive ran for under 1 minute a day, and the satellite showed about 600 m less orbital decay than a comparison satellite over 3 months. He calls this "not conclusive" and allows for a possible conventional (Lorentz-force) explanation. | test | [2026-nextbigfuture-ivo-review](../07-media/2026-nextbigfuture-ivo-review/README.md) |
 | 2026 | NextBigFuture review relays the account above. | media | [2026-nextbigfuture-ivo-review](../07-media/2026-nextbigfuture-ivo-review/README.md) |

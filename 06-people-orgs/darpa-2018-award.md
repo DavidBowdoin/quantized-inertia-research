@@ -28,6 +28,7 @@ Sources differ slightly: McCulloch says he recruited Tajmar to his "DARPA-funded
 | Phase progression | McCulloch says an early Dresden thrust (~140 nN from 0.35 W, ~0.0004 N/kW) "impressed DARPA" and got the project into phase II | McCulloch blog, Jul 2020 |
 | TU Dresden | "Later tests though have shown less thrust" (2020); "the results from the Dresden lab were negative" (2021). Peer-reviewed: **no thrust at nN level** from QI-motivated asymmetric laser resonators, cavities and fibre loops, constraining QI by ≥4 orders of magnitude | Blog 2020, 2021; [Neunzig, Weikert & Tajmar 2022](../03-criticism/2022-neunzig-laser-resonators/README.md) |
 | Alcalá | 1–4 μN (~0.001 N/kW) on a pendulum "subject to significant artefacts"; "inconclusive" (2020); "positive, but with qualifications ... I'm a bit sceptical" (2021) | Blog 2020, 2021 |
+| Alcalá (later) | Cited as "Perez-Diaz, JL, J. Corella, M. McCulloch, 2021. Paper submitted"; McCulloch's 2022 preprint gives 10000 ± 6000 nN observed vs 20 nN predicted and calls it "an artefact". The advocacy site (Jul 2021) counted it among "five" positive labs. No publication found | [2022-mcculloch-qi-thrust-casimir](../01-papers/2022-mcculloch-qi-thrust-casimir/README.md); blog 23 Jan 2022; [quantizedinertia.com](../07-media/2023-quantizedinertia-website/README.md) |
 | Target | McCulloch hoped to reach 10 mN "for DARPA" by end-2022 | Blog 2021 |
 | IVO | IVO reported as **not** DARPA-funded | NextBigFuture Jan 2024 |
 | Final report | None found | — |
@@ -35,7 +36,7 @@ Sources differ slightly: McCulloch says he recruited Tajmar to his "DARPA-funded
 > [!UNVERIFIED]
 > No DARPA final report, programme-manager statement, or contract number was found. A NextBigFuture article (Jan 2024) states, in contradictory passages, both that nothing further had been allocated and that DARPA was spending US$17 million in 2024 on a programme called "Otter" relevant to QI space drives (attributed to a McCulloch interview). This was not corroborated by any DARPA source and should not be relied on.
 
-**Summary:** the only peer-reviewed experimental output identified from the DARPA-funded programme is a null result (Dresden); the Spanish result remains unpublished and described by McCulloch himself as inconclusive.
+**Summary:** the only peer-reviewed experimental output identified from the DARPA-funded programme is a null result (Dresden); the Spanish result remains unpublished, described by McCulloch himself as inconclusive (2020) and later as "an artefact" (2022).
 
 ## References
 
@@ -45,4 +46,5 @@ Sources differ slightly: McCulloch says he recruited Tajmar to his "DARPA-funded
 - McCulloch blog, "A Thrust from 'Nothing'" (2021): https://physicsfromtheedge.blogspot.com/2021/11/a-thrust-from-nothing.html
 - Foresight Institute bio (2023): https://events.foresight.org/summary/mike-mcculloch-how-quantised-inertia-can-revolutionise-space-travel-space-workshop-23/
 - NextBigFuture (2024): https://www.nextbigfuture.com/2024/01/darpa-partially-funded-quantum-space-drive-orbital-test.html
+- McCulloch blog, "Learning from Experiments" (2022): https://physicsfromtheedge.blogspot.com/2022/01/learning-from-experiments.html
 - Neunzig, O., Weikert, M., Tajmar, M. (2022). *CEAS Space J.* 14, 45. https://doi.org/10.1007/s12567-021-00366-4

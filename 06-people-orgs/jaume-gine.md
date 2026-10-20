@@ -29,8 +29,11 @@ Giné is McCulloch's most frequent co-author and the main independent theorist d
 - Named by Vice/Motherboard (2018) as leader of the Spanish team in the DARPA project; he had spent six months working with McCulloch in the UK; the planned set-up was a ~2 W laser in a fibre-optic loop with expected thrust ~1 mN.
 - McCulloch's blog (July 2020) calls the Spanish team "the first QI experimenters", reports a thrust of 1–4 μN (~0.001 N/kW), and says the result "is inconclusive so far" and that "the pendulum is subject to significant artefacts". In November 2021 he described the Spanish results as "positive, but with qualifications", adding he was "a bit sceptical".
 
+- McCulloch's January 2022 preprint cites the result as "Perez-Diaz, JL, J. Corella, M. McCulloch, 2021. Paper submitted", gives 10000 ± 6000 nN observed against 20 nN predicted, and concludes the Spanish positive result "was an artefact" ([2022-mcculloch-qi-thrust-casimir](../01-papers/2022-mcculloch-qi-thrust-casimir/README.md)). The QI advocacy site cites it as "Perez-Diaz et al., 2021" for its claim that five of six labs saw thrust ([2023-quantizedinertia-website](../07-media/2023-quantizedinertia-website/README.md)).
+- Pérez-Díaz's OpenAlex profile (Universidad de Alcalá) shows applied work on fog-based decontamination (Counterfog), superconducting bearings and dampers, with no QI or thrust publication from 2018 to 2026.
+
 > [!UNVERIFIED]
-> No peer-reviewed publication of the Alcalá DARPA results was found while writing this note. Pérez-Díaz's departmental affiliation within Alcalá was not checked.
+> No publication of the Alcalá DARPA results (including the "submitted" 2021 paper) was found in Crossref, OpenAlex or a web search (checked 2026-10-19). Pérez-Díaz's departmental affiliation within Alcalá was not checked.
 
 ## References
 

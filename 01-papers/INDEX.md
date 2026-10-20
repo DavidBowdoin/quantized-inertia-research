@@ -48,6 +48,7 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2019 | [Challenging a Newtonian prediction through Gaia wide binaries](2019-hernandez-gaia-wide-binaries/README.md) | Hernandez et al. | International Journal of Modern Physics D 28(8):1950101 | neutral | ✅ | [DOI](https://doi.org/10.1142/S0218271819501013) [arXiv](https://arxiv.org/abs/1810.08696) |
 | 2019 | [On the Possible Anisotropy of the Unruh Radiation. Part I: Massless Scalar Field in (1+1)D Space-Time](2019-kholupenko-unruh-anisotropy-1/README.md) | Kholupenko | Gravitation and Cosmology 25(3):213-225 | neutral |  | [DOI](https://doi.org/10.1134/S0202289319030071) |
 | 2019 | [Can We Hide Gravitational Sources behind Rindler Horizons?](2019-mcculloch-rindler-horizons/README.md) | McCulloch | Progress in Physics 15(2), 72-74 | supports | ✅ |  |
+| 2019 | [Superluminal Travel from Quantised Inertia](2019-mcculloch-superluminal-travel/README.md) | McCulloch | Journal of Space Exploration 8(2), 1-6 | supports | ✅ |  |
 | 2019 | [Testing Newton/GR, MoND and quantised inertia on wide binaries](2019-mcculloch-wide-binaries/README.md) | McCulloch & Lucio | Astrophysics and Space Science 364(8), 121 | supports | ✅ | [DOI](https://doi.org/10.1007/s10509-019-3615-z) [arXiv](https://arxiv.org/abs/1908.01434) |
 | 2020 | [Modified inertia from extended uncertainty principle(s) and its relation to MoND](2020-gine-luciano-eup-modified-inertia/README.md) | Giné & Luciano | European Physical Journal C 80:1039 | supports | ✅ | [DOI](https://doi.org/10.1140/epjc/s10052-020-08636-x) |
 | 2020 | [Deriving quantised inertia using horizon-widths in the uncertainty principle](2020-mcculloch-horizon-widths/README.md) | McCulloch & Giné | Advanced Studies in Theoretical Physics 14(1), 1-8 | supports | ✅ | [DOI](https://doi.org/10.12988/astp.2020.9416) |
@@ -66,8 +67,10 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2024 | [A critical review of recent GAIA wide binary gravity tests](2024-hernandez-wide-binary-review/README.md) | Hernandez et al. | Monthly Notices of the Royal Astronomical Society 533(1), 729-742 | neutral | ✅ | [DOI](https://doi.org/10.1093/mnras/stae1823) [arXiv](https://arxiv.org/abs/2312.03162) |
 | 2024 | [Testing quantized inertia on Proxima Centauri](2024-mcculloch-proxima-centauri/README.md) | McCulloch | Monthly Notices of the Royal Astronomical Society: Letters 532(1), L67-L69 | supports | ✅ | [DOI](https://doi.org/10.1093/mnrasl/slae047) |
 | 2024 | [Inertial Propulsion Devices: A Review](2024-provatidis-inertial-propulsion-review/README.md) | Provatidis | Eng 5(2), 851-880 | neutral | ✅ | [DOI](https://doi.org/10.3390/eng5020046) |
+| 2024 | [Proposed Versions of Quantized-Inertia Drives](2024-stauffer-qi-drive-versions/README.md) | Stauffer | ResearchGate 377926730 (self-published; not peer-reviewed); mirrored at rocketslinger.com/Quant_Inert/ | neutral | ✅ |  |
 | 2025 | [On the Possible Anisotropy of the Unruh Radiation. Part III: A Screened Detector](2025-kholupenko-unruh-anisotropy-3/README.md) | Kholupenko | Gravitation and Cosmology 31(3), 353-365 | neutral |  | [DOI](https://doi.org/10.1134/S0202289325700239) |
 | 2025 | [Jupiter Mass Binary Objects Show a Minimum Acceleration](2025-mcculloch-jupiter-mass-binaries/README.md) | McCulloch | Astronomy (MDPI) 5(1), 1 | supports | ✅ | [DOI](https://doi.org/10.3390/astronomy5010001) |
+| 2025 | [Experiments for Testing Quantized Inertia Theories](2025-stauffer-qi-experiments/README.md) | Stauffer | ResearchGate 388117533 (self-published; not peer-reviewed); mirrored at rocketslinger.com/Quant_Inert2/ | neutral | ✅ |  |
 
-_61 sources._
+_64 sources._
 <!-- END AUTO-INDEX -->

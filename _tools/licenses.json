@@ -367,6 +367,16 @@
   "note": "Progress in Physics journal-wide licence CC BY-NC-ND 2.5 (site statement; PDF itself carries no notice). Unmodified PDF OK; rendered figures are derivatives of ND content -> LOCAL. [PDF entry]"
  },
  {
+  "folder": "01-papers/2019-mcculloch-superluminal-travel",
+  "pdf_license": "all-rights-reserved",
+  "evidence_url": "https://www.tsijournals.com/articles/superluminal-travel-from-quantised-inertia-13969.html",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2019-mcculloch-superluminal-travel/paper.pdf"
+  ],
+  "note": "TSI Journal of Space Exploration PDF; footer '(c)2019 Trade Science Inc.', no CC statement."
+ },
+ {
   "folder": "01-papers/2019-mcculloch-wide-binaries",
   "pdf_license": "arXiv-nonexclusive",
   "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1908.01434&metadataPrefix=arXiv",
