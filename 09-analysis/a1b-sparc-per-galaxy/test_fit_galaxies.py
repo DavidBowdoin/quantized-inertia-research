@@ -12,6 +12,26 @@ import fit_galaxies as fit
 
 
 class FitDiagnosticsTests(unittest.TestCase):
+    def test_prior_widths_change_only_the_selected_penalties(self):
+        # Each of disk, bulge, distance and inclination is one baseline sigma off.
+        g = dict(bulge=True, R=np.array([1., 2.]), V=np.array([110., 90.]),
+                 eV=np.array([5., 2.]), Vg=np.array([100., 100.]),
+                 Vd=np.zeros(2), Vb=np.zeros(2), D0=10., eD=2., i0=60., ei=5.)
+        p = [math.log10(fit.UD0) + .1, math.log10(fit.UB0) + .1, 12., 65.]
+        base_chi, base_penalty = fit.objective_terms(p, g, np.ones_like, -10.)
+        self.assertAlmostEqual(base_penalty, 4.)
+        for key, expected in [("wider_mass_to_light", 2.5), ("wider_distance", 3.25),
+                              ("wider_inclination", 3.25), ("wider_joint", 1.)]:
+            changed = fit.with_priors([g], fit.PRIOR_SCENARIOS[key])[0]
+            chi, penalty = fit.objective_terms(p, changed, np.ones_like, -10.)
+            self.assertAlmostEqual(chi, base_chi)
+            self.assertAlmostEqual(penalty, expected)
+            self.assertEqual(changed["eD"], g["eD"])
+            self.assertEqual(changed["ei"], g["ei"])
+        self.assertNotIn("prior_config", g)
+        with self.assertRaises(ValueError):
+            fit.with_priors([g], dict(fit.BASE_PRIORS, sigma_log_Y=0.))
+
     def test_velocity_error_change_preserves_priors_and_original_data(self):
         # Gas-only Newtonian prediction is 100 km/s at each radius.
         # Residuals 10 and -10 with errors 5 and 2 give chi2 = 4 + 25.

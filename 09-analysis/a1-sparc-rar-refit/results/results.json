@@ -73,7 +73,7 @@
    "rms": 0.31243242654399916,
    "aic": 1405.3206527817802,
    "bic": 1411.2190638745917,
-   "label": "QI, Θ = 2.6 × 10²⁶ m (fixed)",
+   "label": "2017 QI, older Θ = 2.6 × 10²⁶ m",
    "theta_equiv_m": 2.600000000000002e+26,
    "dbic_vs_mond_simple": 4467.559869016597,
    "dbic_vs_qi_free": 4394.433164485533,
@@ -109,7 +109,7 @@
    "rms": 0.14564794420911362,
    "aic": -2572.361606048262,
    "bic": -2566.46319495545,
-   "label": "QI, Θ = 8.8 × 10²⁶ m (fixed)",
+   "label": "2017 QI, published Θ = 8.8 × 10²⁶ m",
    "theta_equiv_m": 8.800000000000013e+26,
    "dbic_vs_mond_simple": 489.8776101865551,
    "dbic_vs_qi_free": 416.7509056554909,
@@ -145,7 +145,7 @@
    "rms": 0.1347631141587611,
    "aic": -2995.010922796564,
    "bic": -2983.214100610941,
-   "label": "QI, Θ free",
+   "label": "2017 QI, fitted Θ",
    "theta_equiv_m": 1.2252128557937842e+27,
    "dbic_vs_mond_simple": 73.1267045310642,
    "dbic_vs_qi_free": 0.0,
@@ -1188,6 +1188,169 @@
     25
    ]
   ]
+ },
+ "public_bin_reconstruction": {
+  "source": "https://astroweb.case.edu/SPARC/RARbins.mrt",
+  "n_bins": 14,
+  "n_points": 2630,
+  "status": "Public-bin reconstruction; identity with McCulloch's privately supplied bins is unverified.",
+  "convention": "Evaluate each fixed curve at the tabulated log mean gbar. Bars show tabulated within-bin standard deviation in log gobs, not standard errors of means; no horizontal scatter is supplied. Bin counts within scatter are descriptive, not a goodness-of-fit test.",
+  "comparisons": {
+   "qi_late": {
+    "a": 2.0426254062200399e-10,
+    "n_bins_within_one_scatter": 14,
+    "max_abs_residual_over_scatter": 0.7411645136503164,
+    "bins": [
+     {
+      "log_gbar": -11.69,
+      "residual_dex": -0.062254117473314,
+      "residual_over_scatter": -0.3458562081850778
+     },
+     {
+      "log_gbar": -11.48,
+      "residual_dex": -0.11858632218405063,
+      "residual_over_scatter": -0.7411645136503164
+     },
+     {
+      "log_gbar": -11.26,
+      "residual_dex": -0.10085921430463785,
+      "residual_over_scatter": -0.672394762030919
+     },
+     {
+      "log_gbar": -11.05,
+      "residual_dex": -0.0693681867627518,
+      "residual_over_scatter": -0.49548704830537
+     },
+     {
+      "log_gbar": -10.84,
+      "residual_dex": -0.059941208935745394,
+      "residual_over_scatter": -0.46108622258265686
+     },
+     {
+      "log_gbar": -10.62,
+      "residual_dex": -0.03920622060353729,
+      "residual_over_scatter": -0.3267185050294774
+     },
+     {
+      "log_gbar": -10.41,
+      "residual_dex": -0.01795236764378494,
+      "residual_over_scatter": -0.12823119745560668
+     },
+     {
+      "log_gbar": -10.19,
+      "residual_dex": -0.019737221054645815,
+      "residual_over_scatter": -0.15182477734342933
+     },
+     {
+      "log_gbar": -9.98,
+      "residual_dex": -0.014961948360159738,
+      "residual_over_scatter": -0.1068710597154267
+     },
+     {
+      "log_gbar": -9.76,
+      "residual_dex": -0.008770384185723401,
+      "residual_over_scatter": -0.06264560132659572
+     },
+     {
+      "log_gbar": -9.55,
+      "residual_dex": -0.008363182983309514,
+      "residual_over_scatter": -0.05973702130935366
+     },
+     {
+      "log_gbar": -9.34,
+      "residual_dex": -0.03021591870638396,
+      "residual_over_scatter": -0.274690170058036
+     },
+     {
+      "log_gbar": -9.12,
+      "residual_dex": -0.041777088185693145,
+      "residual_over_scatter": -0.3213622168130242
+     },
+     {
+      "log_gbar": -8.91,
+      "residual_dex": -0.02335501600337153,
+      "residual_over_scatter": -0.21231832730337755
+     }
+    ]
+   },
+   "rar_reference": {
+    "a": 1.2e-10,
+    "n_bins_within_one_scatter": 14,
+    "max_abs_residual_over_scatter": 0.2197678791555635,
+    "bins": [
+     {
+      "log_gbar": -11.69,
+      "residual_dex": 0.027392626724036973,
+      "residual_over_scatter": 0.15218125957798317
+     },
+     {
+      "log_gbar": -11.48,
+      "residual_dex": -0.03516286066489016,
+      "residual_over_scatter": -0.2197678791555635
+     },
+     {
+      "log_gbar": -11.26,
+      "residual_dex": -0.025231288721338174,
+      "residual_over_scatter": -0.16820859147558784
+     },
+     {
+      "log_gbar": -11.05,
+      "residual_dex": -0.0024259414393412726,
+      "residual_over_scatter": -0.017328153138151947
+     },
+     {
+      "log_gbar": -10.84,
+      "residual_dex": -0.002777088270127237,
+      "residual_over_scatter": -0.021362217462517208
+     },
+     {
+      "log_gbar": -10.62,
+      "residual_dex": 0.006933147076615853,
+      "residual_over_scatter": 0.05777622563846545
+     },
+     {
+      "log_gbar": -10.41,
+      "residual_dex": 0.017618943275971688,
+      "residual_over_scatter": 0.1258495948283692
+     },
+     {
+      "log_gbar": -10.19,
+      "residual_dex": 0.005821447005031288,
+      "residual_over_scatter": 0.04478036157716375
+     },
+     {
+      "log_gbar": -9.98,
+      "residual_dex": 0.0032417581348962443,
+      "residual_over_scatter": 0.023155415249258886
+     },
+     {
+      "log_gbar": -9.76,
+      "residual_dex": 0.004991057205055327,
+      "residual_over_scatter": 0.03565040860753805
+     },
+     {
+      "log_gbar": -9.55,
+      "residual_dex": 0.004322585033341042,
+      "residual_over_scatter": 0.03087560738100744
+     },
+     {
+      "log_gbar": -9.34,
+      "residual_dex": -0.016530308685844375,
+      "residual_over_scatter": -0.15027553350767614
+     },
+     {
+      "log_gbar": -9.12,
+      "residual_dex": -0.026648173843916823,
+      "residual_over_scatter": -0.204985952645514
+     },
+     {
+      "log_gbar": -8.91,
+      "residual_dex": -0.008038468500251028,
+      "residual_over_scatter": -0.07307698636591843
+     }
+    ]
+   }
+  }
  },
  "bootstrap": {
   "replicates": 200,

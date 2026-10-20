@@ -49,9 +49,9 @@ text { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; fil
 <rect x="668.6" y="304.1" width="22.1" height="45.9" rx="2" fill="var(--s3)"><title>log Θ 27.95–28.05: 3 galaxies</title></rect>
 <rect x="716.9" y="258.2" width="22.1" height="91.8" rx="2" fill="var(--s3)"><title>log Θ 28.15–28.25: 6 galaxies</title></rect>
 <line x1="297.0" x2="297.0" y1="44" y2="350" stroke="var(--s1)" stroke-width="2" stroke-dasharray="5 4"/>
-<text x="301.0" y="58.0" text-anchor="start">2.6 × 10²⁶ m</text>
+<text x="301.0" y="58.0" text-anchor="start">older Θ = 2.6 × 10²⁶ m</text>
 <line x1="424.8" x2="424.8" y1="44" y2="350" stroke="var(--s2)" stroke-width="2" stroke-dasharray="5 4"/>
-<text x="420.8" y="76.0" text-anchor="end">8.8 × 10²⁶ m</text>
+<text x="420.8" y="76.0" text-anchor="end">published Θ = 8.8 × 10²⁶ m</text>
 <line x1="471.2" x2="471.2" y1="44" y2="350" stroke="var(--s3)" stroke-width="2" stroke-dasharray="5 4"/>
 <text x="475.2" y="58.0" text-anchor="start">global best 1.37 × 10²⁷ m</text>
 </svg>

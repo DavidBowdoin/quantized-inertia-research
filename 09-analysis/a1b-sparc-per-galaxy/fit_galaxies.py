@@ -13,6 +13,7 @@ log10 a on a grid, every galaxy's best chi^2 + prior penalty is stored; the glob
 is their sum, and a galaxy bootstrap resamples those per-galaxy profiles.
 The score Q = chi^2 + prior penalty is descriptive, not BIC or a Bayes factor.
 A second full fit enlarges velocity errors while keeping all priors unchanged.
+Four more full fits widen mass-to-light, distance, inclination, and joint priors.
 Reuses the SPARC download and parsers of ../a1-sparc-rar-refit/rar_refit.py.
 """
 import argparse
@@ -36,6 +37,13 @@ C = A1.C
 # priors (Li et al. 2018 style): log-normal 0.1 dex on Y_disk (0.5) and Y_bul (0.7);
 # Gaussian on distance and inclination with the SPARC Table 1 errors
 UD0, UB0, SIG_LOGU = 0.5, 0.7, 0.1
+BASE_PRIORS = dict(sigma_log_Y=SIG_LOGU, distance_width_factor=1., inclination_width_factor=1.)
+PRIOR_SCENARIOS = {
+    "wider_mass_to_light": dict(BASE_PRIORS, sigma_log_Y=0.2),
+    "wider_distance": dict(BASE_PRIORS, distance_width_factor=2.),
+    "wider_inclination": dict(BASE_PRIORS, inclination_width_factor=2.),
+    "wider_joint": dict(sigma_log_Y=0.2, distance_width_factor=2., inclination_width_factor=2.),
+}
 
 NU = {
     "qi": lambda y: np.sqrt(1.0 + 1.0 / y),
@@ -44,7 +52,7 @@ NU = {
     "rar_exp": lambda y: 1.0 / (1.0 - np.exp(-np.sqrt(y))),
 }
 LABEL = {
-    "qi": "QI (a = 2c²/Θ)",
+    "qi": "2017 QI, fitted Θ",
     "mond_simple": "MOND simple μ",
     "mond_standard": "MOND standard μ",
     "rar_exp": "McGaugh 2016 RAR fit",
@@ -102,10 +110,12 @@ def objective_terms(p, g, nu, la):
     gpred = gbar * nu(gbar / 10 ** la)
     vpred = np.sqrt(gpred * R * KPC) / 1e3
     chi2 = float(np.sum(((V - vpred) / eV) ** 2))
-    pen = ((math.log10(ud) - math.log10(UD0)) / SIG_LOGU) ** 2 + ((D - g["D0"]) / g["eD"]) ** 2 \
-        + ((inc - g["i0"]) / g["ei"]) ** 2
+    pr = g.get("prior_config", BASE_PRIORS)
+    pen = ((math.log10(ud) - math.log10(UD0)) / pr["sigma_log_Y"]) ** 2 \
+        + ((D - g["D0"]) / (g["eD"] * pr["distance_width_factor"])) ** 2 \
+        + ((inc - g["i0"]) / (g["ei"] * pr["inclination_width_factor"])) ** 2
     if g["bulge"]:
-        pen += ((math.log10(ub) - math.log10(UB0)) / SIG_LOGU) ** 2
+        pen += ((math.log10(ub) - math.log10(UB0)) / pr["sigma_log_Y"]) ** 2
     return chi2, pen
 
 
@@ -118,6 +128,13 @@ def with_velocity_errors(gals, factor):
     if not math.isfinite(factor) or factor <= 0:
         raise ValueError("velocity error factor must be finite and positive")
     return [dict(g, eV=g["eV"] * factor) for g in gals]
+
+
+def with_priors(gals, config):
+    """Vary penalties only; preserve data, catalogue pulls and baseline bounds."""
+    if set(config) != set(BASE_PRIORS) or any(not math.isfinite(v) or v <= 0 for v in config.values()):
+        raise ValueError("Provide all positive finite prior widths/factors")
+    return [dict(g, prior_config=dict(config)) for g in gals]
 
 
 def distance_summary(rows):
@@ -191,7 +208,7 @@ def figures(fits, grids, total, diag, best_la_gal):
         xs.append(1.7)
         ys.append(1.0)
         p.line(xs, ys, COLOR[k], tip=fits[k]["label"] + f": median {np.median([r['D_ratio'] for r in diag[k]]):.2f}")
-    p.legend([(fits[k]["label"], COLOR[k], None) for k in ("qi_early", "qi_late", "qi", "mond_simple")], 430, 300)
+    p.legend([(fits[k]["label"], COLOR[k], None) for k in ("qi_early", "qi_late", "qi", "mond_simple")], 290, 300)
     p.save(OUT / "fig-2-distance-shift.svg")
 
     # 3. per-galaxy preferred Theta (QI fitted to each galaxy alone)
@@ -207,7 +224,8 @@ def figures(fits, grids, total, diag, best_la_gal):
             x0, x1 = p.X(lo_e) + 1, p.X(hi_e) - 1
             p.el.append(f'<rect x="{x0:.1f}" y="{p.Y(c):.1f}" width="{x1 - x0:.1f}" height="{p.Y(0) - p.Y(c):.1f}" rx="2" '
                         f'fill="var(--s3)"><title>log Θ {lo_e:.2f}–{hi_e:.2f}: {c} galaxies</title></rect>')
-    for th, lab, k in ((A1.THETA_EARLY, "2.6 × 10²⁶ m", "qi_early"), (A1.THETA_LATE, "8.8 × 10²⁶ m", "qi_late"),
+    for th, lab, k in ((A1.THETA_EARLY, "older Θ = 2.6 × 10²⁶ m", "qi_early"),
+                       (A1.THETA_LATE, "published Θ = 8.8 × 10²⁶ m", "qi_late"),
                        (fits["qi"]["theta_equiv_m"], f"global best {fits['qi']['theta_equiv_m'] / 1e27:.2f} × 10²⁷ m", "qi")):
         x = p.X(math.log10(th))
         p.el.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{p.t}" y2="{p.b}" stroke="{COLOR[k]}" stroke-width="2" stroke-dasharray="5 4"/>')
@@ -234,6 +252,9 @@ def profile_minimum(grid, values):
 
 
 def run_analysis(gals, boot, seed, procs, make_figures=False):
+    prior_config = dict(gals[0].get("prior_config", BASE_PRIORS))
+    if any(g.get("prior_config", BASE_PRIORS) != prior_config for g in gals):
+        raise ValueError("A scenario must use the same prior settings for all galaxies")
     npts = int(sum(len(g["R"]) for g in gals))
     grids = {m: (GRID_QI if m == "qi" else GRID) for m in NU}
     jobs = [(g, m, grids[m]) for m in NU for g in gals]
@@ -259,9 +280,10 @@ def run_analysis(gals, boot, seed, procs, make_figures=False):
     fits = {}
     for m in NU:
         la, v = best(m)
-        fits[m] = dict(label=LABEL[m] + ", scale free", log_a=la, a=10 ** la, chi2p=v, kglob=1)
+        fits[m] = dict(label=LABEL[m] + ("" if m == "qi" else ", scale free"),
+                       log_a=la, a=10 ** la, chi2p=v, kglob=1)
     for key, la, theta in (("qi_late", LA_LATE, "8.8"), ("qi_early", LA_EARLY, "2.6")):
-        fits[key] = dict(label=f"QI, Θ = {theta} × 10²⁶ m (fixed)", log_a=la, a=10 ** la,
+        fits[key] = dict(label=A1.MODEL[key][1], log_a=la, a=10 ** la,
                          chi2p=at("qi", la), kglob=0)
 
     # Evaluate nuisance parameters and both objective terms at the refined global scales.
@@ -287,7 +309,11 @@ def run_analysis(gals, boot, seed, procs, make_figures=False):
                              chi2_data=chi2, prior_penalty=pen, chi2p=chi2 + pen,
                              ud=ud, ub=ub if g["bulge"] else None, D_ratio=D / g["D0"],
                              dinc=inc - g["i0"], pull_D=(D - g["D0"]) / g["eD"],
-                             pull_i=(inc - g["i0"]) / g["ei"], distance_method=g["distance_method"]))
+                             pull_i=(inc - g["i0"]) / g["ei"], distance_method=g["distance_method"],
+                             at_D_bound=bool(min(abs(D - max(.1 * g["D0"], g["D0"] - 5 * g["eD"])),
+                                                 abs(D - (g["D0"] + 5 * g["eD"]))) < 1e-4),
+                             at_i_bound=bool(min(abs(inc - max(1.5, g["i0"] - 5 * g["ei"])),
+                                                 abs(inc - min(89.5, g["i0"] + 5 * g["ei"]))) < 1e-4)))
         diag[key] = rows
         f = fits[key]
         f["chi2_data"] = sum(r["chi2_data"] for r in rows)
@@ -299,6 +325,8 @@ def run_analysis(gals, boot, seed, procs, make_figures=False):
         f["nuisance"] = dict(distance_summary(rows), median_ud=float(np.median(ud)),
                              ud_16_84=[float(np.percentile(ud, q)) for q in (16, 84)],
                              median_pull_i=float(np.median([r["pull_i"] for r in rows])),
+                             n_at_D_bound=sum(r["at_D_bound"] for r in rows),
+                             n_at_i_bound=sum(r["at_i_bound"] for r in rows),
                              median_chi2_data_per_dof=float(np.median(red)))
         f["distance_by_method"] = {
             str(method): dict(label=label, **distance_summary(subset))
@@ -343,8 +371,12 @@ def run_analysis(gals, boot, seed, procs, make_figures=False):
     result = dict(n_galaxies=len(names), n_points=npts, n_nuisance=nnuis,
                   score=dict(name="Q", definition="chi2_data + prior_penalty",
                              interpretation="Descriptive penalized fit loss, not BIC or a Bayes factor; no k log n term."),
-                  priors=dict(Y_disk=UD0, Y_bul=UB0, sigma_log_Y=SIG_LOGU,
-                              D="Gaussian (SPARC e_D)", inc="Gaussian (SPARC e_Inc, min 1 deg)"),
+                  priors=dict(Y_disk=UD0, Y_bul=UB0, **prior_config,
+                              D="Gaussian (SPARC e_D times distance_width_factor)",
+                              inc="Gaussian (SPARC e_Inc, min 1 deg, times inclination_width_factor)",
+                              bounds="Same baseline bounds in all scenarios: Y in 10^[-1.5,0.7], "
+                              "D within catalogue ±5 sigma and above 0.1 D0, i within catalogue ±5 sigma and 1.5–89.5 deg.",
+                              pulls="Reported in original catalogue-error units, not widened-prior units."),
                   fits=fits, per_galaxy=diag, per_galaxy_best_log_a_qi=best_la_gal,
                   n_gal_best_at_grid_edge=int(edge), n_gal_qi_late_beats_mond_simple=int(win_late),
                   chi2_data_per_dof_reference=data_chi2_per_dof,
@@ -352,6 +384,24 @@ def run_analysis(gals, boot, seed, procs, make_figures=False):
                   profiles={m: {n: np.round(prof[m][n], 6).tolist() for n in names} for m in NU},
                   bootstrap=dict(replicates=boot, seed=seed, unit="galaxy",
                                  conditional_on="Selected velocity errors and unchanged priors; grid-profile approximation."))
+    # Differences add to the full-sample ΔQ; deletion diagnostics reprofile the global
+    # scales on the stored per-galaxy grids. They do not discard unfavourable galaxies.
+    contribution = []
+    for q, m, free in zip(diag["qi_late"], diag[ref], diag["qi"]):
+        remaining = [n for n in names if n != q["name"]]
+        la_qi, q_free = best("qi", remaining)
+        _, q_ref = best(ref, remaining)
+        fixed = at("qi", LA_LATE, remaining)
+        contribution.append(dict(
+            name=q["name"], n_points=q["n"], distance_method=q["distance_method"],
+            delta_q=q["chi2p"] - m["chi2p"],
+            delta_velocity_chi2=q["chi2_data"] - m["chi2_data"],
+            delta_prior_penalty=q["prior_penalty"] - m["prior_penalty"],
+            delta_q_vs_qi_free=q["chi2p"] - free["chi2p"],
+            leave_one_out_theta_m=2 * C * C / 10 ** la_qi,
+            leave_one_out_delta_q=fixed - q_ref,
+            leave_one_out_delta_q_vs_qi_free=fixed - q_free))
+    result["galaxy_influence"] = sorted(contribution, key=lambda r: (-r["delta_q"], r["name"]))
     if make_figures:
         figures(fits, grids, total, diag, best_la_gal)
     return result
@@ -396,6 +446,41 @@ def write_summary(result):
               "Every model and galaxy profile is refitted, then bootstrapped again with this multiplier held fixed. "
               "This is a conditional sensitivity check, not an inferred error model or a conservative evidence bound.", ""]
     lines += summary_table(sensitivity)
+    lines += ["", "## Prior-width sensitivity: full refits", "",
+              "Catalogue velocity errors and prior centres are retained. Each scenario doubles one prior width "
+              "or all three. Optimizer bounds are held at their baseline values; bound counts below expose truncation. "
+              "These are declared sensitivity choices, not McCulloch assumptions or inferred prior distributions. "
+              "Compare models within each scenario; absolute Q values across scenarios have different penalties. "
+              "All models are refitted and bootstrapped. Scenario JSON retains diagnostics but omits grid profiles to limit size.", "",
+              "| Scenario | σ log₁₀ Υ | D width × | i width × | Fitted QI Θ (m) | Published-Θ ΔQ vs MOND [16–84%] | Published-Θ ΔQ vs fitted QI | Published-Θ median D/D₀ | D / i bound counts |",
+              "|---|---|---|---|---|---|---|---|---|"]
+    for name, scenario in [("baseline", result)] + list(result["prior_sensitivity"].items()):
+        f, pr = scenario["fits"]["qi_late"], scenario["priors"]
+        dq = f"{f['delta_q_vs_mond_simple']:+.0f}"
+        if "boot_delta_q_16_50_84" in f:
+            lo, _, hi = f["boot_delta_q_16_50_84"]
+            dq += f" [{lo:+.0f}, {hi:+.0f}]"
+        d = f["nuisance"]
+        lines.append(f"| {name} | {pr['sigma_log_Y']:.2f} | {pr['distance_width_factor']:g} | "
+                     f"{pr['inclination_width_factor']:g} | {scenario['fits']['qi']['theta_equiv_m']:.3g} | "
+                     f"{dq} | {f['delta_q_vs_qi_free']:+.0f} | {d['median_D_ratio']:.3f} | "
+                     f"{d['n_at_D_bound']} / {d['n_at_i_bound']} |")
+    influence = result["galaxy_influence"]
+    lines += ["", "## Which galaxies contribute to the baseline difference?", "",
+              "Positive contributions favour fitted MOND simple over published-Θ 2017 QI. "
+              "Contributions use each model's full-sample global scale and sum to its ΔQ. "
+              "The top five in each direction are shown; all galaxies are retained in the fits. "
+              "Leave-one-out values reprofile global scales on the existing grids, so they are approximate diagnostics, not new evidence measures.", "",
+              "| Galaxy | Δ velocity χ² | Δ prior penalty | ΔQ | ΔQ after leaving this galaxy out | Fitted QI Θ after leaving it out (m) |",
+              "|---|---|---|---|---|---|"]
+    for r in influence[:5] + influence[-5:]:
+        lines.append(f"| {r['name']} | {r['delta_velocity_chi2']:+.1f} | {r['delta_prior_penalty']:+.1f} | "
+                     f"{r['delta_q']:+.1f} | {r['leave_one_out_delta_q']:+.1f} | {r['leave_one_out_theta_m']:.3g} |")
+    lines += ["", f"Across all single-galaxy deletions: ΔQ ranges from "
+              f"{min(r['leave_one_out_delta_q'] for r in influence):+.1f} to "
+              f"{max(r['leave_one_out_delta_q'] for r in influence):+.1f}; "
+              f"fitted QI Θ ranges from {min(r['leave_one_out_theta_m'] for r in influence):.3g} to "
+              f"{max(r['leave_one_out_theta_m'] for r in influence):.3g} m."]
     lines += ["", "## Baseline distances by measurement method", "",
               "Distance pull = (D_fit − D_catalogue) / σ_D. Fractional shifts and standardized pulls answer different questions.", "",
               "| Model | Distance method | galaxies | median D/D₀ | median distance pull | D/D₀ < 0.8 | pull < −2 | pull < −3 |",
@@ -433,6 +518,13 @@ def main():
     sensitivity["velocity_error_factor"] = factor
     sensitivity["factor_selection"] = "sqrt(max(1, baseline MOND simple velocity chi2 / (n_points - n_nuisance - 1)))"
     result["velocity_error_sensitivity"] = sensitivity
+    result["prior_sensitivity"] = {}
+    for name, config in PRIOR_SCENARIOS.items():
+        print(f"Full prior sensitivity refit: {name}, {config}", flush=True)
+        scenario = run_analysis(with_priors(gals, config), args.boot, args.seed, args.procs)
+        scenario.pop("profiles")
+        scenario.pop("grids")
+        result["prior_sensitivity"][name] = scenario
     (OUT / "results.json").write_text(json.dumps(result, ensure_ascii=False, allow_nan=False) + "\n")
     write_summary(result)
     print((OUT / "summary.md").read_text())

@@ -7,9 +7,9 @@ Q = velocity χ² + prior penalty. ΔQ is a descriptive fit comparison, not BIC,
 
 | Model | global k | a (m s⁻²) [bootstrap 16–84%] | equiv. Θ (m) | velocity χ² | prior penalty | ΔQ vs MOND simple [bootstrap 16–84%] | median Υ_disk | median D/D₀ | D/D₀ < 0.8 | distance pull < −2 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| QI, Θ = 2.6 × 10²⁶ m (fixed) | 0 | 6.914 × 10⁻¹⁰ | 2.6e+26 | 23759.1 | 4971.1 | +14512 [+10502 to +18491] | 0.51 | 0.600 | 113/153 | 89/153 |
-| QI, Θ = 8.8 × 10²⁶ m (fixed) | 0 | 2.043 × 10⁻¹⁰ | 8.8e+26 | 13331.8 | 2089.9 | +1203 [+759 to +1689] | 0.54 | 0.879 | 50/153 | 28/153 |
-| QI (a = 2c²/Θ), scale free | 1 | 1.313 × 10⁻¹⁰ [1.19–1.47] | 1.37e+27 | 13092.3 | 1737.8 | +612 [+270 to +943] | 0.55 | 0.973 | 21/153 | 12/153 |
+| 2017 QI, older Θ = 2.6 × 10²⁶ m | 0 | 6.914 × 10⁻¹⁰ | 2.6e+26 | 23759.1 | 4971.1 | +14512 [+10502 to +18491] | 0.51 | 0.600 | 113/153 | 89/153 |
+| 2017 QI, published Θ = 8.8 × 10²⁶ m | 0 | 2.043 × 10⁻¹⁰ | 8.8e+26 | 13331.8 | 2089.9 | +1203 [+759 to +1689] | 0.54 | 0.879 | 50/153 | 28/153 |
+| 2017 QI, fitted Θ | 1 | 1.313 × 10⁻¹⁰ [1.19–1.47] | 1.37e+27 | 13092.3 | 1737.8 | +612 [+270 to +943] | 0.55 | 0.973 | 21/153 | 12/153 |
 | MOND simple μ, scale free | 1 | 1.112 × 10⁻¹⁰ [1.01–1.25] | 1.62e+27 | 12558.4 | 1660.1 | 0 (reference) | 0.51 | 0.969 | 22/153 | 12/153 |
 | MOND standard μ, scale free | 1 | 1.272 × 10⁻¹⁰ [1.13–1.42] | 1.41e+27 | 13778.8 | 1880.0 | +1440 [+701 to +2166] | 0.58 | 0.982 | 21/153 | 11/153 |
 | McGaugh 2016 RAR fit, scale free | 1 | 1.056 × 10⁻¹⁰ [0.95–1.18] | 1.7e+27 | 12469.4 | 1656.1 | -93 [-132 to -46] | 0.51 | 0.977 | 21/153 | 11/153 |
@@ -20,12 +20,43 @@ Velocity-error multiplier: 2.1659 = √max(1, 4.6912). The diagnostic ratio uses
 
 | Model | global k | a (m s⁻²) [bootstrap 16–84%] | equiv. Θ (m) | velocity χ² | prior penalty | ΔQ vs MOND simple [bootstrap 16–84%] | median Υ_disk | median D/D₀ | D/D₀ < 0.8 | distance pull < −2 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| QI, Θ = 2.6 × 10²⁶ m (fixed) | 0 | 6.914 × 10⁻¹⁰ | 2.6e+26 | 6054.1 | 2957.3 | +5167 [+4165 to +6192] | 0.47 | 0.660 | 106/153 | 79/153 |
-| QI, Θ = 8.8 × 10²⁶ m (fixed) | 0 | 2.043 × 10⁻¹⁰ | 8.8e+26 | 3358.8 | 983.2 | +498 [+368 to +655] | 0.50 | 0.928 | 37/153 | 15/153 |
-| QI (a = 2c²/Θ), scale free | 1 | 1.293 × 10⁻¹⁰ [1.20–1.39] | 1.39e+27 | 3240.2 | 784.1 | +180 [+97 to +262] | 0.52 | 0.993 | 12/153 | 6/153 |
+| 2017 QI, older Θ = 2.6 × 10²⁶ m | 0 | 6.914 × 10⁻¹⁰ | 2.6e+26 | 6054.1 | 2957.3 | +5167 [+4165 to +6192] | 0.47 | 0.660 | 106/153 | 79/153 |
+| 2017 QI, published Θ = 8.8 × 10²⁶ m | 0 | 2.043 × 10⁻¹⁰ | 8.8e+26 | 3358.8 | 983.2 | +498 [+368 to +655] | 0.50 | 0.928 | 37/153 | 15/153 |
+| 2017 QI, fitted Θ | 1 | 1.293 × 10⁻¹⁰ [1.20–1.39] | 1.39e+27 | 3240.2 | 784.1 | +180 [+97 to +262] | 0.52 | 0.993 | 12/153 | 6/153 |
 | MOND simple μ, scale free | 1 | 1.103 × 10⁻¹⁰ [1.02–1.20] | 1.63e+27 | 3117.3 | 726.6 | 0 (reference) | 0.50 | 0.982 | 12/153 | 5/153 |
 | MOND standard μ, scale free | 1 | 1.252 × 10⁻¹⁰ [1.16–1.35] | 1.44e+27 | 3406.6 | 880.5 | +443 [+271 to +619] | 0.54 | 1.000 | 11/153 | 6/153 |
 | McGaugh 2016 RAR fit, scale free | 1 | 1.060 × 10⁻¹⁰ [0.98–1.15] | 1.7e+27 | 3098.1 | 724.9 | -21 [-33 to -7] | 0.51 | 0.988 | 11/153 | 5/153 |
+
+## Prior-width sensitivity: full refits
+
+Catalogue velocity errors and prior centres are retained. Each scenario doubles one prior width or all three. Optimizer bounds are held at their baseline values; bound counts below expose truncation. These are declared sensitivity choices, not McCulloch assumptions or inferred prior distributions. Compare models within each scenario; absolute Q values across scenarios have different penalties. All models are refitted and bootstrapped. Scenario JSON retains diagnostics but omits grid profiles to limit size.
+
+| Scenario | σ log₁₀ Υ | D width × | i width × | Fitted QI Θ (m) | Published-Θ ΔQ vs MOND [16–84%] | Published-Θ ΔQ vs fitted QI | Published-Θ median D/D₀ | D / i bound counts |
+|---|---|---|---|---|---|---|---|---|
+| baseline | 0.10 | 1 | 1 | 1.37e+27 | +1203 [+759, +1689] | +592 | 0.879 | 4 / 16 |
+| wider_mass_to_light | 0.20 | 1 | 1 | 1.34e+27 | +1030 [+615, +1497] | +477 | 0.888 | 4 / 13 |
+| wider_distance | 0.10 | 2 | 1 | 1.38e+27 | +1101 [+663, +1601] | +481 | 0.792 | 10 / 13 |
+| wider_inclination | 0.10 | 1 | 2 | 1.33e+27 | +1082 [+673, +1541] | +471 | 0.941 | 3 / 23 |
+| wider_joint | 0.20 | 2 | 2 | 1.28e+27 | +810 [+422, +1260] | +257 | 0.852 | 9 / 19 |
+
+## Which galaxies contribute to the baseline difference?
+
+Positive contributions favour fitted MOND simple over published-Θ 2017 QI. Contributions use each model's full-sample global scale and sum to its ΔQ. The top five in each direction are shown; all galaxies are retained in the fits. Leave-one-out values reprofile global scales on the existing grids, so they are approximate diagnostics, not new evidence measures.
+
+| Galaxy | Δ velocity χ² | Δ prior penalty | ΔQ | ΔQ after leaving this galaxy out | Fitted QI Θ after leaving it out (m) |
+|---|---|---|---|---|---|
+| NGC5055 | +264.4 | +11.0 | +275.4 | +927.9 | 1.38e+27 |
+| NGC5907 | +231.9 | +22.0 | +253.9 | +958.6 | 1.28e+27 |
+| UGC09133 | +71.9 | +40.4 | +112.3 | +1091.1 | 1.37e+27 |
+| UGC06787 | +109.2 | -21.3 | +87.8 | +1116.5 | 1.34e+27 |
+| NGC0801 | +87.2 | -0.7 | +86.5 | +1119.1 | 1.34e+27 |
+| UGC06786 | +3.4 | -35.2 | -31.8 | +1235.7 | 1.38e+27 |
+| UGC03580 | -9.9 | -26.4 | -36.3 | +1239.8 | 1.38e+27 |
+| NGC0891 | -28.4 | -12.3 | -40.7 | +1246.6 | 1.42e+27 |
+| F571-8 | -88.8 | -4.7 | -93.5 | +1298.2 | 1.39e+27 |
+| NGC2403 | -115.4 | -0.7 | -116.1 | +1326.4 | 1.45e+27 |
+
+Across all single-galaxy deletions: ΔQ ranges from +927.9 to +1326.4; fitted QI Θ ranges from 1.28e+27 to 1.45e+27 m.
 
 ## Baseline distances by measurement method
 
@@ -33,11 +64,11 @@ Distance pull = (D_fit − D_catalogue) / σ_D. Fractional shifts and standardiz
 
 | Model | Distance method | galaxies | median D/D₀ | median distance pull | D/D₀ < 0.8 | pull < −2 | pull < −3 |
 |---|---|---|---|---|---|---|---|
-| QI, Θ = 8.8 × 10²⁶ m (fixed) | Hubble flow | 83 | 0.848 | -0.70 | 34 | 8 | 2 |
-| QI, Θ = 8.8 × 10²⁶ m (fixed) | TRGB | 39 | 0.951 | -0.92 | 5 | 13 | 9 |
-| QI, Θ = 8.8 × 10²⁶ m (fixed) | Cepheids | 3 | 0.879 | -1.18 | 1 | 1 | 1 |
-| QI, Θ = 8.8 × 10²⁶ m (fixed) | Ursa Major cluster | 26 | 0.840 | -1.15 | 9 | 5 | 0 |
-| QI, Θ = 8.8 × 10²⁶ m (fixed) | Supernovae | 2 | 0.873 | -1.33 | 1 | 1 | 0 |
+| 2017 QI, published Θ = 8.8 × 10²⁶ m | Hubble flow | 83 | 0.848 | -0.70 | 34 | 8 | 2 |
+| 2017 QI, published Θ = 8.8 × 10²⁶ m | TRGB | 39 | 0.951 | -0.92 | 5 | 13 | 9 |
+| 2017 QI, published Θ = 8.8 × 10²⁶ m | Cepheids | 3 | 0.879 | -1.18 | 1 | 1 | 1 |
+| 2017 QI, published Θ = 8.8 × 10²⁶ m | Ursa Major cluster | 26 | 0.840 | -1.15 | 9 | 5 | 0 |
+| 2017 QI, published Θ = 8.8 × 10²⁶ m | Supernovae | 2 | 0.873 | -1.33 | 1 | 1 | 0 |
 | MOND simple μ, scale free | Hubble flow | 83 | 0.952 | -0.22 | 15 | 3 | 2 |
 | MOND simple μ, scale free | TRGB | 39 | 0.989 | -0.30 | 3 | 8 | 3 |
 | MOND simple μ, scale free | Cepheids | 3 | 1.156 | +1.53 | 1 | 1 | 0 |
