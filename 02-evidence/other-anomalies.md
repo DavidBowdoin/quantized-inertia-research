@@ -87,6 +87,7 @@ McCulloch has applied QI to many further phenomena; his 2024 book surveys 54 "an
 - **Maximum black-hole mass** of about 10⁵² kg, and a sub-Stefan–Boltzmann radiation deficit of 2.7 × 10⁻²⁰ at 100 pK ([2007-mcculloch-pioneer-anomaly](../01-papers/2007-mcculloch-pioneer-anomaly/README.md)). Neither has been tested.
 - **Other Solar System anomalies** reviewed by Iorio (perihelia, the orbit of Mab, lunar eccentricity, the AU increase). QI is not applied to these in the sources, and the AU "anomaly" disappeared with the 2012 redefinition ([2015-iorio-solar-system-anomalies](../01-papers/2015-iorio-solar-system-anomalies/README.md)).
 - **Giné (2012)**: the cited Solar-System anomaly literature cannot be checked, because the text is inaccessible ([2012-gine-cosmological-holographic](../01-papers/2012-gine-cosmological-holographic/README.md)).
+- **Swastika-shaped wave rotors** (2015; [2015-mcculloch-swastika-rotors](../01-papers/2015-mcculloch-swastika-rotors/README.md)): a Casimir-analogy proposal that a hooked-cross rotor in waves arriving from all directions turns towards its arm-tips, offered as a wave-energy device and, speculatively, as a way to tap Brownian motion or the zero-point field. It does not mention QI/MiHsC, gives no power estimate and has not been tested.
 
 ## Assessment
 Across these cases a pattern recurs. QI is applied, often in short notes in low-impact venues (Progress in Physics, preprints), to anomalies that are unreplicated (Tajmar, Podkletnov), resolved (proton radius), outside the mainstream (LENR) or of uncertain nature (JuMBOs). Agreement is usually partial: 55%, half, 28× too small, or matched only after a change of frame or a photon-specific choice of Θ. None of these applications has been independently tested or reproduced. They show how flexible the theory is rather than adding independent support for it.
@@ -101,6 +102,7 @@ Across these cases a pattern recurs. QI is applied, often in short notes in low-
 - [2024-mcculloch-proxima-centauri](../01-papers/2024-mcculloch-proxima-centauri/README.md)
 - [2025-mcculloch-jupiter-mass-binaries](../01-papers/2025-mcculloch-jupiter-mass-binaries/README.md)
 - [2021-mcculloch-epr-paradox](../01-papers/2021-mcculloch-epr-paradox/README.md)
+- [2015-mcculloch-swastika-rotors](../01-papers/2015-mcculloch-swastika-rotors/README.md)
 - [2015-iorio-solar-system-anomalies](../01-papers/2015-iorio-solar-system-anomalies/README.md)
 - [2012-gine-cosmological-holographic](../01-papers/2012-gine-cosmological-holographic/README.md)
 - [2024-provatidis-inertial-propulsion-review](../01-papers/2024-provatidis-inertial-propulsion-review/README.md)

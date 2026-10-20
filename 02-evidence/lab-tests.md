@@ -35,6 +35,7 @@ This note collects every laboratory measurement or proposal in the repository th
 - **Tajmar effect:**
   - **2010:** ratio −1.78 ± 0.25 × 10⁻⁸ (gyro counter-rotating), with mirror-image behaviour predicted for the southern hemisphere.
   - **2011, revised frame:** 2.67 ± 0.24 × 10⁻⁸ clockwise and 1.34 ± 0.12 × 10⁻⁸ anticlockwise, which accounts for the parity asymmetry. This revision replaced the 2010 southern-hemisphere prediction.
+  - Press coverage: [2011-physorg-gyroscope-tajmar](../07-media/2011-physorg-gyroscope-tajmar/README.md) notes the effect had been seen in only one laboratory.
 - **Podkletnov effect:** 0.03% of g with the AC field (about half the observed effect) and 0.042% with rotation, 28× smaller than observed. MiHsC also predicts that the effect vanishes outside the cryostat, which contradicts the reported vertical column.
 - **Proposed but not performed:**
   - A particle at 0.9c in a 1 km ring, irradiated at 22 km wavelength, should show increased inertia ([2010-mcculloch-minimum-accelerations](../01-papers/2010-mcculloch-minimum-accelerations/README.md)).

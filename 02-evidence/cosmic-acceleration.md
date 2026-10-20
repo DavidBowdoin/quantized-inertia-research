@@ -30,7 +30,7 @@ verdict: supported-by-author-only
   - "MiHsC ... predicts that an object must still accelerate: there is a minimum acceleration in nature." The paper says this is close to the acceleration attributed to dark energy.
   - Numerically, 2c²/Θ is 6.7 × 10⁻¹⁰ m s⁻² with Θ = 2.7 × 10²⁶ m ([2012](../01-papers/2012-mcculloch-galactic-scales/README.md)). It is ≈ 2 × 10⁻¹⁰ m s⁻² with Θ = 8.8 × 10²⁶ m (2017 onward), and 4.18 × 10⁻¹⁰ m s⁻² with Pickering's Θ = 4.3 × 10²⁶ m ([2017-pickering-resonant-cavity](../01-papers/2017-pickering-resonant-cavity/README.md)).
 - **Rindler-horizon route.** [McCulloch 2019, Progress in Physics](../01-papers/2019-mcculloch-rindler-horizons/README.md) argues that a photon moving through the Hubble sphere stops feeling the mass behind its Rindler horizon. The imbalance gives a = 2.45 × 10^(−11±1) m s⁻², said to agree with the cosmic acceleration and the galactic critical acceleration of ~2 × 10⁻¹⁰ m s⁻². Note the ±1 uncertainty in the exponent. The paper's text also contains a typo for the cosmic radius.
-- **Other derivations.** QI papers state that the Hubble-horizon part of QI gives "cosmic acceleration without dark energy" ([2017-mcculloch-information-loss](../01-papers/2017-mcculloch-information-loss/README.md)). Giné (2012) claims that a holographic version gives late-time acceleration "obviating the dark energy" ([2012-gine-holographic-modified-inertia](../01-papers/2012-gine-holographic-modified-inertia/README.md), abstract only; full text not accessible).
+- **Other derivations.** QI papers state that the Hubble-horizon part of QI gives "cosmic acceleration without dark energy" ([2017-mcculloch-information-loss](../01-papers/2017-mcculloch-information-loss/README.md)). Giné (2012) claims that a holographic version gives late-time acceleration "obviating the dark energy" ([2012-gine-holographic-modified-inertia](../01-papers/2012-gine-holographic-modified-inertia/README.md), abstract only; full text not accessible). Giné & Luciano (2024) use the same Hubble-scale damping to estimate Λ ≈ 2H₀²/c² ([2024-gine-luciano-discretization-lambda](../01-papers/2024-gine-luciano-discretization-lambda/README.md)).
 
 ## Independent tests, critiques and null results
 - **No expansion-history test.** No QI paper in the sources computes an expansion history H(z) or a supernova Hubble diagram. The claim is an order-of-magnitude match between a_min and "the cosmic acceleration".
@@ -52,6 +52,7 @@ QI ties its minimum acceleration to the size of the cosmic horizon, so it lands,
 - [2019-mcculloch-superluminal-travel](../01-papers/2019-mcculloch-superluminal-travel/README.md) (residual 2c²/Θ said to persist at v = c)
 - [2017-pickering-resonant-cavity](../01-papers/2017-pickering-resonant-cavity/README.md)
 - [2012-gine-holographic-modified-inertia](../01-papers/2012-gine-holographic-modified-inertia/README.md)
+- [2024-gine-luciano-discretization-lambda](../01-papers/2024-gine-luciano-discretization-lambda/README.md)
 - [2017-smolin-mond-quantum-gravity](../01-papers/2017-smolin-mond-quantum-gravity/README.md)
 - [2019-cadoni-long-range-qg](../01-papers/2019-cadoni-long-range-qg/README.md)
 - [2018-hernandez-bounding-curvature](../01-papers/2018-hernandez-bounding-curvature/README.md)

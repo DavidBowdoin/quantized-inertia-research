@@ -26,6 +26,7 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2015 | [Gravitational anomalies in the solar system?](2015-iorio-solar-system-anomalies/README.md) | Iorio | International Journal of Modern Physics D 24(6), 1530015 | neutral | ✅ | [DOI](https://doi.org/10.1142/S0218271815300153) [arXiv](https://arxiv.org/abs/1412.7673) |
 | 2015 | [Testing quantised inertia on the emdrive](2015-mcculloch-emdrive-epl/README.md) | McCulloch | EPL (Europhysics Letters) 111(6), 60005 | supports | ✅ | [DOI](https://doi.org/10.1209/0295-5075/111/60005) [arXiv](https://arxiv.org/abs/1604.03449) |
 | 2015 | [Can the Emdrive Be Explained by Quantised Inertia?](2015-mcculloch-emdrive-pip/README.md) | McCulloch | Progress in Physics 11(1), 78-80 | supports | ✅ |  |
+| 2015 | [Energy from Swastika-Shaped Rotors](2015-mcculloch-swastika-rotors/README.md) | McCulloch | Progress in Physics 11(2), 139-140 | neutral | ✅ |  |
 | 2016 | [Inertial mass from Unruh temperatures](2016-gine-unruh-temperatures/README.md) | Giné & McCulloch | Modern Physics Letters A 31(17), 1650107 | supports |  | [DOI](https://doi.org/10.1142/S0217732316501078) |
 | 2016 | [Quantised inertia from relativity and the uncertainty principle](2016-mcculloch-relativity-uncertainty/README.md) | McCulloch | EPL (Europhysics Letters) 115(6), 69001 | supports | ✅ | [DOI](https://doi.org/10.1209/0295-5075/115/69001) [arXiv](https://arxiv.org/abs/1610.06787) |
 | 2017 | [Inertial mass of an elementary particle from the holographic scenario](2017-gine-inertial-mass-holographic/README.md) | Giné | International Journal of Modern Physics A 32(6n07), 1750043 | supports |  | [DOI](https://doi.org/10.1142/S0217751X17500439) |
@@ -40,6 +41,7 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2017 | [Propulsive Forces using High-Q Asymmetric High Energy Laser Resonators](2017-taylor-laser-resonators/README.md) | Taylor | Journal of the British Interplanetary Society 70:238-243 | supports |  |  |
 | 2018 | [Casimir effect and the uncertainty principle](2018-gine-casimir-uncertainty/README.md) | Giné | Modern Physics Letters A 33(24):1850140 | neutral |  | [DOI](https://doi.org/10.1142/S0217732318501407) |
 | 2018 | [Hawking effect and Unruh effect from the uncertainty principle](2018-gine-hawking-unruh-uncertainty/README.md) | Giné | EPL 121(1):10001 | neutral |  | [DOI](https://doi.org/10.1209/0295-5075/121/10001) |
+| 2018 | [A Close Look at the Foundation of Quantized Inertia](2018-haug-foundation-quantized-inertia/README.md) | Haug | viXra:1803.0052 | neutral | ✅ |  |
 | 2018 | [Newton's Gravity from Heisenberg's Uncertainty Principle. An In-Depth Study of the McCulloch Derivation](2018-haug-mcculloch-derivation/README.md) | Haug | viXra:1803.0045 | supports | ✅ |  |
 | 2018 | [Can Cold Fusion Be Explained by Quantised Inertia?](2018-mcculloch-cold-fusion/README.md) | McCulloch | Progress in Physics 14(2), 63-65 | supports | ✅ |  |
 | 2018 | [Propellant-less Propulsion from Quantized Inertia](2018-mcculloch-propellantless-propulsion/README.md) | McCulloch | Journal of Space Exploration 7(3), 1-7 | supports | ✅ |  |
@@ -59,11 +61,13 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2021 | [The EPR paradox and the uncertainty principle](2021-mcculloch-epr-paradox/README.md) | McCulloch & Giné | Modern Physics Letters B 35(04), 2150072 | supports |  | [DOI](https://doi.org/10.1142/s021798492150072x) |
 | 2021 | [Thrust from Symmetric Capacitors using Quantised Inertia](2021-mcculloch-symmetric-capacitors/README.md) | McCulloch | ResearchGate preprint (not peer-reviewed) | supports | ✅ |  |
 | 2021 | [Measuring Planck scale U(1) gauge interactions in Quantised Inertia using IKKT gravity](2021-soli-ikkt-qi/README.md) | Soli | APS April Meeting 2021 conference paper (ResearchGate preprint; not peer-reviewed) | supports | ✅ | [DOI](https://doi.org/10.13140/RG.2.2.31904.81929/2) |
+| 2022 | [Is it possible to implement a holographic equivalence principle?](2022-gine-holographic-equivalence/README.md) | Giné | Europhysics Letters 137(1), 19002 | neutral |  | [DOI](https://doi.org/10.1209/0295-5075/137/19002) |
 | 2022 | [On the Possible Anisotropy of the Unruh Radiation. Part II: Massive Scalar Field in (3+1)D Space-Time](2022-kholupenko-unruh-anisotropy-2/README.md) | Kholupenko | Gravitation and Cosmology 28(2), 139-152 | neutral |  | [DOI](https://doi.org/10.1134/S0202289322020074) |
 | 2022 | [Testing Quantised Inertia on the Bending of Light by the Sun](2022-mcculloch-light-bending/README.md) | McCulloch | Research Square preprint (not peer-reviewed) | supports | ✅ | [DOI](https://doi.org/10.21203/rs.3.rs-2251614/v1) |
 | 2022 | [QI Thrust as an Asymmetric Casimir Effect](2022-mcculloch-qi-thrust-casimir/README.md) | McCulloch | ResearchGate preprint (not peer-reviewed) | supports | ✅ |  |
 | 2023 | [Breakdown of the Newton-Einstein Standard Gravity at Low Acceleration in Internal Dynamics of Wide Binary Stars](2023-chae-wide-binaries/README.md) | Chae | The Astrophysical Journal 952(2), 128 | neutral | ✅ | [DOI](https://doi.org/10.3847/1538-4357/ace101) [arXiv](https://arxiv.org/abs/2305.04613) |
 | 2023 | [Accelerated electron thermometer: observation of 1D Planck radiation](2023-lynch-accelerated-electron-thermometer/README.md) | Lynch et al. | Progress of Theoretical and Experimental Physics 2024(2), 023D01 | neutral | ✅ | [DOI](https://doi.org/10.1093/ptep/ptad157) [arXiv](https://arxiv.org/abs/2211.14774) |
+| 2024 | [On the Apparent Discretization of Spacetime and Its Connection with the Cosmological Constant](2024-gine-luciano-discretization-lambda/README.md) | Giné & Luciano | Universe 10(3), 142 | supports | ✅ | [DOI](https://doi.org/10.3390/universe10030142) |
 | 2024 | [A critical review of recent GAIA wide binary gravity tests](2024-hernandez-wide-binary-review/README.md) | Hernandez et al. | Monthly Notices of the Royal Astronomical Society 533(1), 729-742 | neutral | ✅ | [DOI](https://doi.org/10.1093/mnras/stae1823) [arXiv](https://arxiv.org/abs/2312.03162) |
 | 2024 | [Testing quantized inertia on Proxima Centauri](2024-mcculloch-proxima-centauri/README.md) | McCulloch | Monthly Notices of the Royal Astronomical Society: Letters 532(1), L67-L69 | supports | ✅ | [DOI](https://doi.org/10.1093/mnrasl/slae047) |
 | 2024 | [Inertial Propulsion Devices: A Review](2024-provatidis-inertial-propulsion-review/README.md) | Provatidis | Eng 5(2), 851-880 | neutral | ✅ | [DOI](https://doi.org/10.3390/eng5020046) |
@@ -71,6 +75,7 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2025 | [On the Possible Anisotropy of the Unruh Radiation. Part III: A Screened Detector](2025-kholupenko-unruh-anisotropy-3/README.md) | Kholupenko | Gravitation and Cosmology 31(3), 353-365 | neutral |  | [DOI](https://doi.org/10.1134/S0202289325700239) |
 | 2025 | [Jupiter Mass Binary Objects Show a Minimum Acceleration](2025-mcculloch-jupiter-mass-binaries/README.md) | McCulloch | Astronomy (MDPI) 5(1), 1 | supports | ✅ | [DOI](https://doi.org/10.3390/astronomy5010001) |
 | 2025 | [Experiments for Testing Quantized Inertia Theories](2025-stauffer-qi-experiments/README.md) | Stauffer | ResearchGate 388117533 (self-published; not peer-reviewed); mirrored at rocketslinger.com/Quant_Inert2/ | neutral | ✅ |  |
+| 2026 | [A Novel Quantum Thrust from Capacitors](2026-mcculloch-quantum-thrust-capacitors/README.md) | McCulloch | SSRN preprint (not peer-reviewed) | supports |  | [DOI](https://doi.org/10.2139/ssrn.6313698) |
 
-_64 sources._
+_69 sources._
 <!-- END AUTO-INDEX -->

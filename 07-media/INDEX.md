@@ -7,6 +7,9 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 <!-- BEGIN AUTO-INDEX -->
 | Year | Title | Authors | Venue | Status | OA | Links |
 |---|---|---|---|---|---|---|
+| 2011 | [Gyroscope's unexplained acceleration may be due to modified inertia](2011-physorg-gyroscope-tajmar/README.md) | Zyga | Phys.org (PhysOrg.com) | neutral | ✅ |  |
+| 2012 | [Dark matter effect might be explained by modified way to calculate inertial mass](2012-physorg-dark-matter-inertia/README.md) | Zyga | Phys.org | neutral | ✅ |  |
+| 2014 | [An Introduction to MiHsC / quantised inertia](2014-mcculloch-mihsc-101/README.md) | McCulloch | Physics from the Edge (blog; masthead now 'Physics with an edge') | supports | ✅ |  |
 | 2014 | [Physics from the Edge: A New Cosmological Model for Inertia](2014-mcculloch-physics-from-edge/README.md) | McCulloch | World Scientific | supports |  | [DOI](https://doi.org/10.1142/9122) |
 | 2016 | [How The 'Impossible' Space Drive Engine May Work](2016-jalopnik-emdrive/README.md) | Torchinsky | Jalopnik | critical | ✅ |  |
 | 2016 | [Theoretical Dream EmDrive](2016-koberlein-theoretical-dream-emdrive/README.md) | Koberlein | Brian Koberlein (blog) | critical | ✅ |  |
@@ -19,6 +22,7 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2018 | [Plymouth Researchers Awarded $1.3M Grant for Light-Based Space Travel](2018-photonics-darpa/README.md) | Media | Photonics.com / Photonics Spectra | neutral | ✅ |  |
 | 2018 | [Scientists receive $1.3 million to study new propulsion idea for spacecraft](2018-plymouth-darpa/README.md) | Plymouth | University of Plymouth news | supports | ✅ |  |
 | 2018 | [DARPA invests in propellant-free rocket theory](2018-upi-darpa/README.md) | Hays | UPI | neutral | ✅ |  |
+| 2022 | [Quantized Inertia is Nonsense](2022-fleming-qi-nonsense/README.md) | Fleming | YouTube (Ray Fleming channel, @rayfleming2053) | critical | ✅ |  |
 | 2022 | [IVO Ltd. introduces a propulsion first: a pure electric thruster for satellites](2022-satnews-ivo/README.md) | SatNews | SatNews | supports | ✅ |  |
 | 2023 | [Tiverton and Devon Astronomical Society - Lecture on On Orbit Manufacturing and Quantized Inertia](2023-arundal-tiverton-lecture/README.md) | Arundal et al. | Tiverton and Devon Astronomical Society lecture (PEARL conference proceeding) | supports | ✅ |  |
 | 2023 | [EXCLUSIVE: The 'Impossible' Quantum Drive That Defies Known Laws of Physics Was Just Launched Into Space](2023-debrief-ivo-launch/README.md) | Plain | The Debrief | neutral | ✅ |  |
@@ -28,7 +32,9 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2024 | [BREAKING: Satellite failure scuttles first-of-its-kind in-space test of physics-defying Quantum Drive](2024-debrief-ivo-failure/README.md) | Plain | The Debrief | neutral | ✅ |  |
 | 2024 | [Contact Lost With Spacecraft Carrying Experimental Quantum Drive](2024-futurism-ivo-contact-lost/README.md) | Landymore | Futurism (The Byte) | neutral | ✅ |  |
 | 2024 | [Quantised Accelerations: From Anomalies to New Physics](2024-mcculloch-quantised-accelerations/README.md) | McCulloch | Polaris Books | supports |  |  |
+| 2025 | [Kinematics suggest large masses for high redshift galaxies](2025-mcgaugh-kinematics-high-redshift/README.md) | McGaugh | Triton Station (blog) | neutral | ✅ |  |
+| 2025 | [The Problems of Quantized Inertia](2025-uruena-problems-quantized-inertia/README.md) | Palomo | Independent Physics (independentphysics.com blog) | critical | ✅ |  |
 | 2026 | [Reviewing the IVO Quantum Drive](2026-nextbigfuture-ivo-review/README.md) | Wang | NextBigFuture | neutral | ✅ |  |
 
-_22 sources._
+_28 sources._
 <!-- END AUTO-INDEX -->
