@@ -41,7 +41,8 @@ Avoid shadow-library sites, which infringe copyright.
 | 1 | [Physics from the Edge: A New Cosmological Model for Inertia](07-media/2014-mcculloch-physics-from-edge/README.md) | 2014 | World Scientific | [doi:10.1142/9122](https://doi.org/10.1142/9122) | World Scientific book: buy, or borrow via interlibrary loan |
 | 1 | [Quantized Inertia is Nonsense](07-media/2022-fleming-qi-nonsense/README.md) | 2022 | YouTube (Ray Fleming channel, @rayfleming2053) | [link](https://www.youtube.com/watch?v=dM2sBIza_Yg) | Ask the author |
 | 1 | [The Problems of Quantized Inertia](07-media/2025-uruena-problems-quantized-inertia/README.md) | 2025 | Independent Physics (independentphysics.com blog) | [link](https://independentphysics.com/the-problems-of-quantized-inertia/) | Ask the author |
+| 0 | [Optical-Cavity-Induced Current](01-papers/2021-moddel-optical-cavity-current/README.md) | 2021 | Symmetry 13(3), 517 | [doi:10.3390/sym13030517](https://doi.org/10.3390/sym13030517) | Ask the author |
 | 0 | [Kinematics suggest large masses for high redshift galaxies](07-media/2025-mcgaugh-kinematics-high-redshift/README.md) | 2025 | Triton Station (blog) | [link](https://tritonstation.com/2025/02/10/kinematics-suggest-large-masses-for-high-redshift-galaxies/) | Ask the author |
 
-_14 sources without a PDF. "Flags" = `[!UNVERIFIED]` markers in the README; higher means the full text would settle more._
+_15 sources without a PDF. "Flags" = `[!UNVERIFIED]` markers in the README; higher means the full text would settle more._
 <!-- END AUTO-MISSING -->

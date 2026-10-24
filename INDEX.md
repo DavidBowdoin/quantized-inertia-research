@@ -122,6 +122,7 @@ Every note and source in the repository. Section tables with year, status and li
 - [Can the Standard Model Predict a Minimum Acceleration That Gets Rid of Dark Matter?](01-papers/2021-haug-minimum-acceleration/README.md)
 - [The EPR paradox and the uncertainty principle](01-papers/2021-mcculloch-epr-paradox/README.md)
 - [Thrust from Symmetric Capacitors using Quantised Inertia](01-papers/2021-mcculloch-symmetric-capacitors/README.md)
+- [Optical-Cavity-Induced Current](01-papers/2021-moddel-optical-cavity-current/README.md)
 - [Dynamical properties of z ∼ 4.5 dusty star-forming galaxies and their connection with local early-type galaxies](01-papers/2021-rizzo-dsfg-dynamics/README.md)
 - [Measuring Planck scale U(1) gauge interactions in Quantised Inertia using IKKT gravity](01-papers/2021-soli-ikkt-qi/README.md)
 - [Is it possible to implement a holographic equivalence principle?](01-papers/2022-gine-holographic-equivalence/README.md)

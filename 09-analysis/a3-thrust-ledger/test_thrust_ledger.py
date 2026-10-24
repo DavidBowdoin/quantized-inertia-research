@@ -71,9 +71,11 @@ class Limits(unittest.TestCase):
         self.assertAlmostEqual(neg["upper"], 36 * m.NN, places=15)
 
     def test_capacitor_limit_is_three_sigma_as_given(self):
-        for r in rows("Leakage-current capacitor (QI formulas applied by us)"):
-            self.assertAlmostEqual(r["upper"], 0.3e-6 * m.G0, places=15)
-            self.assertGreater(r["ratio"], 30)
+        rr = rows("Leakage-current capacitor (2022 formula applied by us)")
+        self.assertEqual(len(rr), 1)
+        self.assertAlmostEqual(rr[0]["upper"], 0.3e-6 * m.G0, places=15)
+        self.assertAlmostEqual(rr[0]["ratio"], 74, delta=1)
+        self.assertIn("reported 3σ", rr[0]["upper_basis"])
 
     def test_revised_cavity_prediction_is_at_resolution(self):
         rr = rows("Silver laser cavities: McCulloch 2022 revised prediction")
@@ -89,7 +91,37 @@ class Limits(unittest.TestCase):
 
     def test_capacitor_formulas(self):
         self.assertAlmostEqual(m.v_electron(5000) / 2e7, 1, delta=0.06)        # McCulloch 2022 uses 2 × 10⁷ m/s
+        # Literal M21 substitution gives mN/s here, not mN.
         self.assertAlmostEqual(m.f_capacitor_2021(10e-6, 10e-6, 1.0) * 1e3, 9.86, delta=0.05)
+
+
+class Provenance(unittest.TestCase):
+    def test_electrical_output_is_not_a_thrust_measurement(self):
+        excluded, = RES["excluded_comparisons"]
+        self.assertIsNone(excluded["measured_force_N"])
+        self.assertAlmostEqual(excluded["m22_area_m2"] / excluded["source_area_m2"], 1e6)
+        self.assertFalse(any("Moddel" in r["device"] for r in RES["claimed"] + RES["controlled"]))
+        self.assertFalse(any("Moddel" in r["label"] for r in m.chart_rows(RES)))
+
+    def test_rate_substitution_is_audit_only(self):
+        self.assertEqual({r["n"] for r in RES["dimensional_checks"]}, {1.0, 1.2, 1.49})
+        self.assertTrue(all("literal_rate_N_per_s" in r and "ratio" not in r for r in RES["dimensional_checks"]))
+        self.assertFalse(any("2021 Eq. 6" in str(r) for r in RES["controlled"] + RES["claimed"]))
+
+    def test_chart_uses_printed_predictions_and_preserves_sign_warning(self):
+        plotted = next(r for r in m.chart_rows(RES) if r["label"].startswith("EmDrive: Shawyer 1"))
+        self.assertAlmostEqual(max(plotted["pred"]), 26e-3 / 850, places=15)
+        self.assertIn("sign reversed", plotted["label"])
+        self.assertFalse(any("not QI" in r["label"] or "BART" in r["label"] for r in m.chart_rows(RES)))
+
+    def test_chart_distinguishes_bound_conventions(self):
+        plotted = m.chart_rows(RES)
+        capacitor = next(r for r in plotted if r["label"].startswith("Leakage-current capacitor"))
+        silver = next(r for r in plotted if r["label"] == "Silver laser cavities: McCulloch 2022 revised prediction")
+        self.assertEqual(capacitor["upper_basis"], "reported 3σ limit (T20)")
+        self.assertEqual(silver["upper_basis"], "max(m − P/c, 0) + 2σ")
+        self.assertEqual(capacitor["power_basis"], "electrical")
+        self.assertEqual(silver["power_basis"], "optical")
 
 
 if __name__ == "__main__":
