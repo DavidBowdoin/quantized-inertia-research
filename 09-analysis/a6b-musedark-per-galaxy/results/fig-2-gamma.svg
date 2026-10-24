@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620" role="img">
+<title>Fitted exponent γ in a_Q ∝ (1+z)^γ, with galaxy-bootstrap 16–84% ranges</title>
+<style>
+svg { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --grid:#e4e3df; --pt:#8f8d86;
+      --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#6250d6; }
+@media (prefers-color-scheme: dark) {
+  svg { --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --grid:#33322f; --pt:#77756f;
+        --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; } }
+text { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--ink2); font-size: 12px; }
+.t { fill: var(--ink); font-size: 14px; font-weight: 600; }
+.ax { stroke: var(--ink2); stroke-width: 1; }
+.gr { stroke: var(--grid); stroke-width: 1; }
+.ln { fill: none; stroke-width: 2; stroke-linejoin: round; }
+</style>
+<rect width="1000" height="620" fill="var(--surface)"/>
+<text class="t" x="40" y="24">Fitted exponent γ in a_Q ∝ (1+z)^γ, with galaxy-bootstrap 16–84% ranges</text>
+<text x="370.0" y="608" text-anchor="middle">γ (QI as printed: γ = 1; constant scale: γ = 0)</text>
+<text transform="translate(16,307.0) rotate(-90)" text-anchor="middle"></text>
+<line class="gr" x1="113.3" x2="113.3" y1="44" y2="570"/><text x="113.3" y="586" text-anchor="middle">-2</text>
+<line class="gr" x1="186.7" x2="186.7" y1="44" y2="570"/><text x="186.7" y="586" text-anchor="middle">-1</text>
+<line class="gr" x1="260.0" x2="260.0" y1="44" y2="570"/><text x="260.0" y="586" text-anchor="middle">0</text>
+<line class="gr" x1="333.3" x2="333.3" y1="44" y2="570"/><text x="333.3" y="586" text-anchor="middle">1</text>
+<line class="gr" x1="406.7" x2="406.7" y1="44" y2="570"/><text x="406.7" y="586" text-anchor="middle">2</text>
+<line class="gr" x1="480.0" x2="480.0" y1="44" y2="570"/><text x="480.0" y="586" text-anchor="middle">3</text>
+<line class="gr" x1="553.3" x2="553.3" y1="44" y2="570"/><text x="553.3" y="586" text-anchor="middle">4</text>
+<line class="gr" x1="626.7" x2="626.7" y1="44" y2="570"/><text x="626.7" y="586" text-anchor="middle">5</text>
+<line class="gr" x1="700.0" x2="700.0" y1="44" y2="570"/><text x="700.0" y="586" text-anchor="middle">6</text>
+<line class="ax" x1="40" x2="700" y1="570" y2="570"/><line class="ax" x1="40" x2="40" y1="44" y2="570"/>
+<line x1="359.7" x2="596.3" y1="65.7" y2="65.7" stroke="var(--s1)" stroke-width="3"/>
+<circle cx="476.0" cy="65.7" r="5" fill="var(--s1)"><title>data_letter, dynamical disc mass (MUSE-DARK fit): γ = 2.95</title></circle>
+<text x="710.0" y="69.7">data grid, Letter-like: dynamical mass</text>
+<line x1="243.9" x2="492.4" y1="96.6" y2="96.6" stroke="var(--s3)" stroke-width="3"/>
+<circle cx="387.9" cy="96.6" r="5" fill="var(--s3)"><title>data_letter, SED stellar mass: γ = 1.74</title></circle>
+<text x="710.0" y="100.6">data grid, Letter-like: SED mass</text>
+<line x1="158.9" x2="412.0" y1="127.5" y2="127.5" stroke="var(--s4)" stroke-width="3"/>
+<circle cx="301.8" cy="127.5" r="5" fill="var(--s4)"><title>data_letter, SED mass + H₂ (Tacconi, on the main sequence): γ = 0.57</title></circle>
+<text x="710.0" y="131.5">data grid, Letter-like: SED + H₂ (main seq.)</text>
+<line x1="196.3" x2="448.9" y1="158.5" y2="158.5" stroke="var(--s5)" stroke-width="3"/>
+<circle cx="335.5" cy="158.5" r="5" fill="var(--s5)"><title>data_letter, SED mass + H₂ (Tacconi, offset from SFR): γ = 1.03</title></circle>
+<text x="710.0" y="162.5">data grid, Letter-like: SED + H₂ (from SFR)</text>
+<line x1="365.9" x2="557.5" y1="189.4" y2="189.4" stroke="var(--s1)" stroke-width="3"/>
+<circle cx="461.4" cy="189.4" r="5" fill="var(--s1)"><title>data_all, dynamical disc mass (MUSE-DARK fit): γ = 2.75</title></circle>
+<text x="710.0" y="193.4">data grid, all: dynamical mass</text>
+<line x1="258.4" x2="486.2" y1="220.4" y2="220.4" stroke="var(--s3)" stroke-width="3"/>
+<circle cx="377.8" cy="220.4" r="5" fill="var(--s3)"><title>data_all, SED stellar mass: γ = 1.61</title></circle>
+<text x="710.0" y="224.4">data grid, all: SED mass</text>
+<line x1="151.4" x2="414.4" y1="251.3" y2="251.3" stroke="var(--s4)" stroke-width="3"/>
+<circle cx="291.9" cy="251.3" r="5" fill="var(--s4)"><title>data_all, SED mass + H₂ (Tacconi, on the main sequence): γ = 0.43</title></circle>
+<text x="710.0" y="255.3">data grid, all: SED + H₂ (main seq.)</text>
+<line x1="204.2" x2="430.0" y1="282.2" y2="282.2" stroke="var(--s5)" stroke-width="3"/>
+<circle cx="329.2" cy="282.2" r="5" fill="var(--s5)"><title>data_all, SED mass + H₂ (Tacconi, offset from SFR): γ = 0.94</title></circle>
+<text x="710.0" y="286.2">data grid, all: SED + H₂ (from SFR)</text>
+<line x1="341.2" x2="448.9" y1="313.2" y2="313.2" stroke="var(--s1)" stroke-width="3"/>
+<circle cx="390.4" cy="313.2" r="5" fill="var(--s1)"><title>karpov_letter, dynamical disc mass (MUSE-DARK fit): γ = 1.78</title></circle>
+<text x="710.0" y="317.2">Karpov grid, Letter-like: dynamical mass</text>
+<line x1="209.6" x2="352.7" y1="344.1" y2="344.1" stroke="var(--s3)" stroke-width="3"/>
+<circle cx="278.4" cy="344.1" r="5" fill="var(--s3)"><title>karpov_letter, SED stellar mass: γ = 0.25</title></circle>
+<text x="710.0" y="348.1">Karpov grid, Letter-like: SED mass</text>
+<line x1="93.5" x2="257.6" y1="375.1" y2="375.1" stroke="var(--s4)" stroke-width="3"/>
+<circle cx="190.5" cy="375.1" r="5" fill="var(--s4)"><title>karpov_letter, SED mass + H₂ (Tacconi, on the main sequence): γ = -0.95</title></circle>
+<text x="710.0" y="379.1">Karpov grid, Letter-like: SED + H₂ (main seq.)</text>
+<line x1="139.5" x2="305.1" y1="406.0" y2="406.0" stroke="var(--s5)" stroke-width="3"/>
+<circle cx="230.9" cy="406.0" r="5" fill="var(--s5)"><title>karpov_letter, SED mass + H₂ (Tacconi, offset from SFR): γ = -0.40</title></circle>
+<text x="710.0" y="410.0">Karpov grid, Letter-like: SED + H₂ (from SFR)</text>
+<line x1="291.4" x2="409.4" y1="437.0" y2="437.0" stroke="var(--s1)" stroke-width="3"/>
+<circle cx="352.3" cy="437.0" r="5" fill="var(--s1)"><title>karpov_all, dynamical disc mass (MUSE-DARK fit): γ = 1.26</title></circle>
+<text x="710.0" y="441.0">Karpov grid, all: dynamical mass</text>
+<line x1="192.8" x2="316.6" y1="467.9" y2="467.9" stroke="var(--s3)" stroke-width="3"/>
+<circle cx="262.5" cy="467.9" r="5" fill="var(--s3)"><title>karpov_all, SED stellar mass: γ = 0.03</title></circle>
+<text x="710.0" y="471.9">Karpov grid, all: SED mass</text>
+<line x1="81.4" x2="243.3" y1="498.8" y2="498.8" stroke="var(--s4)" stroke-width="3"/>
+<circle cx="167.7" cy="498.8" r="5" fill="var(--s4)"><title>karpov_all, SED mass + H₂ (Tacconi, on the main sequence): γ = -1.26</title></circle>
+<text x="710.0" y="502.8">Karpov grid, all: SED + H₂ (main seq.)</text>
+<line x1="150.8" x2="274.5" y1="529.8" y2="529.8" stroke="var(--s5)" stroke-width="3"/>
+<circle cx="215.3" cy="529.8" r="5" fill="var(--s5)"><title>karpov_all, SED mass + H₂ (Tacconi, offset from SFR): γ = -0.61</title></circle>
+<text x="710.0" y="533.8">Karpov grid, all: SED + H₂ (from SFR)</text>
+<path class="ln" d="M260.0,570.0 L260.0,44.0" stroke="var(--ink2)" stroke-dasharray="3 3"></path>
+<path class="ln" d="M333.3,570.0 L333.3,44.0" stroke="var(--ink2)" stroke-dasharray="3 3"></path>
+</svg>

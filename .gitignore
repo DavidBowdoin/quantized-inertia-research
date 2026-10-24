@@ -5,6 +5,7 @@ downloads/
 09-analysis/*/data/
 __pycache__/
 .venv/
+drafts/
 
 # BEGIN LOCAL-ONLY (licence does not permit redistribution; see AGENTS.md)
 01-papers/2007-mcculloch-pioneer-anomaly/figures/fig-1-allowed-wavelengths.png
@@ -97,6 +98,7 @@ __pycache__/
 01-papers/2024-stauffer-qi-drive-versions/figures/fig-3-baffled-expander.png
 01-papers/2024-stauffer-qi-drive-versions/paper.pdf
 01-papers/2025-stauffer-qi-experiments/paper.pdf
+01-papers/2026-karpov-musedark-a0z-audit/paper.pdf
 03-criticism/2012-turyshev-pioneer-thermal/figures/fig-2-thermal-power.png
 03-criticism/2012-turyshev-pioneer-thermal/figures/fig-3-thermal-vs-anomalous.png
 03-criticism/2012-turyshev-pioneer-thermal/paper.pdf

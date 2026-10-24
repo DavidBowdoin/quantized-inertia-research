@@ -1,7 +1,7 @@
 ---
 title: "Ideas: analyses we could run and tests that would decide"
 tags: [synthesis, ideas, predictions]
-as_of: 2026-10-20
+as_of: 2026-10-23
 ---
 
 # What we can come up with: analyses and decisive tests
@@ -71,7 +71,9 @@ For each QI paper, recompute the headline number with both Θ values. This shows
 ### Tier 1: tests with a real chance of a distinctive positive result
 
 #### 🔧 A6. Does the acceleration scale grow with redshift, and how fast?
-**Why it matters.** QI ties its scale to the cosmic horizon (a_Q = 2c²/Θ), so the scale must change over cosmic time. MOND's a₀ is a constant of nature. This is the clearest place where QI and MOND make different predictions for galaxies. It is the existing B1 idea, and it can now be done with published data rather than new observations.
+**Status (23 Oct 2026): binned first pass done** in [A6](../09-analysis/a6-rar-redshift-evolution/README.md), using the four bins tabulated by [Alcock 2026](../01-papers/2026-alcock-rar-scale-hubble/README.md). Under the assumed curve conversion, the published normalization is 28–45% above every bin, with a −0.11 dex mass shift removing most of the offset in a synthetic-curve check. With fitted amplitude the (1+z) shape fits best of the four fixed laws tested, and A1's calibrated scale transfers if the bars are 1σ. The MUSE-DARK data portal was unreachable. **Per-galaxy follow-ups (23 Oct 2026):** [A6b](../09-analysis/a6b-musedark-per-galaxy/README.md) rebuilds MUSE-DARK galaxies from public fit parameters; the rise depends on the mass budget and radial sampling, so it is not decisive. [A6c](../09-analysis/a6c-rc100-qi/README.md) uses the RC100 sample (z = 0.6–2.5) in place of the Genzel lever arm; it fits the published law and the (1+z) shape worse than a constant under its approximate likelihood, including after adding radius errors and testing error correlations. These are conditional comparisons. Still open: the exact MUSE-DARK data and bin convention, and an independent molecular-gas measurement.
+
+**Why it matters.** QI ties its scale to the cosmic horizon (a_Q = 2c²/Θ), so the scale must change over cosmic time. Standard constant-a₀ MOND differs from this prediction; some cosmological MOND extensions also allow evolution. The redshift law is therefore a useful test of QI against specified alternatives. It is the existing B1 idea, and it can now be done with published data rather than new observations.
 
 **New data.** MUSE-DARK III (Ciocan, Bouché et al. 2026, *A&A* 709, L16, [arXiv:2604.22613](https://arxiv.org/abs/2604.22613), doi:10.1051/0004-6361/202659230) measures the radial acceleration relation for 79 galaxies at 0.33 < z < 1.44. It finds a₀(z ≈ 1) = 2.38 ± 0.1 × 10⁻¹⁰ m s⁻², a scale that "systematically increases with z", and a linear slope a₁ = 1.59 ± 0.1 × 10⁻¹⁰ m s⁻² per unit z. The authors report similar results when they model the data in MOND. They do not mention QI. Earlier constraints come from Genzel et al. 2020 ([arXiv:2006.03046](https://arxiv.org/abs/2006.03046)); Milgrom 2017 ([arXiv:1703.06110](https://arxiv.org/abs/1703.06110)) argues that the Genzel z ≈ 1–2.4 discs "all but exclude" a scale four times the local one at z ≈ 2.
 
@@ -85,7 +87,7 @@ For each QI paper, recompute the headline number with both Θ values. This shows
 
 McCulloch 2017 specifies Θ₀ = 8.8 × 10²⁶ m and Θ(z) = Θ₀/(1+z); that is the primary prediction to test. The last column instead evolves the proper particle-horizon diameter in the stated cosmology, including the evolution of its comoving radius. It is an editorial alternative, not a second law attributed to McCulloch. Its different redshift dependence can be compared separately without replacing his published prescription.
 
-**Editorial reading of the headline numbers.** Against the local a₀ ≈ 1.2 × 10⁻¹⁰, MUSE-DARK's z ≈ 1 value is a ratio of about 2.0. Against the paper's own fitted intercept the ratio is larger, about 2.4 `[!UNVERIFIED: intercept read from the paper body by a research agent, not from the abstract]`. Either way the scale rises, which standard MOND does not predict and QI does. The printed (1+z) law gives 2.0; the proper-horizon reading gives 2.6 at z = 1 but 4.8 at z = 2, where Milgrom's argument bites.
+**Editorial reading of the headline numbers.** Against the local a₀ ≈ 1.2 × 10⁻¹⁰, MUSE-DARK's z ≈ 1 value is a ratio of about 2.0. Against the paper's own fitted intercept the ratio is larger, about 2.4 (the intercept is 1.00 × 10⁻¹⁰ m s⁻² in the journal paper, Eq. 4). This compares a full-sample z ≈ 1 scale with an extrapolated intercept, not two independent measurements. Either way the scale rises, which standard MOND does not predict and QI does. The printed (1+z) law gives 2.0; the proper-horizon reading gives 2.6 at z = 1 but 4.8 at z = 2, where Milgrom's argument bites.
 
 **The test.**
 1. Download the MUSE-DARK rotation curves (data releases at dark.univ-lyon1.fr; check exactly what is served) and refit them with **QI's own function**, a = a_bar·√(1 + a_Q/a_bar), in redshift bins. The paper uses a different interpolating function, and our [A1](../09-analysis/a1-sparc-rar-refit/README.md) refit showed that the QI scale and the McGaugh a₀ differ by about 1.3× locally.
@@ -175,6 +177,6 @@ These are not where QI is likely to gain. But a positive galaxy-scale result wil
 1. ~~Build `09-analysis/` with A1 (SPARC refit) as the first notebook.~~ Done: [A1](../09-analysis/a1-sparc-rar-refit/README.md). [A1b](../09-analysis/a1b-sparc-per-galaxy/README.md) (per-galaxy fits) also done. A public-bin reconstruction of McCulloch's 2017 comparison is now included in A1, using SPARC's tabulated within-bin scatter. Recovering the exact privately supplied bins and their selection remains open. Audit his later derivations in A2b. Keep the disputed Renda reconstruction (A2) as a separate investigation.
 2. Ask McCulloch (via the blog) for the IVO OTP-2 telemetry and the Alcalá DARPA results.
 3. Track new papers: set up a recurring check of arXiv for "quantised inertia" / "MiHsC", and new posts on physicsfromtheedge.blogspot.com.
-4. Do A6 (redshift evolution) as the next observational extension, using McCulloch's published normalization and evolution law first. Keep the locally calibrated and alternative-horizon tests separate (A7).
+4. ~~Do A6 (redshift evolution) as the next observational extension.~~ Binned first pass done: [A6](../09-analysis/a6-rar-redshift-evolution/README.md); per-galaxy [A6b](../09-analysis/a6b-musedark-per-galaxy/README.md) and RC100 [A6c](../09-analysis/a6c-rc100-qi/README.md) done. Next, rerun on the exact MUSE-DARK data if the team supplies it. Keep the locally calibrated and alternative-horizon tests separate (A7).
 5. Prepare A8 now so it can run on Gaia DR4 when it appears on 2 Dec 2026.
 6. Ask IVO (as well as McCulloch) for the OTP-2 drive-on log. Without it, A10 cannot be decisive.

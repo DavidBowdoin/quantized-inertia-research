@@ -27,7 +27,7 @@ verdict: supported-by-author-only
   - Qualitative predictions: the universe's mass grows linearly with its diameter, and the universe was hotter in the past.
   - The paper calls itself an "incomplete toy model ... to stimulate discussion", and it corrects the 2007 paper (λ = 2Θ, not Θ).
 - **Maximum black-hole mass.** [McCulloch 2007](../01-papers/2007-mcculloch-pioneer-anomaly/README.md) predicts M ≤ c³/(8π²GβH) ≈ 10⁵² kg, about 10²² M☉.
-- **Redshift dependence of the galactic anomaly.** Θ_z = Θ_now/(1+z), so v⁴ = 2GMc²(1+z)/Θ_now ([2017-mcculloch-galaxy-rotations-sparc](../01-papers/2017-mcculloch-galaxy-rotations-sparc/README.md)). For the numbers, see [galaxy-rotation](galaxy-rotation.md).
+- **Redshift dependence of the galactic anomaly.** Θ_z = Θ_now/(1+z), so v⁴ = 2GMc²(1+z)/Θ_now ([2017-mcculloch-galaxy-rotations-sparc](../01-papers/2017-mcculloch-galaxy-rotations-sparc/README.md)). For the numbers, see [galaxy-rotation](galaxy-rotation.md). Our binned test of this law against MUSE-DARK's 0.33 < z < 1.44 measurements is [A6](../09-analysis/a6-rar-redshift-evolution/README.md).
 - **Holographic connections by Giné.**
   - [2012-gine-holographic-modified-inertia](../01-papers/2012-gine-holographic-modified-inertia/README.md) (abstract only) claims a modified Friedmann equation from two holographic screens, giving inflation and late-time acceleration without dark energy, plus a MOND-like law.
   - [2012-gine-cosmological-holographic](../01-papers/2012-gine-cosmological-holographic/README.md) is not accessible, so its content is unverified.
