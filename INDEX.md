@@ -56,6 +56,7 @@ Every note and source in the repository. Section tables with year, status and li
 ## [Analysis](09-analysis/INDEX.md)
 - [A1: fixed-Θ refit of the SPARC radial acceleration relation](09-analysis/a1-sparc-rar-refit/README.md)
 - [A1b: per-galaxy SPARC rotation-curve fits, QI vs MOND](09-analysis/a1b-sparc-per-galaxy/README.md)
+- [A2b: McCulloch's later derivations traced to the galaxy predictions](09-analysis/a2b-derivation-trace/README.md)
 - [A6: does the RAR acceleration scale evolve with redshift as QI predicts? (binned first pass)](09-analysis/a6-rar-redshift-evolution/README.md)
 - [A6b: QI's redshift law against MUSE-DARK galaxies rebuilt from public parameters](09-analysis/a6b-musedark-per-galaxy/README.md)
 - [A6c: QI's redshift law against RC100 dark-matter fractions at z = 0.6–2.5](09-analysis/a6c-rc100-qi/README.md)
