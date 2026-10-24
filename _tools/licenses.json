@@ -977,5 +977,55 @@
    "01-papers/2023-nestorshachar-rc100-rotation-curves/table-b1-errors.csv"
   ],
   "note": "Stored PDF is the ApJ published version from iopscience.iop.org; PDF footer and Crossref (vor) state CC BY 4.0. arXiv v1 is CC BY-NC-ND 4.0 (not stored). table-b1-errors.csv transcribes the uncertainty columns from this journal PDF (Table B1, pp. 17–21), with attribution in its header."
+ },
+ {
+  "folder": "01-papers/2017-genzel-baryon-dominated-discs",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1703.04310&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2017-genzel-baryon-dominated-discs/paper.pdf"
+  ],
+  "note": "Stored PDF is arXiv v1; OAI licence is the arXiv default non-exclusive licence. Nature version not open access."
+ },
+ {
+  "folder": "01-papers/2017-ubler-tully-fisher-evolution",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:1703.04321&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2017-ubler-tully-fisher-evolution/paper.pdf"
+  ],
+  "note": "Stored PDF is arXiv v2; OAI licence is the arXiv default non-exclusive licence. ApJ version under IOP copyright."
+ },
+ {
+  "folder": "01-papers/2025-sharma-dark-matter-fraction",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:2309.04541&metadataPrefix=arXiv",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2025-sharma-dark-matter-fraction/paper.pdf"
+  ],
+  "note": "Stored PDF is the arXiv version; OAI licence CC BY 4.0; journal version (A&A 699, A164) also CC BY 4.0 per Crossref."
+ },
+ {
+  "folder": "01-papers/2020-rizzo-cold-disc-early",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:2009.01251&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2020-rizzo-cold-disc-early/paper.pdf"
+  ],
+  "note": "Stored PDF is the arXiv version; OAI licence is the arXiv default non-exclusive licence."
+ },
+ {
+  "folder": "01-papers/2021-rizzo-dsfg-dynamics",
+  "pdf_license": "arXiv-nonexclusive",
+  "evidence_url": "https://oaipmh.arxiv.org/oai?verb=GetRecord&identifier=oai:arXiv.org:2102.05671&metadataPrefix=arXiv",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2021-rizzo-dsfg-dynamics/paper.pdf"
+  ],
+  "note": "Stored PDF is the arXiv version; OAI licence is the arXiv default non-exclusive licence."
  }
 ]

@@ -36,6 +36,13 @@ BINS = [(0.503, 1.990, 0.085, 0.086),
         (1.276, 2.710, 0.134, 0.138)]
 SPARC_A0 = (1.20, 0.26)               # McGaugh et al. 2016, as used by Ciocan et al. and Alcock (total uncertainty)
 CIOCAN_LINEAR = (1.00, 1.59)          # Ciocan et al. 2026b Eq. 4: a0(0), a1 (1e-10 m/s^2; 95% CI +-0.04, +-0.10)
+# Published global linear fits a0(z) = a0(0) + a1 z (McGaugh function, 1e-10 m/s^2; 95% CIs), Ciocan et al. 2026b.
+# Eq. 4: RAR from DC14 disc-halo decompositions. Eq. E.5: RAR from the authors' MOND-framework refit, in which the
+# stellar masses are refitted with modified dynamics and no halo (Appendix E, delta-family with delta ~ 1).
+GLOBAL_FITS = {
+    "dc14_eq4": dict(label="DC14 disc-halo decomposition (Eq. 4)", a0=1.00, a0_ci=0.04, a1=1.59, a1_ci=(0.10, 0.11)),
+    "mond_eq_e5": dict(label="MOND-framework refit, no halo (Eq. E.5)", a0=1.03, a0_ci=0.05, a1=1.20, a1_ci=(0.10, 0.10)),
+}
 
 # Ciocan et al. 2026b Fig. F.1: Gaussian hyperparameters of the true log10 gbar distribution, read from the figure.
 GBAR_MU, GBAR_W = -10.79, 0.63
@@ -225,6 +232,43 @@ def laws(horizon_ratio):
         "proper_horizon": ("editorial: proper particle-horizon diameter", lambda z: horizon_ratio[z]),
         "constant": ("constant scale", lambda z: 1.0),
     }
+
+
+def aq_from_a0(a0_target, mu=GBAR_MU, w=GBAR_W):
+    """Inverse of a0_equiv: the QI scale whose McGaugh-function equivalent is a0_target (both m/s^2)."""
+    lo, hi = math.log10(a0_target) - 1.0, math.log10(a0_target) + 1.0
+    for _ in range(80):
+        m = (lo + hi) / 2
+        if a0_equiv(10 ** m, mu, w) < a0_target:
+            lo = m
+        else:
+            hi = m
+    return 10 ** ((lo + hi) / 2)
+
+
+def global_fit_in_qi(fit):
+    """Evaluate a published linear a0(z) at the bin redshifts and express it in QI's convention.
+
+    Returns per-bin a_Q, ratio to McCulloch's published a_Q(z), and the least-squares slope of
+    log a_Q against log(1+z) over the bins (an effective gamma), for the central values and for
+    the 95% corners of the slope.
+    """
+    def evaluate(a0, a1):
+        rows = []
+        for z in zs():
+            a0z = (a0 + a1 * z) * 1e-10
+            aq = aq_from_a0(a0z)
+            rows.append(dict(z=z, a0_mcg=a0z, a_q=aq, ratio_to_published=aq / (2 * C * C * (1 + z) / THETA0)))
+        x = [math.log10(1 + r["z"]) for r in rows]
+        y = [math.log10(r["a_q"]) for r in rows]
+        mx, my = sum(x) / len(x), sum(y) / len(y)
+        g = sum((a - mx) * (b - my) for a, b in zip(x, y)) / sum((a - mx) ** 2 for a in x)
+        return rows, g
+    rows, g = evaluate(fit["a0"], fit["a1"])
+    _, g_lo = evaluate(fit["a0"] + fit["a0_ci"], fit["a1"] - fit["a1_ci"][0])
+    _, g_hi = evaluate(fit["a0"] - fit["a0_ci"], fit["a1"] + fit["a1_ci"][1])
+    return dict(label=fit["label"], bins=rows, gamma=g, gamma_corners=[g_lo, g_hi],
+                a_q_intercept=aq_from_a0(fit["a0"] * 1e-10))
 
 
 def mass_offset_for(a0_target, a_q, mu=GBAR_MU, w=GBAR_W):
@@ -518,6 +562,7 @@ def main():
         x2, _ = chi2(pred)
         sens.append(dict(mu=mu, w=w, pred=pred, chi2_c68=x2, chi2_c95=chi2(pred, reading="c95")[0]))
     res["sensitivity"]["published_vs_gbar"] = sens
+    res["global_fits"] = {k: global_fit_in_qi(v) for k, v in GLOBAL_FITS.items()}
 
     (OUT / "results.json").write_text(json.dumps(res, indent=1, ensure_ascii=False, allow_nan=False) + "\n")
     fig_scale(res, OUT / "fig-1-scale-vs-redshift.svg", horizon_ratio)
@@ -579,6 +624,15 @@ def summary(r):
     cm = mo["common_mode_published"]
     L += ["", f"Best single shift for the published law: {cm['dm']:+.3f} dex, leaving χ² = {cm['chi2_c68']:.1f} / 3 (p = {cm['p']:.1e}). "
           "Negative means the adopted baryonic masses would have to be too large.", ""]
+    L += ["## Published global fits expressed in QI's convention", "",
+          "Ciocan et al. 2026b global linear fits, evaluated at the bin redshifts and converted to a_Q. "
+          "γ is the least-squares slope of log a_Q against log(1+z); the corners use the 95% CI ends of the fit.", "",
+          "| Fit | a_Q per bin (10⁻¹⁰ m s⁻²) | ÷ published QI | effective γ (95% corners) | intercept a_Q(0) |", "|---|---|---|---|---|"]
+    for k, gf in r["global_fits"].items():
+        L.append(f"| {gf['label']} | " + ", ".join(f"{b['a_q'] * 1e10:.2f}" for b in gf["bins"]) + " | " +
+                 ", ".join(f"{b['ratio_to_published']:.2f}" for b in gf["bins"]) +
+                 f" | {gf['gamma']:.2f} ({gf['gamma_corners'][0]:.2f} to {gf['gamma_corners'][1]:.2f}) | {gf['a_q_intercept'] * 1e10:.2f} |")
+    L.append("")
     L += ["## Sensitivity of the published prediction to the assumed g_bar distribution", "",
           "| μ | w | predictions | χ² (1σ) | χ² (95%) |", "|---|---|---|---|---|"]
     for s in r["sensitivity"]["published_vs_gbar"]:
