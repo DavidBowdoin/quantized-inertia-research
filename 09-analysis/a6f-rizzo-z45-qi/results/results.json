@@ -5,6 +5,12 @@
   "Om": 0.308,
   "OL": 0.691
  },
+ "scope": {
+  "accelerations": "Both g_bar and g_obs reconstructed from Rizzo's NFW decompositions; QI fit without a halo remains open",
+  "baseline": "Ratios to QI today use a theoretical reference, not a measured local sample; evolution rate not inferred",
+  "errors": "Independent marginal parameter draws; covariance and other modelling uncertainties incomplete",
+  "chi2_single_scale": "Tests a common ratio to the published (1+z) law, not a constant scale across redshift"
+ },
  "variants": {
   "main": {
    "galaxies": [

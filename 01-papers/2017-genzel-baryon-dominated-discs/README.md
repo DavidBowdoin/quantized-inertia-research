@@ -46,7 +46,7 @@ No figures are stored.
 
 ## Criticisms & responses
 - Milgrom 2017 ([arXiv:1703.06110](https://arxiv.org/abs/1703.06110)) argues that these discs "all but exclude" an acceleration scale four times the local one at z ≈ 2 (see [ideas-and-tests](../../08-synthesis/ideas-and-tests.md)).
-- Editorial: applying McCulloch's 2017 Eq. 8 to these galaxies overpredicts every acceleration by 23–49% ([A6d](../../09-analysis/a6d-mcculloch-2017-highz/README.md)).
+- Editorial: [A6d](../../09-analysis/a6d-mcculloch-2017-highz/README.md) finds Eq. 8 accelerations 23–49% above the tabulated values conditional on this paper's NFW-derived baryonic inputs. A no-halo QI refit to the measured kinematics remains open.
 
 ## Related
 - Evidence: [galaxy-rotation](../../02-evidence/galaxy-rotation.md)

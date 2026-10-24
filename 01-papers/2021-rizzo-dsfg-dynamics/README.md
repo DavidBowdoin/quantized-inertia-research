@@ -46,7 +46,7 @@ No figures are stored.
 > "five out of six galaxies of the sample show the dynamical signature of a bulge" (Abstract)
 
 ## Criticisms & responses
-- Editorial: the decomposition assumes an NFW halo with fixed concentration; QI assumes no halo. A QI-native refit would need the rotation curves, which are shown only as figures.
+- Editorial: the decomposition assumes an NFW halo with fixed concentration; QI assumes no halo. [A6f](../../09-analysis/a6f-rizzo-z45-qi/README.md) reconstructs both accelerations from the published model. Its normalization tension is conditional on that decomposition and incomplete parameter errors. A QI refit would need the measured rotation curves and their uncertainties; the paper shows the curves as figures.
 
 ## Related
 - Evidence: [galaxy-rotation](../../02-evidence/galaxy-rotation.md)
