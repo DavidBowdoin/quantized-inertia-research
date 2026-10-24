@@ -572,9 +572,9 @@ def figure(res, path):
         pos.append(y)
         y += 1
     h = 110 + 22 * y + 50
-    p = a1.Plot(1280, h, (-11.2, -0.8), (y - 0.4, 0), "QI thrust comparisons per reported watt (optical, microwave or electrical)",
-                "log₁₀ (force / reported power)   (N/W; not wall-plug efficiency)", "", ml=640, mt=96, mb=50)
-    p.axes(list(range(-11, 0)), [])
+    p = a1.Plot(1120, h, (-11.2, 0.2), (y - 0.4, 0), "QI thrust comparisons per reported watt (optical, microwave or electrical)",
+                "log₁₀ (force / reported power)   (N/W; not wall-plug efficiency)", "", ml=430, mt=96, mb=50)
+    p.axes(list(range(-11, 1)), [])
     xp = math.log10(PHOTON)
     p.el.append(f'<line x1="{p.X(xp):.1f}" x2="{p.X(xp):.1f}" y1="{p.t}" y2="{p.b}" stroke="var(--ink2)" '
                 f'stroke-dasharray="4 4"><title>Photon rocket, 1/c = 3.34 nN/W</title></line>')
@@ -613,7 +613,7 @@ def figure(res, path):
                     p.el.append(claim_mark(p.X(v), yy, f"<title>Claimed thrust: {10 ** v:.3g} N/W</title>"))
                 else:
                     p.marker(v, yv, col[key], f"Prediction: {10 ** v:.3g} N/W")
-    lx, ly = 450, 52
+    lx, ly = 430, 52
     p.el.append(f'<circle cx="{lx}" cy="{ly}" r="5" fill="{col["pred"]}"/>')
     p.text(lx + 10, ly + 4, "Prediction (printed when available)")
     lx += 285

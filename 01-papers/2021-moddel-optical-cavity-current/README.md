@@ -8,15 +8,15 @@ doi: 10.3390/sym13030517
 arxiv: 2101.03085
 url: https://doi.org/10.3390/sym13030517
 open_access: true
-license: null
-files: []
+license: CC-BY-4.0
+files: [paper.pdf]
 status: neutral
 tags: [optical-cavity, photoinjection, electrical-current, vacuum-fluctuations]
 ---
 
 # Optical-Cavity-Induced Current
 
-**Citation:** Moddel, G., Weerakkody, A., Doroski, D. & Bartusiak, D. (2021). *Optical-Cavity-Induced Current*. Symmetry 13(3), 517. [DOI](https://doi.org/10.3390/sym13030517); [arXiv text](https://arxiv.org/pdf/2101.03085).
+**Citation:** Moddel, G., Weerakkody, A., Doroski, D. & Bartusiak, D. (2021). *Optical-Cavity-Induced Current*. Symmetry 13(3), 517. [DOI](https://doi.org/10.3390/sym13030517); [arXiv:2101.03085](https://arxiv.org/abs/2101.03085). Stored: [journal PDF](paper.pdf) (CC BY 4.0).
 
 **TL;DR:** Reports electrical output from metal–insulator–metal devices adjoining optical cavities, interpreted through vacuum-fluctuation-induced photoinjection. It does not report mechanical thrust or test QI.
 
@@ -29,10 +29,10 @@ For linear current–voltage characteristics, maximum output power is |I_SC V_OC
 
 ## Data used
 - Current–voltage measurements and variations in cavity and device layers.
-- Primary text checked online; no PDF or figures archived here.
+- Read from the stored journal PDF (CC BY 4.0); no figures extracted.
 
 ## Results & predictions
-- §3.1 and Fig. 4a: 1.4 pW maximum electrical **output**, with a 33 nm cavity and device area 0.02 µm² = 2 × 10⁻¹⁴ m².
+- §3.1 (p. 5) and Fig. 4a: 1.4 pW maximum electrical **output**, with a 33 nm cavity and device area 0.02 µm² = 2 × 10⁻¹⁴ m².
 
 ## Figures
 None stored.

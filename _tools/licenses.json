@@ -1027,5 +1027,15 @@
    "01-papers/2021-rizzo-dsfg-dynamics/paper.pdf"
   ],
   "note": "Stored PDF is the arXiv version; OAI licence is the arXiv default non-exclusive licence."
+ },
+ {
+  "folder": "01-papers/2021-moddel-optical-cavity-current",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://api.crossref.org/works/10.3390/sym13030517",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2021-moddel-optical-cavity-current/paper.pdf"
+  ],
+  "note": "MDPI Symmetry published PDF; PDF p. 1 and Crossref (vor) state CC BY 4.0."
  }
 ]
