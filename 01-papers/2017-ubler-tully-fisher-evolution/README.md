@@ -45,7 +45,7 @@ No figures are stored.
 > "a positive evolution of the baryonic TFR zero-point from z ∼ 0.9 to z ∼ 2.3" (Abstract)
 
 ## Criticisms & responses
-- Editorial: McCulloch 2017 quotes observed reductions of −0.38 to −0.47 dex (z = 0.9) and −0.2 to −0.47 dex (z = 2.3). QI's Eq. 13 predicts a further fall of 0.24 dex between those redshifts, where this paper finds a rise of 0.17 ± 0.06 dex ([A6d](../../09-analysis/a6d-mcculloch-2017-highz/README.md)).
+- Editorial: [A6d](../../09-analysis/a6d-mcculloch-2017-highz/README.md) audits McCulloch's use of these offsets. His deep-limit Eq. 13 gives a fall of 0.24 dex between the two redshifts, whereas the fitted baryonic zero point rises by 0.17 ± 0.06 dex. This paper uses maximum circular velocities near 2.2 R_d (Sect. 2.3–2.4), so the applicability of QI's asymptotic relation must be established before interpreting that discrepancy as a test of its full prediction.
 
 ## Related
 - Evidence: [galaxy-rotation](../../02-evidence/galaxy-rotation.md)

@@ -43,7 +43,7 @@ No figures are stored.
 > "at least some young galaxies are dynamically akin to those observed in the local Universe" (Abstract)
 
 ## Criticisms & responses
-- Editorial: the decomposition assumes an NFW halo, which QI does not. Our A6f uses it as published.
+- Editorial: the decomposition assumes an NFW halo, which QI does not. [A6f](../../09-analysis/a6f-rizzo-z45-qi/README.md) reconstructs both accelerations from that model and reports a conditional consistency check. It does not refit the measured rotation curve with QI and no halo.
 
 ## Related
 - Evidence: [galaxy-rotation](../../02-evidence/galaxy-rotation.md)

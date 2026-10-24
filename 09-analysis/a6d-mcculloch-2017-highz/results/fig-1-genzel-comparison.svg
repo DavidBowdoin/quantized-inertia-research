@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 560" width="620" height="560" role="img">
-<title>Genzel et al. 2017 galaxies: observed acceleration against QI predictions</title>
+<title>Genzel et al. 2017: Fig. 2 reference and QI conditional on NFW-derived baryons</title>
 <style>
 svg { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --grid:#e4e3df; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; }
 @media (prefers-color-scheme: dark) { svg { --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --grid:#33322f; --s1:#3987e5; --s2:#d95926; --s3:#199e70; } }
@@ -7,9 +7,9 @@ text { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; fil
 .t { fill: var(--ink); font-size: 14px; font-weight: 600; }
 </style>
 <rect width="620" height="560" fill="var(--surface)"/>
-<text class="t" x="64" y="24">Six Genzel et al. 2017 galaxies: observed vs QI (10⁻¹⁰ m s⁻²)</text>
+<text class="t" x="64" y="24">Genzel 2017: conditional QI comparison (10⁻¹⁰ m s⁻²)</text>
 <text x="332.0" y="548" text-anchor="middle">observed v_c²/R₁/₂</text>
-<text transform="translate(16,277.0) rotate(-90)" text-anchor="middle">QI value</text>
+<text transform="translate(16,277.0) rotate(-90)" text-anchor="middle">QI reference / conditional prediction</text>
 <line x1="64.0" x2="64.0" y1="44" y2="510" stroke="var(--grid)"/><text x="64.0" y="526" text-anchor="middle">2</text><line x1="64" x2="600" y1="510.0" y2="510.0" stroke="var(--grid)"/><text x="58" y="514.0" text-anchor="end">2</text>
 <line x1="171.2" x2="171.2" y1="44" y2="510" stroke="var(--grid)"/><text x="171.2" y="526" text-anchor="middle">5</text><line x1="64" x2="600" y1="416.8" y2="416.8" stroke="var(--grid)"/><text x="58" y="420.8" text-anchor="end">5</text>
 <line x1="278.4" x2="278.4" y1="44" y2="510" stroke="var(--grid)"/><text x="278.4" y="526" text-anchor="middle">8</text><line x1="64" x2="600" y1="323.6" y2="323.6" stroke="var(--grid)"/><text x="58" y="327.6" text-anchor="end">8</text>
@@ -17,25 +17,25 @@ text { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; fil
 <line x1="492.8" x2="492.8" y1="44" y2="510" stroke="var(--grid)"/><text x="492.8" y="526" text-anchor="middle">14</text><line x1="64" x2="600" y1="137.2" y2="137.2" stroke="var(--grid)"/><text x="58" y="141.2" text-anchor="end">14</text>
 <line x1="600.0" x2="600.0" y1="44" y2="510" stroke="var(--grid)"/><text x="600.0" y="526" text-anchor="middle">17</text><line x1="64" x2="600" y1="44.0" y2="44.0" stroke="var(--grid)"/><text x="58" y="48.0" text-anchor="end">17</text>
 <line x1="64.0" y1="510.0" x2="600.0" y2="44.0" stroke="var(--ink2)" stroke-dasharray="3 3"/>
-<circle cx="113.4" cy="454.5" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>COS4 01351 (z = 0.854): 2017 Fig. 2: minimum acceleration 2c²(1+z)/Θ₀ = 3.79; observed 3.38</title></circle>
-<circle cx="113.4" cy="443.1" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>COS4 01351 (z = 0.854): 2017 Eq. 8 with Genzel's baryonic acceleration = 4.15; observed 3.38</title></circle>
+<circle cx="113.4" cy="454.5" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>COS4 01351 (z = 0.854): 2017 Fig. 2 reference 2c²(1+z)/Θ₀; not a rotational floor = 3.79; observed 3.38</title></circle>
+<circle cx="113.4" cy="443.1" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>COS4 01351 (z = 0.854): 2017 Eq. 8 with Genzel's NFW-derived baryonic acceleration = 4.15; observed 3.38</title></circle>
 <text x="120.4" y="448.5">0.854</text>
-<circle cx="142.9" cy="413.5" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>D3a 6397 (z = 1.5): 2017 Fig. 2: minimum acceleration 2c²(1+z)/Θ₀ = 5.11; observed 4.21</title></circle>
-<circle cx="142.9" cy="401.9" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>D3a 6397 (z = 1.5): 2017 Eq. 8 with Genzel's baryonic acceleration = 5.48; observed 4.21</title></circle>
+<circle cx="142.9" cy="413.5" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>D3a 6397 (z = 1.5): 2017 Fig. 2 reference 2c²(1+z)/Θ₀; not a rotational floor = 5.11; observed 4.21</title></circle>
+<circle cx="142.9" cy="401.9" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>D3a 6397 (z = 1.5): 2017 Eq. 8 with Genzel's NFW-derived baryonic acceleration = 5.48; observed 4.21</title></circle>
 <text x="149.9" y="407.5">1.5</text>
-<circle cx="148.6" cy="406.3" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>GS4 43501 (z = 1.613): 2017 Fig. 2: minimum acceleration 2c²(1+z)/Θ₀ = 5.34; observed 4.37</title></circle>
-<circle cx="148.6" cy="398.0" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>GS4 43501 (z = 1.613): 2017 Eq. 8 with Genzel's baryonic acceleration = 5.60; observed 4.37</title></circle>
+<circle cx="148.6" cy="406.3" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>GS4 43501 (z = 1.613): 2017 Fig. 2 reference 2c²(1+z)/Θ₀; not a rotational floor = 5.34; observed 4.37</title></circle>
+<circle cx="148.6" cy="398.0" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>GS4 43501 (z = 1.613): 2017 Eq. 8 with Genzel's NFW-derived baryonic acceleration = 5.60; observed 4.37</title></circle>
 <text x="155.6" y="400.3">1.613</text>
-<circle cx="183.3" cy="369.3" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>zC 406690 (z = 2.196): 2017 Fig. 2: minimum acceleration 2c²(1+z)/Θ₀ = 6.53; observed 5.34</title></circle>
-<circle cx="183.3" cy="324.9" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>zC 406690 (z = 2.196): 2017 Eq. 8 with Genzel's baryonic acceleration = 7.96; observed 5.34</title></circle>
+<circle cx="183.3" cy="369.3" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>zC 406690 (z = 2.196): 2017 Fig. 2 reference 2c²(1+z)/Θ₀; not a rotational floor = 6.53; observed 5.34</title></circle>
+<circle cx="183.3" cy="324.9" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>zC 406690 (z = 2.196): 2017 Eq. 8 with Genzel's NFW-derived baryonic acceleration = 7.96; observed 5.34</title></circle>
 <text x="190.3" y="363.3">2.196</text>
-<circle cx="457.5" cy="366.4" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>zC 400569 (z = 2.242): 2017 Fig. 2: minimum acceleration 2c²(1+z)/Θ₀ = 6.62; observed 13.01</title></circle>
-<circle cx="457.5" cy="75.6" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>zC 400569 (z = 2.242): 2017 Eq. 8 with Genzel's baryonic acceleration = 15.98; observed 13.01</title></circle>
+<circle cx="457.5" cy="366.4" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>zC 400569 (z = 2.242): 2017 Fig. 2 reference 2c²(1+z)/Θ₀; not a rotational floor = 6.62; observed 13.01</title></circle>
+<circle cx="457.5" cy="75.6" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>zC 400569 (z = 2.242): 2017 Eq. 8 with Genzel's NFW-derived baryonic acceleration = 15.98; observed 13.01</title></circle>
 <text x="464.5" y="360.4">2.242</text>
-<circle cx="165.1" cy="357.5" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>D3a 15504 (z = 2.383): 2017 Fig. 2: minimum acceleration 2c²(1+z)/Θ₀ = 6.91; observed 4.83</title></circle>
-<circle cx="165.1" cy="358.2" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>D3a 15504 (z = 2.383): 2017 Eq. 8 with Genzel's baryonic acceleration = 6.89; observed 4.83</title></circle>
+<circle cx="165.1" cy="357.5" r="5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"><title>D3a 15504 (z = 2.383): 2017 Fig. 2 reference 2c²(1+z)/Θ₀; not a rotational floor = 6.91; observed 4.83</title></circle>
+<circle cx="165.1" cy="358.2" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>D3a 15504 (z = 2.383): 2017 Eq. 8 with Genzel's NFW-derived baryonic acceleration = 6.89; observed 4.83</title></circle>
 <text x="172.1" y="351.5">2.383</text>
-<circle cx="86" cy="64" r="5" fill="var(--s2)"/><text x="98" y="68">McCulloch 2017 Fig. 2: minimum acceleration</text>
-<circle cx="86" cy="82" r="5" fill="var(--s1)"/><text x="98" y="86">2017 Eq. 8 applied to Genzel's baryons</text>
+<circle cx="86" cy="64" r="5" fill="var(--s2)"/><text x="98" y="68">Fig. 2 reference: 2c²(1+z)/Θ₀</text>
+<circle cx="86" cy="82" r="5" fill="var(--s1)"/><text x="98" y="86">Eq. 8 with Genzel's NFW-derived baryons</text>
 <text x="385.6" y="255.3">line of agreement</text>
 </svg>
