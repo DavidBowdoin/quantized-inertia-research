@@ -30,7 +30,7 @@ verdict: refuted-or-null
     - Devices: a spherical-end-cap EmDrive (loaded Q 113–1027, 4.2–10 W) and a superconducting YBCO EmDrive (Q 2063–2599, 18–19 W, in liquid/solid nitrogen at about −196 to −202 °C; the balance itself is rated down to 65 K).
     - F = PQ/c predicted 2.3–22.6 µN and 156–164 µN respectively. Measured: (−11 ± 25) to (13 ± 31) nN, and (−0.33 ± 0.54) to (0.14 ± 0.23) µN, i.e. balance noise only (Tables B1–B2, p. 594).
 
-- **Editorial ledger ([A3](../09-analysis/a3-thrust-ledger/README.md)).** Dresden's PQ/c predictions for their own EmDrives exceed the 2σ upper limits by 30–377× (copper, spherical end cap), 144–273× (superconducting) and, applying the same convention to the White-geometry replica, 175–383×. McCulloch's printed fits to the earlier claimed thrusts reproduce from his inputs; across the five model versions, Shawyer 1 goes from 0.24× to −0.99× to 1.6× the claimed 16 mN.
+- **Editorial ledger ([A3](../09-analysis/a3-thrust-ledger/README.md)).** Dresden's PQ/c predictions for their own EmDrives exceed the descriptive bounds max(m, 0) + 2σ by 30–377× (copper, spherical end cap), 144–273× (superconducting) and, applying the same convention to the White-geometry replica, 175–383×. These ratios are conditional on that adaptation, not calibrated confidence levels. The implemented McCulloch formulas reproduce the tabulated comparisons within rounding (2018 Eq. 7 is transcribed only); across the five model versions, Shawyer 1 goes from 0.24× to −0.99× to 1.6× the claimed 16 mN.
 
 ## Mainstream explanation(s)
 - **Experimental artefacts**, as catalogued by TU Dresden:

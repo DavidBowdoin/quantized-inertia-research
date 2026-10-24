@@ -63,6 +63,7 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2021 | [Can the Standard Model Predict a Minimum Acceleration That Gets Rid of Dark Matter?](2021-haug-minimum-acceleration/README.md) | Haug | Journal of High Energy Physics, Gravitation and Cosmology 7(2), 602-606 | neutral | ✅ | [DOI](https://doi.org/10.4236/jhepgc.2021.72035) |
 | 2021 | [The EPR paradox and the uncertainty principle](2021-mcculloch-epr-paradox/README.md) | McCulloch & Giné | Modern Physics Letters B 35(04), 2150072 | supports |  | [DOI](https://doi.org/10.1142/s021798492150072x) |
 | 2021 | [Thrust from Symmetric Capacitors using Quantised Inertia](2021-mcculloch-symmetric-capacitors/README.md) | McCulloch | ResearchGate preprint (not peer-reviewed) | supports | ✅ |  |
+| 2021 | [Optical-Cavity-Induced Current](2021-moddel-optical-cavity-current/README.md) | Moddel et al. | Symmetry 13(3), 517 | neutral | ✅ | [DOI](https://doi.org/10.3390/sym13030517) [arXiv](https://arxiv.org/abs/2101.03085) |
 | 2021 | [Dynamical properties of z ∼ 4.5 dusty star-forming galaxies and their connection with local early-type galaxies](2021-rizzo-dsfg-dynamics/README.md) | Rizzo et al. | Monthly Notices of the Royal Astronomical Society 507(3), 3952–3984 | neutral | ✅ | [DOI](https://doi.org/10.1093/mnras/stab2295) [arXiv](https://arxiv.org/abs/2102.05671) |
 | 2021 | [Measuring Planck scale U(1) gauge interactions in Quantised Inertia using IKKT gravity](2021-soli-ikkt-qi/README.md) | Soli | APS April Meeting 2021 conference paper (ResearchGate preprint; not peer-reviewed) | supports | ✅ | [DOI](https://doi.org/10.13140/RG.2.2.31904.81929/2) |
 | 2022 | [Is it possible to implement a holographic equivalence principle?](2022-gine-holographic-equivalence/README.md) | Giné | Europhysics Letters 137(1), 19002 | neutral |  | [DOI](https://doi.org/10.1209/0295-5075/137/19002) |
@@ -87,5 +88,5 @@ Status key: **supports** = argues for QI · **neutral** = cites/uses or tests re
 | 2026 | [A Novel Quantum Thrust from Capacitors](2026-mcculloch-quantum-thrust-capacitors/README.md) | McCulloch | SSRN preprint (not peer-reviewed) | supports |  | [DOI](https://doi.org/10.2139/ssrn.6313698) |
 | 2026 | [Reproducibility package for “No strong redshift evolution of the radial acceleration scale out to z ≈ 2.5”](2026-sentina-a0z-rc100/README.md) | Sentina | Zenodo (reproducibility package v6.2; manuscript prepared for A&A) | neutral | ✅ | [DOI](https://doi.org/10.5281/zenodo.23442383) |
 
-_79 sources._
+_80 sources._
 <!-- END AUTO-INDEX -->

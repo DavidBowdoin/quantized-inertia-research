@@ -3,8 +3,8 @@
 Standard library only. Every input is transcribed from the source named in its row (table or
 equation number); nothing is downloaded. The script
   - recomputes printed predictions from their printed inputs,
-  - forms an upper limit for each null measurement and the ratio prediction / limit,
-  - compares the author's fitted predictions with the claimed thrusts they were fitted to,
+  - forms a descriptive bound for each null measurement and the ratio prediction / bound,
+  - compares the author's predictions with the existing thrust claims he discussed,
   - writes results/summary.md, results/ledger.csv, results/results.json and
     results/fig-1-specific-thrust.svg.
 
@@ -41,6 +41,7 @@ SRC = {
     "M18": "McCulloch 2018, J. Space Explor. 7(3)",
     "M21": "McCulloch 2021, preprint (symmetric capacitors)",
     "M22": "McCulloch 2022, preprint (QI thrust as asymmetric Casimir effect)",
+    "Mod21": "Moddel et al. 2021, Optical-Cavity-Induced Current, Symmetry 13, 517, Sec. 3.1",
     "blog": "McCulloch, physicsfromtheedge blog",
     "IVO": "IVO Ltd press claims (2022–2023)",
 }
@@ -79,7 +80,10 @@ def f_casimir(p, q, v, area, d, c=C):
 
 
 def f_capacitor_2021(current, s, n):
-    """McCulloch 2021 Eq. 6: F = N_e hbar c / (2 n s^2), with N_e = I/q as in the preprint."""
+    """Literal Eq. 6 substitution N_e = I/q. Returns N/s, NOT N: a counting time is missing.
+
+    Retained for the dimensional audit only, never used as a force prediction.
+    """
     return current / QE * HBAR * C / (2 * n * s ** 2)
 
 
@@ -170,13 +174,11 @@ def controlled():
     cap = dict(volts=2100, current=10e-6, power=0.021, r=0.020, s=90e-6)
     add("Leakage-current capacitor (Bhatt–Becker extrapolation; not QI)", "2.1 kV, 10 µA", "T20 Table 1", 0.021,
         6.8e-6 * G0, "empirical fit, not QI", None, None, upper=lim)
-    for n in (1.0, 1.2):
-        add("Leakage-current capacitor (QI formulas applied by us)", f"2021 Eq. 6, n = {n:g}", "T20 Table 1", 0.021,
-            f_capacitor_2021(cap["current"], cap["s"], n), "editorial: McCulloch 2021 Eq. 6 applied",
-            None, None, upper=lim)
-    add("Leakage-current capacitor (QI formulas applied by us)", "2022 Eq. 5, Q = 1", "T20 Table 1", 0.021,
+    add("Leakage-current capacitor (2022 formula applied by us)", "2022 Eq. 5, Q = 1", "T20 Table 1", 0.021,
         f_casimir(cap["power"], 1, v_electron(cap["volts"]), math.pi * cap["r"] ** 2, cap["s"]),
-        "editorial: McCulloch 2022 Eq. 5 applied", None, None, upper=lim)
+        "editorial: McCulloch 2022 Eq. 5 applied", None, None, upper=lim,
+        note="Conditional on Q = 1, full plate area and v² = qV/(2m_e); leakage through damaged PE "
+             "does not establish the assumed electron transit or acceleration. M21 audited separately (N/s).")
     # McCulloch's own 2022 revised (photon) predictions against the Dresden data.
     # Eq. 7 is for 0.203 W; Eq. 5 is linear in P, so we scale it to Dresden's silver-cavity powers.
     for shape, rr in t2.items():
@@ -188,11 +190,13 @@ def controlled():
     for shield, rr in [("no shield", (0.08, 0.26)), ("shield at small radius", (0.02, 0.34)),
                        ("shield at big radius", (0.10, 0.39))]:
         add("Asymmetric fibre loop, vacuum: McCulloch 2022 revised prediction", f"{shield}, 203 mW", "N21 Table 5",
-            0.203, 40 * NN, "McCulloch 2022 Eq. 9 as printed", *rr)
+            0.203, 40 * NN, "McCulloch 2022 Eq. 9 as printed", *rr,
+            note="Conditional mapping: M22 uses Q = 300; N21 reports >3300 windings. Chamber objection unresolved.")
     for shield, rr in [("no shield", (0.05, 0.30)), ("shield at small radius", (0.09, 0.18)),
                        ("shield at big radius", (0.06, 0.16))]:
         add("Asymmetric fibre loop, air: McCulloch 2022 revised prediction", f"{shield}, 203 mW", "N22 Table B5",
-            0.203, 40 * NN, "McCulloch 2022 Eq. 9 as printed", *rr, unit=UN)
+            0.203, 40 * NN, "McCulloch 2022 Eq. 9 as printed", *rr, unit=UN,
+            note="Conditional mapping: M22 uses Q = 300; N22 reports 3300 windings; quoted uncertainty differs.")
     for r in rows:
         r["recomputed"] = r["pred"]
         if r["printed_pred"] is not None:
@@ -200,9 +204,13 @@ def controlled():
         anomalous = r["note"].startswith("anomalous")
         if r["upper_given"] is not None:
             r["upper"] = r["upper_given"]
+            r["upper_basis"] = "reported 3σ limit (T20)"
         else:
             base = r["obs"] - (r["power"] / C if anomalous else 0.0)
             r["upper"] = max(base, 0.0) + K_SIGMA * r["sigma"]
+            r["upper_basis"] = "max(m − P/c, 0) + 2σ" if anomalous else "max(m, 0) + 2σ"
+        r["power_basis"] = ("electrical" if r["src"].startswith("T20") else
+                            "microwave" if "EmDrive" in r["device"] else "optical")
         r["ratio"] = r["pred"] / r["upper"]
         r["ratio_central"] = None if r["obs"] is None or anomalous else r["pred"] / abs(r["obs"])
         r["photon"] = r["power"] / C
@@ -276,12 +284,27 @@ def claimed():
     add("Symmetric capacitor (Becker & Bhatt 2018)", "2022 Eq. 10", "M22 Eq. 10, Table", 0.05,
         f_casimir(0.05, 1, 2e7, 0.025 ** 2, 13e-6, c=3e8), 6 * MN, 6 * MN, "6 ± 2 mN as quoted by McCulloch",
         printed=5.7 * MN, note="plate data from a personal communication; text says 10 µm, formula uses 13 µm")
-    add("Symmetric capacitor (Becker & Bhatt 2018)", "2021 Eq. 6, n = 1.2, s = 10 µm", "M21 Eq. 6, Fig. 2", 0.05,
-        f_capacitor_2021(10e-6, 10e-6, 1.2), 6 * MN, 6 * MN, "≈ 6 mN at the smallest gap (M21 Fig. 2)")
-    add("Photo-injector (Moddel et al. 2021)", "2022 Eq. 11", "M22 Eq. 11", 1.4e-12,
-        f_casimir(1.4e-12, 1, 990000, 2e-8, 43e-9, c=3e8), 0.1 * NN, 0.1 * NN, "as quoted by McCulloch",
-        printed=0.35 * NN, note="Moddel et al. not in this repository; whether they report a force is unverified")
     return rows
+
+
+def dimensional_checks():
+    """M21's literal rate substitution, segregated from all force comparisons."""
+    return [dict(device=dev, src="M21 Eq. 6", current_A=10e-6, gap_m=gap, n=n,
+                 n_basis=basis, literal_rate_N_per_s=f_capacitor_2021(10e-6, gap, n))
+            for dev, gap in (("T20 capacitor (editorial application)", 90e-6),
+                             ("Becker & Bhatt capacitor (M21 example)", 10e-6))
+            for n, basis in ((1.0, "Fig. 2"), (1.2, "p. 3 text"), (1.49, "p. 4 and Fig. 2"))]
+
+
+def excluded_comparisons():
+    """Preserve M22's claims without assigning a nonexistent force measurement to Moddel."""
+    return [dict(device="Moddel photoinjector", src="M22 Eq. 11 and table; Mod21 Sec. 3.1, Fig. 4a",
+                 quoted_prediction_N=0.35 * NN, quoted_observation_N=0.1 * NN,
+                 measured_force_N=None, reported_electrical_output_W=1.4e-12,
+                 m22_area_m2=2e-8, source_area_m2=0.02e-12,
+                 reason="Mod21 measures current and voltage, not mechanical thrust. The 1.4 pW is output, "
+                        "not thruster input; its device area is 2e-14 m², a millionth of M22's input. "
+                        "No measured thrust or propulsion F/P can be inferred from these data.")]
 
 
 # ---------------------------------------------------------------------------
@@ -322,11 +345,12 @@ def casimir_checks():
     add("8", "Madrid fibre loop", 20 * NN, (0.129, 300, 0.7 * c3, 0.01, 0.1), (0.129, 300, c3, 0.1, 0.1),
         "text A/d² = 0.01/0.01 with v = 0.7c; Table A = 0.1 m², d = 0.1 m, v = c")
     add("9", "Dresden fibre loop", 40 * NN, (0.203, 300, 0.7 * c3, 0.01, 0.1), (0.2, 300, 0.7 * c3, 0.1, 0.1),
-        "text A/d² = 0.01/0.01; Table A = 0.1 m², d = 0.1 m")
+        "text A/d² = 0.01/0.01; Table A = 0.1 m², d = 0.1 m; Q = 300 vs Dresden's >3300 windings")
     add("10", "Becker & Bhatt capacitor", 5.6 * MN, (0.05, 1, 2e7, 0.025 ** 2, 13e-6),
         (0.05, 1, 0.07 * c3, 0.000625, 0.000013), "Table lists 5.7 mN; text gap 10 µm, formula 13 µm")
     add("11", "Moddel photo-injector", 0.35 * NN, (1.4e-12, 1, 990000, 2e-8, 43e-9),
-        (1.4e-12, 1, 0.004 * c3, 2e-8, 3.3e-8), "text d = 43 nm; Table d = 33 nm, v = 0.004c")
+        (1.4e-12, 1, 0.004 * c3, 2e-8, 3.3e-8), "text d = 43 nm; Table d = 33 nm, v = 0.004c; "
+        "arithmetic only: Mod21 reports no thrust; output power and area are misidentified in M22")
     return out
 
 
@@ -362,6 +386,7 @@ def device_summary(ctl):
     for dev, rr in by_device(ctl).items():
         ratios = [r["ratio"] for r in rr]
         res.append(dict(device=dev, src=rr[0]["src"], basis=rr[0]["basis"], n=len(rr),
+                        upper_basis=rr[0]["upper_basis"], power_basis=rr[0]["power_basis"], note=rr[0]["note"],
                         p_min=min(r["power"] for r in rr), p_max=max(r["power"] for r in rr),
                         pred_min=min(r["pred"] for r in rr), pred_max=max(r["pred"] for r in rr),
                         upper_min=min(r["upper"] for r in rr), upper_max=max(r["upper"] for r in rr),
@@ -390,22 +415,27 @@ def fmt_ratio(v):
 
 def summary(res):
     L = ["# A3 results (generated by thrust_ledger.py; do not edit)", "",
-         f"Upper limit for a null measurement: U = max(measured, 0) + {K_SIGMA:g}σ, with σ the reported ± "
+         f"Descriptive bound for a null measurement: U = max(measured, 0) + {K_SIGMA:g}σ, with σ the reported ± "
          "(N22 states it is the standard deviation of repeated runs). Tajmar & Schreiber's capacitor limit "
          "(0.3 mg) is already 3σ and is used as given. Ratio = predicted / U; ratio > 1 means the prediction "
-         "exceeds the limit. Predictions are the values printed in the source; section 4 compares them with "
+         "exceeds this bound, not a calibrated exclusion confidence. Repeated-run scatter, systematics and "
+         "selection of the strongest run are not a confidence-interval construction. Predictions use printed "
+         "values when available; section 4 compares them with "
          "our recomputation from the printed inputs. `ledger.csv` also gives predicted / |measured| "
          "('ratio_central'), which is unstable when the measured value is near zero. Photon-rocket limit "
          f"1/c = {PHOTON * 1e9:.3f} nN/W.", "",
-         "## 1. Controlled measurements (TU Dresden) against QI-based predictions", "",
-         "| Device | Source | Prediction basis | Power | Predicted | U | Predicted / U (all runs) |",
-         "|---|---|---|---|---|---|---|"]
+         "## 1. Controlled measurements (TU Dresden) and conditional comparisons", "",
+         "Power is optical, microwave or electrical as reported, not uniform wall-plug power. "
+         "Dresden's adaptation, author numbers and editorial applications remain separate. "
+         "Non-QI comparisons are labelled and excluded from the figure.", "",
+         "| Device | Source | Prediction basis | Reported power | Predicted | U (basis) | Predicted / U (all runs) | Note |",
+         "|---|---|---|---|---|---|---|---|"]
     for d in res["device_summary"]:
         lb = " (lower bound)" if d["lower_bound"] else ""
         L.append(f"| {d['device']} | {d['src']} | {d['basis']}{lb} | "
-                 f"{fmt_rng(d['p_min'], d['p_max'], lambda v: f'{v:g} W')} | "
-                 f"{fmt_rng(d['pred_min'], d['pred_max'])} | {fmt_rng(d['upper_min'], d['upper_max'])} | "
-                 f"{fmt_rng(d['ratio_min'], d['ratio_max'], fmt_ratio)} |")
+                 f"{fmt_rng(d['p_min'], d['p_max'], lambda v: f'{v:g} W')} ({d['power_basis']}) | "
+                 f"{fmt_rng(d['pred_min'], d['pred_max'])} | {fmt_rng(d['upper_min'], d['upper_max'])} "
+                 f"({d['upper_basis']}) | {fmt_rng(d['ratio_min'], d['ratio_max'], fmt_ratio)} | {d['note']} |")
     L += ["", "Per-run rows are in `ledger.csv`.", "",
           "## 2. The author's predictions against claimed positive thrusts", "",
           "Predicted / claimed uses the printed prediction where there is one.", "",
@@ -422,7 +452,23 @@ def summary(res):
     for r in res["informal"]:
         p = "—" if r["power"] is None else f"{r['power']:g} W"
         L.append(f"| {r['device']} | {r['src']} | {p} | {fmt_f(r['pred'])} | {fmt_f(r['obs'])} | {r['note']} |")
-    L += ["", "## 4. Arithmetic checks", "",
+    L += ["", "### Excluded force comparison: Moddel photoinjector", ""]
+    for r in res["excluded_comparisons"]:
+        L += [f"M22 quotes {fmt_f(r['quoted_prediction_N'])} predicted and "
+              f"{fmt_f(r['quoted_observation_N'])} observed. {r['reason']}"]
+    L += ["", "## 4. Arithmetic and dimensional checks", "",
+          "### McCulloch 2021 capacitor formula", "",
+          "Eq. 6 multiplies a per-electron force by N_e = I/q, which has units s⁻¹. "
+          "Its literal result has units N/s. A residence/counting time is missing; these values "
+          "are excluded from force ratios and the figure. Multiplying by an implicit one second "
+          "would reproduce the preprint's numerical convention, but is not a physical completion. "
+          "The text uses n = 1.2; Fig. 2 uses n = 1 and 1.49.", "",
+          "| Example | Gap | n | n source | Literal Eq. 6 result (N/s, not force) |",
+          "|---|---|---|---|---|"]
+    for r in res["dimensional_checks"]:
+        L.append(f"| {r['device']} | {r['gap_m'] * 1e6:g} µm | {r['n']:g} | {r['n_basis']} | "
+                 f"{fmt_f(r['literal_rate_N_per_s'])}/s |")
+    L += ["", "### Printed force arithmetic", "",
           "Maximum relative deviation between our recomputation and the printed prediction:", "",
           "| Source | Basis / model | max \\|rel. dev.\\| | Row | Printed | Recomputed |", "|---|---|---|---|---|---|"]
     for r in res["checks"]["max_rel_dev"]:
@@ -447,18 +493,21 @@ def summary(res):
             L.append(f"| {k} | — | — | {fmt_f(epl[k]['printed'])} | {fmt_f(epl[k]['recomputed'])} |")
     s = res["stats"]
     L += ["", "## 5. Headline numbers", "",
-          f"- Controlled devices with a Dresden-adapted prediction: {s['n_devices_dresden']}. In the most "
+          f"- Tabulated groups with a Dresden-adapted prediction: {s['n_groups_dresden']} "
+          "(not independent devices; some combine designs or repeat hardware). In the most "
           f"constraining run of each, predicted / U ranges from {fmt_ratio(s['dresden_best_min'])} "
           f"({s['dresden_best_min_device']}) to {fmt_ratio(s['dresden_best_max'])} ({s['dresden_best_max_device']}).",
-          f"- Devices whose most constraining run exceeds U by ≥ 100×: {s['n_dresden_ge_100']} of "
-          f"{s['n_devices_dresden']}; by ≥ 10⁴×: {s['n_dresden_ge_1e4']}.",
+          f"- Groups whose most constraining run exceeds U by ≥ 100×: {s['n_dresden_ge_100']} of "
+          f"{s['n_groups_dresden']}; by ≥ 10⁴×: {s['n_dresden_ge_1e4']}.",
           f"- McCulloch's 2022 revised silver-cavity prediction / anomalous U: "
           f"{fmt_rng(s['revised_cavity_min'], s['revised_cavity_max'], fmt_ratio)}.",
           f"- McCulloch's 2022 revised fibre-loop prediction (40 nN) / U: vacuum "
           f"{fmt_rng(s['revised_loop_vac_min'], s['revised_loop_vac_max'], fmt_ratio)}; air "
-          f"{fmt_rng(s['revised_loop_air_min'], s['revised_loop_air_max'], fmt_ratio)}.",
-          f"- QI formulas applied by us to the Tajmar & Schreiber capacitor: predicted / U = "
-          f"{fmt_rng(s['capacitor_min'], s['capacitor_max'], fmt_ratio)}.",
+          f"{fmt_rng(s['revised_loop_air_min'], s['revised_loop_air_max'], fmt_ratio)}. "
+          "Conditional on transferring M22's number despite the Q/winding mismatch and chamber objection.",
+          f"- M22 Eq. 5 applied by us to the Tajmar & Schreiber capacitor: predicted / U = "
+          f"{fmt_rng(s['capacitor_min'], s['capacitor_max'], fmt_ratio)}, conditional on its electron-speed, "
+          "area and Q assumptions. M21 is dimensionally incomplete and supplies no force ratio.",
           f"- IVO claim (45–52 mN/W) / photon-rocket limit: {s['ivo_over_photon_lo']:.2g} – "
           f"{s['ivo_over_photon_hi']:.2g}."]
     return "\n".join(L) + "\n"
@@ -470,10 +519,10 @@ def stats(ctl):
     rc = pick("Silver laser cavities: McCulloch 2022 revised prediction")
     lv = pick("Asymmetric fibre loop, vacuum: McCulloch 2022 revised prediction")
     la = pick("Asymmetric fibre loop, air: McCulloch 2022 revised prediction")
-    cp = pick("Leakage-current capacitor (QI formulas applied by us)")
+    cp = pick("Leakage-current capacitor (2022 formula applied by us)")
     lo = min(dres, key=lambda d: d["ratio_max"])
     hi = max(dres, key=lambda d: d["ratio_max"])
-    return dict(n_devices_dresden=len(dres), dresden_best_min=lo["ratio_max"], dresden_best_min_device=lo["device"],
+    return dict(n_groups_dresden=len(dres), dresden_best_min=lo["ratio_max"], dresden_best_min_device=lo["device"],
                 dresden_best_max=hi["ratio_max"], dresden_best_max_device=hi["device"],
                 n_dresden_ge_100=sum(d["ratio_max"] >= 100 for d in dres),
                 n_dresden_ge_1e4=sum(d["ratio_max"] >= 1e4 for d in dres),
@@ -490,18 +539,20 @@ def stats(ctl):
 def chart_rows(res):
     rows = []
     for d in res["device_summary"]:
-        if d["device"].startswith("BART"):
+        if "not QI" in d["basis"]:
             continue
         rr = [r for r in res["controlled"] if r["device"] == d["device"]]
         rows.append(dict(label=d["device"], kind="controlled",
+                         upper_basis=d["upper_basis"], power_basis=d["power_basis"],
                          pred=[r["pred"] / r["power"] for r in rr], obs=[r["upper"] / r["power"] for r in rr]))
     for dev, rr in by_device(res["claimed"]).items():
         rr = [r for r in rr if r["power"]]
         if not rr:
             continue
-        preds = [abs(r["pred"] if r["pred"] is not None else r["printed_pred"]) / r["power"] for r in rr]
+        preds = [abs(r["printed_pred"] if r["printed_pred"] is not None else r["pred"]) / r["power"] for r in rr]
         obs = [v / r["power"] for r in rr for v in (r["obs_lo"], r["obs_hi"])]
-        rows.append(dict(label=dev, kind="claimed", pred=preds, obs=obs))
+        label = dev + (" (|F|; 2017 sign reversed)" if any(r["note"] == "wrong sign" for r in rr) else "")
+        rows.append(dict(label=label, kind="claimed", pred=preds, obs=obs))
     for r in res["informal"]:
         if r["power"] and r["obs"]:
             rows.append(dict(label=r["device"], kind="informal",
@@ -521,16 +572,16 @@ def figure(res, path):
         pos.append(y)
         y += 1
     h = 110 + 22 * y + 50
-    p = a1.Plot(960, h, (-11.2, 3.2), (y - 0.4, 0), "QI thrust predictions vs measurements, per watt of input power",
-                "log₁₀ (force / input power)   (N/W)", "", ml=380, mt=96, mb=50)
-    p.axes(list(range(-11, 4)), [])
+    p = a1.Plot(1280, h, (-11.2, -0.8), (y - 0.4, 0), "QI thrust comparisons per reported watt (optical, microwave or electrical)",
+                "log₁₀ (force / reported power)   (N/W; not wall-plug efficiency)", "", ml=640, mt=96, mb=50)
+    p.axes(list(range(-11, 0)), [])
     xp = math.log10(PHOTON)
     p.el.append(f'<line x1="{p.X(xp):.1f}" x2="{p.X(xp):.1f}" y1="{p.t}" y2="{p.b}" stroke="var(--ink2)" '
                 f'stroke-dasharray="4 4"><title>Photon rocket, 1/c = 3.34 nN/W</title></line>')
     p.text(p.X(xp), p.t - 6, "photon rocket, 1/c", anchor="middle")
     col = {"pred": "var(--s1)", "upper": "var(--s2)", "claim": "var(--s3)"}
-    heads = {"controlled": "Controlled nulls (TU Dresden): prediction vs measured upper limit",
-             "claimed": "The author's fits to claimed thrusts", "informal": "Unpublished and company claims"}
+    heads = {"controlled": "Controlled nulls (TU Dresden): conditional predictions vs descriptive bounds",
+             "claimed": "Author comparisons with existing thrust claims", "informal": "Unpublished and company claims"}
 
     def upper_mark(x, yy, tip=""):
         return (f'<path d="M{x:.1f},{yy - 6:.1f} V{yy + 6:.1f} M{x:.1f},{yy:.1f} l-7,-4 M{x:.1f},{yy:.1f} l-7,4" '
@@ -556,19 +607,19 @@ def figure(res, path):
                             f'stroke="{col[key]}" stroke-width="3" stroke-opacity="0.55"/>')
             for v in (lo, hi):
                 if key == "upper":
-                    p.el.append(upper_mark(p.X(v), yy, f"<title>Measured upper limit, max(m, 0) + 2σ: "
-                                                       f"{10 ** v:.3g} N/W</title>"))
+                    p.el.append(upper_mark(p.X(v), yy, f"<title>Bound: {r['upper_basis']}; "
+                                                       f"{10 ** v:.3g} N/W ({r['power_basis']} power)</title>"))
                 elif key == "claim":
                     p.el.append(claim_mark(p.X(v), yy, f"<title>Claimed thrust: {10 ** v:.3g} N/W</title>"))
                 else:
                     p.marker(v, yv, col[key], f"Prediction: {10 ** v:.3g} N/W")
-    lx, ly = p.l, 52
+    lx, ly = 450, 52
     p.el.append(f'<circle cx="{lx}" cy="{ly}" r="5" fill="{col["pred"]}"/>')
-    p.text(lx + 10, ly + 4, "QI-based prediction (range over runs)")
-    lx += 250
+    p.text(lx + 10, ly + 4, "Prediction (printed when available)")
+    lx += 285
     p.el.append(upper_mark(lx, ly))
-    p.text(lx + 8, ly + 4, "measured upper limit, 2σ")
-    lx += 185
+    p.text(lx + 8, ly + 4, "bound (2σ convention; capacitor 3σ)")
+    lx += 290
     p.el.append(claim_mark(lx, ly))
     p.text(lx + 10, ly + 4, "claimed thrust")
     p.save(path)
@@ -576,7 +627,7 @@ def figure(res, path):
 
 def write_csv(res, path):
     keys = ["group", "device", "setting", "src", "basis", "power", "pred", "pred_lower_bound", "recomputed",
-            "obs", "sigma", "upper", "ratio", "ratio_central", "photon", "note"]
+            "power_basis", "obs", "sigma", "upper", "upper_basis", "ratio", "ratio_central", "photon", "note"]
     with path.open("w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=keys, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
@@ -588,6 +639,7 @@ def build():
     ctl, clm, inf = controlled(), claimed(), informal()
     res = dict(constants=dict(c=C, g0=G0, k_sigma=K_SIGMA, photon_limit_N_per_W=PHOTON), sources=SRC,
                controlled=ctl, device_summary=device_summary(ctl), claimed=clm, informal=inf,
+               dimensional_checks=dimensional_checks(), excluded_comparisons=excluded_comparisons(),
                checks=printed_checks(ctl, clm), stats=stats(ctl))
     return res
 
