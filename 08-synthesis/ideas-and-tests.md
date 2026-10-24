@@ -34,6 +34,8 @@ In his [30 August 2026 response](https://physicsfromtheedge.blogspot.com/2026/08
 ### 🔧 A3. Thrust-prediction ledger
 Make a table of every quantitative QI thrust prediction: EmDrive, laser resonators, fibre loops, capacitors, IVO. For each, list the prediction, the measured upper limit and the ratio. The data are already in [propulsion](../02-evidence/propulsion.md) and the 03-criticism READMEs. A log-scale chart would show where QI has been tested and where it hasn't.
 
+> **Status (2026-10-24): done.** [A3](../09-analysis/a3-thrust-ledger/README.md) tabulates 17 device-level controlled comparisons (two are non-QI context), 23 author fits to claimed thrusts and five informal or company claims. Against 2σ upper limits, Dresden-adapted predictions exceed the measurements by 6× to 3,700× in each device's most constraining run. McCulloch's 2022 revised photon predictions are at the tests' resolution for the silver cavity and 45–67× above the vacuum fibre-loop limits. QI formulas applied by us to Tajmar & Schreiber's capacitor exceed its 3σ limit 35–74×. Every agreeing QI number was fitted to an uncontrolled or unreplicated claim. Three 2022 worked examples do not reproduce from their printed inputs. Open: the 2026 "quantum jitter" capacitor preprint, and the IAC 2021 and Alcalá sources McCulloch cites.
+
 ### 🔧 A4. Wide-binary external-field-effect discriminator
 QI predicts **no external field effect**; MOND predicts one. Using Gaia DR3 wide-binary samples (Chae / Banik public catalogues), split binaries by the Galactic field they sit in and check whether the anomaly (if any) depends on it. This is a test that could separate QI from MOND rather than just from Newton.
 
