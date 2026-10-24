@@ -114,3 +114,17 @@ QI scale per redshift quartile (constant within bin; 1σ from Δ(−ln L) = 0.5)
 | QI function, (1+z)^γ, γ fitted (k = 3) | -0.83 | 2.869 | -0.52 | 0.097 |
 | McGaugh function, constant scale (k = 2) | +0.46 | 1.287 | 0.00 | 0.101 |
 | McGaugh function, scale ∝ H(z) (k = 2) | +8.42 | 0.540 | — | 0.131 |
+
+## fixed_weights (100 galaxies)
+
+| Model | Δ(−ln L) vs QI constant | a_Q(0) (10⁻¹⁰ m s⁻²) | γ | τ |
+|---|---|---|---|---|
+| QI published: a_Q = 2c²(1+z)/Θ₀ (k = 1, τ only) | +41.84 | 2.043 | 1.00 | 0.301 |
+| QI (1+z), a_Q(0) from A1 SPARC fit (k = 1) | +26.12 | 1.467 | 1.00 | 0.247 |
+| QI (1+z), a_Q(0) from A1b SPARC fit (k = 1) | +21.25 | 1.313 | 1.00 | 0.231 |
+| QI (1+z), amplitude fitted (k = 2) | +5.02 | 0.652 | 1.00 | 0.167 |
+| QI function, constant scale (k = 2) | +0.00 | 1.662 | 0.00 | 0.157 |
+| QI function, scale ∝ H(z) (k = 2) | +7.14 | 0.665 | — | 0.173 |
+| QI function, (1+z)^γ, γ fitted (k = 3) | -0.77 | 2.735 | -0.56 | 0.156 |
+| McGaugh function, constant scale (k = 2) | -0.31 | 1.193 | 0.00 | 0.157 |
+| McGaugh function, scale ∝ H(z) (k = 2) | +7.20 | 0.485 | — | 0.175 |

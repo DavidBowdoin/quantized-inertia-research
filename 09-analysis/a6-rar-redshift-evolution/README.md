@@ -21,11 +21,14 @@ The planned test refits individual MUSE-DARK rotation curves with QI's own funct
 4. **A scale calibrated at z ≈ 0 transfers, depending on which one.** The amplitude these bins prefer, a_Q(0) = 1.51 × 10⁻¹⁰ m s⁻² (Θ₀ ≈ 1.19 × 10²⁷ m), is close to A1's SPARC fit of 1.47. Evolving A1's best-fit scale with (1+z), without refitting, gives χ² = 6.3/4 (nominal p = 0.18). A1b's lower best-fit scale gives χ² = 40.7/4. These scores hold the external calibrations fixed; their uncertainties are displayed separately below. The A1 transfer is favorable to a calibrated variant, conditional on this conversion and error model.
 5. **A constant scale and the editorial proper-horizon law are disfavoured.** A constant a₀ gives χ² = 28.8/3, as Alcock found. Setting Θ to the proper particle-horizon diameter at each epoch rises too steeply (χ² = 25.1/3 with the amplitude free).
 
+6. **The MUSE-DARK refit without a halo gives QI's shape at two-thirds of its normalization.** Ciocan et al.'s MOND-framework refit (their Eq. E.5) refits the stellar masses with modified dynamics and no halo, the closest published analogue of a QI analysis. Converted to QI's convention, its effective exponent is γ = 1.02 (0.95–1.09 at the 95% corners) and its scale is 0.66 times McCulloch's prediction. Their halo-based global fit (Eq. 4) gives γ = 1.19 at 0.72–0.78 times the prediction. This is our conversion of a published linear fit, not a fit with QI's function.
+
 > **Update (23 Oct 2026).** The per-galaxy follow-ups below qualify this result: the rise depends on MUSE-DARK's dynamical masses ([A6b](../a6b-musedark-per-galaxy/README.md)), and RC100 at higher redshift disfavours it ([A6c](../a6c-rc100-qi/README.md)).
 
 Taken together, the binned data agree with the *direction and approximate rate* of QI's predicted evolution, as McCulloch's 2017 paper anticipated. They disagree with its *absolute normalization* by about the same fraction as A1 found at z ≈ 0. Both conclusions depend on MUSE-DARK's mass scale and on the unstated confidence level of the plotted bars. A rising scale is not unique to QI: an H(z)-tracking MOND scale fits nearly as well (χ² = 7.4/3).
 
 ## Data
+- **Published global fits:** Ciocan et al. 2026 Eq. 4 (DC14 decompositions) and Eq. E.5 (MOND-framework refit), with their 95% intervals. Each linear law is evaluated at the four bin redshifts and converted to QI's convention with the inverse of the conversion below.
 - **Binned a₀(z):** Alcock 2026, MNRAS 551, stag1485, Table 1 ([doi:10.1093/mnras/stag1485](https://doi.org/10.1093/mnras/stag1485), CC BY 4.0). Four quantile bins in redshift, digitized from Ciocan et al. 2026 Fig. 3. The lowest and highest values, 1.99 and 2.71 × 10⁻¹⁰ m s⁻², are printed in Ciocan et al.'s text. The intermediate values and all bars are digitized. The numbers are written into the script with this provenance.
 
   | Plotted z | a₀ (10⁻¹⁰ m s⁻²) | lower bar | upper bar |
