@@ -3,10 +3,11 @@
 
 Editorial analysis for the Quantized Inertia research archive. Python 3 standard library only.
 
-Three parts, each an explicit recomputation of steps printed in the source papers:
-1. Derivation routes. Each route is implemented step by step, as printed, and its output is written as
-   m_i/m = P * (1 - kappa c^2 / (a Theta)). P (normalisation) and kappa (the galaxy-scale coefficient) are
-   recovered numerically, and single choices are varied one at a time to see which of P or kappa they move.
+Three parts, distinguishing reproduction of printed expressions from checks of their derivation:
+1. Derivation routes. The printed mass expressions are reproduced and, where linear, written as
+   m_i/m (or dm/m) = P * (1 - kappa c^2 / (a Theta)). A separate check reproduces the sign inconsistency
+   between the 2016 conservation equation and its printed mass change (first reported by Haug 2018b). Variants test P and kappa;
+   fixed kappa does not make galaxy predictions independent of P without an explicit normalisation.
 2. Orbit laws. McCulloch's papers turn Eq. 1 into an orbit law in four different ways. Each is checked against
    the equation it claims to solve, then scored on SPARC with A1's loader and likelihood (A1 data required).
 3. Theta(z). McCulloch 2017 Eq. 9 against two literal readings of the derivations' "cosmic horizon" in flat
@@ -49,7 +50,7 @@ def wien_x5():
 BETA = 1 / wien_x5()
 
 # ---------------------------------------------------------------- 1. derivation routes
-# Each function returns m_i/m (or dm/m) at acceleration a for cosmic scale theta, following the printed steps.
+# Each route returns the printed m_i/m (or dm/m); reproducing it does not validate every preceding step.
 
 
 def route_2007(a, theta, beta=BETA):
@@ -64,8 +65,9 @@ def route_2013(a, theta):
 
 
 def route_2016(a, theta, dx_r=None, dx_h=None, hbar_factor=1.0, photon="wien"):
-    """EPL 115, 69001, Eqs. 13-20. dm = (hbar/c)(1/dx2 - 1/dx1), dx2 = c^2/a, dx1 = Theta/2,
-    then the a in the prefactor is replaced by the Wien-peak photon energy E = hc/lambda_m (Eq. 18)."""
+    """EPL 115, 69001, printed Eqs. 14-20: dm = (hbar/c)(1/dx2 - 1/dx1), dx2 = c^2/a, dx1 = Theta/2,
+    then the a in the prefactor is replaced by the Wien-peak photon energy E = hc/lambda_m (Eq. 18).
+    Eq. 13 instead implies the opposite sign for dm = m2 - m1; check_2016_conservation audits this."""
     dx_r = C * C / a if dx_r is None else dx_r(a)
     dx_h = theta / 2 if dx_h is None else dx_h(theta)
     de = hbar_factor * HBAR * C * (1 / dx_r - 1 / dx_h)            # energy, J
@@ -74,6 +76,24 @@ def route_2016(a, theta, dx_r=None, dx_h=None, hbar_factor=1.0, photon="wien"):
     else:                                                        # k_B T_Unruh
         e_photon = HBAR * a / (2 * math.pi * C)
     return de / e_photon
+
+
+def check_2016_conservation(a, theta=THETA):
+    """Editorial check of Eq. 13 against printed Eq. 14 (arXiv:1610.06787v1, p. 5).
+
+    Eq. 13: m1 c^2 + U1 = m2 c^2 + U2, so (m2-m1)c^2 = U1-U2.
+    Residuals are final minus initial energy, divided by the Wien-peak energy mc^2 used in Eqs. 18-20.
+    The printed route is retained separately; this check supplies no replacement physical model.
+    """
+    u1 = HBAR * C / (theta / 2)
+    u2 = HBAR * C / (C * C / a)
+    e_photon = H_PLANCK * C / (4 * math.pi ** 2 * BETA * C * C / a)
+    dm_eq13 = (u1 - u2) / e_photon
+    dm_printed = route_2016(a, theta)
+    return dict(a=a, theta=theta, dm_over_m_from_eq13=dm_eq13,
+                dm_over_m_printed=dm_printed,
+                printed_eq13_residual=(dm_printed * e_photon + u2 - u1) / e_photon,
+                rearranged_eq13_residual=(dm_eq13 * e_photon + u2 - u1) / e_photon)
 
 
 def route_2020_widths(a, theta, half_circumference=(True, True), hbar_factor=0.5, photon="kT"):
@@ -135,7 +155,7 @@ ROUTES = [
     # key, source, variant label, function
     ("2007", "McCulloch 2007, MNRAS 376, 338", "as printed (beta from Wien)", route_2007),
     ("2013", "McCulloch 2013, EPL 101, 59001", "Eq. 8 bracket taken literally", route_2013),
-    ("2016", "McCulloch 2016, EPL 115, 69001", "as printed: hbar, radii, Wien-peak photon",
+    ("2016", "McCulloch 2016, EPL 115, 69001", "printed Eqs. 14–20 (sign conflicts with Eq. 13); hbar, radii, Wien peak",
      lambda a, t: route_2016(a, t)),
     ("2016_kT", "", "2016 with k_B T instead of the Wien-peak photon",
      lambda a, t: route_2016(a, t, photon="kT")),
@@ -182,9 +202,12 @@ def law_2017(g, aq):
     return math.sqrt(g * g + g * aq)
 
 
-def law_selfconsistent(g, aq):
+def law_selfconsistent(g, aq, prefactor=1.0):
     """Eq. 6, a^2 = g(|a| + aq), solved with |a| = a: MOND's 'simple' function with a0 = aq.
-    Same algebra as McCulloch & Lucio 2019 (wide binaries) Eqs. 10-13."""
+    Same algebra as McCulloch & Lucio 2019 (wide binaries) Eqs. 10-13.
+    Optional editorial prefactor P retains m_i/m = P(1-aq/(a+aq)) at fixed G and baryonic masses:
+    a^2 = (g/P)(a+aq). All SPARC scores use P=1, as in the published mass law."""
+    g = g / prefactor
     return g / 2 + math.sqrt(g * g / 4 + g * aq)
 
 
@@ -396,9 +419,10 @@ def fmt(x, nd=2):
 
 def summary(res):
     L = ["# A2b results (generated by derivation_trace.py; do not edit)", ""]
-    L += ["## 1. Derivation routes written as m_i/m = P (1 − κ c²/(aΘ))", "",
-          "Recovered numerically from each route's printed steps. `a_scale` = κc²/Θ at Θ = 8.8 × 10²⁶ m. "
-          "`departure` is the largest relative difference from the linear form for a > 2.5c²/Θ.", "",
+    L += ["## 1. Printed mass expressions: m_i/m (or dm/m) = P (1 − κ c²/(aΘ))", "",
+          "Reproducing a printed expression does not validate its derivation. `a_scale` = κc²/Θ at Θ = 8.8 × 10²⁶ m. "
+          "`departure` measures the linear form for a > 2.5c²/Θ; extrapolating the 2017 linearisation here does not "
+          "extend its physical domain beyond a ≈ 2c²/Θ.", "",
           "| Route | Variant | P | κ | a_scale (m s⁻²) | departure |", "|---|---|---|---|---|---|"]
     for r in res["routes"]:
         if r["max_rel_departure"] > 1e-6:                            # not of the linear form: P, kappa meaningless
@@ -407,7 +431,25 @@ def summary(res):
         L.append(f"| {r['source'] or '↳'} | {r['variant']} | {r['P']:.4f} | {r['kappa']:.4f} | "
                  f"{r['a_scale']:.3e} | {r['max_rel_departure']:.1e} |")
     L += ["", f"β = 1/x₅ = {BETA:.5f}; βπ² = {BETA * math.pi ** 2:.4f}; 2πβ = {2 * math.pi * BETA:.4f}; 4/π = {4 / math.pi:.4f}.", ""]
-    L += ["## 2. Orbit laws", "", "Identity checks (max relative error):", ""]
+    ch = res["conservation_2016"]
+    L += ["### Editorial check: the 2016 sign inconsistency", "",
+          "Eq. 13 implies dm = (ħ/c)(1/Δx₁ − 1/Δx₂), for dm = m₂ − m₁. Printed Eq. 14 reverses that sign. "
+          "The route table retains Eqs. 14–20 as printed; it is not a verification of Eq. 13 → Eq. 14.", "",
+          f"At a = 2a_Q = {ch['a']:.3e} m s⁻², using the paper's Wien-peak energy mc²:", "",
+          f"- dm/m from Eq. 13: {ch['dm_over_m_from_eq13']:+.6f}.",
+          f"- dm/m from printed Eqs. 14–20: {ch['dm_over_m_printed']:+.6f}.",
+          f"- Eq. 13 energy residual (final − initial)/mc² with the printed mass change: {ch['printed_eq13_residual']:+.6f}.",
+          f"- Residual using Eq. 13's own rearrangement: {ch['rearranged_eq13_residual']:.1e}.", "",
+          "First reported by Haug (2018b, viXra:1803.0052), who writes that McCulloch confirmed privately that Eq. 13 "
+          "should carry minus signs; Eq. 14 then follows. Haug argues the corrected relation is no longer conservation of "
+          "mass-energy plus uncertainty energy. This check reproduces the inconsistency; it does not select a revised QI model.", "",
+          "### Normalisation and galaxy predictions", "",
+          "The listed normalisation variants leave κ = 2, but retain P ≠ 1. At fixed G and baryonic masses, "
+          "the split-acceleration equation becomes a² = (g/P)(a+a_Q), so P changes the prediction. "
+          "Dividing the mass law by its high-acceleration limit P can remove it only as an explicit normalisation "
+          "with a consistent mass/G calibration. All orbit-law scores below use the published P = 1; they do not "
+          "test every derivation prefactor.", ""]
+    L += ["## 2. Orbit laws (P = 1)", "", "Identity checks (max relative error):", ""]
     for k, v in res["law_checks"].items():
         L.append(f"- `{k}`: {v:.1e}")
     L += ["", "log₁₀ a predicted at log₁₀ g (Θ = 8.8 × 10²⁶ m, a_Q = " + f"{A_Q:.3e} m s⁻²):", "",
@@ -460,7 +502,8 @@ def main():
     args = ap.parse_args()
     OUT.mkdir(exist_ok=True)
     res = dict(constants=dict(beta=BETA, theta=THETA, a_q=A_Q, l_planck=L_P),
-               routes=routes(), law_checks=law_checks(), law_table=law_table(),
+               routes=routes(), conservation_2016=check_2016_conservation(2 * A_Q),
+               law_checks=law_checks(), law_table=law_table(),
                laws={k: dict(label=lab, used_in=u) for k, lab, _, u in LAWS}, theta_z=theta_readings())
     a1 = None
     if not args.no_sparc:

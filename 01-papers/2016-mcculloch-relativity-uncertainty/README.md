@@ -37,8 +37,10 @@ $$m_i = m\left(1 - \frac{2c^2}{|a|\Theta}\right)$$
 Uncertainty-energy gravity (Eqs. 5, 9):
 $$\Delta\bar{E} = \frac{\hbar c\, mM}{m_P^2\, \Delta\bar{x}}, \qquad F \sim \frac{\hbar c}{m_P^2}\frac{mM}{r^2}$$
 
-Conservation of mass-energy plus uncertainty energy (Eqs. 13–14):
+Conservation of mass-energy plus uncertainty energy (Eqs. 13–14, as printed):
 $$m_1c^2 + \frac{\hbar c}{\Delta x_1} = m_2c^2 + \frac{\hbar c}{\Delta x_2}, \qquad dm = \frac{\hbar}{c}\left(\frac{1}{\Delta x_2} - \frac{1}{\Delta x_1}\right)$$
+
+With the paper's definition dm = m₂ − m₁, these equations have a sign inconsistency. [Haug 2018b](../2018-haug-foundation-quantized-inertia/README.md) reported it first and writes that McCulloch confirmed privately that Eq. 13 should carry minus signs; the printed Eq. 14 then follows. [A2b](../../09-analysis/a2b-derivation-trace/README.md#editorial-check-the-2016-sign-inconsistency) reproduces the printed result and checks it against the conservation equation separately.
 
 With Δx₁ = Θ/2 (cosmic horizon) and Δx₂ = c²/a (Rindler horizon) (Eqs. 17, 20):
 $$dm = \frac{\hbar a}{c^3}\left(1 - \frac{2c^2}{a\Theta}\right) \;\Rightarrow\; dm = 2\pi\beta\, m\left(1 - \frac{2c^2}{a\Theta}\right)$$

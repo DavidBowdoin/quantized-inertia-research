@@ -13,6 +13,21 @@ def route(key):
 
 
 class Routes(unittest.TestCase):
+    def test_2016_printed_mass_change_violates_its_conservation_equation(self):
+        for theta in (2.6e26, m.THETA):
+            aq = 2 * m.C ** 2 / theta
+            for ratio in (1.0, 2.0, 10.0):
+                with self.subTest(theta=theta, a_over_aq=ratio):
+                    ch = m.check_2016_conservation(ratio * aq, theta)
+                    self.assertAlmostEqual(ch["rearranged_eq13_residual"], 0.0, places=12)
+                    self.assertAlmostEqual(ch["dm_over_m_from_eq13"], -ch["dm_over_m_printed"], places=12)
+                    if ratio == 1.0:
+                        self.assertAlmostEqual(ch["printed_eq13_residual"], 0.0, places=12)
+                    else:
+                        self.assertLess(ch["dm_over_m_from_eq13"], 0.0)
+                        self.assertGreater(ch["dm_over_m_printed"], 0.0)
+                        self.assertGreater(ch["printed_eq13_residual"], 1.0)
+
     def test_printed_coefficients(self):
         self.assertAlmostEqual(route("2007")["kappa"], m.BETA * math.pi ** 2, places=10)
         self.assertAlmostEqual(route("2013")["kappa"], 4 / math.pi, places=10)
@@ -39,6 +54,17 @@ class Routes(unittest.TestCase):
 
 
 class Laws(unittest.TestCase):
+    def test_prefactor_changes_prediction_at_fixed_baryonic_acceleration(self):
+        for g in (1e-12, m.A_Q, 1e-8):
+            baseline = m.law_selfconsistent(g, m.A_Q)
+            for p in (math.log(2), 2 * math.pi * m.BETA):
+                a = m.law_selfconsistent(g, m.A_Q, prefactor=p)
+                # Check the force balance, independently of the quadratic solution.
+                self.assertAlmostEqual(p * (1 - m.A_Q / (a + m.A_Q)) * a / g, 1.0, places=12)
+                self.assertGreater(abs(a / baseline - 1), 0.05)
+                # Absorbing P into g is an additional calibration, unlike holding g fixed.
+                self.assertAlmostEqual(m.law_selfconsistent(p * g, m.A_Q, prefactor=p) / baseline, 1.0, places=12)
+
     def test_identities(self):
         for k, v in m.law_checks().items():
             self.assertLess(v, 1e-12, k)

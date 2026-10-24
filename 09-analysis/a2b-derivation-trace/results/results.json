@@ -27,7 +27,7 @@
   {
    "key": "2016",
    "source": "McCulloch 2016, EPL 115, 69001",
-   "variant": "as printed: hbar, radii, Wien-peak photon",
+   "variant": "printed Eqs. 14–20 (sign conflicts with Eq. 13); hbar, radii, Wien peak",
    "P": 1.2654664150541128,
    "kappa": 2.000000000000002,
    "a_scale": 2.0426254062200425e-10,
@@ -133,6 +133,14 @@
    "max_rel_departure": 4.183094534890003e-16
   }
  ],
+ "conservation_2016": {
+  "a": 4.0852508124400797e-10,
+  "theta": 8.8e+26,
+  "dm_over_m_from_eq13": -0.6327332075270564,
+  "dm_over_m_printed": 0.6327332075270564,
+  "printed_eq13_residual": 1.2654664150541128,
+  "rearranged_eq13_residual": 8.165775216068752e-17
+ },
  "law_checks": {
   "selfcons_solves_eq6": 4.0564404221504114e-16,
   "eq8_solves_eq7": 2.999049545462744e-16,
