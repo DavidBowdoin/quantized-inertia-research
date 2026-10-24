@@ -935,5 +935,47 @@
   "classification": "LOCAL",
   "files": [],
   "note": "No PDF stored (SSRN blocks scripted access); Crossref records no licence. Treat any later SSRN PDF as LOCAL unless an open licence is shown."
+ },
+ {
+  "folder": "01-papers/2026-ciocan-muse-dark-rar",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://www.aanda.org/articles/aa/pdf/2026/05/aa59230-26.pdf",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2026-ciocan-muse-dark-rar/paper.pdf",
+   "01-papers/2026-ciocan-muse-dark-rar/figures/fig-3-a0-vs-redshift.png"
+  ],
+  "note": "Stored PDF is the A&A published version (downloaded by the owner from aanda.org); PDF footer and Crossref (vor) state CC BY 4.0. Replaces the arXiv v1 copy (CC BY-NC-ND 4.0). Fig. 3 rendered from it."
+ },
+ {
+  "folder": "01-papers/2026-alcock-rar-scale-hubble",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://api.crossref.org/works/10.1093/mnras/stag1485",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2026-alcock-rar-scale-hubble/paper.pdf"
+  ],
+  "note": "Stored PDF is the MNRAS published version (served by arXiv e-print 2609.38796); PDF footer, Crossref (vor) and arXiv OAI all state CC BY 4.0."
+ },
+ {
+  "folder": "01-papers/2026-karpov-musedark-a0z-audit",
+  "pdf_license": "unknown",
+  "evidence_url": "https://zenodo.org/api/records/22278304",
+  "classification": "LOCAL",
+  "files": [
+   "01-papers/2026-karpov-musedark-a0z-audit/paper.pdf"
+  ],
+  "note": "Zenodo record licence is MIT and the package README says MIT applies to the code; licence of the manuscript PDF not stated. Kept local (if in doubt, LOCAL)."
+ },
+ {
+  "folder": "01-papers/2023-nestorshachar-rc100-rotation-curves",
+  "pdf_license": "CC-BY-4.0",
+  "evidence_url": "https://api.crossref.org/works/10.3847/1538-4357/aca9cf",
+  "classification": "PUBLIC",
+  "files": [
+   "01-papers/2023-nestorshachar-rc100-rotation-curves/paper.pdf",
+   "01-papers/2023-nestorshachar-rc100-rotation-curves/table-b1-errors.csv"
+  ],
+  "note": "Stored PDF is the ApJ published version from iopscience.iop.org; PDF footer and Crossref (vor) state CC BY 4.0. arXiv v1 is CC BY-NC-ND 4.0 (not stored). table-b1-errors.csv transcribes the uncertainty columns from this journal PDF (Table B1, pp. 17–21), with attribution in its header."
  }
 ]

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520" role="img">
+<title>QI scale a_Q fitted per redshift bin, MUSE-DARK rebuilt from public parameters</title>
+<style>
+svg { --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --grid:#e4e3df; --pt:#8f8d86;
+      --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#6250d6; }
+@media (prefers-color-scheme: dark) {
+  svg { --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --grid:#33322f; --pt:#77756f;
+        --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; } }
+text { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; fill: var(--ink2); font-size: 12px; }
+.t { fill: var(--ink); font-size: 14px; font-weight: 600; }
+.ax { stroke: var(--ink2); stroke-width: 1; }
+.gr { stroke: var(--grid); stroke-width: 1; }
+.ln { fill: none; stroke-width: 2; stroke-linejoin: round; }
+</style>
+<rect width="760" height="520" fill="var(--surface)"/>
+<text class="t" x="64" y="24">QI scale a_Q fitted per redshift bin, MUSE-DARK rebuilt from public parameters</text>
+<text x="402.0" y="508" text-anchor="middle">redshift z</text>
+<text transform="translate(16,257.0) rotate(-90)" text-anchor="middle">a_Q (10⁻¹⁰ m s⁻²)</text>
+<line class="gr" x1="120.3" x2="120.3" y1="44" y2="470"/><text x="120.3" y="486" text-anchor="middle">0.4</text>
+<line class="gr" x1="233.0" x2="233.0" y1="44" y2="470"/><text x="233.0" y="486" text-anchor="middle">0.6</text>
+<line class="gr" x1="345.7" x2="345.7" y1="44" y2="470"/><text x="345.7" y="486" text-anchor="middle">0.8</text>
+<line class="gr" x1="458.3" x2="458.3" y1="44" y2="470"/><text x="458.3" y="486" text-anchor="middle">1</text>
+<line class="gr" x1="571.0" x2="571.0" y1="44" y2="470"/><text x="571.0" y="486" text-anchor="middle">1.2</text>
+<line class="gr" x1="683.7" x2="683.7" y1="44" y2="470"/><text x="683.7" y="486" text-anchor="middle">1.4</text>
+<line class="gr" x1="64" x2="740" y1="470.0" y2="470.0"/><text x="58" y="474.0" text-anchor="end">0</text>
+<line class="gr" x1="64" x2="740" y1="375.3" y2="375.3"/><text x="58" y="379.3" text-anchor="end">2</text>
+<line class="gr" x1="64" x2="740" y1="280.7" y2="280.7"/><text x="58" y="284.7" text-anchor="end">4</text>
+<line class="gr" x1="64" x2="740" y1="186.0" y2="186.0"/><text x="58" y="190.0" text-anchor="end">6</text>
+<line class="gr" x1="64" x2="740" y1="91.3" y2="91.3"/><text x="58" y="95.3" text-anchor="end">8</text>
+<line class="ax" x1="64" x2="740" y1="470" y2="470"/><line class="ax" x1="64" x2="64" y1="44" y2="470"/>
+<path class="ln" d="M64.0,344.3 L75.3,342.4 L86.5,340.4 L97.8,338.5 L109.1,336.6 L120.3,334.6 L131.6,332.7 L142.9,330.8 L154.1,328.8 L165.4,326.9 L176.7,325.0 L187.9,323.0 L199.2,321.1 L210.5,319.2 L221.7,317.2 L233.0,315.3 L244.3,313.4 L255.5,311.4 L266.8,309.5 L278.1,307.6 L289.3,305.6 L300.6,303.7 L311.9,301.8 L323.1,299.8 L334.4,297.9 L345.7,296.0 L356.9,294.0 L368.2,292.1 L379.5,290.2 L390.7,288.2 L402.0,286.3 L413.3,284.4 L424.5,282.4 L435.8,280.5 L447.1,278.6 L458.3,276.6 L469.6,274.7 L480.9,272.8 L492.1,270.8 L503.4,268.9 L514.7,267.0 L525.9,265.0 L537.2,263.1 L548.5,261.2 L559.7,259.2 L571.0,257.3 L582.3,255.4 L593.5,253.4 L604.8,251.5 L616.1,249.6 L627.3,247.6 L638.6,245.7 L649.9,243.8 L661.1,241.8 L672.4,239.9 L683.7,238.0 L694.9,236.0 L706.2,234.1 L717.5,232.2 L728.7,230.2 L740.0,228.3" stroke="var(--s2)"><title>published QI, Θ₀ = 8.8 × 10²⁶ m</title></path>
+<line x1="259.4" x2="259.4" y1="415.7" y2="310.5" stroke="var(--s1)" stroke-width="2"/><circle cx="259.4" cy="373.4" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>dynamical disc mass (MUSE-DARK fit): 2.04</title></circle>
+<line x1="423.0" x2="423.0" y1="342.0" y2="273.6" stroke="var(--s1)" stroke-width="2"/><circle cx="423.0" cy="310.5" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>dynamical disc mass (MUSE-DARK fit): 3.37</title></circle>
+<line x1="500.1" x2="500.1" y1="274.9" y2="203.8" stroke="var(--s1)" stroke-width="2"/><circle cx="500.1" cy="244.7" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>dynamical disc mass (MUSE-DARK fit): 4.76</title></circle>
+<line x1="625.1" x2="625.1" y1="205.4" y2="82.7" stroke="var(--s1)" stroke-width="2"/><circle cx="625.1" cy="150.0" r="5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"><title>dynamical disc mass (MUSE-DARK fit): 6.76</title></circle>
+<line x1="270.6" x2="270.6" y1="417.0" y2="315.7" stroke="var(--s3)" stroke-width="2"/><circle cx="270.6" cy="381.9" r="5" fill="var(--s3)" stroke="var(--surface)" stroke-width="2"><title>SED stellar mass: 1.86</title></circle>
+<line x1="434.2" x2="434.2" y1="333.6" y2="254.7" stroke="var(--s3)" stroke-width="2"/><circle cx="434.2" cy="297.2" r="5" fill="var(--s3)" stroke="var(--surface)" stroke-width="2"><title>SED stellar mass: 3.65</title></circle>
+<line x1="511.4" x2="511.4" y1="363.4" y2="312.4" stroke="var(--s3)" stroke-width="2"/><circle cx="511.4" cy="337.4" r="5" fill="var(--s3)" stroke="var(--surface)" stroke-width="2"><title>SED stellar mass: 2.80</title></circle>
+<line x1="636.4" x2="636.4" y1="345.5" y2="249.9" stroke="var(--s3)" stroke-width="2"/><circle cx="636.4" cy="295.1" r="5" fill="var(--s3)" stroke="var(--surface)" stroke-width="2"><title>SED stellar mass: 3.69</title></circle>
+<line x1="281.9" x2="281.9" y1="432.3" y2="355.7" stroke="var(--s4)" stroke-width="2"/><circle cx="281.9" cy="410.1" r="5" fill="var(--s4)" stroke="var(--surface)" stroke-width="2"><title>SED mass + H₂ (Tacconi, on the main sequence): 1.27</title></circle>
+<line x1="445.5" x2="445.5" y1="400.9" y2="352.4" stroke="var(--s4)" stroke-width="2"/><circle cx="445.5" cy="377.7" r="5" fill="var(--s4)" stroke="var(--surface)" stroke-width="2"><title>SED mass + H₂ (Tacconi, on the main sequence): 1.95</title></circle>
+<line x1="522.6" x2="522.6" y1="422.2" y2="395.0" stroke="var(--s4)" stroke-width="2"/><circle cx="522.6" cy="411.1" r="5" fill="var(--s4)" stroke="var(--surface)" stroke-width="2"><title>SED mass + H₂ (Tacconi, on the main sequence): 1.24</title></circle>
+<line x1="647.7" x2="647.7" y1="419.9" y2="367.5" stroke="var(--s4)" stroke-width="2"/><circle cx="647.7" cy="396.7" r="5" fill="var(--s4)" stroke="var(--surface)" stroke-width="2"><title>SED mass + H₂ (Tacconi, on the main sequence): 1.55</title></circle>
+<line x1="80" x2="104" y1="62" y2="62" stroke="var(--s2)" stroke-width="2"/>
+<text x="110.0" y="66.0">QI published: 2c²(1+z)/Θ₀</text>
+<line x1="80" x2="104" y1="80" y2="80" stroke="var(--s1)" stroke-width="2"/>
+<text x="110.0" y="84.0">dynamical disc mass (MUSE-DARK fit)</text>
+<line x1="80" x2="104" y1="98" y2="98" stroke="var(--s3)" stroke-width="2"/>
+<text x="110.0" y="102.0">SED stellar mass</text>
+<line x1="80" x2="104" y1="116" y2="116" stroke="var(--s4)" stroke-width="2"/>
+<text x="110.0" y="120.0">SED mass + H₂ (Tacconi, on the main sequence)</text>
+</svg>
