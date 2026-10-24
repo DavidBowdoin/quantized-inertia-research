@@ -63,6 +63,15 @@ Alcock reproduction (his cosmology, bins only, bars = 1σ): frozen A = 2.28, χ�
 
 Best single shift for the published law: -0.113 dex, leaving χ² = 5.4 / 3 (p = 1.5e-01). Negative means the adopted baryonic masses would have to be too large.
 
+## Published global fits expressed in QI's convention
+
+Ciocan et al. 2026b global linear fits, evaluated at the bin redshifts and converted to a_Q. γ is the least-squares slope of log a_Q against log(1+z); the corners use the 95% CI ends of the fit.
+
+| Fit | a_Q per bin (10⁻¹⁰ m s⁻²) | ÷ published QI | effective γ (95% corners) | intercept a_Q(0) |
+|---|---|---|---|---|
+| DC14 disc-halo decomposition (Eq. 4) | 2.21, 2.81, 3.21, 3.62 | 0.72, 0.75, 0.77, 0.78 | 1.19 (1.13 to 1.24) | 1.27 |
+| MOND-framework refit, no halo (Eq. E.5) | 2.02, 2.47, 2.78, 3.09 | 0.66, 0.66, 0.66, 0.67 | 1.02 (0.95 to 1.09) | 1.31 |
+
 ## Sensitivity of the published prediction to the assumed g_bar distribution
 
 | μ | w | predictions | χ² (1σ) | χ² (95%) |

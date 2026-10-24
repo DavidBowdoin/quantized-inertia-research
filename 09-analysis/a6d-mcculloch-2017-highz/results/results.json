@@ -1,0 +1,170 @@
+{
+ "theta0_m": 8.8e+26,
+ "a_q0": 2.0426254062200399e-10,
+ "genzel": [
+  {
+   "name": "COS4 01351",
+   "z": 0.854,
+   "a_min": 3.787027503131954e-10,
+   "g_obs_n1": 3.381775385653616e-10,
+   "g_obs_hband": 2.870576780845511e-10,
+   "ratio_min_over_obs_n1": 1.1198341318579361,
+   "ratio_min_over_obs_hband": 1.3192566484901713,
+   "gbar": 2.671602554666357e-10,
+   "g_qi_eq8": 4.153900884958485e-10,
+   "ratio_eq8_over_obs": 1.2283195692358604,
+   "fdm_obs": 0.21,
+   "fdm_obs_err": "±0.1",
+   "fdm_qi_eq8": 0.3568448962418954,
+   "below_minimum": true
+  },
+  {
+   "name": "D3a 6397",
+   "z": 1.5,
+   "a_min": 5.106563515550101e-10,
+   "g_obs_n1": 4.2086336448054524e-10,
+   "g_obs_hband": 5.278625249417008e-10,
+   "ratio_min_over_obs_n1": 1.213354249033514,
+   "ratio_min_over_obs_hband": 0.9674040634186125,
+   "gbar": 3.4931659251885254e-10,
+   "g_qi_eq8": 5.480901554327421e-10,
+   "ratio_eq8_over_obs": 1.3022995149725798,
+   "fdm_obs": 0.17,
+   "fdm_obs_err": "<0.38",
+   "fdm_qi_eq8": 0.36266581500072514,
+   "below_minimum": true
+  },
+  {
+   "name": "GS4 43501",
+   "z": 1.613,
+   "a_min": 5.337380186452965e-10,
+   "g_obs_n1": 4.368372067112466e-10,
+   "g_obs_hband": 4.368372067112466e-10,
+   "ratio_min_over_obs_n1": 1.2218236231835036,
+   "ratio_min_over_obs_hband": 1.2218236231835036,
+   "gbar": 3.538381374361098e-10,
+   "g_qi_eq8": 5.604090415942151e-10,
+   "ratio_eq8_over_obs": 1.2828784567443006,
+   "fdm_obs": 0.19,
+   "fdm_obs_err": "±0.09",
+   "fdm_qi_eq8": 0.36860737216242234,
+   "below_minimum": true
+  },
+  {
+   "name": "zC 406690",
+   "z": 2.196,
+   "a_min": 6.528230798279248e-10,
+   "g_obs_n1": 5.338506261871798e-10,
+   "g_obs_hband": 5.338506261871798e-10,
+   "ratio_min_over_obs_n1": 1.2228571960109131,
+   "ratio_min_over_obs_hband": 1.2228571960109131,
+   "gbar": 5.338506261871798e-10,
+   "g_qi_eq8": 7.959312162718742e-10,
+   "ratio_eq8_over_obs": 1.4909249464714558,
+   "fdm_obs": 0.0,
+   "fdm_obs_err": "<0.08",
+   "fdm_qi_eq8": 0.3292754257236883,
+   "below_minimum": true
+  },
+  {
+   "name": "zC 400569",
+   "z": 2.242,
+   "a_min": 6.62219156696537e-10,
+   "g_obs_n1": 1.301182705255214e-09,
+   "g_obs_hband": 1.0734757318355515e-09,
+   "ratio_min_over_obs_n1": 0.5089363346300005,
+   "ratio_min_over_obs_hband": 0.6168925268242431,
+   "gbar": 1.301182705255214e-09,
+   "g_qi_eq8": 1.5983568269436909e-09,
+   "ratio_eq8_over_obs": 1.2283876971990564,
+   "fdm_obs": 0.0,
+   "fdm_obs_err": "<0.07",
+   "fdm_qi_eq8": 0.1859247676607485,
+   "below_minimum": false
+  },
+  {
+   "name": "D3a 15504",
+   "z": 2.383,
+   "a_min": 6.910201749242396e-10,
+   "g_obs_n1": 4.828815154260261e-10,
+   "g_obs_hband": 4.598871575485963e-10,
+   "ratio_min_over_obs_n1": 1.4310346386205766,
+   "ratio_min_over_obs_hband": 1.5025863705516052,
+   "gbar": 4.2493573357490295e-10,
+   "g_qi_eq8": 6.886287407706205e-10,
+   "ratio_eq8_over_obs": 1.4260822143151872,
+   "fdm_obs": 0.12,
+   "fdm_obs_err": "<0.26",
+   "fdm_qi_eq8": 0.38292477729092145,
+   "below_minimum": true
+  }
+ ],
+ "uebler": {
+  "per_redshift": [
+   {
+    "z": 0.9,
+    "qi_relative": -0.2787536009528289,
+    "qi_absolute_vs_local": -0.5097610842748718,
+    "observed_btfr": -0.44,
+    "observed_stfr": -0.44,
+    "mcculloch_quoted": [
+     -0.38,
+     -0.47
+    ]
+   },
+   {
+    "z": 2.3,
+    "qi_relative": -0.5185139398778874,
+    "qi_absolute_vs_local": -0.7495214231999302,
+    "observed_btfr": -0.27,
+    "observed_stfr": -0.42,
+    "mcculloch_quoted": [
+     -0.2,
+     -0.47
+    ]
+   }
+  ],
+  "within_sample": {
+   "observed": 0.16999999999999993,
+   "observed_err": 0.06403124237432849,
+   "qi_predicted": -0.23976033892505855,
+   "difference_in_sigma": 6.39938136026766,
+   "alternative_samples": {
+    "first_order": 0.28,
+    "w16": 0.2
+   }
+  },
+  "inputs": {
+   "btfr": {
+    "z": [
+     0.9,
+     2.3
+    ],
+    "b": [
+     10.68,
+     10.85
+    ],
+    "b_err": [
+     0.04,
+     0.05
+    ],
+    "offset_from_local": [
+     -0.44,
+     -0.27
+    ]
+   },
+   "stfr": {
+    "z": [
+     0.9,
+     2.3
+    ],
+    "offset_from_local": [
+     -0.44,
+     -0.42
+    ]
+   },
+   "evolution_first_order_sample": 0.28,
+   "evolution_w16_sample": 0.2
+  }
+ }
+}

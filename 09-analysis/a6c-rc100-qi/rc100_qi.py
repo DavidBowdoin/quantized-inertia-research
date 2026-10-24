@@ -60,7 +60,7 @@ def fetch():
     return rows
 
 
-def table(rows, fix87=True, drop=(), errors="journal", rho=0.0):
+def table(rows, fix87=True, drop=(), errors="journal", rho=0.0, fixed_weights=False):
     """rho = assumed Corr(f_DM, ln g_obs), not measured by this archive.
 
     Vc-Re covariance is unavailable; journal mode treats those errors as independent.
@@ -81,6 +81,11 @@ def table(rows, fix87=True, drop=(), errors="journal", rho=0.0):
         out.append(d)
     T = {k: np.array([d[k] for d in out]) for k in out[0]}
     T["gobs"] = T["Vc"] ** 2 / T["Re"] * KK_TO_SI
+    if fixed_weights:
+        # Data-based derivative of the QI prediction, evaluated at the observed f_DM with x = 1 - f_DM:
+        # d f / d ln g_obs = -x (1 - x^2) / (1 + x^2). Same weights for every model, so no fit can shrink its errors.
+        x = np.clip(1 - T["fDM"], 1e-3, 1.0)
+        T["d_fixed"] = -x * (1 - x * x) / (1 + x * x)
     return T
 
 
@@ -119,6 +124,8 @@ def nll(kind, T, idx, a_of_z, tau):
     a = a_of_z(z)
     fp = fpred(kind, g, a)
     d = (fpred(kind, g * 1.05, a) - fpred(kind, g / 1.05, a)) / (2 * math.log(1.05))
+    if "d_fixed" in T:
+        d = T["d_fixed"][idx]
     v = residual_variance(T["e_fDM"][idx], T["sigma_lng"][idx], d, tau, T["rho_f_lng"][idx])
     return 0.5 * float(np.sum((T["fDM"][idx] - fp) ** 2 / v + np.log(v)))
 
@@ -308,7 +315,8 @@ def main():
                 "sentina_errors": dict(errors="sentina"),
                 "row87_as_transcribed": dict(fix87=False, errors="sentina"),
                 "drop_67_83": dict(fix87=True, drop=(67, 83)), "z_below_1p5": None,
-                "rho_minus_0p5": dict(rho=-0.5), "rho_plus_0p5": dict(rho=0.5)}
+                "rho_minus_0p5": dict(rho=-0.5), "rho_plus_0p5": dict(rho=0.5),
+                "fixed_weights": dict(fixed_weights=True)}
     for name, v in variants.items():
         if v is None:
             T = table(rows)
@@ -374,7 +382,7 @@ def summary(r):
          "are conditional on this approximate error model; bootstrap fractions are not posterior probabilities or calibrated p-values.", "",
          f"Validation on Sentina's table as transcribed (McGaugh function): constant-scale A = {v['mcg_constant_A']:.3f} × 10⁻¹⁰ m s⁻², "
          f"Δ(−ln L) of H(z) relative to constant = {v['dnll_hubble_minus_constant']:.2f}. Sentina reports 1.26 (bootstrap median) and 8.98.", ""]
-    for name in ("main", "sentina_errors", "row87_as_transcribed", "drop_67_83", "z_below_1p5", "rho_minus_0p5", "rho_plus_0p5"):
+    for name in ("main", "sentina_errors", "row87_as_transcribed", "drop_67_83", "z_below_1p5", "rho_minus_0p5", "rho_plus_0p5", "fixed_weights"):
         e = r[name]
         L += [f"## {name} ({e['n']} galaxies)", "", "| Model | Δ(−ln L) vs QI constant | a_Q(0) (10⁻¹⁰ m s⁻²) | γ | τ |", "|---|---|---|---|---|"]
         for k, m in e["models"].items():
