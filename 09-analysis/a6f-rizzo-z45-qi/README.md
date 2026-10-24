@@ -1,30 +1,31 @@
 ---
 title: "A6f: QI's scale at z ≈ 4.5 from six ALMA discs"
 tags: [analysis, galaxy-rotation, high-redshift, theta, alma]
-as_of: 2026-10-23
+as_of: 2026-10-24
 ---
 
 # A6f: QI's scale at z ≈ 4.5 from six ALMA discs
 
-> **Editorial analysis.** This is our own calculation, not a published result. It uses the published mass models of [Rizzo et al. 2020](../../01-papers/2020-rizzo-cold-disc-early/README.md) and [Rizzo et al. 2021](../../01-papers/2021-rizzo-dsfg-dynamics/README.md), following the reconstruction in [Sentina 2026](../../01-papers/2026-sentina-a0z-rc100/README.md).
+> **Editorial analysis, conditional on NFW halo fits.** This calculation uses the published mass models of [Rizzo et al. 2020](../../01-papers/2020-rizzo-cold-disc-early/README.md) and [Rizzo et al. 2021](../../01-papers/2021-rizzo-dsfg-dynamics/README.md), following the reconstruction in [Sentina 2026](../../01-papers/2026-sentina-a0z-rc100/README.md). Both the baryonic acceleration and the total acceleration called g_obs below are reconstructed from those models. This is a consistency check of the decompositions with QI, not a fit of the observed rotation curves under QI's no-dark-matter assumptions.
 
 ## Question
-McCulloch 2017 predicts a_Q = 2c²(1+z)/Θ₀, which at z ≈ 4.5 is 5.5 times its present value: a change of 0.74 dex, larger than typical baryonic-mass systematics. This is the redshift range where QI's prediction is most distinctive. What scale do the best-resolved z ≈ 4.5 rotating discs imply?
+McCulloch 2017 predicts a_Q = 2c²(1+z)/Θ₀, which at z ≈ 4.5 is 5.5 times its theoretical present value. What QI scale would reproduce Rizzo's published baryon-plus-halo accelerations at the chosen outer radii? This high-redshift normalization check has no matched local comparison sample, so it cannot separately measure the rate of evolution. The scale's sensitivity to uncertain baryonic parameters must also be propagated; its 0.74 dex theoretical change cannot be compared directly with a mass uncertainty.
 
 ## Bottom line
-1. **The implied QI scale is about a third of the published prediction.** A random-effects mean over six galaxies gives a_Q = 0.33 × 2c²(1+z)/Θ₀, with log ratio −0.48 ± 0.18. Relative to QI's z = 0 scale that is a rise of 1.8×, against the predicted 5.5×.
-2. **One galaxy matches McCulloch's value and others fall far short.** Ratios to the prediction range from 0.08 (SPT2132-58) to 1.01 (SPT0441-46). A single common scale fits badly (χ² = 124 for 5 degrees of freedom), so the implied scale varies by 0.39 dex beyond the stated errors. QI predicts one scale at a given redshift, but these errors are underestimated (see Caveats).
-3. **The result is stable to the tested choices.** Changing the halo overdensity definition or the outer radius by ±15% moves the mean ratio between 0.33 and 0.36.
+1. **Rizzo's NFW decompositions imply about a third of the published QI scale.** A random-effects mean over six galaxies gives a_Q = 0.33 × 2c²(1+z)/Θ₀, with log ratio −0.48 ± 0.18 under the approximate error model. The ratio to QI's theoretical z = 0 scale is 1.8; this is not a measured rise from a local sample. A lower normalization and slower evolution cannot be separated by this comparison.
+2. **The conditional scales vary substantially between galaxies.** Ratios to the prediction range from 0.08 (SPT2132-58) to 1.01 (SPT0441-46). A common ratio to the published law gives χ² = 124 for 5 degrees of freedom under the independent-parameter approximation, with fitted additional scatter of 0.39 dex. Missing parameter correlations and other modelling uncertainties prevent treating this as a calibrated rejection of QI's universal scale.
+3. **The result is stable within the tested halo reconstructions.** Changing the halo overdensity definition or the outer radius by ±15% moves the mean ratio between 0.33 and 0.36. These variations retain the halo-fitted baryonic parameters; they do not test a QI refit with no halo.
 
-The direction matches RC100 ([A6c](../a6c-rc100-qi/README.md)) and Genzel's galaxies ([A6d](../a6d-mcculloch-2017-highz/README.md)): QI's published law predicts more apparent dark matter at high redshift than these decompositions infer.
+Like RC100 ([A6c](../a6c-rc100-qi/README.md)) and Genzel ([A6d](../a6d-mcculloch-2017-highz/README.md)), this finds a normalization tension conditional on a halo-based decomposition. The observational evidence is the measured kinematics; the split into baryonic and halo contributions is a model inference that a no-dark-matter theory can challenge. A direct QI test must refit those kinematics with baryons and QI, propagating the independent constraints on the baryonic parameters.
 
 ## Data
 - **Mass-model parameters** (stellar mass, Sérsic R_e and n, gas mass, halo mass, gas scale length, fixed concentration): Rizzo 2021 Tables 4, 5 and C1 for five galaxies; Rizzo 2020 Extended Data Table 5 and Methods for SPT0418-47. We checked Sentina's transcription against both papers; all values match.
 - **Outermost radii** were read from the rotation-curve figures by Sentina and are approximate.
-- **Cross-check:** Rizzo 2021 quotes baryon-to-total ratios at the outermost radius of 0.66 ± 0.02 (SPT0441-46) and 0.90 ± 0.03 (SPT0345-47). Our rebuild gives 0.71 and 0.85, within about 2σ; the difference likely reflects the read-off radii.
+- **Qualitative comparison:** Rizzo 2021 quotes baryon-to-total mass ratios at the outermost radius of 0.66 ± 0.02 (SPT0441-46) and 0.90 ± 0.03 (SPT0345-47). Our acceleration ratios g_bar/g_obs are 0.71 and 0.85. For a gas disc, a ratio of force contributions need not equal an enclosed-mass ratio. Together with approximate radii and missing covariances, this prevents using the comparison as a precision validation of the reconstruction.
 
 ## Method
 - **Mass model, as in Rizzo:** deprojected spherical Sérsic stars, an exponential (Freeman) gas disc and an NFW halo with fixed concentration. The virial radius uses the Bryan–Norman overdensity in Rizzo's cosmology (H₀ = 67.8, Ω_m = 0.308).
+- **Reconstructed accelerations:** g_bar = (V_star² + V_gas²)/R_out and g_obs = (V_star² + V_gas² + V_NFW²)/R_out. All component masses come from the halo decomposition. The NFW term reconstructs the comparison target; it is not added to the QI prediction.
 - **QI scale per galaxy:** invert McCulloch 2017 Eq. 8 at R_out: a = g_bar((g_obs/g_bar)² − 1).
 - **Uncertainty:** 20,000 Monte Carlo draws per galaxy from split-normal posteriors, sampled independently.
 - **Combination:** random-effects mean of log(a/prediction) with fitted intrinsic scatter, rather than an inverse-variance mean that one precise galaxy would dominate.
@@ -42,8 +43,9 @@ Generated by the script (`results/summary.md`).
 | SPT0418-47 | 4.225 | 7.47 | 10.67 | 0.63–0.77 |
 
 ## Caveats
-- **The decompositions assume an NFW halo**, as in A6c; a QI-native refit would need the rotation curves themselves, which are published only as figures.
-- **Errors are underestimated.** Posterior correlations, especially between stellar and halo mass, are not published, and the outer radii are approximate. The intrinsic scatter therefore partly reflects modelling uncertainty.
+- **The decompositions assume an NFW halo**, as in A6c. A QI refit needs the measured rotation curves and their uncertainties, rather than total curves regenerated from halo parameters. The papers show the curves as figures; a fit to digitized points would additionally need to account for digitization and unavailable covariance.
+- **The uncertainty model is incomplete.** We sample marginal parameter errors independently, omit gas-scale-length errors, and use approximate outer radii. The joint parameter samples are unavailable here. The fitted scatter can absorb modelling uncertainty and does not demonstrate physical scatter in QI's scale; the quoted intervals and χ² are conditional diagnostics.
+- **There is no measured low-redshift baseline in this analysis.** Dividing by QI's theoretical a_Q(0) does not determine an observed evolution exponent. That requires comparable measurements across redshift and their shared calibration uncertainties.
 - **Six massive, lensed, dusty galaxies** are not a representative sample, and gas masses rest on a fitted [CII]-to-gas conversion.
 - **At R_out these galaxies are baryon dominated** (g_bar/g_obs ≈ 0.5–0.85), so the implied scale depends on the transition shape of QI's function.
 

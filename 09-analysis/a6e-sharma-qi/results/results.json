@@ -15,6 +15,10 @@
    "Rout": 0.18631178707224336
   }
  },
+ "scope": {
+  "errors": "Shared survey and mass-calibration errors are not modelled; no guaranteed direction of likelihood bias",
+  "tully_fisher_eq13": "Descriptive offsets; deep-limit, asymptotic velocity and enclosed total-mass assumptions unverified"
+ },
  "samples": {
   "rout_all": {
    "label": "R_out, all surveys (main)",

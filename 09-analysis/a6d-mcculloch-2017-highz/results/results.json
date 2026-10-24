@@ -1,6 +1,11 @@
 {
  "theta0_m": 8.8e+26,
  "a_q0": 2.0426254062200399e-10,
+ "scope": {
+  "genzel": "Eq. 8 conditional on NFW-derived baryonic parameters; no QI refit",
+  "below_minimum": "Ordered rotation below the Fig. 2 reference, not a violation of the combined-acceleration floor",
+  "uebler": "Eq. 13 deep-limit comparison using maximum circular velocities; applicability unverified; sigma is not an exclusion significance"
+ },
  "genzel": [
   {
    "name": "COS4 01351",

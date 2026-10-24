@@ -9,6 +9,9 @@ McCulloch 2017 (Ap&SS 362, 149; arXiv:1709.04918), Sect. 4, makes two high-z com
    2c^2/Theta(z), Theta(z) = Theta_now/(1+z). He reports QI 9-19% higher for the four lower-z galaxies.
 
 Inputs are typed from the source tables (numbers only), with locations given below.
+The Eq. 8 extension is conditional on Genzel's NFW-derived baryonic parameters. Eq. 13 is a deep-limit
+relation, whereas Uebler uses maximum circular velocities; its applicability is not established here.
+The Fig. 2 reference is not a floor on ordered rotation alone: Sect. 2 includes a varying component a'.
 
 Run:  python3 -I 09-analysis/a6d-mcculloch-2017-highz/highz_2017.py
 """
@@ -57,7 +60,7 @@ def genzel():
                          ratio_min_over_obs_n1=a_min / g_n1, ratio_min_over_obs_hband=a_min / g_h,
                          gbar=gbar, g_qi_eq8=g_qi, ratio_eq8_over_obs=g_qi / g_n1,
                          fdm_obs=f, fdm_obs_err=ferr, fdm_qi_eq8=1 - gbar / g_qi,
-                         below_minimum=g_n1 < a_min))
+                         below_minimum=g_n1 < a_min))  # Rotational component below the Fig. 2 reference only.
     return rows
 
 
@@ -93,11 +96,11 @@ def fig(rows, path):
     X = lambda v: ml + (v - lo) / (hi - lo) * (w - ml - mr)
     Y = lambda v: h - mb - (v - lo) / (hi - lo) * (h - mt - mb)
     el = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img">',
-          "<title>Genzel et al. 2017 galaxies: observed acceleration against QI predictions</title>", STYLE,
+          "<title>Genzel et al. 2017: Fig. 2 reference and QI conditional on NFW-derived baryons</title>", STYLE,
           f'<rect width="{w}" height="{h}" fill="var(--surface)"/>',
-          f'<text class="t" x="{ml}" y="24">Six Genzel et al. 2017 galaxies: observed vs QI (10⁻¹⁰ m s⁻²)</text>',
+          f'<text class="t" x="{ml}" y="24">Genzel 2017: conditional QI comparison (10⁻¹⁰ m s⁻²)</text>',
           f'<text x="{(ml + w - mr) / 2}" y="{h - 12}" text-anchor="middle">observed v_c²/R₁/₂</text>',
-          f'<text transform="translate(16,{(mt + h - mb) / 2}) rotate(-90)" text-anchor="middle">QI value</text>']
+          f'<text transform="translate(16,{(mt + h - mb) / 2}) rotate(-90)" text-anchor="middle">QI reference / conditional prediction</text>']
     for v in (2, 5, 8, 11, 14, 17):
         el.append(f'<line x1="{X(v):.1f}" x2="{X(v):.1f}" y1="{mt}" y2="{h - mb}" stroke="var(--grid)"/>'
                   f'<text x="{X(v):.1f}" y="{h - mb + 16}" text-anchor="middle">{v}</text>'
@@ -106,14 +109,14 @@ def fig(rows, path):
     el.append(f'<line x1="{X(lo):.1f}" y1="{Y(lo):.1f}" x2="{X(hi):.1f}" y2="{Y(hi):.1f}" stroke="var(--ink2)" stroke-dasharray="3 3"/>')
     for r in rows:
         x = r["g_obs_n1"] * 1e10
-        for key, col, lab in (("a_min", "var(--s2)", "2017 Fig. 2: minimum acceleration 2c²(1+z)/Θ₀"),
-                              ("g_qi_eq8", "var(--s1)", "2017 Eq. 8 with Genzel's baryonic acceleration")):
+        for key, col, lab in (("a_min", "var(--s2)", "2017 Fig. 2 reference 2c²(1+z)/Θ₀; not a rotational floor"),
+                              ("g_qi_eq8", "var(--s1)", "2017 Eq. 8 with Genzel's NFW-derived baryonic acceleration")):
             y = r[key] * 1e10
             el.append(f'<circle cx="{X(x):.1f}" cy="{Y(y):.1f}" r="5" fill="{col}" stroke="var(--surface)" stroke-width="2">'
                       f'<title>{r["name"]} (z = {r["z"]}): {lab} = {y:.2f}; observed {x:.2f}</title></circle>')
         el.append(f'<text x="{X(x) + 7:.1f}" y="{Y(r["a_min"] * 1e10) - 6:.1f}">{r["z"]}</text>')
-    for i, (lab, col) in enumerate((("McCulloch 2017 Fig. 2: minimum acceleration", "var(--s2)"),
-                                    ("2017 Eq. 8 applied to Genzel's baryons", "var(--s1)"))):
+    for i, (lab, col) in enumerate((("Fig. 2 reference: 2c²(1+z)/Θ₀", "var(--s2)"),
+                                    ("Eq. 8 with Genzel's NFW-derived baryons", "var(--s1)"))):
         y = 64 + 18 * i
         el.append(f'<circle cx="{ml + 22}" cy="{y}" r="5" fill="{col}"/><text x="{ml + 34}" y="{y + 4}">{lab}</text>')
     el.append(f'<text x="{X(11):.1f}" y="{Y(10.2):.1f}">line of agreement</text>')
@@ -124,28 +127,39 @@ def main():
     OUT.mkdir(exist_ok=True)
     g = genzel()
     u, within = uebler()
-    res = dict(theta0_m=THETA0, a_q0=A_Q0, genzel=g, uebler=dict(per_redshift=u, within_sample=within, inputs=UEBLER))
+    res = dict(theta0_m=THETA0, a_q0=A_Q0,
+               scope=dict(genzel="Eq. 8 conditional on NFW-derived baryonic parameters; no QI refit",
+                          below_minimum="Ordered rotation below the Fig. 2 reference, not a violation of the combined-acceleration floor",
+                          uebler="Eq. 13 deep-limit comparison using maximum circular velocities; applicability unverified; sigma is not an exclusion significance"),
+               genzel=g, uebler=dict(per_redshift=u, within_sample=within, inputs=UEBLER))
     (OUT / "results.json").write_text(json.dumps(res, indent=1, ensure_ascii=False, allow_nan=False) + "\n")
     fig(g, OUT / "fig-1-genzel-comparison.svg")
     L = ["# A6d results (generated by highz_2017.py; do not edit)", "",
+         "Editorial analysis. Genzel's baryonic accelerations come from NFW halo fits. The Eq. 8 results below are conditional on those inputs; "
+         "a no-halo QI refit to the measured kinematics remains open.", "",
          f"QI scale today a_Q(0) = 2c²/Θ₀ = {A_Q0 * 1e10:.3f} × 10⁻¹⁰ m s⁻² (Θ₀ = 8.8 × 10²⁶ m).", "",
          "## Genzel et al. 2017 (accelerations in 10⁻¹⁰ m s⁻²)", "",
-         "| Galaxy | z | observed v_c²/R₁/₂ (n=1 radius) | QI minimum 2c²(1+z)/Θ₀ | minimum ÷ observed | same, H-band radius | Eq. 8 prediction | Eq. 8 ÷ observed | f_DM observed | f_DM from Eq. 8 |",
+         "| Galaxy | z | tabulated v_c²/R₁/₂ (n=1 radius) | Fig. 2 reference 2c²(1+z)/Θ₀ | reference ÷ circular | same, H-band radius | conditional Eq. 8 | Eq. 8 ÷ circular | NFW-fit f_DM | apparent f_DM from Eq. 8 |",
          "|---|---|---|---|---|---|---|---|---|---|"]
     for r in g:
         L.append(f"| {r['name']} | {r['z']} | {r['g_obs_n1'] * 1e10:.2f} | {r['a_min'] * 1e10:.2f} | {r['ratio_min_over_obs_n1']:.2f} | "
                  f"{r['ratio_min_over_obs_hband']:.2f} | {r['g_qi_eq8'] * 1e10:.2f} | {r['ratio_eq8_over_obs']:.2f} | "
                  f"{r['fdm_obs']:.2f} ({r['fdm_obs_err']}) | {r['fdm_qi_eq8']:.2f} |")
     nb = sum(r["below_minimum"] for r in g)
-    L += ["", f"Observed acceleration below the QI minimum in {nb} of {len(g)} galaxies (n=1 radius).", "",
+    L += ["", f"The circular acceleration is below the Fig. 2 reference in {nb} of {len(g)} galaxies (n=1 radius). "
+          "McCulloch's Eqs. 5–8 include a varying component a′ as well as ordered rotation; the latter can be below 2c²/Θ. "
+          "This count is not a violation of Eq. 8 or of the combined-acceleration floor.", "",
           "## Übler et al. 2017 baryonic Tully–Fisher relation (dex of mass at fixed velocity)", "",
+          "Eq. 13 assumes slow rotation at the outskirts (McCulloch Sect. 4, Eqs. 10–13). Übler Sect. 2.3–2.4 uses maximum circular velocities "
+          "near 2.2 R_d. This reproduces the author's comparison without establishing the deep-limit approximation for that sample.", "",
           "| z | observed bTFR offset from local | observed sTFR offset | McCulloch's quoted range | QI Eq. 13, relative to QI at z = 0 | QI absolute, relative to the SPARC normalisation |",
           "|---|---|---|---|---|---|"]
     for r in u:
         L.append(f"| {r['z']} | {r['observed_btfr']:+.2f} | {r['observed_stfr']:+.2f} | {r['mcculloch_quoted'][0]:+.2f} to {r['mcculloch_quoted'][1]:+.2f} | "
                  f"{r['qi_relative']:+.2f} | {r['qi_absolute_vs_local']:+.2f} |")
     L += ["", f"Within Übler's sample, z ≈ 0.9 → 2.3: observed bTFR zero point changes by {within['observed']:+.2f} ± {within['observed_err']:.2f} dex; "
-          f"QI predicts {within['qi_predicted']:+.2f} dex (difference {within['difference_in_sigma']:.1f} σ, statistical errors only). "
+          f"the Eq. 13 deep-limit formula gives {within['qi_predicted']:+.2f} dex (difference {within['difference_in_sigma']:.1f} times the quoted statistical error). "
+          "This is an arithmetic discrepancy in that comparison, not a calibrated QI exclusion significance. "
           f"Übler's alternative samples give +{UEBLER['evolution_first_order_sample']:.2f} and +{UEBLER['evolution_w16_sample']:.2f} dex."]
     (OUT / "summary.md").write_text("\n".join(L) + "\n")
     print((OUT / "summary.md").read_text())
